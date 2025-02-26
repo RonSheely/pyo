@@ -10,7 +10,7 @@ cd ..
 
 echo ====== Build and install libsndfile. ======
 wget https://github.com/libsndfile/libsndfile/releases/download/1.0.31/libsndfile-1.0.31.tar.bz2
-tar -xzf libsndfile-1.0.31.tar.bz2
+tar -xjf libsndfile-1.0.31.tar.bz2
 cd libsndfile-1.0.31
 ./autogen.sh
 ./configure

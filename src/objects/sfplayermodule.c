@@ -1266,20 +1266,28 @@ SfMarkerShuffler_chooseNewMark(SfMarkerShuffler *self, int dir)
 }
 
 static void
-SfMarkerShuffler_setMarkers(SfMarkerShuffler *self, PyObject *markerstmp)
+SfMarkerShuffler_setMarkers(SfMarkerShuffler *self)
 {
     Py_ssize_t i;
-    Py_ssize_t len = PyList_Size(markerstmp);
-    self->markers = (MYFLT *)PyMem_RawRealloc(self->markers, (len + 2) * sizeof(MYFLT));
-    self->markers[0] = 0.;
-
-    for (i = 0; i < len; i++)
+    SF_CUES cues;
+    if (sf_command(self->sf, SFC_GET_CUE, &cues, sizeof(cues)))
     {
-        self->markers[i + 1] = PyFloat_AsDouble(PyList_GetItem(markerstmp, i));
-    }
+        self->markers = (MYFLT *)PyMem_RawRealloc(self->markers, (cues.cue_count + 2) * sizeof(MYFLT));
+        self->markers[0] = 0.;
 
-    self->markers[len + 1] = self->sndSize;
-    self->markers_size = (int)len + 1;
+        for (i = 0; i < cues.cue_count; i++)
+        {
+            self->markers[i + 1] = (MYFLT)(cues.cue_points[i].sample_offset);
+        }
+
+        self->markers[cues.cue_count + 1] = self->sndSize;
+        self->markers_size = (int)cues.cue_count + 1;
+    }
+    else
+    {
+        self->markers = NULL;
+        self->markers_size = 0;
+    }
 }
 
 static int
@@ -1307,7 +1315,8 @@ SfMarkerShuffler_dealloc(SfMarkerShuffler* self)
         sf_close(self->sf);
 
     PyMem_RawFree(self->samplesBuffer);
-    PyMem_RawFree(self->markers);
+    if (self->markers)
+        PyMem_RawFree(self->markers);
     SfMarkerShuffler_clear(self);
     Py_TYPE(self->stream)->tp_free((PyObject*)self->stream);
     Py_TYPE(self)->tp_free((PyObject*)self);
@@ -1318,7 +1327,7 @@ SfMarkerShuffler_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
 {
     int i;
     Py_ssize_t psize;
-    PyObject *speedtmp = NULL, *markerstmp = NULL;
+    PyObject *speedtmp = NULL;
     SfMarkerShuffler *self;
     self = (SfMarkerShuffler *)type->tp_alloc(type, 0);
 
@@ -1333,9 +1342,9 @@ SfMarkerShuffler_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
     Stream_setFunctionPtr(self->stream, SfMarkerShuffler_compute_next_data_frame);
     self->mode_func_ptr = SfMarkerShuffler_setProcMode;
 
-    static char *kwlist[] = {"path", "markers", "speed", "interp", NULL};
+    static char *kwlist[] = {"path", "speed", "interp", NULL};
 
-    if (! PyArg_ParseTupleAndKeywords(args, kwds, "s#O|Oi", kwlist, &self->path, &psize, &markerstmp, &speedtmp, &self->interp))
+    if (! PyArg_ParseTupleAndKeywords(args, kwds, "s#|Oi", kwlist, &self->path, &psize, &speedtmp, &self->interp))
         Py_RETURN_NONE;
 
     if (speedtmp)
@@ -1376,8 +1385,7 @@ SfMarkerShuffler_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
     self->sndChnls = self->info.channels;
     self->srScale = self->sndSr / self->sr;
 
-    Py_INCREF(markerstmp);
-    SfMarkerShuffler_setMarkers((SfMarkerShuffler *)self, markerstmp);
+    SfMarkerShuffler_setMarkers((SfMarkerShuffler *)self);
 
     self->samplesBuffer = (MYFLT *)PyMem_RawRealloc(self->samplesBuffer, self->bufsize * self->sndChnls * sizeof(MYFLT));
 
@@ -1503,6 +1511,22 @@ SfMarkerShuffler_getSamplesBuffer(SfMarkerShuffler *self)
     return (MYFLT *)self->samplesBuffer;
 }
 
+PyObject *
+SfMarkerShuffler_getMarkers(SfMarkerShuffler *self)
+{
+    PyObject* l = PyList_New(0);
+    if (self->markers_size > 0)
+    {
+        Py_ssize_t i;
+        for (i=0; i < self->markers_size; i++)
+        {
+            PyList_Append(l, PyLong_FromLong((long)self->markers[i]));
+        }
+    }
+    Py_INCREF(l);
+    return l;
+}
+
 static PyMemberDef SfMarkerShuffler_members[] =
 {
     {"server", T_OBJECT_EX, offsetof(SfMarkerShuffler, server), 0, "Pyo server."},
@@ -1521,6 +1545,7 @@ static PyMethodDef SfMarkerShuffler_methods[] =
     {"setSpeed", (PyCFunction)SfMarkerShuffler_setSpeed, METH_O, "Sets sfplayer reading speed."},
     {"setInterp", (PyCFunction)SfMarkerShuffler_setInterp, METH_O, "Sets sfplayer interpolation mode."},
     {"setRandomType", (PyCFunction)SfMarkerShuffler_setRandomType, METH_VARARGS | METH_KEYWORDS, "Sets sfplayer random type."},
+    {"getMarkers", (PyCFunction)SfMarkerShuffler_getMarkers, METH_NOARGS, "Returns all marker positions as a list."},
     {NULL}  /* Sentinel */
 };
 
@@ -2129,20 +2154,28 @@ SfMarkerLooper_chooseNewMark(SfMarkerLooper *self, int dir)
 }
 
 static void
-SfMarkerLooper_setMarkers(SfMarkerLooper *self, PyObject *markerstmp)
+SfMarkerLooper_setMarkers(SfMarkerLooper *self)
 {
     Py_ssize_t i;
-    Py_ssize_t len = PyList_Size(markerstmp);
-    self->markers = (MYFLT *)PyMem_RawRealloc(self->markers, (len + 2) * sizeof(MYFLT));
-    self->markers[0] = 0.;
-
-    for (i = 0; i < len; i++)
+    SF_CUES cues;
+    if (sf_command(self->sf, SFC_GET_CUE, &cues, sizeof(cues)))
     {
-        self->markers[i + 1] = PyFloat_AsDouble(PyList_GetItem(markerstmp, i));
-    }
+        self->markers = (MYFLT *)PyMem_RawRealloc(self->markers, (cues.cue_count + 2) * sizeof(MYFLT));
+        self->markers[0] = 0.;
 
-    self->markers[len + 1] = self->sndSize;
-    self->markers_size = (int)len + 1;
+        for (i = 0; i < cues.cue_count; i++)
+        {
+            self->markers[i + 1] = (MYFLT)(cues.cue_points[i].sample_offset);
+        }
+
+        self->markers[cues.cue_count + 1] = self->sndSize;
+        self->markers_size = (int)cues.cue_count + 1;
+    }
+    else
+    {
+        self->markers = NULL;
+        self->markers_size = 0;
+    }
 }
 
 static int
@@ -2172,7 +2205,8 @@ SfMarkerLooper_dealloc(SfMarkerLooper* self)
         sf_close(self->sf);
 
     PyMem_RawFree(self->samplesBuffer);
-    PyMem_RawFree(self->markers);
+    if (self->markers)
+        PyMem_RawFree(self->markers);
     SfMarkerLooper_clear(self);
     Py_TYPE(self->stream)->tp_free((PyObject*)self->stream);
     Py_TYPE(self)->tp_free((PyObject*)self);
@@ -2183,7 +2217,7 @@ SfMarkerLooper_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
 {
     int i;
     Py_ssize_t psize;
-    PyObject *speedtmp = NULL, *marktmp = NULL, *markerstmp = NULL;
+    PyObject *speedtmp = NULL, *marktmp = NULL;
     SfMarkerLooper *self;
     self = (SfMarkerLooper *)type->tp_alloc(type, 0);
 
@@ -2201,9 +2235,9 @@ SfMarkerLooper_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
     Stream_setFunctionPtr(self->stream, SfMarkerLooper_compute_next_data_frame);
     self->mode_func_ptr = SfMarkerLooper_setProcMode;
 
-    static char *kwlist[] = {"path", "markers", "speed", "mark", "interp", NULL};
+    static char *kwlist[] = {"path", "speed", "mark", "interp", NULL};
 
-    if (! PyArg_ParseTupleAndKeywords(args, kwds, "s#O|OOi", kwlist, &self->path, &psize, &markerstmp, &speedtmp, &marktmp, &self->interp))
+    if (! PyArg_ParseTupleAndKeywords(args, kwds, "s#|OOi", kwlist, &self->path, &psize, &speedtmp, &marktmp, &self->interp))
         Py_RETURN_NONE;
 
     if (speedtmp)
@@ -2247,8 +2281,7 @@ SfMarkerLooper_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
     self->sndChnls = self->info.channels;
     self->srScale = self->sndSr / self->sr;
 
-    Py_INCREF(markerstmp);
-    SfMarkerLooper_setMarkers((SfMarkerLooper *)self, markerstmp);
+    SfMarkerLooper_setMarkers((SfMarkerLooper *)self);
 
     self->samplesBuffer = (MYFLT *)PyMem_RawRealloc(self->samplesBuffer, self->bufsize * self->sndChnls * sizeof(MYFLT));
 
@@ -2298,6 +2331,22 @@ SfMarkerLooper_getSamplesBuffer(SfMarkerLooper *self)
     return (MYFLT *)self->samplesBuffer;
 }
 
+PyObject *
+SfMarkerLooper_getMarkers(SfMarkerLooper *self)
+{
+    PyObject* l = PyList_New(0);
+    if (self->markers_size > 0)
+    {
+        Py_ssize_t i;
+        for (i=0; i < self->markers_size; i++)
+        {
+            PyList_Append(l, PyLong_FromLong((long)self->markers[i]));
+        }
+    }
+    Py_INCREF(l);
+    return l;
+}
+
 static PyMemberDef SfMarkerLooper_members[] =
 {
     {"server", T_OBJECT_EX, offsetof(SfMarkerLooper, server), 0, "Pyo server."},
@@ -2317,6 +2366,7 @@ static PyMethodDef SfMarkerLooper_methods[] =
     {"setSpeed", (PyCFunction)SfMarkerLooper_setSpeed, METH_O, "Sets sfplayer reading speed."},
     {"setMark", (PyCFunction)SfMarkerLooper_setMark, METH_O, "Sets marker to loop."},
     {"setInterp", (PyCFunction)SfMarkerLooper_setInterp, METH_O, "Sets sfplayer interpolation mode."},
+    {"getMarkers", (PyCFunction)SfMarkerLooper_getMarkers, METH_NOARGS, "Returns all marker positions as a list."},
     {NULL}  /* Sentinel */
 };
 

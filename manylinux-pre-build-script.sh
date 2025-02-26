@@ -8,6 +8,17 @@ make install 1>/dev/null
 ldconfig
 cd ..
 
+echo ====== Build and install libsndfile. ======
+wget https://github.com/libsndfile/libsndfile/releases/download/1.0.31/libsndfile-1.0.31.tar.bz2
+tar -xzf libsndfile-1.0.31.tar.bz2
+cd libsndfile-1.0.31
+./autogen.sh
+./configure
+make 1>/dev/null
+make install 1>/dev/null
+ldconfig
+cd ..
+
 echo ====== Build and install alsa-lib. ======
 wget https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.8.tar.bz2
 tar -xjf alsa-lib-1.2.8.tar.bz2

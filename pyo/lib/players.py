@@ -27,7 +27,6 @@ License along with pyo.  If not, see <http://www.gnu.org/licenses/>.
 """
 from ._core import *
 from ._maps import *
-import aifc
 
 
 class SfPlayer(PyoObject):
@@ -355,15 +354,8 @@ class SfMarkerShuffler(PyoObject):
         self._base_objs = []
         self._snd_size, self._dur, self._snd_sr, self._snd_chnls, _format, _type = sndinfo(path[0], raise_on_failure=True)
         for i in range(lmax):
-            try:
-                sf = aifc.open(wrap(path, i))  # Do we need stringencode() here?
-                markerstmp = sf.getmarkers()
-                sf.close()
-                self._markers = [m[1] for m in markerstmp]
-            except:
-                self._markers = []
             self._base_players.append(
-                SfMarkerShuffler_base(stringencode(wrap(path, i)), self._markers, wrap(speed, i), wrap(interp, i))
+                SfMarkerShuffler_base(stringencode(wrap(path, i)), wrap(speed, i), wrap(interp, i))
             )
         for i in range(lmax * self._snd_chnls):
             j = i // self._snd_chnls
@@ -463,7 +455,7 @@ class SfMarkerShuffler(PyoObject):
         Returns a list of marker time values in samples.
 
         """
-        return self._markers
+        return self._base_players[0].getMarkers()
 
     def ctrl(self, map_list=None, title=None, wxnoserver=False):
         self._map_list = [
@@ -551,16 +543,9 @@ class SfMarkerLooper(PyoObject):
         self._base_objs = []
         self._snd_size, self._dur, self._snd_sr, self._snd_chnls, _format, _type = sndinfo(path[0], raise_on_failure=True)
         for i in range(lmax):
-            try:
-                sf = aifc.open(wrap(path, i))
-                markerstmp = sf.getmarkers()
-                sf.close()
-                self._markers = [m[1] for m in markerstmp]
-            except:
-                self._markers = []
             self._base_players.append(
                 SfMarkerLooper_base(
-                    stringencode(wrap(path, i)), self._markers, wrap(speed, i), wrap(mark, i), wrap(interp, i)
+                    stringencode(wrap(path, i)), wrap(speed, i), wrap(mark, i), wrap(interp, i)
                 )
             )
         for i in range(lmax * self._snd_chnls):
@@ -620,7 +605,7 @@ class SfMarkerLooper(PyoObject):
         Returns a list of marker time values in samples.
 
         """
-        return self._markers
+        return self._base_players[0].getMarkers()
 
     def ctrl(self, map_list=None, title=None, wxnoserver=False):
         self._map_list = [

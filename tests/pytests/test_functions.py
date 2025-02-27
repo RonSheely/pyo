@@ -290,7 +290,7 @@ class TestServerQueriesFunctions:
         assert serverCreated() == True
 
     def test_serverBooted(self):
-        s = Server()
+        s = Server(audio="manual")
         assert serverBooted() == False
         s.boot()
         assert serverBooted() == True

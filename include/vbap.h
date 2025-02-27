@@ -95,8 +95,8 @@ void free_speakers_setup(SPEAKERS_SETUP *setup);
  */
 VBAP_DATA * init_vbap_data(SPEAKERS_SETUP *setup, int **triplets);
 
-VBAP_DATA * init_vbap_from_speakers(ls lss[MAX_LS_AMOUNT], int count,
-                                    int dim, int outputPatches[MAX_LS_AMOUNT],
+VBAP_DATA * init_vbap_from_speakers(ls *lss, int count,
+                                    int dim, int *outputPatches,
                                     int maxOutputPatch, int **triplets);
 
 VBAP_DATA * copy_vbap_data(VBAP_DATA *data);

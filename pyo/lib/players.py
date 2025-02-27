@@ -299,16 +299,16 @@ class SfPlayer(PyoObject):
 
 class SfMarkerShuffler(PyoObject):
     """
-    AIFF with markers soundfile shuffler.
+    Soundfile player with markers shuffler.
 
-    Reads audio data from a AIFF file using one of several available
+    Reads audio data from an audio file using one of several available
     interpolation types. User can alter its pitch with the `speed`
     attribute. The object takes care of sampling rate conversion to
     match the Server sampling rate setting.
 
-    The reading pointer randomly choose a marker (from the MARK chunk
-    in the header of the AIFF file) as its starting point and reads
-    the samples until it reaches the following marker. Then, it choose
+    The reading pointer randomly chooses a marker (from the markers chunk
+    in the header of an AIFF or WAVE) as its starting point, and reads
+    the samples until it reaches the following marker. Then, it chooses
     another marker and reads from the new position and so on...
 
     :Parent: :py:class:`PyoObject`
@@ -486,15 +486,15 @@ class SfMarkerShuffler(PyoObject):
 
 class SfMarkerLooper(PyoObject):
     """
-    AIFF with markers soundfile looper.
+    Soundfile player with markers looper.
 
-    Reads audio data from a AIFF file using one of several available
+    Reads audio data from an audio file using one of several available
     interpolation types. User can alter its pitch with the `speed`
     attribute. The object takes care of sampling rate conversion to
     match the Server sampling rate setting.
 
-    The reading pointer loops a specific marker (from the MARK chunk
-    in the header of the AIFF file) until it received a new integer
+    The reading pointer loops a specific marker (from the markers chunk
+    in the header of the AIFF or WAVE file) until it received a new integer
     in the `mark` attribute.
 
     :Parent: :py:class:`PyoObject`

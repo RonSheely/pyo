@@ -1456,8 +1456,8 @@ VBAP_DATA * init_vbap_data(SPEAKERS_SETUP *setup, int **triplets)
     return data;
 }
 
-VBAP_DATA * init_vbap_from_speakers(ls lss[MAX_LS_AMOUNT], int count,
-                                    int dim, int outputPatches[MAX_LS_AMOUNT],
+VBAP_DATA * init_vbap_from_speakers(ls *lss, int count,
+                                    int dim, int *outputPatches,
                                     int maxOutputPatch, int **triplets)
 {
     int i, j, ret, offset = 0;

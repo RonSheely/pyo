@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyo"
-version = "1.0.5-3"
+version = "1.0.5"
 authors = [{name = "Olivier Belanger", email = "belangeo@gmail.com"}]
 description = "Python module to build digital signal processing program."
 readme = "README.md"
@@ -64,6 +64,23 @@ packages = [
     "pyo.editor.snippets.Interface",
     "pyo.editor.snippets.Utilities",
     "pyo.examples",
+    "pyo.examples.x01-intro",
+    "pyo.examples.x02-controls",
+    "pyo.examples.x03-generators",
+    "pyo.examples.x04-soundfiles",
+    "pyo.examples.x05-envelopes",
+    "pyo.examples.x06-filters",
+    "pyo.examples.x07-effects",
+    "pyo.examples.x08-dynamics",
+    "pyo.examples.x09-callbacks",
+    "pyo.examples.x10-tables",
+    "pyo.examples.x16-midi",
+    "pyo.examples.x17-osc",
+    "pyo.examples.x19-multirate",
+    "pyo.examples.x20-multicore",
+    "pyo.examples.x21-utilities",
+    "pyo.examples.x22-events",
+    "pyo.examples.x23-expression",
     "pyo.examples.snds",
     "pyo.examples.algorithmic",
     "pyo.examples.fft",

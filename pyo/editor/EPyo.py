@@ -1950,8 +1950,7 @@ class ManualPanel(wx.Treebook):
         _ed_set_style(stc)
 
     def setStyle(self):
-        # tree = self.GetTreeCtrl() # Should be there now...
-        tree = [x for x in self.GetChildren() if isinstance(x, wx.TreeCtrl)][0]
+        tree = self.GetTreeCtrl()
         tree.SetBackgroundColour(wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW))
         root = tree.GetRootItem()
         tree.SetItemTextColour(root, wx.SystemSettings.GetColour(wx.SYS_COLOUR_MENUTEXT))

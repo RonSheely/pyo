@@ -181,16 +181,16 @@ if sys.platform == "win32":
 elif sys.platform == "darwin":
     pkgs_3rdpary = {
         #package flags: (include, lib, version)
-        "flac": (False, True, "1.4.3"),
+        "flac": (False, True, "1.5.0"),
         "liblo": (True, True, "0.32"),
         "libogg": (False, True, "1.3.5"),
-        "libsndfile": (True, True, "1.2.2"),
+        "libsndfile": (True, True, "1.2.2_1"),
         "libvorbis": (False, True, "1.3.7"),
         "opus": (False, True, "1.5.2"),
         "portaudio": (True, True, "19.7.0"),
         "portmidi": (True, True, "2.0.4_1"),
         "lame": (False, True, "3.100"),
-        "mpg123": (False, True, "1.32.7"),
+        "mpg123": (False, True, "1.32.10"),
     }
 
     ### TODO: MacOS, script argument / conditional statement to automate the default path
@@ -236,7 +236,7 @@ elif sys.platform == "darwin":
         for bind in library_dirs:
             dylibs.extend(glob.glob(os.path.join(bind, "*.dylib")))
         dylibs = [dylib for dylib in dylibs if not os.path.islink(dylib)]
-        dylibs = [dylib for dylib in dylibs if "FLAC++" not in dylib and "portaudiocpp" not in dylib]
+        dylibs = [os.path.relpath(dylib) for dylib in dylibs if "FLAC++" not in dylib and "portaudiocpp" not in dylib]
         data_files = (("/pyo", dylibs),)
 
 libraries += ["m"]

@@ -1021,7 +1021,7 @@ void choose_ls_tuplets(ls lss[MAX_LS_AMOUNT],
                        ls_triplet_chain **ls_triplets,
                        int ls_amount)
 {
-    int i, j, amount = 0;
+    int i, j;
     int sorted_lss[MAX_LS_AMOUNT];
     int exist[MAX_LS_AMOUNT];
     float inv_mat[MAX_LS_AMOUNT][4];
@@ -1047,7 +1047,6 @@ void choose_ls_tuplets(ls lss[MAX_LS_AMOUNT],
                                     inv_mat[i]) != 0)
             {
                 exist[i] = 1;
-                amount++;
             }
         }
     }
@@ -1060,7 +1059,6 @@ void choose_ls_tuplets(ls lss[MAX_LS_AMOUNT],
                                 inv_mat[ls_amount - 1]) != 0)
         {
             exist[ls_amount - 1] = 1;
-            amount++;
         }
     }
 

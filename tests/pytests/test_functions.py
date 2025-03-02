@@ -19,7 +19,7 @@ class TestInitFunctions:
             for f in examples[cat]:
                 assert os.path.isfile(f)
 
-        root = os.path.split(os.path.split(examples['01-intro'][0])[0])[0]
+        root = os.path.split(os.path.split(examples['x01-intro'][0])[0])[0]
 
         examples = getPyoExamples()
         for cat in examples:

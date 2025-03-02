@@ -22,7 +22,7 @@ rm -rf build dist
 /usr/local/bin/python3.13 setup.py sdist
 
 ### Build pyo for python 3.9
-/usr/local/bin/python3.9 setup.py bdist_wheel --use-coreaudio --use-double -p macosx_13_0_arm64
+/usr/local/bin/python3.9 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp39-cp39-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -64,7 +64,7 @@ else
 fi
 
 ### Build pyo for python 3.10
-/usr/local/bin/python3.10 setup.py bdist_wheel --use-coreaudio --use-double -p macosx_13_0_arm64
+/usr/local/bin/python3.10 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp310-cp310-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -106,7 +106,7 @@ else
 fi
 
 ### Build pyo for python 3.11
-/usr/local/bin/python3.11 setup.py bdist_wheel --use-coreaudio --use-double -p macosx_13_0_arm64
+/usr/local/bin/python3.11 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp311-cp311-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -148,7 +148,7 @@ else
 fi
 
 ### Build pyo for python 3.12
-/usr/local/bin/python3.12 setup.py bdist_wheel --use-coreaudio --use-double -p macosx_13_0_arm64
+/usr/local/bin/python3.12 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp312-cp312-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -190,7 +190,7 @@ else
 fi
 
 ### Build pyo for python 3.13
-/usr/local/bin/python3.13 setup.py bdist_wheel --use-coreaudio --use-double -p macosx_13_0_arm64
+/usr/local/bin/python3.13 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp313-cp313-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info

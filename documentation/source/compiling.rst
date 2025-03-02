@@ -17,8 +17,8 @@ To compile pyo with all its features, you will need the following dependencies:
 - `WxPython Phoenix 4.2.0 or higher <https://www.wxpython.org/pages/downloads/>`_
 - `Portaudio <http://www.portaudio.com/>`_
 - `Portmidi <http://portmedia.sourceforge.net/portmidi/>`_
-- `libsndfile <http://www.mega-nerd.com/libsndfile/>`_
-- `liblo <http://liblo.sourceforge.net/>`_
+- `libsndfile <http://www.mega-nerd.com/libsndfile/>`_ (1.0.30+)
+- `liblo <http://liblo.sourceforge.net/>`_ (0.32+)
 - `git <https://git-scm.com/>`_ (if you want the latest sources)
 
 Please note that under MacOS you will need to install the 

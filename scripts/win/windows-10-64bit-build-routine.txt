@@ -38,28 +38,15 @@ https://git-scm.com/download/win
 From vcpkg repo, install portaudio, portmidi, libsndfile, liblo and pthreads
 
 === STEP 8 ===
---- Install Python 3.7+ 64-bit.
+--- Install Python 3.9+ 64-bit.
 --- Add PythonXX and PythonXX\Scripts paths to environment variables.
  
 === STEP 9 ===
---- Copy PythonXX/vcruntime140.dll in PythonXX/libs/
-
-=== STEP 10 ===
---- Patch PythonXX/Lib/distutils/cygwinccompiler.py to add missing msc_ver:
-    
-    elif msc_ver == "1700":
-        return ['msvcr110']
-    elif msc_ver == "1800":
-        return ['msvcr120']
-    elif msc_ver.startswith("19"):
-        return ['vcruntime140']
-
-=== STEP 11 ===
 Update python modules (for all python versions)
 
-py -3.x -m pip install -U pip wheel wxPython 
+py -3.x -m pip install -U pip build numpy pytest wxPython 
 
-=== STEP 12 ===
+=== STEP 10 ===
 --- Download pyo sources from git and build it with (in a standard command prompt):
 
-py -X.X setup.py install --use-double
+py -X.X -m build --config-setting="--build-option=--use-double"

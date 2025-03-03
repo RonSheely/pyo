@@ -57,7 +57,7 @@
         {
             "label": "Compile Windows (single)",
             "type": "shell",
-            "command": "py -3.${input:pyMinVersion} setup.py bdist_wheel & py -3.${input:pyMinVersion} -m pip install --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
+            "command": "py -3.${input:pyMinVersion} -m build & py -3.${input:pyMinVersion} -m pip install --user --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -74,7 +74,7 @@
         {
             "label": "Compile Windows (double)",
             "type": "shell",
-            "command": "py -3.${input:pyMinVersion} setup.py bdist_wheel --use-double & py -3.${input:pyMinVersion} -m pip install --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
+            "command": "py -3.${input:pyMinVersion} -m build --config-setting=\"--build-option=--use-double\" & py -3.${input:pyMinVersion} -m pip install --user --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"

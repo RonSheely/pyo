@@ -23,7 +23,6 @@
 #include <Python.h>
 #include <object.h>
 #include "structmember.h"
-#include <math.h>
 #include "pyomodule.h"
 #include "streammodule.h"
 #include "servermodule.h"
@@ -31,6 +30,8 @@
 #include "sndfile.h"
 #include "wind.h"
 #include "fft.h"
+#include <math.h>
+#include <time.h>
 
 #if !defined(_WIN32) && !defined(_WIN64)
 #include <fcntl.h>

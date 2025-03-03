@@ -126,24 +126,23 @@ else:
 
 # Platform-specific build settings for the pyo extension(s).
 if sys.platform == "win32":
-    def vcpkg_path(root, pkg, triplet):
-        return os.path.join(root, "_".join((pkg, triplet)))
-
     pkgs_3rdpary = {
         #package flags: (include, lib, bin)
-        "libflac": (False, False, True),
+        "FLAC": (False, False, True),
         "liblo": (True, True, True),
-        "libogg": (False, False, True),
-        "libsndfile": (True, True, True),
-        "libvorbis": (False, False, True),
+        "ogg": (False, False, True),
+        "sndfile": (True, True, True),
+        "vorbis": (False, False, True),
         "opus": (False, False, True),
         "portaudio": (True, True, True),
         "portmidi": (True, True, True),
-        "mp3lame": (False, False, True),
+        "libmp3lame": (False, False, True),
         "mpg123": (False, False, True)
     }
-    vcpkg_root = os.environ.get("VCPKG_ROOT", "../vcpkg")
-    vcpkg_packages_root = os.environ.get("VCPKG_PACKAGES_ROOT", os.path.join(vcpkg_root, "packages"))
+    # We can't use relative path fot vcpkg because the build system copies the entire repo
+    # in a temp folder and build from there. VCPKG_ROOT should be defined to build on a user computer.
+    vcpkg_root = os.environ.get("VCPKG_ROOT", r"C:\Users\belan\git\vcpkg")
+    vcpkg_packages_root = os.environ.get("VCPKG_PACKAGES_ROOT", os.path.join(vcpkg_root, "installed"))
     vcpkg_triplet = os.environ.get("VCPKG_DEFAULT_TRIPLET", "x64-windows")
     msys2_mingw_root = os.environ.get("MSYS2_MINGW_ROOT", r"C:\msys64\mingw64")
 
@@ -155,17 +154,8 @@ if sys.platform == "win32":
         print("setup.py is no more configured to compile on 32-bit windows.")
         sys.exit()
     else:
-        for pkg, req in pkgs_3rdpary.items():
-            pkg_dir = vcpkg_path(vcpkg_packages_root, pkg, vcpkg_triplet)
-            if req[0]:
-                include_dirs.append(os.path.join(pkg_dir, "include"))
-            if req[1]:
-                library_dirs.append(os.path.join(pkg_dir, "lib"))
-            if req[2]:
-                binary_dirs.append(os.path.join(pkg_dir, "bin"))
-        
         # newer vcpkg stores unified deps in root/installed/triplet/(include|bin|lib)
-        vcpkg_shared_base = os.path.join(vcpkg_root, "installed", vcpkg_triplet)
+        vcpkg_shared_base = os.path.join(vcpkg_packages_root, vcpkg_triplet)
         include_dirs.append(os.path.join(vcpkg_shared_base, "include"))
         library_dirs.append(os.path.join(vcpkg_shared_base, "lib"))
         binary_dirs.append(os.path.join(vcpkg_shared_base, "bin"))
@@ -177,7 +167,6 @@ if sys.platform == "win32":
 
         libraries.append("sndfile")
 
-        macros.append(("MS_WIN64", None))
 elif sys.platform == "darwin":
     pkgs_3rdpary = {
         #package flags: (include, lib, version)
@@ -193,17 +182,12 @@ elif sys.platform == "darwin":
         "mpg123": (False, True, "1.32.10"),
     }
 
-    ### TODO: MacOS, script argument / conditional statement to automate the default path
-    # Intel: /usr/local/Cellar
-    # arm64: /opt/homebrew/Cellar
     mac_arch = arch = platform.machine()
     if mac_arch == "arm64":
         brew_default_root = "/opt/homebrew/Cellar"
     else:
         brew_default_root = "/usr/local/Cellar"
     brew_packages_root = os.environ.get("BREW_PACKAGES_ROOT", brew_default_root)
-
-    ### TODO: MacOS, Copy lib files and run install_name_tool here...
 
     include_dirs = ["include"]
     library_dirs = []

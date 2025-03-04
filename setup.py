@@ -224,7 +224,7 @@ elif sys.platform == "darwin":
         data_files = (("/pyo", dylibs),)
 
 libraries += ["m"]
-extra_compile_args = ["-Wno-strict-prototypes", "-Wno-strict-aliasing"] + oflag + gflag
+extra_compile_args = ["-Wno-strict-prototypes", "-Wno-strict-aliasing", "-Wno-incompatible-pointer-types"] + oflag + gflag
 
 extensions = []
 for extension_name, extra_macros in zip(extension_names, extra_macros_per_extension):

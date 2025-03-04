@@ -1,3 +1,30 @@
+2025-03-03 belangeo <belangeo@gmail.com>
+
+    * Moved packaging to the build frontend module.
+
+2025-02-26 belangeo <belangeo@gmail.com>
+
+    * Fixed issue #286: Use libsnfile to retrieve aiff markers instead of the deprecated aifc module.
+
+2025-02-22 belangeo <belangeo@gmail.com>
+
+    * Expr: Added a third argument to let statement to be able to set an initial value.
+    * Expr: Fixed the printNodes function.
+    * Expr: Added band-limited oscillators in generators.expr.
+    * Expr: Added strange attractors in attractors.expr.
+
+2024-01-27 belangeo <belangeo@gmail.com>
+
+    * Fixed issue #264: Fixed Linseg and Expseg accuracy.
+
+2024-01-25 belangeo <belangeo@gmail.com>
+
+    * Fixed issue #272: Inconsistency in NoteinRead and NoteinRec file format.
+
+2024-01-13 belangeo <belangeo@gmail.com>
+
+    * Fixed issue #261: Found bug with stdout during pyo.Server initialization.
+
 2023-02-19 belangeo <belangeo@gmail.com>
 
     * Git tag: 1.0.5.

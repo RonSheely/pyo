@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-content_root="../../" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Audio Server — Pyo 1.0.5 documentation</title>
-<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/agogo.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/autoclasstoc.css" rel="stylesheet" type="text/css"/>
-<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-<script src="../../_static/jquery.js"></script>
-<script src="../../_static/underscore.js"></script>
-<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-<script src="../../_static/doctools.js"></script>
-<script src="../../_static/sphinx_highlight.js"></script>
-<link href="../../_static/E-PyoIcon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Audio Server — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
@@ -25,8 +21,8 @@
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
-<div class="headertitle"><a href="../../index.html">Pyo 1.0.5 documentation</a></div>
-<div aria-label="related navigation" class="rel" role="navigation">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
 <a accesskey="P" href="index.html" title="Classes by category">previous</a> |
           <a accesskey="N" href="listener.html" title="Controller listeners">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
@@ -57,25 +53,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
-<div role="search">
+<search role="search">
 <h3 style="margin-top: 1.5em;">Search</h3>
 <form action="../../search.html" class="search" method="get">
 <input name="q" type="text"/>
 <input type="submit" value="Go"/>
 </form>
-</div>
+</search>
 </div>
 <div class="document">
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
 <section id="audio-server">
-<h1>Audio Server<a class="headerlink" href="#audio-server" title="Permalink to this heading">¶</a></h1>
+<h1>Audio Server<a class="headerlink" href="#audio-server" title="Link to this heading">¶</a></h1>
 <section id="server">
-<h2><em>Server</em><a class="headerlink" href="#server" title="Permalink to this heading">¶</a></h2>
+<h2><em>Server</em><a class="headerlink" href="#server" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.Server">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">44100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portaudio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jackname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ichnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winhost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'directsound'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portmidi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">44100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portaudio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jackname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ichnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winhost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'directsound'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portmidi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server" title="Link to this definition">¶</a></dt>
 <dd><p>Main processing audio loop callback handler.</p>
 <p>The Server object handles all communications with Portaudio and
 Portmidi. It keeps track of all audio streams created as well as
@@ -83,7 +79,7 @@ connections between them.</p>
 <p>An instance of the Server must be booted before defining any
 signal processing chain.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>sr: int, optional</dt><dd><p>Sampling rate used by Portaudio and the Server to compute samples.
 Defaults to 44100.</p>
@@ -170,21 +166,17 @@ the user’s responsability to manage the audio/midi configuration of its system
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.Server.amp" title="pyo.Server.amp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp</span></code></p></td>
 <td><p>float.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.Server.startoffset" title="pyo.Server.startoffset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startoffset</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">startoffset</span></code></p></td>
 <td><p>float.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.Server.verbosity" title="pyo.Server.verbosity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verbosity</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">verbosity</span></code></p></td>
 <td><p>int.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.Server.globalseed" title="pyo.Server.globalseed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalseed</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">globalseed</span></code></p></td>
 <td><p>int.</p></td>
 </tr>
 </tbody>
@@ -193,10 +185,6 @@ the user’s responsability to manage the audio/midi configuration of its system
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([sr, nchnls, buffersize, duplex, ...])</p></td>
 <td><p></p></td>
@@ -444,17 +432,17 @@ the user’s responsability to manage the audio/midi configuration of its system
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.reinit">
-<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">44100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portaudio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jackname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ichnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winhost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'directsound'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portmidi'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.reinit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.reinit" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">44100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portaudio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jackname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ichnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winhost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'directsound'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portmidi'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.reinit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.reinit" title="Link to this definition">¶</a></dt>
 <dd><p>Reinit the server’settings. Useful to alternate between real-time and offline server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Same as in the __init__ method.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setCallback">
-<span class="sig-name descname"><span class="pre">setCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setCallback" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setCallback" title="Link to this definition">¶</a></dt>
 <dd><p>Register a custom process callback.</p>
 <p>The function given as argument will be called every computation
 block, just before the computation of the audio object tree.
@@ -463,10 +451,10 @@ numpy calls for example.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.gui">
-<span class="sig-name descname"><span class="pre">gui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.gui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.gui" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">gui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.gui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.gui" title="Link to this definition">¶</a></dt>
 <dd><p>Show the server’s user interface.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>locals: locals namespace {locals(), None}, optional</dt><dd><p>If locals() is given, the interface will show an interpreter extension,
 giving a way to interact with the running script. Defaults to None.</p>
@@ -490,19 +478,19 @@ title, “Pyo Server” is used.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.closeGui">
-<span class="sig-name descname"><span class="pre">closeGui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.closeGui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.closeGui" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">closeGui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.closeGui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.closeGui" title="Link to this definition">¶</a></dt>
 <dd><p>Programmatically close the server’s GUI.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setTimeCallable">
-<span class="sig-name descname"><span class="pre">setTimeCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setTimeCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setTimeCallable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setTimeCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setTimeCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setTimeCallable" title="Link to this definition">¶</a></dt>
 <dd><p>Set a function callback that will receive the current time as argument.</p>
 <dl class="simple">
 <dt>The function will receive four integers in this format:</dt><dd><p>hours, minutes, seconds, milliseconds</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>func: python callable</dt><dd><p>Python function or method to call with current time as argument.</p>
 </dd>
@@ -512,11 +500,11 @@ title, “Pyo Server” is used.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setMeterCallable">
-<span class="sig-name descname"><span class="pre">setMeterCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMeterCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMeterCallable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMeterCallable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMeterCallable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMeterCallable" title="Link to this definition">¶</a></dt>
 <dd><p>Set a function callback that will receive the current rms values as argument.</p>
 <p>The function will receive a list containing the rms value for each audio channel.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>func: python callable</dt><dd><p>Python function or method to call with current rms values as argument.</p>
 </dd>
@@ -526,12 +514,12 @@ title, “Pyo Server” is used.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setMeter">
-<span class="sig-name descname"><span class="pre">setMeter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meter</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMeter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMeter" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMeter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meter</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMeter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMeter" title="Link to this definition">¶</a></dt>
 <dd><p>Registers a meter object to the server.</p>
 <p>The object must have a method named <cite>setRms</cite>. This method will be called
 with the rms values of each audio channel as argument.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>meter: python object</dt><dd><p>Python object with a <cite>setRms</cite> method.</p>
 </dd>
@@ -541,10 +529,10 @@ with the rms values of each audio channel as argument.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setInOutDevice">
-<span class="sig-name descname"><span class="pre">setInOutDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInOutDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInOutDevice" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInOutDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInOutDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInOutDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Set both input and output audio devices. See <cite>pa_list_devices()</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Number of the audio input and output devices.</p>
 </dd>
@@ -554,10 +542,10 @@ with the rms values of each audio channel as argument.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setInputDevice">
-<span class="sig-name descname"><span class="pre">setInputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInputDevice" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInputDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Set the audio input device number. See <cite>pa_list_devices()</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Number of the audio device listed by Portaudio.</p>
 </dd>
@@ -567,10 +555,10 @@ with the rms values of each audio channel as argument.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setOutputDevice">
-<span class="sig-name descname"><span class="pre">setOutputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setOutputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setOutputDevice" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setOutputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setOutputDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Set the audio output device number. See <cite>pa_list_devices()</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Number of the audio device listed by Portaudio.</p>
 </dd>
@@ -580,13 +568,13 @@ with the rms values of each audio channel as argument.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setInputOffset">
-<span class="sig-name descname"><span class="pre">setInputOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInputOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInputOffset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInputOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInputOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInputOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Set the first physical input channel.</p>
 <p>Channel number <cite>x</cite> from the soundcard will be assigned to
 server’s channel one, channel number <cite>x</cite> + 1 to server’s
 channel two and so on.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Channel number.</p>
 </dd>
@@ -596,13 +584,13 @@ channel two and so on.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setOutputOffset">
-<span class="sig-name descname"><span class="pre">setOutputOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setOutputOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setOutputOffset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOutputOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setOutputOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setOutputOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Set the first physical output channel.</p>
 <p>Server’s channel one will be assigned to soundcard’s channel
 number <cite>x</cite>, server’s channel two will be assigned to soundcard’s
 channel number <cite>x</cite> + 1 and so on.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Channel number.</p>
 </dd>
@@ -612,12 +600,12 @@ channel number <cite>x</cite> + 1 and so on.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setInOutOffset">
-<span class="sig-name descname"><span class="pre">setInOutOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInOutOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInOutOffset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInOutOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInOutOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInOutOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Set the first physical input and output channels.</p>
 <p>Set both offsets to the same value. See <cite>setInputOffset</cite> and
 <cite>setOutputOffset</cite> documentation for more details.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Channel number.</p>
 </dd>
@@ -627,12 +615,12 @@ channel number <cite>x</cite> + 1 and so on.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setMidiInputDevice">
-<span class="sig-name descname"><span class="pre">setMidiInputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMidiInputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMidiInputDevice" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMidiInputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMidiInputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMidiInputDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Set the Midi input device number. See <cite>pm_list_devices()</cite>.</p>
 <p>A number greater than the highest portmidi device index
 will opened all available input devices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Number of the Midi device listed by Portmidi.</p>
 </dd>
@@ -642,10 +630,10 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setMidiOutputDevice">
-<span class="sig-name descname"><span class="pre">setMidiOutputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMidiOutputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMidiOutputDevice" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMidiOutputDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setMidiOutputDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setMidiOutputDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Set the Midi output device number. See <cite>pm_list_devices()</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>Number of the Midi device listed by Portmidi.</p>
 </dd>
@@ -655,16 +643,16 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.allowMicrosoftMidiDevices">
-<span class="sig-name descname"><span class="pre">allowMicrosoftMidiDevices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.allowMicrosoftMidiDevices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.allowMicrosoftMidiDevices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">allowMicrosoftMidiDevices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.allowMicrosoftMidiDevices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.allowMicrosoftMidiDevices" title="Link to this definition">¶</a></dt>
 <dd><p>Allows the Microsoft Midi Mapper or GS Wavetable Synth device.</p>
 <p>These are off by default because they crash on some systems.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setSamplingRate">
-<span class="sig-name descname"><span class="pre">setSamplingRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setSamplingRate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setSamplingRate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setSamplingRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setSamplingRate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setSamplingRate" title="Link to this definition">¶</a></dt>
 <dd><p>Set the sampling rate used by the server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>New sampling rate, must be supported by the soundcard.</p>
 </dd>
@@ -674,10 +662,10 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setBufferSize">
-<span class="sig-name descname"><span class="pre">setBufferSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setBufferSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setBufferSize" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setBufferSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setBufferSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setBufferSize" title="Link to this definition">¶</a></dt>
 <dd><p>Set the buffer size used by the server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>New buffer size.</p>
 </dd>
@@ -687,10 +675,10 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setNchnls">
-<span class="sig-name descname"><span class="pre">setNchnls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setNchnls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setNchnls" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setNchnls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setNchnls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setNchnls" title="Link to this definition">¶</a></dt>
 <dd><p>Set the number of output (and input if <cite>ichnls</cite> = None) channels used by the server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>New number of channels.</p>
 </dd>
@@ -700,10 +688,10 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setIchnls">
-<span class="sig-name descname"><span class="pre">setIchnls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setIchnls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setIchnls" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setIchnls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setIchnls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setIchnls" title="Link to this definition">¶</a></dt>
 <dd><p>Set the number of input channels (if different of output channels) used by the server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>New number of input channels.</p>
 </dd>
@@ -713,10 +701,10 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setDuplex">
-<span class="sig-name descname"><span class="pre">setDuplex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setDuplex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setDuplex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setDuplex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setDuplex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setDuplex" title="Link to this definition">¶</a></dt>
 <dd><p>Set the duplex mode used by the server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int {0 or 1}</dt><dd><p>New mode. 0 is output only, 1 is both ways.</p>
 </dd>
@@ -726,10 +714,10 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setVerbosity">
-<span class="sig-name descname"><span class="pre">setVerbosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setVerbosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setVerbosity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setVerbosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setVerbosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setVerbosity" title="Link to this definition">¶</a></dt>
 <dd><p>Set the server’s verbosity.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><dl class="simple">
 <dt>A sum of values to display different levels:</dt><dd><ul class="simple">
@@ -747,12 +735,12 @@ will opened all available input devices.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setGlobalDur">
-<span class="sig-name descname"><span class="pre">setGlobalDur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setGlobalDur"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setGlobalDur" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setGlobalDur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setGlobalDur"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setGlobalDur" title="Link to this definition">¶</a></dt>
 <dd><p>Set the global object duration (time to wait before stopping the object).</p>
 <p>This value, if not 0, will override the <cite>dur</cite> argument of object’s
 play() and out() methods.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float</dt><dd><p>New global duration.</p>
 </dd>
@@ -762,12 +750,12 @@ play() and out() methods.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setGlobalDel">
-<span class="sig-name descname"><span class="pre">setGlobalDel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setGlobalDel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setGlobalDel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setGlobalDel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setGlobalDel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setGlobalDel" title="Link to this definition">¶</a></dt>
 <dd><p>Set the global object delay time (time to wait before activating the object).</p>
 <p>This value, if not 0, will override the <cite>del</cite> argument of object’s
 play() and out() methods.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float</dt><dd><p>New global delay time.</p>
 </dd>
@@ -777,10 +765,10 @@ play() and out() methods.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackAuto">
-<span class="sig-name descname"><span class="pre">setJackAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAuto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAuto" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAuto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAuto" title="Link to this definition">¶</a></dt>
 <dd><p>Tells the server to auto-connect (or not) Jack ports to System ports.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>xin: boolean</dt><dd><p>Input Auto-connection switch. True is enabled (default) and False is disabled.</p>
 </dd>
@@ -792,10 +780,10 @@ play() and out() methods.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackAutoConnectInputPorts">
-<span class="sig-name descname"><span class="pre">setJackAutoConnectInputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectInputPorts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectInputPorts" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackAutoConnectInputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectInputPorts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectInputPorts" title="Link to this definition">¶</a></dt>
 <dd><p>Tells the server to auto-connect Jack input ports to pre-defined Jack ports.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>ports: list of list of strings</dt><dd><p>Name of the Jack ports to auto-connect to pyo input channels.
 There must be exactly one list of port(s) for each pyo input channel.</p>
@@ -807,10 +795,10 @@ There must be exactly one list of port(s) for each pyo input channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackAutoConnectOutputPorts">
-<span class="sig-name descname"><span class="pre">setJackAutoConnectOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectOutputPorts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectOutputPorts" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackAutoConnectOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectOutputPorts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectOutputPorts" title="Link to this definition">¶</a></dt>
 <dd><p>Tells the server to auto-connect Jack output ports to pre-defined Jack ports.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>ports: list of list of strings</dt><dd><p>Name of the Jack ports to auto-connect to pyo output channels.
 There must be exactly one list of port(s) for each pyo output channel.</p>
@@ -822,11 +810,11 @@ There must be exactly one list of port(s) for each pyo output channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackInputPortNames">
-<span class="sig-name descname"><span class="pre">setJackInputPortNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackInputPortNames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackInputPortNames" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackInputPortNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackInputPortNames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackInputPortNames" title="Link to this definition">¶</a></dt>
 <dd><p>Change the short name of pyo’s input ports for the jack server.</p>
 <p>This method must be called after the server is booted.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>name: string or list of strings</dt><dd><p>New name of input ports for the jack server. If <cite>name</cite> is a string,
 ‘_xxx’ (where xxx is the channel number) will be added to it for
@@ -839,11 +827,11 @@ used as is and there must be one for each input channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackOutputPortNames">
-<span class="sig-name descname"><span class="pre">setJackOutputPortNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackOutputPortNames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackOutputPortNames" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackOutputPortNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackOutputPortNames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackOutputPortNames" title="Link to this definition">¶</a></dt>
 <dd><p>Change the short name of pyo’s output ports for the jack server.</p>
 <p>This method must be called after the server is booted.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>name: string or list of strings</dt><dd><p>New name of output ports for the jack server. If <cite>name</cite> is a string,
 ‘_xxx’ (where xxx is the channel number) will be added to it for
@@ -856,10 +844,10 @@ used as is and there must be one for each output channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackAutoConnectMidiInputPort">
-<span class="sig-name descname"><span class="pre">setJackAutoConnectMidiInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectMidiInputPort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectMidiInputPort" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackAutoConnectMidiInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectMidiInputPort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectMidiInputPort" title="Link to this definition">¶</a></dt>
 <dd><p>Tells the server to auto-connect Jack midi input port to pre-defined Jack ports.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>ports: string or list of strings</dt><dd><p>Name of the Jack ports to auto-connect to pyo midi input channel.</p>
 <p>[‘ports’, ‘to’, ‘midi’, ‘input’, …]</p>
@@ -870,10 +858,10 @@ used as is and there must be one for each output channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackAutoConnectMidiOutputPort">
-<span class="sig-name descname"><span class="pre">setJackAutoConnectMidiOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectMidiOutputPort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectMidiOutputPort" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackAutoConnectMidiOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ports</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackAutoConnectMidiOutputPort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackAutoConnectMidiOutputPort" title="Link to this definition">¶</a></dt>
 <dd><p>Tells the server to auto-connect Jack midi output port to pre-defined Jack ports.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>ports: string or list of strings</dt><dd><p>Name of the Jack ports to auto-connect to pyo midi output channel.</p>
 <p>[‘ports’, ‘to’, ‘midi’, ‘output’, …]</p>
@@ -884,11 +872,11 @@ used as is and there must be one for each output channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackMidiInputPortName">
-<span class="sig-name descname"><span class="pre">setJackMidiInputPortName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackMidiInputPortName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackMidiInputPortName" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackMidiInputPortName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackMidiInputPortName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackMidiInputPortName" title="Link to this definition">¶</a></dt>
 <dd><p>Change the short name of pyo’s midi input port for the jack server.</p>
 <p>This method must be called after the server is booted.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>name: string</dt><dd><p>New name of midi input port for the jack server.</p>
 </dd>
@@ -898,11 +886,11 @@ used as is and there must be one for each output channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setJackMidiOutputPortName">
-<span class="sig-name descname"><span class="pre">setJackMidiOutputPortName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackMidiOutputPortName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackMidiOutputPortName" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setJackMidiOutputPortName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setJackMidiOutputPortName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setJackMidiOutputPortName" title="Link to this definition">¶</a></dt>
 <dd><p>Change the short name of pyo’s midi output port for the jack server.</p>
 <p>This method must be called after the server is booted.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>name: string</dt><dd><p>New name of midi output port for the jack server.</p>
 </dd>
@@ -912,11 +900,11 @@ used as is and there must be one for each output channel.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setIsJackTransportSlave">
-<span class="sig-name descname"><span class="pre">setIsJackTransportSlave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setIsJackTransportSlave"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setIsJackTransportSlave" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setIsJackTransportSlave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setIsJackTransportSlave"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setIsJackTransportSlave" title="Link to this definition">¶</a></dt>
 <dd><p>Set if pyo’s server is slave to jack transport or not.</p>
 <p>This method must be called before booting the server.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: boolean</dt><dd><p>If True, the server’s start and stop command will be slave to
 Jack transport. If False (the default) jack transport is ignored.</p>
@@ -927,10 +915,10 @@ Jack transport. If False (the default) jack transport is ignored.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setGlobalSeed">
-<span class="sig-name descname"><span class="pre">setGlobalSeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setGlobalSeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setGlobalSeed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setGlobalSeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setGlobalSeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setGlobalSeed" title="Link to this definition">¶</a></dt>
 <dd><p>Set the server’s global seed used by random objects.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>x: int</dt><dd><p>A positive integer that will be used as the seed by random objects.</p>
 <p>If zero, randoms will be seeded with the system clock current value.</p>
@@ -941,11 +929,11 @@ Jack transport. If False (the default) jack transport is ignored.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setStartOffset">
-<span class="sig-name descname"><span class="pre">setStartOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setStartOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setStartOffset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setStartOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setStartOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setStartOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Set the server’s starting time offset. First <cite>x</cite> seconds will be rendered
 offline as fast as possible.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float</dt><dd><p>Starting time of the real-time processing.</p>
 </dd>
@@ -955,10 +943,10 @@ offline as fast as possible.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setAmp">
-<span class="sig-name descname"><span class="pre">setAmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setAmp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setAmp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setAmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setAmp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setAmp" title="Link to this definition">¶</a></dt>
 <dd><p>Set the overall amplitude.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float</dt><dd><p>New amplitude.</p>
 </dd>
@@ -968,7 +956,7 @@ offline as fast as possible.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.beginResamplingBlock">
-<span class="sig-name descname"><span class="pre">beginResamplingBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.beginResamplingBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.beginResamplingBlock" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">beginResamplingBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.beginResamplingBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.beginResamplingBlock" title="Link to this definition">¶</a></dt>
 <dd><p>Starts a resampling block.</p>
 <p>This factor must be a power-of-two. A positive value means
 upsampling and a negative value means downsampling. After this
@@ -980,7 +968,7 @@ block using the resampling factor.</p>
 perform up or down resampling of audio signal created before the
 block.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int, power-of-two</dt><dd><p>Resampling factor. Must be a power-of-two. A positive
 value starts an upsampling block while a negative value
@@ -992,7 +980,7 @@ starts a downsampling block.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.endResamplingBlock">
-<span class="sig-name descname"><span class="pre">endResamplingBlock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.endResamplingBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.endResamplingBlock" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">endResamplingBlock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.endResamplingBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.endResamplingBlock" title="Link to this definition">¶</a></dt>
 <dd><p>Ends a resampling block.</p>
 <p>This call ends a code block using a sample rate different from
 the current sampling rate of the system.</p>
@@ -1002,19 +990,19 @@ block.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.shutdown">
-<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.shutdown" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.shutdown" title="Link to this definition">¶</a></dt>
 <dd><p>Shut down and clear the server. This method will erase all objects
 from the callback loop. This method need to be called before changing
 server’s parameters like <cite>samplingrate</cite>, <cite>buffersize</cite>, <cite>nchnls</cite>, …</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.boot">
-<span class="sig-name descname"><span class="pre">boot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newBuffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.boot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.boot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">boot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newBuffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.boot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.boot" title="Link to this definition">¶</a></dt>
 <dd><p>Boot the server. Must be called before defining any signal processing
 chain. Server’s parameters like <cite>samplingrate</cite>, <cite>buffersize</cite> or
 <cite>nchnls</cite> will be effective after a call to this method.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>newBuffer: bool</dt><dd><p>Specify if the buffers need to be allocated or not. Useful to limit
 the allocation of new buffers when the buffer size hasn’t change.</p>
@@ -1029,20 +1017,20 @@ C/C++ application with the embedded server.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.start" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.start" title="Link to this definition">¶</a></dt>
 <dd><p>Start the audio callback loop and begin processing.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.stop" title="Link to this definition">¶</a></dt>
 <dd><p>Stop the audio callback loop.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.recordOptions">
-<span class="sig-name descname"><span class="pre">recordOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampletype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recordOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recordOptions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">recordOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampletype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recordOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recordOptions" title="Link to this definition">¶</a></dt>
 <dd><p>Sets options for soundfile created by offline rendering or global recording.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>dur: float</dt><dd><p>Duration, in seconds, of the recorded file. Only used by
 offline rendering. Must be positive. Defaults to -1.</p>
@@ -1091,14 +1079,14 @@ FLAC and OGG compressed formats. Defaults to 0.4.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.recstart">
-<span class="sig-name descname"><span class="pre">recstart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recstart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recstart" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">recstart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recstart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recstart" title="Link to this definition">¶</a></dt>
 <dd><p>Begins a default recording of the sound that is sent to the
 soundcard. This will create a file called <cite>pyo_rec.wav</cite> in
 the user’s home directory if no path is supplied or defined
 with recordOptions method. Uses file format and sample type
 defined with recordOptions method.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>filename: string, optional</dt><dd><p>Name of the file to be created. Defaults to None.</p>
 </dd>
@@ -1108,17 +1096,17 @@ defined with recordOptions method.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.recstop">
-<span class="sig-name descname"><span class="pre">recstop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recstop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recstop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">recstop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recstop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recstop" title="Link to this definition">¶</a></dt>
 <dd><p>Stop the previously started recording.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.noteout">
-<span class="sig-name descname"><span class="pre">noteout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.noteout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.noteout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">noteout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.noteout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.noteout" title="Link to this definition">¶</a></dt>
 <dd><p>Send a MIDI note message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>pitch: int</dt><dd><p>Midi pitch, between 0 and 127.</p>
 </dd>
@@ -1139,12 +1127,12 @@ means to play the note now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.afterout">
-<span class="sig-name descname"><span class="pre">afterout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.afterout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.afterout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">afterout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.afterout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.afterout" title="Link to this definition">¶</a></dt>
 <dd><p>Send an aftertouch message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>pitch: int</dt><dd><p>Midi key pressed down, between 0 and 127.</p>
 </dd>
@@ -1164,12 +1152,12 @@ means to play the note now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.ctlout">
-<span class="sig-name descname"><span class="pre">ctlout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctlnum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.ctlout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.ctlout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ctlout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctlnum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.ctlout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.ctlout" title="Link to this definition">¶</a></dt>
 <dd><p>Send a control change message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>ctlnum: int</dt><dd><p>Controller number, between 0 and 127.</p>
 </dd>
@@ -1189,12 +1177,12 @@ means to play the note now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.programout">
-<span class="sig-name descname"><span class="pre">programout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.programout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.programout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">programout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.programout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.programout" title="Link to this definition">¶</a></dt>
 <dd><p>Send a program change message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>value: int</dt><dd><p>New program number, between 0 and 127.</p>
 </dd>
@@ -1212,12 +1200,12 @@ means to play the note now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.pressout">
-<span class="sig-name descname"><span class="pre">pressout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.pressout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.pressout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pressout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.pressout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.pressout" title="Link to this definition">¶</a></dt>
 <dd><p>Send a channel pressure message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>value: int</dt><dd><p>Single greatest pressure value, between 0 and 127.</p>
 </dd>
@@ -1235,12 +1223,12 @@ means to play the note now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.bendout">
-<span class="sig-name descname"><span class="pre">bendout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.bendout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.bendout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bendout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.bendout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.bendout" title="Link to this definition">¶</a></dt>
 <dd><p>Send a pitch bend message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>value: int</dt><dd><p>14 bits pitch bend value. 8192 is where there is no
 bending, 0 is full down and 16383 is full up bending.</p>
@@ -1259,13 +1247,13 @@ means to play the note now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.sysexout">
-<span class="sig-name descname"><span class="pre">sysexout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.sysexout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.sysexout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sysexout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.sysexout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.sysexout" title="Link to this definition">¶</a></dt>
 <dd><p>Send a system exclusive message to the selected midi output device.</p>
 <p>Arguments can be list of values/messages to generate multiple events
 in one call. Implemented only for portmidi, this method is not available
 when using jack as the midi backend.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>msg: str</dt><dd><p>A valid system exclusive message as a string. The first byte
 must be 0xf0 and the last one must be 0xf7.</p>
@@ -1280,7 +1268,7 @@ to play the message now. Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.makenote">
-<span class="sig-name descname"><span class="pre">makenote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.makenote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.makenote" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">makenote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.makenote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.makenote" title="Link to this definition">¶</a></dt>
 <dd><p>Send MIDI noteon/noteoff messages to the selected midi output device.</p>
 <p>This method will send a noteon message to the selected midi output
 device and after a delay of <cite>duration</cite> milliseconds, it will send
@@ -1288,7 +1276,7 @@ the corresponding noteoff message.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>pitch: int</dt><dd><p>Midi pitch, between 0 and 127.</p>
 </dd>
@@ -1308,7 +1296,7 @@ Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.addMidiEvent">
-<span class="sig-name descname"><span class="pre">addMidiEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.addMidiEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.addMidiEvent" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">addMidiEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.addMidiEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.addMidiEvent" title="Link to this definition">¶</a></dt>
 <dd><p>Add a MIDI event in the server processing loop.</p>
 <p>This method can be used to  programmatically simulate incoming
 MIDI events. In an embedded framework (ie. pyo inside puredata,
@@ -1321,7 +1309,7 @@ called at the beginning of the block. If you use audio objects
 to generate MIDI events, they should be created before the rest
 of the processing chain.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>status: int</dt><dd><p>The status byte, indicating the type of event and the
 MIDI channel. Typical event type are:</p>
@@ -1346,114 +1334,114 @@ for a control change). Defaults to 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getSamplingRate">
-<span class="sig-name descname"><span class="pre">getSamplingRate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getSamplingRate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getSamplingRate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getSamplingRate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getSamplingRate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getSamplingRate" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current sampling rate.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getNchnls">
-<span class="sig-name descname"><span class="pre">getNchnls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getNchnls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getNchnls" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getNchnls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getNchnls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getNchnls" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current number of channels.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getBufferSize">
-<span class="sig-name descname"><span class="pre">getBufferSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getBufferSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getBufferSize" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getBufferSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getBufferSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getBufferSize" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current buffer size.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getGlobalDur">
-<span class="sig-name descname"><span class="pre">getGlobalDur</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getGlobalDur"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getGlobalDur" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getGlobalDur</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getGlobalDur"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getGlobalDur" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current global duration.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getGlobalDel">
-<span class="sig-name descname"><span class="pre">getGlobalDel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getGlobalDel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getGlobalDel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getGlobalDel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getGlobalDel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getGlobalDel" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current global delay time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getGlobalSeed">
-<span class="sig-name descname"><span class="pre">getGlobalSeed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getGlobalSeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getGlobalSeed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getGlobalSeed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getGlobalSeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getGlobalSeed" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current global seed.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getIsStarted">
-<span class="sig-name descname"><span class="pre">getIsStarted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getIsStarted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getIsStarted" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getIsStarted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getIsStarted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getIsStarted" title="Link to this definition">¶</a></dt>
 <dd><p>Returns 1 if the server is started, otherwise returns 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getIsBooted">
-<span class="sig-name descname"><span class="pre">getIsBooted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getIsBooted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getIsBooted" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getIsBooted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getIsBooted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getIsBooted" title="Link to this definition">¶</a></dt>
 <dd><p>Returns 1 if the server is booted, otherwise returns 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.deactivateMidi">
-<span class="sig-name descname"><span class="pre">deactivateMidi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.deactivateMidi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.deactivateMidi" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">deactivateMidi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.deactivateMidi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.deactivateMidi" title="Link to this definition">¶</a></dt>
 <dd><p>Deactivate Midi callback. Must be called before the boot() method.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getMidiActive">
-<span class="sig-name descname"><span class="pre">getMidiActive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getMidiActive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getMidiActive" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getMidiActive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getMidiActive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getMidiActive" title="Link to this definition">¶</a></dt>
 <dd><p>Returns 1 if Midi callback is active, otherwise returns 0.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getStreams">
-<span class="sig-name descname"><span class="pre">getStreams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getStreams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getStreams" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getStreams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getStreams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getStreams" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the list of Stream objects currently in the Server memory.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getNumberOfStreams">
-<span class="sig-name descname"><span class="pre">getNumberOfStreams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getNumberOfStreams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getNumberOfStreams" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getNumberOfStreams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getNumberOfStreams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getNumberOfStreams" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the number of streams currently in the Server memory.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setServer">
-<span class="sig-name descname"><span class="pre">setServer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setServer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setServer" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setServer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setServer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setServer" title="Link to this definition">¶</a></dt>
 <dd><p>Sets this server as the one to use for new objects when using
 the embedded device.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getInputAddr">
-<span class="sig-name descname"><span class="pre">getInputAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getInputAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getInputAddr" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getInputAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getInputAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getInputAddr" title="Link to this definition">¶</a></dt>
 <dd><p>Return the address of the input buffer.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getOutputAddr">
-<span class="sig-name descname"><span class="pre">getOutputAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getOutputAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getOutputAddr" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getOutputAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getOutputAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getOutputAddr" title="Link to this definition">¶</a></dt>
 <dd><p>Return the address of the output buffer.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getServerID">
-<span class="sig-name descname"><span class="pre">getServerID</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getServerID"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getServerID" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getServerID</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getServerID"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getServerID" title="Link to this definition">¶</a></dt>
 <dd><p>Return the server ID.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getServerAddr">
-<span class="sig-name descname"><span class="pre">getServerAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getServerAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getServerAddr" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getServerAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getServerAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getServerAddr" title="Link to this definition">¶</a></dt>
 <dd><p>Return the address of the server.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getEmbedICallbackAddr">
-<span class="sig-name descname"><span class="pre">getEmbedICallbackAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getEmbedICallbackAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getEmbedICallbackAddr" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getEmbedICallbackAddr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getEmbedICallbackAddr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getEmbedICallbackAddr" title="Link to this definition">¶</a></dt>
 <dd><p>Return the address of the interleaved embedded
 callback function.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getCurrentTime">
-<span class="sig-name descname"><span class="pre">getCurrentTime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getCurrentTime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getCurrentTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getCurrentTime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getCurrentTime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getCurrentTime" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current time as a formatted string.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getCurrentTimeInSamples">
-<span class="sig-name descname"><span class="pre">getCurrentTimeInSamples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getCurrentTimeInSamples"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getCurrentTimeInSamples" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getCurrentTimeInSamples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getCurrentTimeInSamples"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getCurrentTimeInSamples" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current time in number of elapsed samples since the server was started.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.getCurrentAmp">
-<span class="sig-name descname"><span class="pre">getCurrentAmp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getCurrentAmp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getCurrentAmp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getCurrentAmp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.getCurrentAmp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.getCurrentAmp" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current amplitudes as a tuple of <cite>nchnls</cite> length.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.setAutoStartChildren">
-<span class="sig-name descname"><span class="pre">setAutoStartChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setAutoStartChildren"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setAutoStartChildren" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setAutoStartChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setAutoStartChildren"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setAutoStartChildren" title="Link to this definition">¶</a></dt>
 <dd><p>Giving True to this method tells pyo that a call to the <cite>play</cite>,
 <cite>out</cite> or <cite>stop</cite> method of audio objects should propagate to the
 other audio objects given as arguments. This can be used to
@@ -1520,29 +1508,29 @@ arithmetic. Code like this (for which you want to call out.stop()):</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.process">
-<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.process" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.process" title="Link to this definition">¶</a></dt>
 <dd><p>Tell the server to compute a single buffer size of audio samples.</p>
 <p>The audio backend of the server must be set to <cite>manual</cite> to use this method.
 It’s probably only useful in the context of internal testing.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.Server.amp">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">amp</span></span><a class="headerlink" href="#pyo.Server.amp" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">amp</span></span><a class="headerlink" href="#pyo.Server.amp" title="Link to this definition">¶</a></dt>
 <dd><p>float. Overall amplitude.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.Server.startoffset">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">startoffset</span></span><a class="headerlink" href="#pyo.Server.startoffset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">startoffset</span></span><a class="headerlink" href="#pyo.Server.startoffset" title="Link to this definition">¶</a></dt>
 <dd><p>float. Starting time of the real-time processing.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.Server.verbosity">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbosity</span></span><a class="headerlink" href="#pyo.Server.verbosity" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbosity</span></span><a class="headerlink" href="#pyo.Server.verbosity" title="Link to this definition">¶</a></dt>
 <dd><p>int. Server verbosity.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.Server.globalseed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">globalseed</span></span><a class="headerlink" href="#pyo.Server.globalseed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">globalseed</span></span><a class="headerlink" href="#pyo.Server.globalseed" title="Link to this definition">¶</a></dt>
 <dd><p>int. Server global seed.</p>
 </dd></dl>
 </dd></dl>
@@ -1559,7 +1547,7 @@ It’s probably only useful in the context of internal testing.</p>
 <div class="footer-wrapper">
 <div class="footer">
 <div class="left">
-<div aria-label="related navigaton" role="navigation">
+<div aria-label="Related" role="navigation">
 <a href="index.html" title="Classes by category">previous</a> |
             <a href="listener.html" title="Controller listeners">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
@@ -1569,8 +1557,8 @@ It’s probably only useful in the context of internal testing.</p>
 </div>
 <div class="right">
 <div class="footer" role="contentinfo">
-        © Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
 </div>
 <div class="clearer"></div>

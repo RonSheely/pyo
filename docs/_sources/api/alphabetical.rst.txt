@@ -251,8 +251,8 @@ Alphabetical class reference
 - :py:class:`Select` :     Sends trigger on matching integer values.
 - :py:class:`Selector` :     Audio selector.
 - :py:class:`Seq` :     Generates a rhythmic sequence of trigger signals.
-- :py:class:`SfMarkerLooper` :     AIFF with markers soundfile looper.
-- :py:class:`SfMarkerShuffler` :     AIFF with markers soundfile shuffler.
+- :py:class:`SfMarkerLooper` :     Soundfile player with markers looper.
+- :py:class:`SfMarkerShuffler` :     Soundfile player with markers shuffler.
 - :py:class:`SfPlayer` :     Soundfile player.
 - :py:class:`SharedTable` :     Create an inter-process shared memory table.
 - :py:class:`SigTo` :     Convert numeric value to PyoObject signal with portamento.

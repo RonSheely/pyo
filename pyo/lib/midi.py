@@ -659,21 +659,21 @@ class Notein(PyoObject):
         :Args:
 
             x: int
-                0 := no hold (default)
-                1 := hold mode, new noteon event will be activate
-                     until the next noteon event with the same pitch,
-                     velocity sensitive
-                2 := onoff mode, new noteon event will be activate
-                     until the next noteon event with the same pitch,
-                     noteon velocity is set to 127
-                3 := single key hold mode, new noteon event will be activate
-                     until any next noteon event, if next noteon event has
-                     the same pitch a noteoff event will be sent,
-                     velocity sensitive
-                4 := single key onoff mode, new noteon event will be activate
-                     until any next noteon event, if next noteon event has
-                     the same pitch a noteoff event will be sent,
-                     noteon velocity is set to 127
+                0. no hold (default)
+                1. hold mode, new noteon event will be activate
+                   until the next noteon event with the same pitch,
+                   velocity sensitive
+                2. onoff mode, new noteon event will be activate
+                   until the next noteon event with the same pitch,
+                   noteon velocity is set to 127
+                3. single key hold mode, new noteon event will be activate
+                   until any next noteon event, if next noteon event has
+                   the same pitch a noteoff event will be sent,
+                   velocity sensitive
+                4. single key onoff mode, new noteon event will be activate
+                   until any next noteon event, if next noteon event has
+                   the same pitch a noteoff event will be sent,
+                   noteon velocity is set to 127
 
         """
         pyoArgsAssert(self, "I", x)

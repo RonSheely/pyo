@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>07-hilbert-transform.py - Barberpole-like phasing effect. — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
+<link href="../../about.html" rel="author" title="About these documents"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="../x07-effects/index.html" rel="next" title="x07-effects"/>
+<link href="06-vocoder.html" rel="prev" title="06-vocoder.py - Analysis/resynthesis vocoder effect."/>
+</head><body>
+<div class="header-wrapper" role="banner">
+<div class="header">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
+<a accesskey="P" href="06-vocoder.html" title="06-vocoder.py - Analysis/resynthesis vocoder effect.">previous</a> |
+          <a accesskey="N" href="../x07-effects/index.html" title="x07-effects">next</a> |
+          <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="content">
+<div class="sidebar">
+<h3>Table of Contents</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About pyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download.html">Installing pyo with pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compiling.html">Compiling pyo from sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../structure.html">Structure of the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../winaudioinspect.html">Configuring the audio output (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../perftips.html">Improve performance of pyo programs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../x01-intro/index.html">First steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x02-controls/index.html">Parameter control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x03-generators/index.html">Synthesis generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x04-soundfiles/index.html">Playing with soundfiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x05-envelopes/index.html">Amplitude envelopes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x07-effects/index.html">Creating sound effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x08-dynamics/index.html">Dynamic range of audio signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x09-callbacks/index.html">Calling python functions from audio objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x10-tables/index.html">Using tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x16-midi/index.html">How to use MIDI with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x17-osc/index.html">How to use OSC with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x19-multirate/index.html">Multirate audio processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x20-multicore/index.html">Multicore audio programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x21-utilities/index.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x22-events/index.html">Events framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x23-expression/index.html">Evaluating prefix expression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
+</ul>
+<search role="search">
+<h3 style="margin-top: 1.5em;">Search</h3>
+<form action="../../search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</search>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="hilbert-transform-py-barberpole-like-phasing-effect">
+<h1>07-hilbert-transform.py - Barberpole-like phasing effect.<a class="headerlink" href="#hilbert-transform-py-barberpole-like-phasing-effect" title="Link to this heading">¶</a></h1>
+<p>This example uses two frequency shifters (based on complex
+modulation) linearly shifting the frequency content of a sound.</p>
+<p>Frequency shifting is similar to ring modulation, except the
+upper and lower sidebands are separated into individual outputs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ComplexMod</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Complex modulation used to shift the frequency</span>
+<span class="sd">    spectrum of the input sound.</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hilb</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+        <span class="c1"># Quadrature oscillator (sine, cosine).</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quad</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">])</span>
+        <span class="c1"># real * cosine.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mod1</span> <span class="o">=</span> <span class="n">hilb</span><span class="p">[</span><span class="s2">"real"</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># imaginary * sine.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mod2</span> <span class="o">=</span> <span class="n">hilb</span><span class="p">[</span><span class="s2">"imag"</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># Up shift corresponds to the sum frequencies.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_up</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mod1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mod2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.7</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chnl</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_up</span><span class="o">.</span><span class="n">out</span><span class="p">(</span><span class="n">chnl</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+
+<span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
+
+<span class="c1"># Large spectrum source.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.PinkNoise" title="pyo.lib.generators.PinkNoise"><span class="n">src</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.PinkNoise" title="pyo.lib.generators.PinkNoise"><span class="n">PinkNoise</span></a><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="c1"># Apply the Hilbert transform.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/filters.html#pyo.Hilbert" title="pyo.lib.filters.Hilbert"><span class="n">hilb</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/filters.html#pyo.Hilbert" title="pyo.lib.filters.Hilbert"><span class="n">Hilbert</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.PinkNoise" title="pyo.lib.generators.PinkNoise"><span class="n">src</span></a><span class="p">)</span>
+
+<span class="c1"># LFOs controlling the amount of frequency shifting.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lf1</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lf2</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># Stereo Single-Sideband Modulation.</span>
+<span class="n">wetl</span> <span class="o">=</span> <span class="n">ComplexMod</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/filters.html#pyo.Hilbert" title="pyo.lib.filters.Hilbert"><span class="n">hilb</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lf1</span></a><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
+<span class="n">wetr</span> <span class="o">=</span> <span class="n">ComplexMod</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/filters.html#pyo.Hilbert" title="pyo.lib.filters.Hilbert"><span class="n">hilb</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lf2</span></a><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Mixed with the dry sound.</span>
+<span class="n">dry</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">mix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div aria-label="Related" role="navigation">
+<a href="06-vocoder.html" title="06-vocoder.py - Analysis/resynthesis vocoder effect.">previous</a> |
+            <a href="../x07-effects/index.html" title="x07-effects">next</a> |
+            <a href="../../genindex.html" title="General Index">index</a>
+</div>
+<div aria-label="source link" role="note">
+</div>
+</div>
+<div class="right">
+<div class="footer" role="contentinfo">
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+</body>
+</html>

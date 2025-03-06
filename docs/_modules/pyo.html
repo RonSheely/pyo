@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyo &#8212; Pyo 1.0.5 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/agogo.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/E-PyoIcon.ico"/>
+    <title>pyo &#8212; Pyo 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/agogo.css?v=227e5aac" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css?v=08871587" />
+    <script src="../_static/documentation_options.js?v=e2a723ec"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/E-PyoIcon.ico"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -24,8 +20,8 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../index.html">Pyo 1.0.5 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
+          href="../index.html">Pyo 1.0.6 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="Related">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a>
         </div>
@@ -52,13 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
 
-          <div role="search">
+          <search role="search">
             <h3 style="margin-top: 1.5em;">Search</h3>
             <form class="search" action="../search.html" method="get">
                 <input type="text" name="q" />
                 <input type="submit" value="Go" />
             </form>
-          </div>
+          </search>
 
         </div>
         <div class="document">
@@ -87,70 +83,70 @@
 <span class="sd">You should have received a copy of the GNU Lesser General Public</span>
 <span class="sd">License along with pyo.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;linux&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;.libs&quot;</span><span class="p">)):</span>
-    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_linux_wheel_fix_symlinks</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">_linux_wheel_fix_symlinks</span>
 
-<span class="kn">from</span> <span class="nn">.lib._maps</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">analysis</span> <span class="k">as</span> <span class="n">analysis</span>
-<span class="kn">from</span> <span class="nn">.lib.analysis</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">controls</span> <span class="k">as</span> <span class="n">controls</span>
-<span class="kn">from</span> <span class="nn">.lib.controls</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">dynamics</span> <span class="k">as</span> <span class="n">dynamics</span>
-<span class="kn">from</span> <span class="nn">.lib.dynamics</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">effects</span> <span class="k">as</span> <span class="n">effects</span>
-<span class="kn">from</span> <span class="nn">.lib.effects</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">filters</span> <span class="k">as</span> <span class="n">filters</span>
-<span class="kn">from</span> <span class="nn">.lib.filters</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">generators</span> <span class="k">as</span> <span class="n">generators</span>
-<span class="kn">from</span> <span class="nn">.lib.generators</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">arithmetic</span> <span class="k">as</span> <span class="n">arithmetic</span>
-<span class="kn">from</span> <span class="nn">.lib.arithmetic</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">midi</span> <span class="k">as</span> <span class="n">midi</span>
-<span class="kn">from</span> <span class="nn">.lib.midi</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">opensndctrl</span> <span class="k">as</span> <span class="n">opensndctrl</span>
-<span class="kn">from</span> <span class="nn">.lib.opensndctrl</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">pan</span> <span class="k">as</span> <span class="n">pan</span>
-<span class="kn">from</span> <span class="nn">.lib.pan</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">pattern</span> <span class="k">as</span> <span class="n">pattern</span>
-<span class="kn">from</span> <span class="nn">.lib.pattern</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">randoms</span> <span class="k">as</span> <span class="n">randoms</span>
-<span class="kn">from</span> <span class="nn">.lib.randoms</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib.server</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib.listener</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">players</span> <span class="k">as</span> <span class="n">players</span>
-<span class="kn">from</span> <span class="nn">.lib.players</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">tableprocess</span> <span class="k">as</span> <span class="n">tableprocess</span>
-<span class="kn">from</span> <span class="nn">.lib.tableprocess</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">matrixprocess</span> <span class="k">as</span> <span class="n">matrixprocess</span>
-<span class="kn">from</span> <span class="nn">.lib.matrixprocess</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib.tables</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib.matrix</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">triggers</span> <span class="k">as</span> <span class="n">triggers</span>
-<span class="kn">from</span> <span class="nn">.lib.triggers</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">utils</span> <span class="k">as</span> <span class="n">utils</span>
-<span class="kn">from</span> <span class="nn">.lib.utils</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">expression</span> <span class="k">as</span> <span class="n">expression</span>
-<span class="kn">from</span> <span class="nn">.lib.expression</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">fourier</span> <span class="k">as</span> <span class="n">fourier</span>
-<span class="kn">from</span> <span class="nn">.lib.fourier</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">phasevoc</span> <span class="k">as</span> <span class="n">phasevoc</span>
-<span class="kn">from</span> <span class="nn">.lib.phasevoc</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib._core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib.wxgui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">wxgui</span> <span class="k">as</span> <span class="n">wxgui</span>
-<span class="kn">from</span> <span class="nn">.lib.hrtf</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">hrtf</span> <span class="k">as</span> <span class="n">hrtf</span>
-<span class="kn">from</span> <span class="nn">.lib.events</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">events</span> <span class="k">as</span> <span class="n">events</span>
-<span class="kn">from</span> <span class="nn">.lib.mmlmusic</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">mmlmusic</span> <span class="k">as</span> <span class="n">mmlmusic</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib._maps</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">analysis</span> <span class="k">as</span> <span class="n">analysis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">controls</span> <span class="k">as</span> <span class="n">controls</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.controls</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">dynamics</span> <span class="k">as</span> <span class="n">dynamics</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.dynamics</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">effects</span> <span class="k">as</span> <span class="n">effects</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.effects</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">filters</span> <span class="k">as</span> <span class="n">filters</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.filters</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">generators</span> <span class="k">as</span> <span class="n">generators</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.generators</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">arithmetic</span> <span class="k">as</span> <span class="n">arithmetic</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.arithmetic</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">midi</span> <span class="k">as</span> <span class="n">midi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.midi</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">opensndctrl</span> <span class="k">as</span> <span class="n">opensndctrl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.opensndctrl</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pan</span> <span class="k">as</span> <span class="n">pan</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.pan</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pattern</span> <span class="k">as</span> <span class="n">pattern</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.pattern</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">randoms</span> <span class="k">as</span> <span class="n">randoms</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.randoms</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.server</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.listener</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">players</span> <span class="k">as</span> <span class="n">players</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.players</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">tableprocess</span> <span class="k">as</span> <span class="n">tableprocess</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.tableprocess</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">matrixprocess</span> <span class="k">as</span> <span class="n">matrixprocess</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.matrixprocess</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.matrix</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">triggers</span> <span class="k">as</span> <span class="n">triggers</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.triggers</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span> <span class="k">as</span> <span class="n">utils</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.utils</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">expression</span> <span class="k">as</span> <span class="n">expression</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.expression</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">fourier</span> <span class="k">as</span> <span class="n">fourier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.fourier</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">phasevoc</span> <span class="k">as</span> <span class="n">phasevoc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.phasevoc</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib._core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.wxgui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">wxgui</span> <span class="k">as</span> <span class="n">wxgui</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.hrtf</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">hrtf</span> <span class="k">as</span> <span class="n">hrtf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.events</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">events</span> <span class="k">as</span> <span class="n">events</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib.mmlmusic</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">mmlmusic</span> <span class="k">as</span> <span class="n">mmlmusic</span>
 
 <span class="k">if</span> <span class="n">WITH_EXTERNALS</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">.lib</span> <span class="kn">import</span> <span class="n">external</span> <span class="k">as</span> <span class="n">external</span>
-    <span class="kn">from</span> <span class="nn">.lib.external</span> <span class="kn">import</span> <span class="o">*</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">external</span> <span class="k">as</span> <span class="n">external</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.lib.external</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">OBJECTS_TREE</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;functions&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span>
@@ -544,8 +540,10 @@
 <span class="p">]</span>
 
 
-<div class="viewcode-block" id="getPyoKeywords"><a class="viewcode-back" href="../api/functions/util.html#pyo.getPyoKeywords">[docs]</a><span class="k">def</span> <span class="nf">getPyoKeywords</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="getPyoKeywords">
+<a class="viewcode-back" href="../api/functions/util.html#pyo.getPyoKeywords">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getPyoKeywords</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a list of every keywords (classes and functions) of pyo.</span>
 
 <span class="sd">    &gt;&gt;&gt; keywords = getPyoKeywords()</span>
@@ -575,8 +573,11 @@
     <span class="k">return</span> <span class="n">_list</span></div>
 
 
-<div class="viewcode-block" id="getPyoExamples"><a class="viewcode-back" href="../api/functions/util.html#pyo.getPyoExamples">[docs]</a><span class="k">def</span> <span class="nf">getPyoExamples</span><span class="p">(</span><span class="n">fullpath</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="getPyoExamples">
+<a class="viewcode-back" href="../api/functions/util.html#pyo.getPyoExamples">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getPyoExamples</span><span class="p">(</span><span class="n">fullpath</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a listing of the examples, as a dictionary, installed with pyo.</span>
 
 <span class="sd">    :Args:</span>
@@ -602,6 +603,7 @@
     <span class="k">return</span> <span class="n">examples</span></div>
 
 
+
 <span class="n">OBJECTS_TREE</span><span class="p">[</span><span class="s2">&quot;functions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OBJECTS_TREE</span><span class="p">[</span><span class="s2">&quot;functions&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;getPyoKeywords&quot;</span><span class="p">,</span> <span class="s2">&quot;getPyoExamples&quot;</span><span class="p">])</span>
 </pre></div>
 
@@ -617,7 +619,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <div role="navigation" aria-label="related navigaton">
+          <div role="navigation" aria-label="Related">
             <a href="../genindex.html" title="General Index"
               >index</a>
           </div>
@@ -628,8 +630,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
         </div>
         <div class="clearer"></div>

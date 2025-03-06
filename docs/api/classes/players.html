@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-content_root="../../" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Soundfile Players — Pyo 1.0.5 documentation</title>
-<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/agogo.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/autoclasstoc.css" rel="stylesheet" type="text/css"/>
-<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-<script src="../../_static/jquery.js"></script>
-<script src="../../_static/underscore.js"></script>
-<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-<script src="../../_static/doctools.js"></script>
-<script src="../../_static/sphinx_highlight.js"></script>
-<link href="../../_static/E-PyoIcon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Soundfile Players — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
@@ -25,8 +21,8 @@
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
-<div class="headertitle"><a href="../../index.html">Pyo 1.0.5 documentation</a></div>
-<div aria-label="related navigation" class="rel" role="navigation">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
 <a accesskey="P" href="pattern.html" title="Event Sequencing">previous</a> |
           <a accesskey="N" href="randoms.html" title="Random generators">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
@@ -57,25 +53,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
-<div role="search">
+<search role="search">
 <h3 style="margin-top: 1.5em;">Search</h3>
 <form action="../../search.html" class="search" method="get">
 <input name="q" type="text"/>
 <input type="submit" value="Go"/>
 </form>
-</div>
+</search>
 </div>
 <div class="document">
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
 <section id="soundfile-players">
-<h1>Soundfile Players<a class="headerlink" href="#soundfile-players" title="Permalink to this heading">¶</a></h1>
+<h1>Soundfile Players<a class="headerlink" href="#soundfile-players" title="Link to this heading">¶</a></h1>
 <p>Play soundfiles from the disk.</p>
 <p>SfMarkerXXX objects use markers features (store in the header) from
 an AIFF file to create more specific reading patterns.</p>
 <section id="objects-in-this-category">
-<h2>Objects in this category<a class="headerlink" href="#objects-in-this-category" title="Permalink to this heading">¶</a></h2>
+<h2>Objects in this category<a class="headerlink" href="#objects-in-this-category" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#pyo.SfPlayer" title="pyo.SfPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SfPlayer</span></code></a> :     Soundfile player.</p></li>
 <li><p><a class="reference internal" href="#pyo.SfMarkerLooper" title="pyo.SfMarkerLooper"><code class="xref py py-class docutils literal notranslate"><span class="pre">SfMarkerLooper</span></code></a> :     AIFF with markers soundfile looper.</p></li>
@@ -83,20 +79,20 @@ an AIFF file to create more specific reading patterns.</p>
 </ul>
 </section>
 <section id="sfplayer">
-<h2><em>SfPlayer</em><a class="headerlink" href="#sfplayer" title="Permalink to this heading">¶</a></h2>
+<h2><em>SfPlayer</em><a class="headerlink" href="#sfplayer" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.SfPlayer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SfPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SfPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer" title="Link to this definition">¶</a></dt>
 <dd><p>Soundfile player.</p>
 <p>Reads audio data from a file using one of several available interpolation
 types. User can alter its pitch with the <cite>speed</cite> attribute. The object
 takes care of sampling rate conversion to match the Server sampling
 rate setting.</p>
 <dl class="field-list">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>path: string</dt><dd><p>Full path name of the sound to read.</p>
 </dd>
@@ -140,7 +136,7 @@ retrieve the trigger streams by calling obj[‘trig’]:</p>
 <p>Note that the object will send as many trigs as there is channels
 in the sound file. If you want to retrieve only one trig, only give
 the first stream to the next object:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">printing</span><span class="p">():</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">printing</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"one trig!"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sf</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/players.html#pyo.SfPlayer" title="pyo.lib.players.SfPlayer"><span class="n">SfPlayer</span></a><span class="p">(</span><span class="s2">"/stereo/sound/file.aif"</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigFunc" title="pyo.lib.triggers.TrigFunc"><span class="n">trig</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigFunc" title="pyo.lib.triggers.TrigFunc"><span class="n">TrigFunc</span></a><span class="p">(</span><span class="n">sf</span><span class="p">[</span><span class="s1">'trig'</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">printing</span><span class="p">)</span>
@@ -156,36 +152,28 @@ the first stream to the next object:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.SfPlayer.path" title="pyo.SfPlayer.path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></p></td>
 <td><p>string.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.SfPlayer.sound" title="pyo.SfPlayer.sound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sound</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sound</span></code></p></td>
 <td><p>string.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.SfPlayer.speed" title="pyo.SfPlayer.speed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">speed</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">speed</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.SfPlayer.loop" title="pyo.SfPlayer.loop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loop</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">loop</span></code></p></td>
 <td><p>bool.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.SfPlayer.offset" title="pyo.SfPlayer.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></p></td>
 <td><p>float.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.SfPlayer.interp" title="pyo.SfPlayer.interp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp</span></code></p></td>
 <td><p>int {1, 2, 3, 4}.</p></td>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
@@ -199,10 +187,6 @@ the first stream to the next object:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(path[, speed, loop, offset, ...])</p></td>
 <td><p></p></td>
@@ -230,11 +214,7 @@ the first stream to the next object:</p>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([mul, add])</p></td>
 <td><p></p></td>
@@ -361,11 +341,7 @@ the first stream to the next object:</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>()</p></td>
 <td><p></p></td>
@@ -429,22 +405,14 @@ the first stream to the next object:</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
@@ -454,11 +422,7 @@ the first stream to the next object:</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_init_play</span></code>()</p></td>
 <td><p></p></td>
@@ -468,11 +432,7 @@ the first stream to the next object:</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_autoplay</span></code>([dur, delay])</p></td>
 <td><p></p></td>
@@ -486,12 +446,12 @@ the first stream to the next object:</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.setPath">
-<span class="sig-name descname"><span class="pre">setPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setPath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setPath" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setPath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setPath" title="Link to this definition">¶</a></dt>
 <dd><p>Sets a new sound to read.</p>
 <p>The number of channels of the new sound must match those
 of the sound loaded at initialization time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>path: string</dt><dd><p>Full path of the new sound.</p>
 </dd>
@@ -501,12 +461,12 @@ of the sound loaded at initialization time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.setSound">
-<span class="sig-name descname"><span class="pre">setSound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setSound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setSound" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setSound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setSound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setSound" title="Link to this definition">¶</a></dt>
 <dd><p>Sets a new sound to read.</p>
 <p>The number of channels of the new sound must match those
 of the sound loaded at initialization time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>path: string</dt><dd><p>Full path of the new sound.</p>
 </dd>
@@ -516,10 +476,10 @@ of the sound loaded at initialization time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.setSpeed">
-<span class="sig-name descname"><span class="pre">setSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setSpeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setSpeed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setSpeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setSpeed" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>speed</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>new <cite>speed</cite> attribute.</p>
 </dd>
@@ -529,10 +489,10 @@ of the sound loaded at initialization time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.setLoop">
-<span class="sig-name descname"><span class="pre">setLoop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setLoop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setLoop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setLoop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setLoop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setLoop" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>loop</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: bool {True, False}</dt><dd><p>new <cite>loop</cite> attribute.</p>
 </dd>
@@ -542,10 +502,10 @@ of the sound loaded at initialization time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.setOffset">
-<span class="sig-name descname"><span class="pre">setOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setOffset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>offset</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float</dt><dd><p>new <cite>offset</cite> attribute.</p>
 </dd>
@@ -555,10 +515,10 @@ of the sound loaded at initialization time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.setInterp">
-<span class="sig-name descname"><span class="pre">setInterp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setInterp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setInterp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInterp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.setInterp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.setInterp" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>interp</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int {1, 2, 3, 4}</dt><dd><p>new <cite>interp</cite> attribute.</p>
 </dd>
@@ -568,14 +528,14 @@ of the sound loaded at initialization time.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfPlayer.ctrl">
-<span class="sig-name descname"><span class="pre">ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.ctrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.ctrl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfPlayer.ctrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfPlayer.ctrl" title="Link to this definition">¶</a></dt>
 <dd><p>Opens a sliders window to control the parameters of the object.
 SLMap has a <cite>dataOnly</cite> attribute to identify parameters that don’t
 audio signal as control but only discrete values.</p>
 <p>If a list of values are given to a parameter, a multisliders
 will be used to control each stream independently.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>map_list: list of SLMap objects, optional</dt><dd><p>Users defined set of parameters scaling. There is default
 scaling for each object that accept <cite>ctrl</cite> method.</p>
@@ -594,54 +554,54 @@ the server GUI before showing the controller window.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfPlayer.path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#pyo.SfPlayer.path" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#pyo.SfPlayer.path" title="Link to this definition">¶</a></dt>
 <dd><p>string. Full path of the sound.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfPlayer.sound">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sound</span></span><a class="headerlink" href="#pyo.SfPlayer.sound" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sound</span></span><a class="headerlink" href="#pyo.SfPlayer.sound" title="Link to this definition">¶</a></dt>
 <dd><p>string. Alias to the <cite>path</cite> attribute.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfPlayer.speed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><a class="headerlink" href="#pyo.SfPlayer.speed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><a class="headerlink" href="#pyo.SfPlayer.speed" title="Link to this definition">¶</a></dt>
 <dd><p>float or PyoObject. Transposition factor.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfPlayer.loop">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">loop</span></span><a class="headerlink" href="#pyo.SfPlayer.loop" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">loop</span></span><a class="headerlink" href="#pyo.SfPlayer.loop" title="Link to this definition">¶</a></dt>
 <dd><p>bool. Looping mode.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfPlayer.offset">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#pyo.SfPlayer.offset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#pyo.SfPlayer.offset" title="Link to this definition">¶</a></dt>
 <dd><p>float. Time, in seconds, of the first sample to read.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfPlayer.interp">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interp</span></span><a class="headerlink" href="#pyo.SfPlayer.interp" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interp</span></span><a class="headerlink" href="#pyo.SfPlayer.interp" title="Link to this definition">¶</a></dt>
 <dd><p>int {1, 2, 3, 4}. Interpolation method.</p>
 </dd></dl>
 </dd></dl>
 </section>
 <section id="sfmarkerlooper">
-<h2><em>SfMarkerLooper</em><a class="headerlink" href="#sfmarkerlooper" title="Permalink to this heading">¶</a></h2>
+<h2><em>SfMarkerLooper</em><a class="headerlink" href="#sfmarkerlooper" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SfMarkerLooper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper" title="Permalink to this definition">¶</a></dt>
-<dd><p>AIFF with markers soundfile looper.</p>
-<p>Reads audio data from a AIFF file using one of several available
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SfMarkerLooper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper" title="Link to this definition">¶</a></dt>
+<dd><p>Soundfile player with markers looper.</p>
+<p>Reads audio data from an audio file using one of several available
 interpolation types. User can alter its pitch with the <cite>speed</cite>
 attribute. The object takes care of sampling rate conversion to
 match the Server sampling rate setting.</p>
-<p>The reading pointer loops a specific marker (from the MARK chunk
-in the header of the AIFF file) until it received a new integer
+<p>The reading pointer loops a specific marker (from the markers chunk
+in the header of the AIFF or WAVE file) until it received a new integer
 in the <cite>mark</cite> attribute.</p>
 <dl class="field-list">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>path: string</dt><dd><p>Full path name of the sound to read.</p>
 </dd>
@@ -679,27 +639,19 @@ rate signal, its value is updated only once per buffer size.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.SfMarkerLooper.speed" title="pyo.SfMarkerLooper.speed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">speed</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">speed</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.SfMarkerLooper.mark" title="pyo.SfMarkerLooper.mark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mark</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mark</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.SfMarkerLooper.interp" title="pyo.SfMarkerLooper.interp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp</span></code></p></td>
 <td><p>int {1, 2, 3, 4}.</p></td>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
@@ -713,10 +665,6 @@ rate signal, its value is updated only once per buffer size.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(path[, speed, mark, interp, mul, add])</p></td>
 <td><p></p></td>
@@ -738,11 +686,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([mul, add])</p></td>
 <td><p></p></td>
@@ -869,11 +813,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>()</p></td>
 <td><p></p></td>
@@ -937,22 +877,14 @@ rate signal, its value is updated only once per buffer size.</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
@@ -962,11 +894,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_init_play</span></code>()</p></td>
 <td><p></p></td>
@@ -976,11 +904,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_autoplay</span></code>([dur, delay])</p></td>
 <td><p></p></td>
@@ -994,10 +918,10 @@ rate signal, its value is updated only once per buffer size.</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.setSpeed">
-<span class="sig-name descname"><span class="pre">setSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.setSpeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.setSpeed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.setSpeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.setSpeed" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>speed</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>new <cite>speed</cite> attribute.</p>
 </dd>
@@ -1007,10 +931,10 @@ rate signal, its value is updated only once per buffer size.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.setMark">
-<span class="sig-name descname"><span class="pre">setMark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.setMark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.setMark" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.setMark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.setMark" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>mark</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>new <cite>mark</cite> attribute.</p>
 </dd>
@@ -1020,10 +944,10 @@ rate signal, its value is updated only once per buffer size.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.setInterp">
-<span class="sig-name descname"><span class="pre">setInterp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.setInterp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.setInterp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInterp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.setInterp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.setInterp" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>interp</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int {1, 2, 3, 4}</dt><dd><p>new <cite>interp</cite> attribute.</p>
 </dd>
@@ -1033,19 +957,19 @@ rate signal, its value is updated only once per buffer size.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.getMarkers">
-<span class="sig-name descname"><span class="pre">getMarkers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.getMarkers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.getMarkers" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getMarkers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.getMarkers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.getMarkers" title="Link to this definition">¶</a></dt>
 <dd><p>Returns a list of marker time values in samples.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.ctrl">
-<span class="sig-name descname"><span class="pre">ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.ctrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.ctrl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerLooper.ctrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerLooper.ctrl" title="Link to this definition">¶</a></dt>
 <dd><p>Opens a sliders window to control the parameters of the object.
 SLMap has a <cite>dataOnly</cite> attribute to identify parameters that don’t
 audio signal as control but only discrete values.</p>
 <p>If a list of values are given to a parameter, a multisliders
 will be used to control each stream independently.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>map_list: list of SLMap objects, optional</dt><dd><p>Users defined set of parameters scaling. There is default
 scaling for each object that accept <cite>ctrl</cite> method.</p>
@@ -1064,40 +988,40 @@ the server GUI before showing the controller window.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.speed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><a class="headerlink" href="#pyo.SfMarkerLooper.speed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><a class="headerlink" href="#pyo.SfMarkerLooper.speed" title="Link to this definition">¶</a></dt>
 <dd><p>float or PyoObject. Transposition factor.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.mark">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mark</span></span><a class="headerlink" href="#pyo.SfMarkerLooper.mark" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mark</span></span><a class="headerlink" href="#pyo.SfMarkerLooper.mark" title="Link to this definition">¶</a></dt>
 <dd><p>float or PyoObject. Marker to loop.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfMarkerLooper.interp">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interp</span></span><a class="headerlink" href="#pyo.SfMarkerLooper.interp" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interp</span></span><a class="headerlink" href="#pyo.SfMarkerLooper.interp" title="Link to this definition">¶</a></dt>
 <dd><p>int {1, 2, 3, 4}. Interpolation method.</p>
 </dd></dl>
 </dd></dl>
 </section>
 <section id="sfmarkershuffler">
-<h2><em>SfMarkerShuffler</em><a class="headerlink" href="#sfmarkershuffler" title="Permalink to this heading">¶</a></h2>
+<h2><em>SfMarkerShuffler</em><a class="headerlink" href="#sfmarkershuffler" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SfMarkerShuffler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler" title="Permalink to this definition">¶</a></dt>
-<dd><p>AIFF with markers soundfile shuffler.</p>
-<p>Reads audio data from a AIFF file using one of several available
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SfMarkerShuffler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler" title="Link to this definition">¶</a></dt>
+<dd><p>Soundfile player with markers shuffler.</p>
+<p>Reads audio data from an audio file using one of several available
 interpolation types. User can alter its pitch with the <cite>speed</cite>
 attribute. The object takes care of sampling rate conversion to
 match the Server sampling rate setting.</p>
-<p>The reading pointer randomly choose a marker (from the MARK chunk
-in the header of the AIFF file) as its starting point and reads
-the samples until it reaches the following marker. Then, it choose
+<p>The reading pointer randomly chooses a marker (from the markers chunk
+in the header of an AIFF or WAVE) as its starting point, and reads
+the samples until it reaches the following marker. Then, it chooses
 another marker and reads from the new position and so on…</p>
 <dl class="field-list">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>path: string</dt><dd><p>Full path name of the sound to read. Can’t e changed after
 initialization.</p>
@@ -1133,24 +1057,16 @@ rate signal, its value is updated only once per buffer size.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.SfMarkerShuffler.speed" title="pyo.SfMarkerShuffler.speed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">speed</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">speed</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyo.SfMarkerShuffler.interp" title="pyo.SfMarkerShuffler.interp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp</span></code></p></td>
 <td><p>int {1, 2, 3, 4}.</p></td>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
@@ -1164,10 +1080,6 @@ rate signal, its value is updated only once per buffer size.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(path[, speed, interp, mul, add])</p></td>
 <td><p></p></td>
@@ -1189,11 +1101,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([mul, add])</p></td>
 <td><p></p></td>
@@ -1320,11 +1228,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>()</p></td>
 <td><p></p></td>
@@ -1388,22 +1292,14 @@ rate signal, its value is updated only once per buffer size.</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
@@ -1413,11 +1309,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_init_play</span></code>()</p></td>
 <td><p></p></td>
@@ -1427,11 +1319,7 @@ rate signal, its value is updated only once per buffer size.</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_autoplay</span></code>([dur, delay])</p></td>
 <td><p></p></td>
@@ -1445,10 +1333,10 @@ rate signal, its value is updated only once per buffer size.</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.setSpeed">
-<span class="sig-name descname"><span class="pre">setSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.setSpeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.setSpeed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setSpeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.setSpeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.setSpeed" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>speed</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>new <cite>speed</cite> attribute.</p>
 </dd>
@@ -1458,10 +1346,10 @@ rate signal, its value is updated only once per buffer size.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.setInterp">
-<span class="sig-name descname"><span class="pre">setInterp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.setInterp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.setInterp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setInterp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.setInterp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.setInterp" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>interp</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int {1, 2, 3, 4}</dt><dd><p>new <cite>interp</cite> attribute.</p>
 </dd>
@@ -1471,10 +1359,10 @@ rate signal, its value is updated only once per buffer size.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.setRandomType">
-<span class="sig-name descname"><span class="pre">setRandomType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.setRandomType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.setRandomType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setRandomType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.setRandomType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.setRandomType" title="Link to this definition">¶</a></dt>
 <dd><p>Set the random distribution type used to choose the markers.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>dist: int or string</dt><dd><dl class="simple">
 <dt>The distribution type. Available distributions are:</dt><dd><ol class="arabic simple" start="0">
@@ -1579,19 +1467,19 @@ parameter):</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.getMarkers">
-<span class="sig-name descname"><span class="pre">getMarkers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.getMarkers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.getMarkers" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getMarkers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.getMarkers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.getMarkers" title="Link to this definition">¶</a></dt>
 <dd><p>Returns a list of marker time values in samples.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.ctrl">
-<span class="sig-name descname"><span class="pre">ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.ctrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.ctrl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/players.html#SfMarkerShuffler.ctrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.SfMarkerShuffler.ctrl" title="Link to this definition">¶</a></dt>
 <dd><p>Opens a sliders window to control the parameters of the object.
 SLMap has a <cite>dataOnly</cite> attribute to identify parameters that don’t
 audio signal as control but only discrete values.</p>
 <p>If a list of values are given to a parameter, a multisliders
 will be used to control each stream independently.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>map_list: list of SLMap objects, optional</dt><dd><p>Users defined set of parameters scaling. There is default
 scaling for each object that accept <cite>ctrl</cite> method.</p>
@@ -1610,12 +1498,12 @@ the server GUI before showing the controller window.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.speed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><a class="headerlink" href="#pyo.SfMarkerShuffler.speed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speed</span></span><a class="headerlink" href="#pyo.SfMarkerShuffler.speed" title="Link to this definition">¶</a></dt>
 <dd><p>float or PyoObject. Transposition factor.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.SfMarkerShuffler.interp">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interp</span></span><a class="headerlink" href="#pyo.SfMarkerShuffler.interp" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interp</span></span><a class="headerlink" href="#pyo.SfMarkerShuffler.interp" title="Link to this definition">¶</a></dt>
 <dd><p>int {1, 2, 3, 4}. Interpolation method.</p>
 </dd></dl>
 </dd></dl>
@@ -1632,7 +1520,7 @@ the server GUI before showing the controller window.</p>
 <div class="footer-wrapper">
 <div class="footer">
 <div class="left">
-<div aria-label="related navigaton" role="navigation">
+<div aria-label="Related" role="navigation">
 <a href="pattern.html" title="Event Sequencing">previous</a> |
             <a href="randoms.html" title="Random generators">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
@@ -1642,8 +1530,8 @@ the server GUI before showing the controller window.</p>
 </div>
 <div class="right">
 <div class="footer" role="contentinfo">
-        © Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
 </div>
 <div class="clearer"></div>

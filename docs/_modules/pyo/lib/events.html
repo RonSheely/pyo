@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyo.lib.events &#8212; Pyo 1.0.5 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../../_static/E-PyoIcon.ico"/>
+    <title>pyo.lib.events &#8212; Pyo 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css?v=227e5aac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css?v=08871587" />
+    <script src="../../../_static/documentation_options.js?v=e2a723ec"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/E-PyoIcon.ico"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -24,8 +20,8 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../../../index.html">Pyo 1.0.5 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
+          href="../../../index.html">Pyo 1.0.6 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="Related">
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a>
         </div>
@@ -52,13 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
 
-          <div role="search">
+          <search role="search">
             <h3 style="margin-top: 1.5em;">Search</h3>
             <form class="search" action="../../../search.html" method="get">
                 <input type="text" name="q" />
                 <input type="submit" value="Go" />
             </form>
-          </div>
+          </search>
 
         </div>
         <div class="document">
@@ -101,16 +97,16 @@
 <span class="sd">You should have received a copy of the GNU General Public License</span>
 <span class="sd">along with pyo.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">._core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">.pattern</span> <span class="kn">import</span> <span class="n">Pattern</span><span class="p">,</span> <span class="n">CallAfter</span>
-<span class="kn">from</span> <span class="nn">.tableprocess</span> <span class="kn">import</span> <span class="n">TableRead</span>
-<span class="kn">from</span> <span class="nn">.controls</span> <span class="kn">import</span> <span class="n">Fader</span><span class="p">,</span> <span class="n">Adsr</span>
-<span class="kn">from</span> <span class="nn">.generators</span> <span class="kn">import</span> <span class="n">RCOsc</span>
-<span class="kn">from</span> <span class="nn">.effects</span> <span class="kn">import</span> <span class="n">STRev</span>
-<span class="kn">from</span> <span class="nn">.pan</span> <span class="kn">import</span> <span class="n">Pan</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.pattern</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pattern</span><span class="p">,</span> <span class="n">CallAfter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.tableprocess</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableRead</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.controls</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fader</span><span class="p">,</span> <span class="n">Adsr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.generators</span><span class="w"> </span><span class="kn">import</span> <span class="n">RCOsc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.effects</span><span class="w"> </span><span class="kn">import</span> <span class="n">STRev</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.pan</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pan</span>
 
 <span class="n">inf</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">inf</span>
 
@@ -135,7 +131,7 @@
 
 <span class="c1"># Utility functions</span>
 <span class="c1">###################</span>
-<span class="k">def</span> <span class="nf">degreeToMidiNote</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">degreeToMidiNote</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="s2">&quot;Converts an octave.degree notation to a MIDI note.&quot;</span>
     <span class="n">st</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -160,14 +156,14 @@
     <span class="k">return</span> <span class="nb">oct</span> <span class="o">*</span> <span class="mi">12</span> <span class="o">+</span> <span class="n">deg</span>
 
 
-<span class="k">def</span> <span class="nf">midiNoteToDegree</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">midiNoteToDegree</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="s2">&quot;Converts a MIDI note to an octave.degree notation.&quot;</span>
     <span class="nb">oct</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span>
     <span class="n">deg</span> <span class="o">=</span> <span class="n">value</span> <span class="o">%</span> <span class="mi">12</span>
     <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.</span><span class="si">%02d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">oct</span><span class="p">,</span> <span class="n">deg</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">getValueFromAttribute</span><span class="p">(</span><span class="n">master</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">currentDict</span><span class="p">,</span> <span class="n">valueIfNone</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">getValueFromAttribute</span><span class="p">(</span><span class="n">master</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">currentDict</span><span class="p">,</span> <span class="n">valueIfNone</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="s2">&quot;Retrieve the value of an Events attribute, resolving its type.&quot;</span>
     <span class="n">attribute</span> <span class="o">=</span> <span class="n">master</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
     <span class="n">returnValue</span> <span class="o">=</span> <span class="kc">None</span>
@@ -203,15 +199,15 @@
 
 <span class="c1"># Utility classes</span>
 <span class="c1">#################</span>
-<span class="k">class</span> <span class="nc">MarkovGen</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MarkovGen</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">originalList</span> <span class="o">=</span> <span class="n">lst</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">temporaryList</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">playedNotes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">startPlayback</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">startPlayback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">startPlayback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">playedNotes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">originalList</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">temporaryList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
@@ -219,7 +215,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">temporaryList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">originalList</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">playedNotes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">originalList</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">originalList</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="p">:]</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">newValue</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">condition</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">probTable</span> <span class="o">=</span> <span class="p">[]</span>
@@ -242,7 +238,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">playedNotes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newValue</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">newValue</span>
 
-    <span class="k">def</span> <span class="nf">setOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">order</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">startPlayback</span><span class="p">()</span>
@@ -250,8 +246,10 @@
 
 <span class="c1"># Instruments</span>
 <span class="c1">#############</span>
-<div class="viewcode-block" id="EventInstrument"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventInstrument">[docs]</a><span class="k">class</span> <span class="nc">EventInstrument</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventInstrument">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventInstrument">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventInstrument</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for an Events instrument. All attributes given to the Events</span>
 <span class="sd">    object can be accessed as self.attribute_name inside the instrument.</span>
 
@@ -276,7 +274,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 
@@ -290,18 +288,19 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">clearWhenDone</span> <span class="o">=</span> <span class="n">CallAfter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clearWhenDone</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">delay</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dur</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">removeFunction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">instanceId</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">DefaultInstrument</span><span class="p">(</span><span class="n">EventInstrument</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultInstrument</span><span class="p">(</span><span class="n">EventInstrument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The default instrument, playing a stereo RC oscillator, used when</span>
 <span class="sd">    &#39;instr&#39; attribute is not defined for an Events object.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
         <span class="n">EventInstrument</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">osc</span> <span class="o">=</span> <span class="n">RCOsc</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">,</span> <span class="n">sharp</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sig</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">osc</span><span class="o">.</span><span class="n">mix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
@@ -309,8 +308,10 @@
 
 <span class="c1"># Event Scale</span>
 <span class="c1">#############</span>
-<div class="viewcode-block" id="EventScale"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale">[docs]</a><span class="k">class</span> <span class="nc">EventScale</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventScale">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventScale</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Musical scale builder.</span>
 
 <span class="sd">    EventScale constructs a list of pitches according to its arguments.</span>
@@ -372,7 +373,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;major&quot;</span><span class="p">,</span> <span class="n">first</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">octaves</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;major&quot;</span><span class="p">,</span> <span class="n">first</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">octaves</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rootDegrees</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
             <span class="s2">&quot;C#&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -424,7 +425,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_init</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">_populate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_populate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">:</span>
             <span class="k">return</span>
 
@@ -441,17 +442,19 @@
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">midiNoteToDegree</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_length</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
 
-<div class="viewcode-block" id="EventScale.setRoot"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setRoot">[docs]</a>    <span class="k">def</span> <span class="nf">setRoot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventScale.setRoot">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setRoot">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setRoot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `root` attribute and reconstruct the scale.</span>
 
 <span class="sd">        :Args:</span>
@@ -468,8 +471,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_root</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="EventScale.setScale"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setScale">[docs]</a>    <span class="k">def</span> <span class="nf">setScale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventScale.setScale">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setScale">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setScale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `scale` attribute and reconstruct the scale.</span>
 
 <span class="sd">        :Args:</span>
@@ -486,8 +492,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_scale</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="EventScale.setFirst"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setFirst">[docs]</a>    <span class="k">def</span> <span class="nf">setFirst</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventScale.setFirst">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setFirst">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setFirst</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `first` attribute and reconstruct the scale.</span>
 
 <span class="sd">        :Args:</span>
@@ -500,8 +509,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_first</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="EventScale.setOctaves"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setOctaves">[docs]</a>    <span class="k">def</span> <span class="nf">setOctaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventScale.setOctaves">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setOctaves">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setOctaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `octaves` attribute and reconstruct the scale.</span>
 
 <span class="sd">        :Args:</span>
@@ -514,8 +526,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_octaves</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="EventScale.setType"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setType">[docs]</a>    <span class="k">def</span> <span class="nf">setType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventScale.setType">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventScale.setType">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `type` attribute and reconstruct the scale.</span>
 
 <span class="sd">        :Args:</span>
@@ -528,56 +543,60 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_populate</span><span class="p">()</span></div>
 
+
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;string. Name of the fundamental key.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;string. Name of the fundamental key.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_root</span>
 
     <span class="nd">@root</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setRoot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;string. Name of scale to generate.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;string. Name of scale to generate.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scale</span>
 
     <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setScale</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">first</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int. First octave to generate.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">first</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int. First octave to generate.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_first</span>
 
     <span class="nd">@first</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">first</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">first</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setFirst</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">octaves</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int. Number of octaves to generate.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">octaves</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int. Number of octaves to generate.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_octaves</span>
 
     <span class="nd">@octaves</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">octaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">octaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setOctaves</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int. Unit in which pitch values are stored.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int. Unit in which pitch values are stored.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span>
 
     <span class="nd">@type</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+
 
 
 <span class="c1"># Event Generators</span>
 <span class="c1">##################</span>
-<div class="viewcode-block" id="EventGenerator"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator">[docs]</a><span class="k">class</span> <span class="nc">EventGenerator</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventGenerator">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventGenerator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for all event generators.</span>
 
 <span class="sd">    This class contains the common behaviours of all event generators.</span>
@@ -639,12 +658,12 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">master</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">_inspect_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_inspect_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="c1"># Inspect the value passed as a generator argument.</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">type</span><span class="p">([]),</span> <span class="nb">type</span><span class="p">(())]:</span>
             <span class="n">generator</span> <span class="o">=</span> <span class="n">EventSeq</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
@@ -652,19 +671,19 @@
             <span class="n">generator</span> <span class="o">=</span> <span class="n">EventSeq</span><span class="p">([</span><span class="n">generator</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">generator</span>
 
-    <span class="k">def</span> <span class="nf">_inspect_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_inspect_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
         <span class="c1"># Inspect the value passed as a values argument.</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">:</span>
             <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">values</span>
 
-    <span class="k">def</span> <span class="nf">_inspect_occurrences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">occurrences</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_inspect_occurrences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">occurrences</span><span class="p">):</span>
         <span class="c1"># Inspect the value passed as an occurrences argument.</span>
         <span class="k">if</span> <span class="n">occurrences</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
             <span class="n">occurrences</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">_internalGeneratorNextCall</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_internalGeneratorNextCall</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Return the next value of an internal generator.</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="p">,</span> <span class="n">EventKey</span><span class="p">):</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">needToResetTarget</span><span class="p">:</span>
@@ -686,7 +705,7 @@
 
         <span class="k">return</span> <span class="n">value</span>
 
-    <span class="k">def</span> <span class="nf">_checkValueTypeAndIncrementCount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_checkValueTypeAndIncrementCount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="c1"># Final check of the value produced by the generator in the next() method.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -697,93 +716,107 @@
             <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_ADD</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_SUB</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_MUL</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__div__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__div__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_DIV</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_DIV</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__pow__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__pow__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_POW</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__mod__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__mod__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_MOD</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__floordiv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__floordiv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">):</span>
         <span class="n">generator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">EventDummy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="n">PYO_EVENT_OPERATOR_FLR</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">setMaster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setMaster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master</span><span class="p">):</span>
         <span class="c1"># Keep a reference of the master player (an Events object).</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">master</span> <span class="o">=</span> <span class="n">master</span>
 
-    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Return a deep copy of this generator (used in Events.events()).</span>
         <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Reset the generator to its init state. Implemented in child objects.</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Internally called to produce the next value. Implemented in child objects.</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">resetEmbeddedGenerator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">resetEmbeddedGenerator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Recursively resets embedded generators. Used when starting a sequence.</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">resetEmbeddedGenerator</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-<div class="viewcode-block" id="EventGenerator.floor"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.floor">[docs]</a>    <span class="k">def</span> <span class="nf">floor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventGenerator.floor">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.floor">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">floor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter computing the largest integer less than or</span>
 <span class="sd">        equal to its input value.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_FLOOR</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.ceil"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.ceil">[docs]</a>    <span class="k">def</span> <span class="nf">ceil</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.ceil">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.ceil">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ceil</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter computing the smallest integer greater than or</span>
 <span class="sd">        equal to its input value.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_CEIL</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.round"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.round">[docs]</a>    <span class="k">def</span> <span class="nf">round</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.round">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.round">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter computing the nearest integer to its input value.</span>
 <span class="sd">        If two values are equally close, rounding is done toward the even choice.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_ROUND</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.abs"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.abs">[docs]</a>    <span class="k">def</span> <span class="nf">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.abs">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.abs">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter computing the absolute value of its input value.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_ABS</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.snap"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.snap">[docs]</a>    <span class="k">def</span> <span class="nf">snap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">choice</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.snap">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.snap">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">snap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">choice</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter which choose the nearest value of its input value</span>
 <span class="sd">        in the `choice` list.</span>
 
@@ -795,8 +828,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_SNAP</span><span class="p">,</span> <span class="n">choice</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.deviate"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.deviate">[docs]</a>    <span class="k">def</span> <span class="nf">deviate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.deviate">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.deviate">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deviate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter which randomly move, up or down, its input value</span>
 <span class="sd">        according to the argument `depth`, in percent.</span>
 
@@ -808,8 +844,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_DEVIATE</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.clip"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.clip">[docs]</a>    <span class="k">def</span> <span class="nf">clip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maxi</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.clip">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.clip">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maxi</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter which clips its input value between the limits</span>
 <span class="sd">        `mini` and `maxi`.</span>
 
@@ -823,8 +862,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_CLIP</span><span class="p">,</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maxi</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.scale"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.scale">[docs]</a>    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maxi</span><span class="p">,</span> <span class="n">expon</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.scale">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.scale">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maxi</span><span class="p">,</span> <span class="n">expon</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter which maps its input value, in the range 0 to 1,</span>
 <span class="sd">        to an output range, with a scaling curve deternimed bu the `expon` value.</span>
 
@@ -842,8 +884,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_SCALE</span><span class="p">,</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maxi</span><span class="p">,</span> <span class="n">expon</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.rescale"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.rescale">[docs]</a>    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inmin</span><span class="p">,</span> <span class="n">inmax</span><span class="p">,</span> <span class="n">outmin</span><span class="p">,</span> <span class="n">outmax</span><span class="p">,</span> <span class="n">expon</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.rescale">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.rescale">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inmin</span><span class="p">,</span> <span class="n">inmax</span><span class="p">,</span> <span class="n">outmin</span><span class="p">,</span> <span class="n">outmax</span><span class="p">,</span> <span class="n">expon</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter which maps its input value, in the range `inmin`</span>
 <span class="sd">        to `inmax`, to an output range, `outmin` to `outmax`, with a scaling</span>
 <span class="sd">        curve deternimed bu the `expon` value.</span>
@@ -866,8 +911,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_RESCALE</span><span class="p">,</span> <span class="n">inmin</span><span class="p">,</span> <span class="n">inmax</span><span class="p">,</span> <span class="n">outmin</span><span class="p">,</span> <span class="n">outmax</span><span class="p">,</span> <span class="n">expon</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EventGenerator.iftrue"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.iftrue">[docs]</a>    <span class="k">def</span> <span class="nf">iftrue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">comp</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventGenerator.iftrue">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventGenerator.iftrue">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">iftrue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">comp</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return an EventFilter which compares its input value to the value</span>
 <span class="sd">        given to `comp` argument, using the comparison operator `op`. If</span>
 <span class="sd">        the result is True, the input value is sent to the output, otherwise,</span>
@@ -882,19 +930,23 @@
 <span class="sd">                Comparison value.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_IFTRUE</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="n">EventFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">PYO_EVENT_FILTER_IFTRUE</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="EventDummy"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventDummy">[docs]</a><span class="k">class</span> <span class="nc">EventDummy</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EventDummy">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventDummy">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventDummy</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
     <span class="s2">&quot;An EventGenerator created internally to handle arithmetic on Events.&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator1</span><span class="p">,</span> <span class="n">generator2</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator1</span><span class="p">,</span> <span class="n">generator2</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator1</span> <span class="o">=</span> <span class="n">generator1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator2</span> <span class="o">=</span> <span class="n">generator2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator1</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">master</span><span class="p">)</span>
         <span class="n">v1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator1</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 
@@ -923,17 +975,20 @@
                 <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">v1</span> <span class="o">/</span> <span class="n">v2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">v2</span></div>
 
 
-<div class="viewcode-block" id="EventFilter"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventFilter">[docs]</a><span class="k">class</span> <span class="nc">EventFilter</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EventFilter">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventFilter">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventFilter</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
     <span class="s2">&quot;An EventGenerator created internally to handle simple filter on Events.&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="n">generator</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lastValue</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">setMaster</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">master</span><span class="p">)</span>
         <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 
@@ -1004,9 +1059,12 @@
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastValue</span></div>
 
 
+
 <span class="c1">###################</span>
-<div class="viewcode-block" id="EventKey"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventKey">[docs]</a><span class="k">class</span> <span class="nc">EventKey</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventKey">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventKey">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventKey</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An EventGenerator that allow to retrieve the value of another parameter.</span>
 
 <span class="sd">    EventKey returns the current value of another parameter of the Events</span>
@@ -1033,32 +1091,38 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">needToResetTarget</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">externalMaster</span> <span class="o">=</span> <span class="n">master</span>
 
-<div class="viewcode-block" id="EventKey.getKey"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventKey.getKey">[docs]</a>    <span class="k">def</span> <span class="nf">getKey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventKey.getKey">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventKey.getKey">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getKey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the key, as a string, of the parameter to read from.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span></div>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">needToResetTarget</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">externalMaster</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">getValueFromAttribute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">master</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getKey</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">master</span><span class="o">.</span><span class="n">getCurrentDict</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">getValueFromAttribute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">externalMaster</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getKey</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">externalMaster</span><span class="o">.</span><span class="n">getCurrentDict</span><span class="p">())</span></div>
 
 
+
 <span class="c1">###################</span>
-<div class="viewcode-block" id="EventSeq"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventSeq">[docs]</a><span class="k">class</span> <span class="nc">EventSeq</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventSeq">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventSeq">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventSeq</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Plays through an entire list of values many times.</span>
 
 <span class="sd">    EventSeq will loop over its list of values a number of times</span>
@@ -1089,7 +1153,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_values</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
@@ -1097,14 +1161,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">stopEventsWhenDone</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">completed</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1122,8 +1186,11 @@
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">next</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="EventSlide"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventSlide">[docs]</a><span class="k">class</span> <span class="nc">EventSlide</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventSlide">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventSlide">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventSlide</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Plays overlapping segments from a list of values.</span>
 
 <span class="sd">    EventSlide will play a segment of length `segment` from startpos,</span>
@@ -1163,7 +1230,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">segment</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">startpos</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">wraparound</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">segment</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">startpos</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">wraparound</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_values</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
@@ -1180,10 +1247,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">startpos</span> <span class="o">=</span> <span class="n">startpos</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">segment</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">completed</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">startpos</span>
@@ -1192,7 +1259,7 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">getStepValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getStepValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1214,7 +1281,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastStep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastStep</span>
 
-    <span class="k">def</span> <span class="nf">getSegmentValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getSegmentValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segment</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">segment</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segment</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1233,7 +1300,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastSegment</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastSegment</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1276,8 +1343,11 @@
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">next</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="EventIndex"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventIndex">[docs]</a><span class="k">class</span> <span class="nc">EventIndex</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventIndex">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventIndex">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventIndex</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Plays values from a list based on a position index.</span>
 
 <span class="sd">    :Args:</span>
@@ -1303,7 +1373,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_values</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
@@ -1313,16 +1383,16 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">stopEventsWhenDone</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">getIndexValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getIndexValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1343,7 +1413,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastIndex</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastIndex</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1360,8 +1430,11 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<div class="viewcode-block" id="EventMarkov"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventMarkov">[docs]</a><span class="k">class</span> <span class="nc">EventMarkov</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventMarkov">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventMarkov">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventMarkov</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Applies a Markov algorithm to a list of values.</span>
 
 <span class="sd">    A Markov chain is a stochastic model describing a sequence of possible events</span>
@@ -1393,7 +1466,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_values</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
@@ -1403,16 +1476,16 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">markov</span> <span class="o">=</span> <span class="n">MarkovGen</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">getOrderValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getOrderValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1433,7 +1506,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastOrder</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastOrder</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1450,9 +1523,12 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
+
 <span class="c1">###################</span>
-<div class="viewcode-block" id="EventChoice"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventChoice">[docs]</a><span class="k">class</span> <span class="nc">EventChoice</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventChoice">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventChoice">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventChoice</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Plays values randomly chosen from a list.</span>
 
 <span class="sd">    :Args:</span>
@@ -1475,7 +1551,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_values</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
@@ -1483,14 +1559,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">stopEventsWhenDone</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1503,8 +1579,11 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<div class="viewcode-block" id="EventDrunk"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventDrunk">[docs]</a><span class="k">class</span> <span class="nc">EventDrunk</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventDrunk">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventDrunk">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventDrunk</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Performs a random walk over a list of values.</span>
 
 <span class="sd">    A random walk is a stochastic process that consists of a succession of</span>
@@ -1534,7 +1613,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">maxStep</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">maxStep</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_values</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
@@ -1543,10 +1622,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">stopEventsWhenDone</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">allowRepetition</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1554,7 +1633,7 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxStep</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">maxStep</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">getMaxStepValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getMaxStepValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxStep</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxStep</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxStep</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1577,7 +1656,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastMaxStep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastMaxStep</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1602,8 +1681,11 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<div class="viewcode-block" id="EventNoise"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventNoise">[docs]</a><span class="k">class</span> <span class="nc">EventNoise</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="EventNoise">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventNoise">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventNoise</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return a random value between -1.0 and 1.0.</span>
 
 <span class="sd">    EventNoise returns a random value between -1.0 and 1.0, based on one of</span>
@@ -1634,22 +1716,22 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lastType</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_occurrences</span><span class="p">(</span><span class="n">occurrences</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">stopEventsWhenDone</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y1</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">c0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c5</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c6</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-    <span class="k">def</span> <span class="nf">getTypeValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getTypeValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1670,7 +1752,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastType</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastType</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getTypeValue</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -1697,9 +1779,12 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
+
 <span class="c1">###################</span>
-<div class="viewcode-block" id="EventCall"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventCall">[docs]</a><span class="k">class</span> <span class="nc">EventCall</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventCall">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventCall">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventCall</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calls a function, with any number of arguments, and uses its return value.</span>
 
 <span class="sd">    EventCall can call any function (built-in, from a module or user-defined)</span>
@@ -1729,7 +1814,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="o">=</span> <span class="n">function</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
@@ -1737,14 +1822,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;stopEventsWhenDone&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internalGeneratorNextCall</span><span class="p">()</span>
 
@@ -1765,9 +1850,12 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
+
 <span class="c1">###################</span>
-<div class="viewcode-block" id="EventConditional"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventConditional">[docs]</a><span class="k">class</span> <span class="nc">EventConditional</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EventConditional">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.EventConditional">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EventConditional</span><span class="p">(</span><span class="n">EventGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Executes one generator or the other depending on the result of a condition.</span>
 
 <span class="sd">    EventConditional takes three values or generators as arguments and if the</span>
@@ -1804,7 +1892,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">,</span> <span class="n">iftrue</span><span class="p">,</span> <span class="n">iffalse</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">,</span> <span class="n">iftrue</span><span class="p">,</span> <span class="n">iffalse</span><span class="p">,</span> <span class="n">occurrences</span><span class="o">=</span><span class="n">inf</span><span class="p">,</span> <span class="n">stopEventsWhenDone</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">EventGenerator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">condition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">iftrue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect_generator</span><span class="p">(</span><span class="n">iftrue</span><span class="p">)</span>
@@ -1813,14 +1901,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stopEventsWhenDone</span> <span class="o">=</span> <span class="n">stopEventsWhenDone</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occurrences</span>
 
-    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lastCondition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastIftrue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastIffalse</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">getConditionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getConditionValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1837,7 +1925,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastCondition</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastCondition</span>
 
-    <span class="k">def</span> <span class="nf">getIftrueValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getIftrueValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iftrue</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iftrue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iftrue</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1854,7 +1942,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastIftrue</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastIftrue</span>
 
-    <span class="k">def</span> <span class="nf">getIffalseValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getIffalseValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iffalse</span><span class="p">,</span> <span class="n">PyoObject</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iffalse</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iffalse</span><span class="p">,</span> <span class="n">EventGenerator</span><span class="p">):</span>
@@ -1871,7 +1959,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lastIffalse</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastIffalse</span>
 
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">condition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getConditionValue</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">condition</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -1889,10 +1977,13 @@
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
+
 <span class="c1"># Event Player</span>
 <span class="c1">##############</span>
-<div class="viewcode-block" id="Events"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events">[docs]</a><span class="k">class</span> <span class="nc">Events</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Events">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Events</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Sequencing user-defined events to form musical phrases.</span>
 
 <span class="sd">    The Events object is the primary tool in the events framework. It uses</span>
@@ -2009,7 +2100,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">):</span>
         <span class="c1"># Instrument key</span>
         <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;instr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DefaultInstrument</span>
         <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;signal&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2052,8 +2143,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">Sig</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;outs&quot;</span><span class="p">])</span>
 
-<div class="viewcode-block" id="Events.events"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.events">[docs]</a>    <span class="k">def</span> <span class="nf">events</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Return a copy of this Events object. &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Events.events">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.events">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">events</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a copy of this Events object. &quot;&quot;&quot;</span>
         <span class="n">evts</span> <span class="o">=</span> <span class="n">Events</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
@@ -2062,8 +2155,11 @@
                 <span class="n">evts</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">evts</span></div>
 
-<div class="viewcode-block" id="Events.play"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.play">[docs]</a>    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Events.play">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.play">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Start the events playback.</span>
 
 <span class="sd">        This method returns `self`, allowing it to be applied at the object</span>
@@ -2086,7 +2182,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">actives</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">callAtEnd</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s2">&quot;atend&quot;</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s2">&quot;atend&quot;</span><span class="p">]):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">callAtEnd</span> <span class="o">=</span> <span class="n">CallAfter</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s2">&quot;atend&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;instr&quot;</span><span class="p">,</span> <span class="s2">&quot;signal&quot;</span><span class="p">,</span> <span class="s2">&quot;bpm&quot;</span><span class="p">,</span> <span class="s2">&quot;outs&quot;</span><span class="p">,</span> <span class="s2">&quot;atend&quot;</span><span class="p">]]:</span>
@@ -2104,8 +2200,11 @@
 
         <span class="k">return</span> <span class="bp">self</span></div>
 
-<div class="viewcode-block" id="Events.stop"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Events.stop">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.stop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Stop the events playback.</span>
 
 <span class="sd">        :Args:</span>
@@ -2117,11 +2216,14 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">callNextEvent</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="n">wait</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">getCurrentDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCurrentDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentDict</span>
 
-<div class="viewcode-block" id="Events.sig"><a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.sig">[docs]</a>    <span class="k">def</span> <span class="nf">sig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Events.sig">
+<a class="viewcode-back" href="../../../api/classes/events.html#pyo.Events.sig">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the audio output signal (sum of all active instances), if defined.</span>
 
 <span class="sd">        The audio output signal of an Events object is the sum of the active</span>
@@ -2133,8 +2235,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span></div>
 
-    <span class="k">def</span> <span class="nf">_processEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Create instrument instances and add them to the active list.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_processEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create instrument instances and add them to the active list.&quot;&quot;&quot;</span>
 
         <span class="n">quarterDur</span> <span class="o">=</span> <span class="mf">60.0</span> <span class="o">/</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;bpm&quot;</span><span class="p">]</span>
 
@@ -2247,14 +2350,15 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">instanceId</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxInstanceId</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">instanceId</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">_remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceId</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Removes an instrument instance from the active list. &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instanceId</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Removes an instrument instance from the active list. &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">instanceId</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">actives</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">actives</span><span class="p">[</span><span class="n">instanceId</span><span class="p">]</span>
         <span class="k">if</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;signal&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
                 <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">instr</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;signal&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">instr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">actives</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">instr</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="s2">&quot;signal&quot;</span><span class="p">])]</span>
             <span class="p">)</span></div>
+
 </pre></div>
 
             <div class="clearer"></div>
@@ -2269,7 +2373,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <div role="navigation" aria-label="related navigaton">
+          <div role="navigation" aria-label="Related">
             <a href="../../../genindex.html" title="General Index"
               >index</a>
           </div>
@@ -2280,8 +2384,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
         </div>
         <div class="clearer"></div>

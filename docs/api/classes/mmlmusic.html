@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-content_root="../../" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Music Macro Language evaluator — Pyo 1.0.5 documentation</title>
-<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/agogo.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/autoclasstoc.css" rel="stylesheet" type="text/css"/>
-<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-<script src="../../_static/jquery.js"></script>
-<script src="../../_static/underscore.js"></script>
-<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-<script src="../../_static/doctools.js"></script>
-<script src="../../_static/sphinx_highlight.js"></script>
-<link href="../../_static/E-PyoIcon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Music Macro Language evaluator — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
@@ -25,8 +21,8 @@
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
-<div class="headertitle"><a href="../../index.html">Pyo 1.0.5 documentation</a></div>
-<div aria-label="related navigation" class="rel" role="navigation">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
 <a accesskey="P" href="midi.html" title="Midi Handling">previous</a> |
           <a accesskey="N" href="opensndctrl.html" title="Open Sound Control">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
@@ -57,40 +53,40 @@
 <li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
-<div role="search">
+<search role="search">
 <h3 style="margin-top: 1.5em;">Search</h3>
 <form action="../../search.html" class="search" method="get">
 <input name="q" type="text"/>
 <input type="submit" value="Go"/>
 </form>
-</div>
+</search>
 </div>
 <div class="document">
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
 <section id="music-macro-language-evaluator">
-<h1>Music Macro Language evaluator<a class="headerlink" href="#music-macro-language-evaluator" title="Permalink to this heading">¶</a></h1>
+<h1>Music Macro Language evaluator<a class="headerlink" href="#music-macro-language-evaluator" title="Link to this heading">¶</a></h1>
 <p>The MML object implements acustom MML evaluator to allow simple and efficient
 music composition within pyo. The language’s rules are explained below.</p>
 <p>The MML object generates triggers on new notes with additional streams to
 handle frequency, amplitude, duration and custom parameters. See the object
 documentation for more details.</p>
 <section id="objects-in-this-category">
-<h2>Objects in this category<a class="headerlink" href="#objects-in-this-category" title="Permalink to this heading">¶</a></h2>
+<h2>Objects in this category<a class="headerlink" href="#objects-in-this-category" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#pyo.MML" title="pyo.MML"><code class="xref py py-class docutils literal notranslate"><span class="pre">MML</span></code></a> :     Generates music sequences based on a custom MML notation.</p></li>
 </ul>
 </section>
 <section id="api-documentation">
-<h2><strong>API documentation</strong><a class="headerlink" href="#api-documentation" title="Permalink to this heading">¶</a></h2>
+<h2><strong>API documentation</strong><a class="headerlink" href="#api-documentation" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>The space separates the tokens in a music sequence (a token can be a note value,
 an amplitude control, a tempo statement, etc.).</p></li>
 </ul>
 </section>
 <section id="pre-processing-on-music-text">
-<h2>Pre-Processing on music text<a class="headerlink" href="#pre-processing-on-music-text" title="Permalink to this heading">¶</a></h2>
+<h2>Pre-Processing on music text<a class="headerlink" href="#pre-processing-on-music-text" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>A comment starts with a semicolon ( <strong>;</strong> ) and ends at the end of the line. This
 text will be removed before starting to evaluate the sequences.</p></li>
@@ -103,7 +99,7 @@ macro’s body.</p></li>
 </ul>
 </section>
 <section id="realtime-processing-of-the-music">
-<h2>Realtime Processing of the music<a class="headerlink" href="#realtime-processing-of-the-music" title="Permalink to this heading">¶</a></h2>
+<h2>Realtime Processing of the music<a class="headerlink" href="#realtime-processing-of-the-music" title="Link to this heading">¶</a></h2>
 <p><strong>Voice number</strong></p>
 <ul class="simple">
 <li><p>The symbol #, followed by a number indicates the voice number for the line. This should be
@@ -187,21 +183,21 @@ limit to the number of levels of loop embedding.</p></li>
 </ul>
 </section>
 <section id="objects">
-<h2><strong>Objects</strong><a class="headerlink" href="#objects" title="Permalink to this heading">¶</a></h2>
+<h2><strong>Objects</strong><a class="headerlink" href="#objects" title="Link to this heading">¶</a></h2>
 </section>
 <section id="mml">
-<h2><em>MML</em><a class="headerlink" href="#mml" title="Permalink to this heading">¶</a></h2>
+<h2><em>MML</em><a class="headerlink" href="#mml" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.MML">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">music</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updateAtEnd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">music</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updateAtEnd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML" title="Link to this definition">¶</a></dt>
 <dd><p>Generates music sequences based on a custom MML notation.</p>
 <p>Music Macro Language (MML) is a music description language used in
 sequencing music on computer and video game systems.</p>
 <dl class="field-list">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>music: string</dt><dd><p>The new music code to parse. If the string is a valid path
 to a text file, the file is opened and its content is taken
@@ -272,21 +268,13 @@ Defaults to False.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyo.MML.music" title="pyo.MML.music"><code class="xref py py-obj docutils literal notranslate"><span class="pre">music</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">music</span></code></p></td>
 <td><p>string.</p></td>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mul</span></code></p></td>
 <td><p>float or PyoObject.</p></td>
@@ -300,10 +288,6 @@ Defaults to False.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(music[, voices, loop, poly, ...])</p></td>
 <td><p></p></td>
@@ -355,11 +339,7 @@ Defaults to False.</p>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([mul, add])</p></td>
 <td><p></p></td>
@@ -486,11 +466,7 @@ Defaults to False.</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>()</p></td>
 <td><p></p></td>
@@ -554,22 +530,14 @@ Defaults to False.</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_STREAM_TYPE</span></code></p></td>
 <td><p></p></td>
@@ -579,11 +547,7 @@ Defaults to False.</p>
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
-<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_init_play</span></code>()</p></td>
 <td><p></p></td>
@@ -593,11 +557,7 @@ Defaults to False.</p>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+</details><details><summary>Inherited from <a class="reference internal" href="_core.html#pyo.PyoObjectBase" title="pyo.lib._core.PyoObjectBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObjectBase</span></code></a></summary><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_autoplay</span></code>([dur, delay])</p></td>
 <td><p></p></td>
@@ -611,14 +571,14 @@ Defaults to False.</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'amp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.get" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'amp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.get" title="Link to this definition">¶</a></dt>
 <dd><p>Return the first sample of the current buffer as a float.</p>
 <p>Can be used to convert audio stream to usable Python data.</p>
 <p>“freq”, “amp”, “dur”, “end”, “x”, “y” or “z” can be given
 to <cite>identifier</cite> to retrieve a specific stream to get the
 value from.</p>
 <dl class="field-list">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt>identifier: string {“freq”, “amp”, “dur”, “end”, “x”, “y”, “z”}</dt><dd><p>Address string parameter identifying audio stream.
 Defaults to “amp”.</p>
@@ -634,10 +594,10 @@ stream will be returned as a float.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.setMusic">
-<span class="sig-name descname"><span class="pre">setMusic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setMusic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setMusic" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMusic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setMusic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setMusic" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>music</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: string</dt><dd><p>The new music code to parse. If the string is a valid path
 to a text file, the file is opened and its content is taken
@@ -649,15 +609,15 @@ as the music code.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.getSequences">
-<span class="sig-name descname"><span class="pre">getSequences</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.getSequences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.getSequences" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getSequences</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.getSequences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.getSequences" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the sequences parsed from the music text.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.getNoteFromPitch">
-<span class="sig-name descname"><span class="pre">getNoteFromPitch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.getNoteFromPitch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.getNoteFromPitch" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getNoteFromPitch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.getNoteFromPitch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.getNoteFromPitch" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a MIDI note to MML notation and returns the result as a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>The MIDI note to convert to MML notation. This will return two tokens,
 the octave followed by the note name.</p>
@@ -668,10 +628,10 @@ the octave followed by the note name.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.getVolumeFromVelocity">
-<span class="sig-name descname"><span class="pre">getVolumeFromVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.getVolumeFromVelocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.getVolumeFromVelocity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getVolumeFromVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.getVolumeFromVelocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.getVolumeFromVelocity" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a MIDI velocity to MML volume notation and returns the result as a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int</dt><dd><p>The MIDI velocity to convert to MML volume notation. This will return a
 volume token.</p>
@@ -682,13 +642,13 @@ volume token.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.play">
-<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.play"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.play" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.play"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.play" title="Link to this definition">¶</a></dt>
 <dd><p>Start processing without sending samples to output.
 This method is called automatically at the object creation.</p>
 <p>This method returns <cite>self</cite>, allowing it to be applied at the object
 creation.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>dur: float, optional</dt><dd><p>Duration, in seconds, of the object’s activation. The default
 is 0 and means infinite duration.</p>
@@ -701,12 +661,12 @@ is 0 and means infinite duration.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.stop" title="Link to this definition">¶</a></dt>
 <dd><p>Stop processing.</p>
 <p>This method returns <cite>self</cite>, allowing it to be applied at the object
 creation.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>wait: float, optional</dt><dd><p>Delay, in seconds, before the process is actually stopped.
 If autoStartChildren is activated in the Server, this value
@@ -730,12 +690,12 @@ triggered by the stop call.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.out">
-<span class="sig-name descname"><span class="pre">out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chnl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.out"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.out" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chnl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.out"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.out" title="Link to this definition">¶</a></dt>
 <dd><p>Start processing and send samples to audio output beginning at <cite>chnl</cite>.</p>
 <p>This method returns <cite>self</cite>, allowing it to be applied at the object
 creation.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>chnl: int, optional</dt><dd><p>Physical output assigned to the first audio stream of the
 object. Defaults to 0.</p>
@@ -761,10 +721,10 @@ assigned to successive streams.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.setMul">
-<span class="sig-name descname"><span class="pre">setMul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setMul"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setMul" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setMul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setMul"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setMul" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>mul</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>New <cite>mul</cite> attribute.</p>
 </dd>
@@ -774,10 +734,10 @@ assigned to successive streams.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.setAdd">
-<span class="sig-name descname"><span class="pre">setAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setAdd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setAdd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setAdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setAdd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setAdd" title="Link to this definition">¶</a></dt>
 <dd><p>Replace the <cite>add</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>New <cite>add</cite> attribute.</p>
 </dd>
@@ -787,10 +747,10 @@ assigned to successive streams.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.setSub">
-<span class="sig-name descname"><span class="pre">setSub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setSub"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setSub" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setSub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setSub"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setSub" title="Link to this definition">¶</a></dt>
 <dd><p>Replace and inverse the <cite>add</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>New inversed <cite>add</cite> attribute.</p>
 </dd>
@@ -800,10 +760,10 @@ assigned to successive streams.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.setDiv">
-<span class="sig-name descname"><span class="pre">setDiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setDiv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setDiv" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">setDiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.setDiv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.setDiv" title="Link to this definition">¶</a></dt>
 <dd><p>Replace and inverse the <cite>mul</cite> attribute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: float or PyoObject</dt><dd><p>New inversed <cite>mul</cite> attribute.</p>
 </dd>
@@ -813,10 +773,10 @@ assigned to successive streams.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MML.editor">
-<span class="sig-name descname"><span class="pre">editor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MML</span> <span class="pre">Editor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.editor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.editor" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">editor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MML</span> <span class="pre">Editor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wxnoserver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/mmlmusic.html#MML.editor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MML.editor" title="Link to this definition">¶</a></dt>
 <dd><p>Opens the text editor for this object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>title: string, optional</dt><dd><p>Title of the window. If none is provided, the name of the
 class is used.</p>
@@ -832,7 +792,7 @@ the server GUI before showing the controller window.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.MML.music">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">music</span></span><a class="headerlink" href="#pyo.MML.music" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">music</span></span><a class="headerlink" href="#pyo.MML.music" title="Link to this definition">¶</a></dt>
 <dd><p>string. The music code to parse.</p>
 </dd></dl>
 </dd></dl>
@@ -849,7 +809,7 @@ the server GUI before showing the controller window.</p>
 <div class="footer-wrapper">
 <div class="footer">
 <div class="left">
-<div aria-label="related navigaton" role="navigation">
+<div aria-label="Related" role="navigation">
 <a href="midi.html" title="Midi Handling">previous</a> |
             <a href="opensndctrl.html" title="Open Sound Control">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
@@ -859,8 +819,8 @@ the server GUI before showing the controller window.</p>
 </div>
 <div class="right">
 <div class="footer" role="contentinfo">
-        © Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
 </div>
 <div class="clearer"></div>

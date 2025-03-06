@@ -3,8 +3,8 @@ Installing pyo with pip
 
 In most use cases the best way to install pyo on your system is by using a pre-built
 package for your operating system. These packages are available through pip.
-Python supported version are 2.7 (up to 1.0.1), 3.5 (up to 1.0.1), 3.6 (up to 1.0.4),
-and 3.7 to 3.11.
+Current version supports Python 3.9 to 3.13.
+Older supported Python versions are 2.7 (up to 1.0.1), 3.5 (up to 1.0.1), 3.6 (up to 1.0.4).
 To install, run this command (if you have both python2 and python3 installed and want 
 to target python3, use `pip3`)::
 
@@ -15,14 +15,11 @@ invoke it as a script from the `python` command.
 
 .. code-block:: bash
 
-    # for python 2
-    python2 -m pip install --user pyo
+    # for python 3.13
+    python3.13 -m pip install --user pyo
 
-    # for python 3.7
-    python3.7 -m pip install --user pyo
-
-    # for python 3.8 under Windows (`py` is the python launcher command)
-    py -3.8 -m pip install --user pyo
+    # for python 3.13 under Windows (`py` is the python launcher command)
+    py -3.13 -m pip install --user pyo
 
     # if you want to install system-wide under MacOS or linux, use `sudo`
     sudo python3 -m pip install pyo
@@ -33,7 +30,7 @@ This information is useful mainly for advanced users.
 Pyo is a python module...
 -------------------------
 
-... which means that python must be present (version 3.7 to 3.11) 
+... which means that python must be present (version 3.9 to 3.13) 
 on the system. If python is not installed, you can download it on 
 `python.org <https://www.python.org/downloads/>`_.
 

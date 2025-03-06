@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-content_root="../" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Creating a custom PyoObject - Flanger — Pyo 1.0.5 documentation</title>
-<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/agogo.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/autoclasstoc.css" rel="stylesheet" type="text/css"/>
-<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-<script src="../_static/jquery.js"></script>
-<script src="../_static/underscore.js"></script>
-<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-<script src="../_static/doctools.js"></script>
-<script src="../_static/sphinx_highlight.js"></script>
-<link href="../_static/E-PyoIcon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Creating a custom PyoObject - Flanger — Pyo 1.0.6 documentation</title>
+<link href="../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../_static/doctools.js?v=9bcbadda"></script>
+<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../_static/E-PyoIcon.ico" rel="icon"/>
 <link href="../about.html" rel="author" title="About these documents"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
@@ -25,8 +21,8 @@
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
-<div class="headertitle"><a href="../index.html">Pyo 1.0.5 documentation</a></div>
-<div aria-label="related navigation" class="rel" role="navigation">
+<div class="headertitle"><a href="../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
 <a accesskey="P" href="pyoobject1.html" title="Creating a custom PyoObject - RingMod">previous</a> |
           <a accesskey="N" href="pyotableobject1.html" title="Creating a custom PyoTableObject - TriangleTable">next</a> |
           <a accesskey="I" href="../genindex.html" title="General Index">index</a>
@@ -56,20 +52,20 @@
 </ul>
 </li>
 </ul>
-<div role="search">
+<search role="search">
 <h3 style="margin-top: 1.5em;">Search</h3>
 <form action="../search.html" class="search" method="get">
 <input name="q" type="text"/>
 <input type="submit" value="Go"/>
 </form>
-</div>
+</search>
 </div>
 <div class="document">
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
 <section id="creating-a-custom-pyoobject-flanger">
-<h1>Creating a custom PyoObject - Flanger<a class="headerlink" href="#creating-a-custom-pyoobject-flanger" title="Permalink to this heading">¶</a></h1>
+<h1>Creating a custom PyoObject - Flanger<a class="headerlink" href="#creating-a-custom-pyoobject-flanger" title="Link to this heading">¶</a></h1>
 <p>There are few steps we need to take care of in order to create a class with all
 of the PyoObject behaviors.</p>
 <p>Things to consider:</p>
@@ -88,17 +84,17 @@ of the PyoObject behaviors.</p>
 </pre></div>
 </div>
 <p>First of all, we need to import the pyo module</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <a class="sphinx-codeautolink-a" href="../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <section id="step-1-declaring-the-class">
-<h2>Step 1 - Declaring the class<a class="headerlink" href="#step-1-declaring-the-class" title="Permalink to this heading">¶</a></h2>
+<h2>Step 1 - Declaring the class<a class="headerlink" href="#step-1-declaring-the-class" title="Link to this heading">¶</a></h2>
 <p>We will create a new class called Flanger with PyoObject as its parent class.
 Another good habit is to put a __doc__ string at the beginning of our classes.
 Doing so will allow other users to retrieve the object’s documentation with the
 standard python help() function.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Flanger</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../api/classes/_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><span class="n">PyoObject</span></a><span class="p">):</span>
-    <span class="sd">"""</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Flanger</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../api/classes/_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><span class="n">PyoObject</span></a><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Flanging effect.</span>
 
 <span class="sd">    A flanging is an audio effect produced by mixing two identical signals together,</span>
@@ -136,7 +132,7 @@ standard python help() function.</p>
 </div>
 </section>
 <section id="step-2-the-init-method">
-<h2>Step 2 - The __init__ method<a class="headerlink" href="#step-2-the-init-method" title="Permalink to this heading">¶</a></h2>
+<h2>Step 2 - The __init__ method<a class="headerlink" href="#step-2-the-init-method" title="Link to this heading">¶</a></h2>
 <p>This is the place where we have to take care of some of pyo’s generic behaviours.
 The most important thing to remember is that when a PyoObject receives another
 PyoObject in input, it looks for an attribute called self._base_objs. This attribute
@@ -153,7 +149,7 @@ arguments to create multiple instances of our object and managing multiple audio
 Two functions help us to accomplish this:</p>
 <p><cite>convertArgsToLists(*args)</cite> : Return arguments converted to lists and the maximum list size.
 wrap(list,i) : Return value at position “i” in “list” with wrap around len(list).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">lfofreq</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">lfofreq</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="c1"># Properly initialize PyoObject's basic attributes</span>
     <span class="n">PyoObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
@@ -182,15 +178,15 @@ wrap(list,i) : Return value at position “i” in “list” with wrap around l
 </div>
 </section>
 <section id="step-3-setxxx-methods-and-attributes">
-<h2>Step 3 - setXXX methods and attributes<a class="headerlink" href="#step-3-setxxx-methods-and-attributes" title="Permalink to this heading">¶</a></h2>
+<h2>Step 3 - setXXX methods and attributes<a class="headerlink" href="#step-3-setxxx-methods-and-attributes" title="Link to this heading">¶</a></h2>
 <p>Now, we will add methods and attributes getter and setter for all controllable
 parameters. It should be noted that we use the setInput() method of the
 InputFader object to change an input source. This object implements a cross-fade
 between the old source and the new one with a cross-fade duration argument.
 Here, we need to keep references of raw argument in order to get the
 real current state when we call the dump() method.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fadetime</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
-    <span class="sd">"""</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">setInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fadetime</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Replace the `input` attribute.</span>
 
 <span class="sd">    :Args:</span>
@@ -204,8 +200,8 @@ real current state when we call the dump() method.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">_input</span> <span class="o">=</span> <span class="n">x</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_in_fader</span><span class="o">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fadetime</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">setDepth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="sd">"""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">setDepth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Replace the `depth` attribute.</span>
 
 <span class="sd">    :Args:</span>
@@ -217,8 +213,8 @@ real current state when we call the dump() method.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span> <span class="o">=</span> <span class="n">x</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">x</span>
 
-<span class="k">def</span> <span class="nf">setLfoFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="sd">"""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">setLfoFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Replace the `lfofreq` attribute.</span>
 
 <span class="sd">    :Args:</span>
@@ -230,8 +226,8 @@ real current state when we call the dump() method.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">_lfofreq</span> <span class="o">=</span> <span class="n">x</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">x</span>
 
-<span class="k">def</span> <span class="nf">setFeedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="sd">"""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">setFeedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Replace the `feedback` attribute.</span>
 
 <span class="sd">    :Args:</span>
@@ -244,48 +240,48 @@ real current state when we call the dump() method.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">feedback</span> <span class="o">=</span> <span class="n">x</span>
 
 <span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""PyoObject. Input signal to process."""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""PyoObject. Input signal to process."""</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input</span>
 <span class="nd">@input</span><span class="o">.</span><span class="n">setter</span>
-<span class="k">def</span> <span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""float or PyoObject. Amplitude of the delay line modulation."""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""float or PyoObject. Amplitude of the delay line modulation."""</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span>
 <span class="nd">@depth</span><span class="o">.</span><span class="n">setter</span>
-<span class="k">def</span> <span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">setDepth</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""float or PyoObject. Frequency of the delay line modulation."""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""float or PyoObject. Frequency of the delay line modulation."""</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lfofreq</span>
 <span class="nd">@lfofreq</span><span class="o">.</span><span class="n">setter</span>
-<span class="k">def</span> <span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">setLfoFreq</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""float or PyoObject. Amount of out sig sent back in delay line."""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""float or PyoObject. Amount of out sig sent back in delay line."""</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_feedback</span>
 <span class="nd">@feedback</span><span class="o">.</span><span class="n">setter</span>
-<span class="k">def</span> <span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">setFeedback</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="step-4-the-ctrl-method">
-<h2>Step 4 - The ctrl() method<a class="headerlink" href="#step-4-the-ctrl-method" title="Permalink to this heading">¶</a></h2>
+<h2>Step 4 - The ctrl() method<a class="headerlink" href="#step-4-the-ctrl-method" title="Link to this heading">¶</a></h2>
 <p>The ctrl() method of a PyoObject is used to pop-up a GUI to control the parameters
 of the object. The initialization of sliders is done with a list of SLMap objects
 where we can set the range of the slider, the type of scaling, the name of the
 attribute linked to the slider and the initial value. We will define a default
 “self._map_list” that will be used if the user doesn’t provide one to the parameter
 “map_list”. If the object doesn’t have any parameter to control with a GUI, this</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_map_list</span> <span class="o">=</span> <span class="p">[</span><a class="sphinx-codeautolink-a" href="../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="s2">"lin"</span><span class="p">,</span> <span class="s2">"depth"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span><span class="p">),</span>
                       <a class="sphinx-codeautolink-a" href="../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">20.</span><span class="p">,</span> <span class="s2">"log"</span><span class="p">,</span> <span class="s2">"lfofreq"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lfofreq</span><span class="p">),</span>
                       <a class="sphinx-codeautolink-a" href="../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="s2">"lin"</span><span class="p">,</span> <span class="s2">"feedback"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_feedback</span><span class="p">),</span>
@@ -295,26 +291,26 @@ attribute linked to the slider and the initial value. We will define a default
 </div>
 </section>
 <section id="step-5-overriding-the-play-stop-and-out-methods">
-<h2>Step 5 - Overriding the .play(), .stop() and .out() methods<a class="headerlink" href="#step-5-overriding-the-play-stop-and-out-methods" title="Permalink to this heading">¶</a></h2>
+<h2>Step 5 - Overriding the .play(), .stop() and .out() methods<a class="headerlink" href="#step-5-overriding-the-play-stop-and-out-methods" title="Link to this heading">¶</a></h2>
 <p>Finally, we might want to override .play(), .stop() and .out() methods to be sure all
 our internal PyoObjects are consequently managed instead of only objects in self._base_obj,
 as it is in built-in objects. To handle properly the process for self._base_objs, we still
 need to call the method that belongs to PyoObject. We return the returned value (self) of
 these methods in order to possibly append the method to the object’s creation. See the
 definition of these methods in the PyoObject man page to understand the meaning of arguments.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">PyoObject</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">PyoObject</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chnl</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chnl</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
@@ -324,11 +320,11 @@ definition of these methods in the PyoObject man page to understand the meaning 
 <p>Here we are, we’ve just created our second custom pyo object!</p>
 </section>
 <section id="complete-class-definition-and-test">
-<h2>Complete class definition and test<a class="headerlink" href="#complete-class-definition-and-test" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <a class="sphinx-codeautolink-a" href="../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a> <span class="kn">import</span> <span class="o">*</span>
+<h2>Complete class definition and test<a class="headerlink" href="#complete-class-definition-and-test" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="k">class</span> <span class="nc">Flanger</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../api/classes/_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><span class="n">PyoObject</span></a><span class="p">):</span>
-    <span class="sd">"""</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Flanger</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../api/classes/_core.html#pyo.PyoObject" title="pyo.lib._core.PyoObject"><span class="n">PyoObject</span></a><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Flanging effect.</span>
 
 <span class="sd">    A flanging is an audio effect produced by mixing two identical signals together,</span>
@@ -362,7 +358,7 @@ definition of these methods in the PyoObject man page to understand the meaning 
 <span class="sd">    &gt;&gt;&gt; flg = Flanger(input=inp, depth=0.9, lfofreq=0.1, feedback=lf).out()</span>
 
 <span class="sd">    """</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">lfofreq</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">lfofreq</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input</span> <span class="o">=</span> <span class="nb">input</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span> <span class="o">=</span> <span class="n">depth</span>
@@ -379,8 +375,8 @@ definition of these methods in the PyoObject man page to understand the meaning 
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_base_objs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_flange</span><span class="o">.</span><span class="n">getBaseObjects</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">setInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fadetime</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
-        <span class="sd">"""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fadetime</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Replace the `input` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -394,8 +390,8 @@ definition of these methods in the PyoObject man page to understand the meaning 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_in_fader</span><span class="o">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fadetime</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">setDepth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">"""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setDepth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Replace the `depth` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -407,8 +403,8 @@ definition of these methods in the PyoObject man page to understand the meaning 
         <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="k">def</span> <span class="nf">setLfoFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">"""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setLfoFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Replace the `lfofreq` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -420,8 +416,8 @@ definition of these methods in the PyoObject man page to understand the meaning 
         <span class="bp">self</span><span class="o">.</span><span class="n">_lfofreq</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="k">def</span> <span class="nf">setFeedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">"""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setFeedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Replace the `feedback` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -433,25 +429,25 @@ definition of these methods in the PyoObject man page to understand the meaning 
         <span class="bp">self</span><span class="o">.</span><span class="n">_feedback</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">feedback</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">PyoObject</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">PyoObject</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chnl</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chnl</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modamp</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mod</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dls</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">PyoObject</span><span class="o">.</span><span class="n">out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chnl</span><span class="p">,</span> <span class="n">inc</span><span class="p">,</span> <span class="n">dur</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_map_list</span> <span class="o">=</span> <span class="p">[</span><a class="sphinx-codeautolink-a" href="../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="s2">"lin"</span><span class="p">,</span> <span class="s2">"depth"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span><span class="p">),</span>
                           <a class="sphinx-codeautolink-a" href="../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">20.</span><span class="p">,</span> <span class="s2">"log"</span><span class="p">,</span> <span class="s2">"lfofreq"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lfofreq</span><span class="p">),</span>
                           <a class="sphinx-codeautolink-a" href="../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="s2">"lin"</span><span class="p">,</span> <span class="s2">"feedback"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_feedback</span><span class="p">),</span>
@@ -459,35 +455,35 @@ definition of these methods in the PyoObject man page to understand the meaning 
         <span class="n">PyoObject</span><span class="o">.</span><span class="n">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""PyoObject. Input signal to process."""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""PyoObject. Input signal to process."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input</span>
     <span class="nd">@input</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""float or PyoObject. Amplitude of the delay line modulation."""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""float or PyoObject. Amplitude of the delay line modulation."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_depth</span>
     <span class="nd">@depth</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setDepth</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""float or PyoObject. Frequency of the delay line modulation."""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""float or PyoObject. Frequency of the delay line modulation."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lfofreq</span>
     <span class="nd">@lfofreq</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lfofreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLfoFreq</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">"""float or PyoObject. Amount of out sig sent back in delay line."""</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""float or PyoObject. Amount of out sig sent back in delay line."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_feedback</span>
     <span class="nd">@feedback</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setFeedback</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="c1"># Run the script to test the Flanger object.</span>
@@ -511,7 +507,7 @@ definition of these methods in the PyoObject man page to understand the meaning 
 <div class="footer-wrapper">
 <div class="footer">
 <div class="left">
-<div aria-label="related navigaton" role="navigation">
+<div aria-label="Related" role="navigation">
 <a href="pyoobject1.html" title="Creating a custom PyoObject - RingMod">previous</a> |
             <a href="pyotableobject1.html" title="Creating a custom PyoTableObject - TriangleTable">next</a> |
             <a href="../genindex.html" title="General Index">index</a>
@@ -521,8 +517,8 @@ definition of these methods in the PyoObject man page to understand the meaning 
 </div>
 <div class="right">
 <div class="footer" role="contentinfo">
-        © Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
 </div>
 <div class="clearer"></div>

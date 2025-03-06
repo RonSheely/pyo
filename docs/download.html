@@ -1,50 +1,39 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Installing pyo with pip &#8212; Pyo 1.0.5 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/agogo.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-codeautolink.css" />
-    <link rel="stylesheet" type="text/css" href="_static/autoclasstoc.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="_static/E-PyoIcon.ico"/>
-    <link rel="author" title="About these documents" href="about.html" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Compiling pyo from sources" href="compiling.html" />
-    <link rel="prev" title="About pyo" href="about.html" /> 
-  </head><body>
-    <div class="header-wrapper" role="banner">
-      <div class="header">
-        <div class="headertitle"><a
-          href="index.html">Pyo 1.0.5 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="about.html" title="About pyo"
-             accesskey="P">previous</a> |
-          <a href="compiling.html" title="Compiling pyo from sources"
-             accesskey="N">next</a> |
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a>
-        </div>
-       </div>
-    </div>
-
-    <div class="content-wrapper">
-      <div class="content">
-        <div class="sidebar">
-          
-          <h3>Table of Contents</h3>
-          <ul class="current">
+<html data-content_root="./" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Installing pyo with pip — Pyo 1.0.6 documentation</title>
+<link href="_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="_static/documentation_options.js?v=e2a723ec"></script>
+<script src="_static/doctools.js?v=9bcbadda"></script>
+<script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="_static/E-PyoIcon.ico" rel="icon"/>
+<link href="about.html" rel="author" title="About these documents"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="compiling.html" rel="next" title="Compiling pyo from sources"/>
+<link href="about.html" rel="prev" title="About pyo"/>
+</head><body>
+<div class="header-wrapper" role="banner">
+<div class="header">
+<div class="headertitle"><a href="index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
+<a accesskey="P" href="about.html" title="About pyo">previous</a> |
+          <a accesskey="N" href="compiling.html" title="Compiling pyo from sources">next</a> |
+          <a accesskey="I" href="genindex.html" title="General Index">index</a>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="content">
+<div class="sidebar">
+<h3>Table of Contents</h3>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About pyo</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installing pyo with pip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling pyo from sources</a></li>
@@ -58,28 +47,24 @@
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Advanced tutorials</a></li>
 </ul>
-
-          <div role="search">
-            <h3 style="margin-top: 1.5em;">Search</h3>
-            <form class="search" action="search.html" method="get">
-                <input type="text" name="q" />
-                <input type="submit" value="Go" />
-            </form>
-          </div>
-
-        </div>
-        <div class="document">
-            
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="installing-pyo-with-pip">
-<h1>Installing pyo with pip<a class="headerlink" href="#installing-pyo-with-pip" title="Permalink to this heading">¶</a></h1>
+<search role="search">
+<h3 style="margin-top: 1.5em;">Search</h3>
+<form action="search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</search>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="installing-pyo-with-pip">
+<h1>Installing pyo with pip<a class="headerlink" href="#installing-pyo-with-pip" title="Link to this heading">¶</a></h1>
 <p>In most use cases the best way to install pyo on your system is by using a pre-built
 package for your operating system. These packages are available through pip.
-Python supported version are 2.7 (up to 1.0.1), 3.5 (up to 1.0.1), 3.6 (up to 1.0.4),
-and 3.7 to 3.11.
+Current version supports Python 3.9 to 3.13.
+Older supported Python versions are 2.7 (up to 1.0.1), 3.5 (up to 1.0.1), 3.6 (up to 1.0.4).
 To install, run this command (if you have both python2 and python3 installed and want
 to target python3, use <cite>pip3</cite>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">pyo</span>
@@ -87,24 +72,21 @@ to target python3, use <cite>pip3</cite>):</p>
 </div>
 <p>If you are not sure to which version of python the <cite>pip</cite> command is bound to, you can
 invoke it as a script from the <cite>python</cite> command.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for python 2</span>
-python2 -m pip install --user pyo
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for python 3.13</span>
+python3.13<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>pyo
 
-<span class="c1"># for python 3.7</span>
-python3.7 -m pip install --user pyo
-
-<span class="c1"># for python 3.8 under Windows (`py` is the python launcher command)</span>
-py -3.8 -m pip install --user pyo
+<span class="c1"># for python 3.13 under Windows (`py` is the python launcher command)</span>
+py<span class="w"> </span>-3.13<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>pyo
 
 <span class="c1"># if you want to install system-wide under MacOS or linux, use `sudo`</span>
-sudo python3 -m pip install pyo
+sudo<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyo
 </pre></div>
 </div>
 <p>For instructions on building from source package, see <a class="reference external" href="compiling.html">Compiling pyo from sources</a>.
 This information is useful mainly for advanced users.</p>
 <section id="pyo-is-a-python-module">
-<h2>Pyo is a python module…<a class="headerlink" href="#pyo-is-a-python-module" title="Permalink to this heading">¶</a></h2>
-<p>… which means that python must be present (version 3.7 to 3.11)
+<h2>Pyo is a python module…<a class="headerlink" href="#pyo-is-a-python-module" title="Link to this heading">¶</a></h2>
+<p>… which means that python must be present (version 3.9 to 3.13)
 on the system. If python is not installed, you can download it on
 <a class="reference external" href="https://www.python.org/downloads/">python.org</a>.</p>
 <p>Pyo also offers some GUI facilities to control or visualize the audio processing.
@@ -115,7 +97,7 @@ If you want to use all of pyo’s GUI features, you must install WxPython, avail
 </div>
 </section>
 <section id="removing-older-version-of-pyo-prior-to-1-0-0">
-<h2>Removing older version of pyo (prior to 1.0.0)<a class="headerlink" href="#removing-older-version-of-pyo-prior-to-1-0-0" title="Permalink to this heading">¶</a></h2>
+<h2>Removing older version of pyo (prior to 1.0.0)<a class="headerlink" href="#removing-older-version-of-pyo-prior-to-1-0-0" title="Link to this heading">¶</a></h2>
 <p>Prior to version 1.0.0, pyo was installed with binary installers on MacOS and Windows. <cite>pip</cite> knows
 nothing about these files and therefore cannot automatically removed them. To avoid conflicts between
 versions, it’s best to remove older installation of pyo.</p>
@@ -123,7 +105,7 @@ versions, it’s best to remove older installation of pyo.</p>
 <p>On MacOS, you can run this script for the version of python for which you want to use 1.0.0.</p>
 <p><a class="reference external" href="https://github.com/belangeo/pyo/blob/master/scripts/cleanup_older_pyo_versions.py">https://github.com/belangeo/pyo/blob/master/scripts/cleanup_older_pyo_versions.py</a></p>
 <p>As an example, if you want to remove an old installation under python 3.6, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo python3.6 cleanup_older_pyo_versions.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>python3.6<span class="w"> </span>cleanup_older_pyo_versions.py
 </pre></div>
 </div>
 <p>You should also delete the <strong>E-pyo</strong> app in the <cite>Applications</cite> folder.</p>
@@ -138,7 +120,7 @@ or dist-packages folder of your python distribution). Files to delete are:
 pyo.py, pyo64.py, _pyo.so, _pyo64.so, pyolib/ and pyo…egg.</p>
 </section>
 <section id="running-the-epyo-text-editor">
-<h2>Running the EPyo text editor<a class="headerlink" href="#running-the-epyo-text-editor" title="Permalink to this heading">¶</a></h2>
+<h2>Running the EPyo text editor<a class="headerlink" href="#running-the-epyo-text-editor" title="Link to this heading">¶</a></h2>
 <p>To be “pip” compliant, I’ve had to make a choice and removed the pre-built E-Pyo application
 previously installed alongside pyo. But the truth is that this application lives in a single
 python script and can be easily used as long as WxPython is installed under the current python
@@ -151,42 +133,33 @@ EPyo is to run this command in a terminal or a command prompt:</p>
 </div>
 </section>
 </section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div aria-label="Related" role="navigation">
+<a href="about.html" title="About pyo">previous</a> |
+            <a href="compiling.html" title="Compiling pyo from sources">next</a> |
+            <a href="genindex.html" title="General Index">index</a>
+</div>
+<div aria-label="source link" role="note">
+</div>
+</div>
+<div class="right">
+<div class="footer" role="contentinfo">
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
-
-    <div class="footer-wrapper">
-      <div class="footer">
-        <div class="left">
-          <div role="navigation" aria-label="related navigaton">
-            <a href="about.html" title="About pyo"
-              >previous</a> |
-            <a href="compiling.html" title="Compiling pyo from sources"
-              >next</a> |
-            <a href="genindex.html" title="General Index"
-              >index</a>
-          </div>
-          <div role="note" aria-label="source link">
-          </div>
-        </div>
-
-        <div class="right">
-          
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
-    </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
-    </div>
-
-  </body>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+</body>
 </html>

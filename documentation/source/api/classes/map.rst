@@ -80,5 +80,3 @@ Objects in this category
    :members:
 
    .. autoclasstoc::
-
-

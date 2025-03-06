@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyo.lib.wxgui &#8212; Pyo 1.0.5 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../../_static/E-PyoIcon.ico"/>
+    <title>pyo.lib.wxgui &#8212; Pyo 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css?v=227e5aac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css?v=08871587" />
+    <script src="../../../_static/documentation_options.js?v=e2a723ec"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/E-PyoIcon.ico"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -24,8 +20,8 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../../../index.html">Pyo 1.0.5 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
+          href="../../../index.html">Pyo 1.0.6 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="Related">
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a>
         </div>
@@ -52,13 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
 
-          <div role="search">
+          <search role="search">
             <h3 style="margin-top: 1.5em;">Search</h3>
             <form class="search" action="../../../search.html" method="get">
                 <input type="text" name="q" />
                 <input type="submit" value="Go" />
             </form>
-          </div>
+          </search>
 
         </div>
         <div class="document">
@@ -75,49 +71,49 @@
 <span class="sd">under the current Python distribution to access these classes.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">._widgets</span> <span class="kn">import</span> <span class="n">PYO_USE_WX</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._widgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">PYO_USE_WX</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">PYO_USE_WX</span><span class="p">:</span>
     <span class="n">NO_WX_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;WxPython must be installed on the system to use pyo&#39;s wx widgets.&quot;</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiControlSlider</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiControlSlider</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiVuMeter</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiVuMeter</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiGrapher</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiGrapher</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiMultiSlider</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiMultiSlider</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiSpectrum</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiSpectrum</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiScope</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiScope</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiSndView</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiSndView</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
-    <span class="k">class</span> <span class="nc">PyoGuiKeyboard</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiKeyboard</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">NO_WX_MESSAGE</span><span class="p">)</span>
 
 
 <span class="k">else</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">wx</span>
-    <span class="kn">import</span> <span class="nn">wx.lib.newevent</span>
-    <span class="kn">from</span> <span class="nn">._wxwidgets</span> <span class="kn">import</span> <span class="n">ControlSlider</span><span class="p">,</span> <span class="n">VuMeter</span><span class="p">,</span> <span class="n">Grapher</span><span class="p">,</span> <span class="n">DataMultiSlider</span><span class="p">,</span> <span class="n">HRangeSlider</span>
-    <span class="kn">from</span> <span class="nn">._wxwidgets</span> <span class="kn">import</span> <span class="n">SpectrumPanel</span><span class="p">,</span> <span class="n">ScopePanel</span><span class="p">,</span> <span class="n">SndViewTablePanel</span><span class="p">,</span> <span class="n">Keyboard</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">wx</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">wx.lib.newevent</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">._wxwidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">ControlSlider</span><span class="p">,</span> <span class="n">VuMeter</span><span class="p">,</span> <span class="n">Grapher</span><span class="p">,</span> <span class="n">DataMultiSlider</span><span class="p">,</span> <span class="n">HRangeSlider</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">._wxwidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpectrumPanel</span><span class="p">,</span> <span class="n">ScopePanel</span><span class="p">,</span> <span class="n">SndViewTablePanel</span><span class="p">,</span> <span class="n">Keyboard</span>
 
     <span class="k">if</span> <span class="s2">&quot;phoenix&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">wx</span><span class="o">.</span><span class="n">version</span><span class="p">():</span>
         <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">PostEvent</span>
@@ -130,8 +126,10 @@
     <span class="n">PyoGuiSndViewSelectionEvent</span><span class="p">,</span> <span class="n">EVT_PYO_GUI_SNDVIEW_SELECTION</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">newevent</span><span class="o">.</span><span class="n">NewEvent</span><span class="p">()</span>
     <span class="n">PyoGuiKeyboardEvent</span><span class="p">,</span> <span class="n">EVT_PYO_GUI_KEYBOARD</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">newevent</span><span class="o">.</span><span class="n">NewEvent</span><span class="p">()</span>
 
-<div class="viewcode-block" id="PyoGuiControlSlider"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiControlSlider</span><span class="p">(</span><span class="n">ControlSlider</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiControlSlider">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiControlSlider</span><span class="p">(</span><span class="n">ControlSlider</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Floating-point control slider.</span>
 
 <span class="sd">        :Parent: wx.Panel</span>
@@ -175,7 +173,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">parent</span><span class="p">,</span>
             <span class="n">minvalue</span><span class="p">,</span>
@@ -203,26 +201,34 @@
                 <span class="n">orient</span><span class="p">,</span>
             <span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
             <span class="n">evt</span> <span class="o">=</span> <span class="n">PyoGuiControlSliderEvent</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="nb">object</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.enable"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.enable">[docs]</a>        <span class="k">def</span> <span class="nf">enable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiControlSlider.enable">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.enable">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">enable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Enable the slider for user input.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">Enable</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.disable"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.disable">[docs]</a>        <span class="k">def</span> <span class="nf">disable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.disable">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.disable">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">disable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Disable the slider for user input.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">Disable</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.setValue"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.setValue">[docs]</a>        <span class="k">def</span> <span class="nf">setValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">propagate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.setValue">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.setValue">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">propagate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets a new value to the slider.</span>
 
 <span class="sd">            :Args:</span>
@@ -235,8 +241,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">propagate</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.setMidiCtl"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.setMidiCtl">[docs]</a>        <span class="k">def</span> <span class="nf">setMidiCtl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">propagate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.setMidiCtl">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.setMidiCtl">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setMidiCtl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">propagate</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets the midi controller number to show on the slider.</span>
 
 <span class="sd">            :Args:</span>
@@ -249,8 +258,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setMidiCtl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">propagate</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.setRange"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.setRange">[docs]</a>        <span class="k">def</span> <span class="nf">setRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minvalue</span><span class="p">,</span> <span class="n">maxvalue</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.setRange">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.setRange">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minvalue</span><span class="p">,</span> <span class="n">maxvalue</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets new minimum and maximum values.</span>
 
 <span class="sd">            :Args:</span>
@@ -263,71 +275,102 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="n">minvalue</span><span class="p">,</span> <span class="n">maxvalue</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.getValue"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getValue">[docs]</a>        <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.getValue">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getValue">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current value of the slider.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">GetValue</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.getMidiCtl"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getMidiCtl">[docs]</a>        <span class="k">def</span> <span class="nf">getMidiCtl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.getMidiCtl">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getMidiCtl">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getMidiCtl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the midi controller number, if any, assigned to the slider.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getMidiCtl</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.getMinValue"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getMinValue">[docs]</a>        <span class="k">def</span> <span class="nf">getMinValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.getMinValue">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getMinValue">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getMinValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current minimum value.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getMinValue</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.getMaxValue"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getMaxValue">[docs]</a>        <span class="k">def</span> <span class="nf">getMaxValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.getMaxValue">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getMaxValue">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getMaxValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current maximum value.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getMaxValue</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.getInit"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getInit">[docs]</a>        <span class="k">def</span> <span class="nf">getInit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.getInit">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getInit">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getInit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the initial value.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getInit</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.getRange"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getRange">[docs]</a>        <span class="k">def</span> <span class="nf">getRange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.getRange">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.getRange">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getRange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns minimum and maximum values as a list.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiControlSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getRange</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.isInteger"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.isInteger">[docs]</a>        <span class="k">def</span> <span class="nf">isInteger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.isInteger">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.isInteger">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">isInteger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns True if the slider manage only integer, False otherwise.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">integer</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.isLog"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.isLog">[docs]</a>        <span class="k">def</span> <span class="nf">isLog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.isLog">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.isLog">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">isLog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns True if the slider is logarithmic, False otherwise.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">log</span></div>
 
-<div class="viewcode-block" id="PyoGuiControlSlider.isPowOfTwo"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.isPowOfTwo">[docs]</a>        <span class="k">def</span> <span class="nf">isPowOfTwo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiControlSlider.isPowOfTwo">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiControlSlider.isPowOfTwo">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">isPowOfTwo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns True if the slider manage only power-of-two values, False otherwise.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">powoftwo</span></div></div>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">powoftwo</span></div>
+</div>
 
-<div class="viewcode-block" id="PyoGuiVuMeter"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiVuMeter">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiVuMeter</span><span class="p">(</span><span class="n">VuMeter</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiVuMeter">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiVuMeter">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiVuMeter</span><span class="p">(</span><span class="n">VuMeter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Multi-channels Vu Meter.</span>
 
 <span class="sd">        When registered as the Server&#39;s meter, its internal method `setRms`</span>
@@ -354,11 +397,13 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">nchnls</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span> <span class="n">orient</span><span class="o">=</span><span class="n">wx</span><span class="o">.</span><span class="n">HORIZONTAL</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">nchnls</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span> <span class="n">orient</span><span class="o">=</span><span class="n">wx</span><span class="o">.</span><span class="n">HORIZONTAL</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiVuMeter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">nchnls</span><span class="p">,</span> <span class="n">orient</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiVuMeter.setNchnls"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiVuMeter.setNchnls">[docs]</a>        <span class="k">def</span> <span class="nf">setNchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nchnls</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiVuMeter.setNchnls">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiVuMeter.setNchnls">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setNchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nchnls</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets the number of channels of the meter.</span>
 
 <span class="sd">            :Args:</span>
@@ -367,10 +412,14 @@
 <span class="sd">                    The number of channels.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiVuMeter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setNumSliders</span><span class="p">(</span><span class="n">nchnls</span><span class="p">)</span></div></div>
+            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiVuMeter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setNumSliders</span><span class="p">(</span><span class="n">nchnls</span><span class="p">)</span></div>
+</div>
 
-<div class="viewcode-block" id="PyoGuiGrapher"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiGrapher</span><span class="p">(</span><span class="n">Grapher</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiGrapher</span><span class="p">(</span><span class="n">Grapher</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Multi-modes break-points function editor.</span>
 
 <span class="sd">        :Parent: wx.Panel</span>
@@ -428,7 +477,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">parent</span><span class="p">,</span>
             <span class="n">xlen</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span>
@@ -447,37 +496,48 @@
                 <span class="n">parent</span><span class="p">,</span> <span class="n">xlen</span><span class="p">,</span> <span class="n">yrange</span><span class="p">,</span> <span class="n">init</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">inverse</span><span class="p">,</span> <span class="n">tension</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outFunction</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">style</span>
             <span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
             <span class="n">evt</span> <span class="o">=</span> <span class="n">PyoGuiGrapherEvent</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="nb">object</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">Refresh</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sendValues</span><span class="p">()</span>
 
-<div class="viewcode-block" id="PyoGuiGrapher.reset"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.reset">[docs]</a>        <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiGrapher.reset">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.reset">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Resets the points to the initial state.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiGrapher</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.getPoints"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.getPoints">[docs]</a>        <span class="k">def</span> <span class="nf">getPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.getPoints">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.getPoints">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current normalized points of the grapher.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiGrapher</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getPoints</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.getValues"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.getValues">[docs]</a>        <span class="k">def</span> <span class="nf">getValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.getValues">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.getValues">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current points, according to Y-axis range, of the grapher.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiGrapher</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getValues</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setPoints"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setPoints">[docs]</a>        <span class="k">def</span> <span class="nf">setPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setPoints">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setPoints">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets a new group of normalized points in the grapher.</span>
 
 <span class="sd">            :Args:</span>
@@ -489,8 +549,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="p">[</span><span class="n">pt</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">pts</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setValues"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setValues">[docs]</a>        <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setValues">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setValues">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets a new group of points, according to Y-axis range, in the grapher.</span>
 
 <span class="sd">            :Args:</span>
@@ -502,8 +565,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">valuesToPoint</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setYrange"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setYrange">[docs]</a>        <span class="k">def</span> <span class="nf">setYrange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yrange</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setYrange">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setYrange">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setYrange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yrange</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets a new Y-axis range to the grapher.</span>
 
 <span class="sd">            :Args:</span>
@@ -516,8 +582,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">yrange</span> <span class="o">=</span> <span class="n">yrange</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setValues</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setInitPoints"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setInitPoints">[docs]</a>        <span class="k">def</span> <span class="nf">setInitPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setInitPoints">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setInitPoints">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setInitPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets a new initial normalized points list to the grapher.</span>
 
 <span class="sd">            :Args:</span>
@@ -528,8 +597,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiGrapher</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setInitPoints</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setMode"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setMode">[docs]</a>        <span class="k">def</span> <span class="nf">setMode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setMode">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setMode">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setMode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the grapher&#39;s mode.</span>
 
 <span class="sd">            :Args:</span>
@@ -547,8 +619,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setExp"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setExp">[docs]</a>        <span class="k">def</span> <span class="nf">setExp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setExp">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setExp">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setExp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the grapher&#39;s exponent factor for exponential graph.</span>
 
 <span class="sd">            :Args:</span>
@@ -560,8 +635,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">exp</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setInverse"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setInverse">[docs]</a>        <span class="k">def</span> <span class="nf">setInverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setInverse">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setInverse">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setInverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the grapher&#39;s inverse boolean for exponential graph.</span>
 
 <span class="sd">            :Args:</span>
@@ -573,8 +651,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">inverse</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setTension"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setTension">[docs]</a>        <span class="k">def</span> <span class="nf">setTension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setTension">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setTension">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setTension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the grapher&#39;s tension factor for curved graph.</span>
 
 <span class="sd">            :Args:</span>
@@ -586,8 +667,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">tension</span> <span class="o">=</span> <span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiGrapher.setBias"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setBias">[docs]</a>        <span class="k">def</span> <span class="nf">setBias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiGrapher.setBias">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiGrapher.setBias">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setBias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the grapher&#39;s bias factor for curved graph.</span>
 
 <span class="sd">            :Args:</span>
@@ -597,10 +681,14 @@
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_refresh</span><span class="p">()</span></div>
+</div>
 
-<div class="viewcode-block" id="PyoGuiMultiSlider"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiMultiSlider</span><span class="p">(</span><span class="n">DataMultiSlider</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiMultiSlider">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiMultiSlider</span><span class="p">(</span><span class="n">DataMultiSlider</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Data multi-sliders editor.</span>
 
 <span class="sd">        :Parent: wx.Panel</span>
@@ -636,7 +724,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">xlen</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">yrange</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">xlen</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">yrange</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">init</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">init</span> <span class="o">=</span> <span class="p">[</span><span class="n">yrange</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">*</span> <span class="n">xlen</span>
             <span class="k">else</span><span class="p">:</span>
@@ -646,26 +734,34 @@
                     <span class="n">init</span> <span class="o">=</span> <span class="n">init</span><span class="p">[:</span><span class="n">xlen</span><span class="p">]</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiMultiSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">init</span><span class="p">,</span> <span class="n">yrange</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outFunction</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
             <span class="n">evt</span> <span class="o">=</span> <span class="n">PyoGuiMultiSliderEvent</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="nb">object</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiMultiSlider.reset"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.reset">[docs]</a>        <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiMultiSlider.reset">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.reset">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Resets the sliders to their initial state.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiMultiSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiMultiSlider.getValues"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.getValues">[docs]</a>        <span class="k">def</span> <span class="nf">getValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiMultiSlider.getValues">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.getValues">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getValues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current values of the sliders.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="PyoGuiMultiSlider.setValues"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.setValues">[docs]</a>        <span class="k">def</span> <span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiMultiSlider.setValues">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.setValues">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets new values to the sliders.</span>
 
 <span class="sd">            :Args:</span>
@@ -676,8 +772,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">CallAfter</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiMultiSlider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="n">vals</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiMultiSlider.setYrange"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.setYrange">[docs]</a>        <span class="k">def</span> <span class="nf">setYrange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yrange</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiMultiSlider.setYrange">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiMultiSlider.setYrange">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setYrange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yrange</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets a new Y-axis range to the multi-sliders.</span>
 
 <span class="sd">            :Args:</span>
@@ -687,10 +786,14 @@
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">yrange</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">yrange</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">yrange</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">Refresh</span><span class="p">()</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Refresh</span><span class="p">()</span></div>
+</div>
 
-<div class="viewcode-block" id="PyoGuiSpectrum"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiSpectrum</span><span class="p">(</span><span class="n">SpectrumPanel</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSpectrum">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiSpectrum</span><span class="p">(</span><span class="n">SpectrumPanel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Frequency spectrum display.</span>
 
 <span class="sd">        This widget should be used with the Spectrum object, which measures</span>
@@ -730,13 +833,15 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">lowfreq</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">highfreq</span><span class="o">=</span><span class="mi">22050</span><span class="p">,</span> <span class="n">fscaling</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mscaling</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span>
         <span class="p">):</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiSpectrum</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lowfreq</span><span class="p">,</span> <span class="n">highfreq</span><span class="p">,</span> <span class="n">fscaling</span><span class="p">,</span> <span class="n">mscaling</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiSpectrum.update"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.update">[docs]</a>        <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiSpectrum.update">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.update">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Display updating method.</span>
 
 <span class="sd">            This method is automatically called by the audio analyzer</span>
@@ -756,8 +861,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">CallAfter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setImage</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiSpectrum.setAnalyzer"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setAnalyzer">[docs]</a>        <span class="k">def</span> <span class="nf">setAnalyzer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSpectrum.setAnalyzer">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setAnalyzer">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setAnalyzer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Register an audio analyzer object (Spectrum).</span>
 
 <span class="sd">            :Args:</span>
@@ -774,8 +882,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setMscaling</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mscaling</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setChnls</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="PyoGuiSpectrum.setLowFreq"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setLowFreq">[docs]</a>        <span class="k">def</span> <span class="nf">setLowFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSpectrum.setLowFreq">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setLowFreq">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setLowFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the lowest frequency of the display.</span>
 
 <span class="sd">            This method propagates the value to the audio analyzer.</span>
@@ -790,8 +901,11 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setLowFreq</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiSpectrum</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setLowFreq</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiSpectrum.setHighFreq"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setHighFreq">[docs]</a>        <span class="k">def</span> <span class="nf">setHighFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSpectrum.setHighFreq">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setHighFreq">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setHighFreq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the highest frequency of the display.</span>
 
 <span class="sd">            This method propagates the value to the audio analyzer.</span>
@@ -806,8 +920,11 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setHighFreq</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiSpectrum</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setHighFreq</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiSpectrum.setFscaling"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setFscaling">[docs]</a>        <span class="k">def</span> <span class="nf">setFscaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSpectrum.setFscaling">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setFscaling">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setFscaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the frequency scaling (X-axis) of the display.</span>
 
 <span class="sd">            This method propagates the value to the audio analyzer.</span>
@@ -822,8 +939,11 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setFscaling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiSpectrum</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setFscaling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiSpectrum.setMscaling"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setMscaling">[docs]</a>        <span class="k">def</span> <span class="nf">setMscaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSpectrum.setMscaling">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSpectrum.setMscaling">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setMscaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the magnitude scaling (Y-axis) of the display.</span>
 
 <span class="sd">            This method propagates the value to the audio analyzer.</span>
@@ -836,10 +956,14 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setMscaling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiSpectrum</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setMscaling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
+            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiSpectrum</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setMscaling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+</div>
 
-<div class="viewcode-block" id="PyoGuiScope"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiScope</span><span class="p">(</span><span class="n">ScopePanel</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiScope">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiScope</span><span class="p">(</span><span class="n">ScopePanel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Oscilloscope display.</span>
 
 <span class="sd">        This widget should be used with the Scope object, which computes</span>
@@ -871,13 +995,15 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">0.67</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">0.67</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiScope</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiScope</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiScope</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setGain</span><span class="p">(</span><span class="n">gain</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiScope.update"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.update">[docs]</a>        <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiScope.update">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.update">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Display updating method.</span>
 
 <span class="sd">            This method is automatically called by the audio analyzer</span>
@@ -897,8 +1023,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">CallAfter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setImage</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiScope.setAnalyzer"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.setAnalyzer">[docs]</a>        <span class="k">def</span> <span class="nf">setAnalyzer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiScope.setAnalyzer">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.setAnalyzer">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setAnalyzer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Register an audio analyzer object (Scope).</span>
 
 <span class="sd">            :Args:</span>
@@ -913,8 +1042,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setGain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gain</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setChnls</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="PyoGuiScope.setLength"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.setLength">[docs]</a>        <span class="k">def</span> <span class="nf">setLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiScope.setLength">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.setLength">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the length, in seconds, of the displayed audio segment.</span>
 
 <span class="sd">            This method propagates the value to the audio analyzer.</span>
@@ -929,8 +1061,11 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiScope</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiScope.setGain"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.setGain">[docs]</a>        <span class="k">def</span> <span class="nf">setGain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiScope.setGain">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiScope.setGain">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setGain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the gain applied to the input signal.</span>
 
 <span class="sd">            This method propagates the value to the audio analyzer.</span>
@@ -943,14 +1078,18 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">setGain</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiScope</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setGain</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
+            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiScope</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setGain</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+</div>
+
 
     <span class="c1"># left-click + drag ===&gt; event position</span>
     <span class="c1"># right-click + drag ===&gt; highlight a selection + event selection (start, end)</span>
     <span class="c1"># Shift + right-click + drag ===&gt; move the selection + event selection (start, end)</span>
     <span class="c1"># Ctrl + right-click ===&gt; delete the selection + event selection (0.0, 1.0)</span>
-<div class="viewcode-block" id="PyoGuiSndView"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiSndView</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">Panel</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiSndView">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiSndView</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">Panel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Soundfile display.</span>
 
 <span class="sd">        This widget should be used with the SndTable object, which keeps</span>
@@ -1000,7 +1139,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">Panel</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
             <span class="n">box</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">BoxSizer</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">VERTICAL</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_curzoom</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
@@ -1017,7 +1156,7 @@
             <span class="n">box</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">wx</span><span class="o">.</span><span class="n">EXPAND</span> <span class="o">|</span> <span class="n">wx</span><span class="o">.</span><span class="n">LEFT</span> <span class="o">|</span> <span class="n">wx</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">SetSizer</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_setZoom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_setZoom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">values</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_curzoom</span>
             <span class="n">dur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">getDur</span><span class="p">()</span>
@@ -1026,21 +1165,23 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_curzoom</span> <span class="o">=</span> <span class="n">values</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
-        <span class="k">def</span> <span class="nf">_position_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_position_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
             <span class="n">evt</span> <span class="o">=</span> <span class="n">PyoGuiSndViewMousePositionEvent</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="nb">object</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_select_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_select_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection</span><span class="p">):</span>
             <span class="n">selection</span> <span class="o">=</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">selection</span><span class="p">)),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">selection</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">))</span>
             <span class="n">evt</span> <span class="o">=</span> <span class="n">PyoGuiSndViewSelectionEvent</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">selection</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="nb">object</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">_setViewFrame</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiSndView.update"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.update">[docs]</a>        <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiSndView.update">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.update">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Display updating method.</span>
 
 <span class="sd">            This method is automatically called by the audio memory</span>
@@ -1052,8 +1193,11 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">CallAfter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">setImage</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiSndView.setTable"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.setTable">[docs]</a>        <span class="k">def</span> <span class="nf">setTable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSndView.setTable">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.setTable">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setTable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Register an audio memory object (SndTable).</span>
 
 <span class="sd">            :Args:</span>
@@ -1069,8 +1213,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">chnls</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiSndView.setSelection"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.setSelection">[docs]</a>        <span class="k">def</span> <span class="nf">setSelection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSndView.setSelection">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.setSelection">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setSelection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Changes the selected region.</span>
 
 <span class="sd">            This method will trigger a EVT_PYO_GUI_SNDVIEW_SELECTION event</span>
@@ -1090,18 +1237,25 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">setSelection</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PyoGuiSndView.resetSelection"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.resetSelection">[docs]</a>        <span class="k">def</span> <span class="nf">resetSelection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiSndView.resetSelection">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiSndView.resetSelection">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">resetSelection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Removes the selected region.</span>
 
 <span class="sd">            This method will trigger a EVT_PYO_GUI_SNDVIEW_SELECTION event</span>
 <span class="sd">            with a tuple (0.0, 1.0) as value.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">resetSelection</span><span class="p">()</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sndview</span><span class="o">.</span><span class="n">resetSelection</span><span class="p">()</span></div>
+</div>
 
-<div class="viewcode-block" id="PyoGuiKeyboard"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard">[docs]</a>    <span class="k">class</span> <span class="nc">PyoGuiKeyboard</span><span class="p">(</span><span class="n">Keyboard</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiKeyboard">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">PyoGuiKeyboard</span><span class="p">(</span><span class="n">Keyboard</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Virtual MIDI keyboard.</span>
 
 <span class="sd">        :Parent: wx.Panel</span>
@@ -1130,29 +1284,37 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">poly</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">poly</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
             <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiKeyboard</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">wx</span><span class="o">.</span><span class="n">ID_ANY</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">poly</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outFunction</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_outFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
             <span class="n">evt</span> <span class="o">=</span> <span class="n">PyoGuiKeyboardEvent</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="nb">object</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">wx</span><span class="o">.</span><span class="n">QueueEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PyoGuiKeyboard.getCurrentNotes"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard.getCurrentNotes">[docs]</a>        <span class="k">def</span> <span class="nf">getCurrentNotes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PyoGuiKeyboard.getCurrentNotes">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard.getCurrentNotes">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">getCurrentNotes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns a list of the current notes.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiKeyboard</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getCurrentNotes</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiKeyboard.reset"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard.reset">[docs]</a>        <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiKeyboard.reset">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard.reset">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Resets the keyboard state.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiKeyboard</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PyoGuiKeyboard.setPoly"><a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard.setPoly">[docs]</a>        <span class="k">def</span> <span class="nf">setPoly</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poly</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PyoGuiKeyboard.setPoly">
+<a class="viewcode-back" href="../../../api/classes/wxgui.html#pyo.PyoGuiKeyboard.setPoly">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">setPoly</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poly</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sets the maximum number of notes that can be held at the same time.</span>
 
 <span class="sd">            :Args:</span>
@@ -1161,7 +1323,9 @@
 <span class="sd">                    New maximum number of notes held at once.</span>
 
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiKeyboard</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setPoly</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span></div></div>
+            <span class="nb">super</span><span class="p">(</span><span class="n">PyoGuiKeyboard</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setPoly</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
             <div class="clearer"></div>
@@ -1176,7 +1340,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <div role="navigation" aria-label="related navigaton">
+          <div role="navigation" aria-label="Related">
             <a href="../../../genindex.html" title="General Index"
               >index</a>
           </div>
@@ -1187,8 +1351,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
         </div>
         <div class="clearer"></div>

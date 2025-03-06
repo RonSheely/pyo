@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyo.lib.server &#8212; Pyo 1.0.5 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../../_static/E-PyoIcon.ico"/>
+    <title>pyo.lib.server &#8212; Pyo 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css?v=227e5aac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css?v=08871587" />
+    <script src="../../../_static/documentation_options.js?v=e2a723ec"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/E-PyoIcon.ico"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -24,8 +20,8 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../../../index.html">Pyo 1.0.5 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
+          href="../../../index.html">Pyo 1.0.6 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="Related">
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a>
         </div>
@@ -52,13 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
 
-          <div role="search">
+          <search role="search">
             <h3 style="margin-top: 1.5em;">Search</h3>
             <form class="search" action="../../../search.html" method="get">
                 <input type="text" name="q" />
                 <input type="submit" value="Go" />
             </form>
-          </div>
+          </search>
 
         </div>
         <div class="document">
@@ -89,15 +85,17 @@
 <span class="sd">You should have received a copy of the GNU Lesser General Public</span>
 <span class="sd">License along with pyo.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">._core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">._widgets</span> <span class="kn">import</span> <span class="n">createServerGUI</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._widgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">createServerGUI</span>
 
 <span class="c1">######################################################################</span>
 <span class="c1">### Proxy of Server object</span>
 <span class="c1">######################################################################</span>
-<div class="viewcode-block" id="Server"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server">[docs]</a><span class="k">class</span> <span class="nc">Server</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Server">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Server</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main processing audio loop callback handler.</span>
 
 <span class="sd">    The Server object handles all communications with Portaudio and</span>
@@ -172,6 +170,7 @@
 <span class="sd">            User can set an environment variable named PYO_SERVER_MIDI to set this value globally.</span>
 <span class="sd">        verbosity: int, optional</span>
 <span class="sd">            Set the server&#39;s verbosity.</span>
+
 <span class="sd">    .. note::</span>
 
 <span class="sd">        The following methods must be called **before** booting the server</span>
@@ -202,7 +201,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">sr</span><span class="o">=</span><span class="mi">44100</span><span class="p">,</span>
         <span class="n">nchnls</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
@@ -248,7 +247,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setInputDevice</span><span class="p">(</span><span class="n">host_default_in</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setOutputDevice</span><span class="p">(</span><span class="n">host_default_out</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setTime</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setRms</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">getIsBooted</span><span class="p">():</span>
@@ -260,7 +259,9 @@
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_audio</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;offline&quot;</span><span class="p">,</span> <span class="s2">&quot;offline_nb&quot;</span><span class="p">,</span> <span class="s2">&quot;embedded&quot;</span><span class="p">,</span> <span class="s2">&quot;manual&quot;</span><span class="p">]:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Server.reinit"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.reinit">[docs]</a>    <span class="k">def</span> <span class="nf">reinit</span><span class="p">(</span>
+<div class="viewcode-block" id="Server.reinit">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.reinit">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reinit</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">sr</span><span class="o">=</span><span class="mi">44100</span><span class="p">,</span>
         <span class="n">nchnls</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
@@ -272,7 +273,7 @@
         <span class="n">winhost</span><span class="o">=</span><span class="s2">&quot;directsound&quot;</span><span class="p">,</span>
         <span class="n">midi</span><span class="o">=</span><span class="s2">&quot;portmidi&quot;</span><span class="p">,</span>
     <span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reinit the server&#39;settings. Useful to alternate between real-time and offline server.</span>
 
 <span class="sd">        :Args:</span>
@@ -312,8 +313,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setInputDevice</span><span class="p">(</span><span class="n">host_default_in</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setOutputDevice</span><span class="p">(</span><span class="n">host_default_out</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setCallback"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setCallback">[docs]</a>    <span class="k">def</span> <span class="nf">setCallback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setCallback">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setCallback">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setCallback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Register a custom process callback.</span>
 
 <span class="sd">        The function given as argument will be called every computation</span>
@@ -322,11 +326,14 @@
 <span class="sd">        numpy calls for example.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setCallback</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.gui"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.gui">[docs]</a>    <span class="k">def</span> <span class="nf">gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">meter</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.gui">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.gui">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">meter</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Show the server&#39;s user interface.</span>
 
 <span class="sd">        :Args:</span>
@@ -376,8 +383,11 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">win</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.closeGui"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.closeGui">[docs]</a>    <span class="k">def</span> <span class="nf">closeGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.closeGui">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.closeGui">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">closeGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Programmatically close the server&#39;s GUI.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -385,8 +395,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_gui_frame</span><span class="o">.</span><span class="n">quit_from_code</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_gui_frame</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="Server.setTimeCallable"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setTimeCallable">[docs]</a>    <span class="k">def</span> <span class="nf">setTimeCallable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setTimeCallable">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setTimeCallable">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setTimeCallable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set a function callback that will receive the current time as argument.</span>
 
 <span class="sd">        The function will receive four integers in this format:</span>
@@ -401,8 +414,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">setTime</span> <span class="o">=</span> <span class="n">func</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setTimeCallable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setMeterCallable"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMeterCallable">[docs]</a>    <span class="k">def</span> <span class="nf">setMeterCallable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setMeterCallable">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMeterCallable">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setMeterCallable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set a function callback that will receive the current rms values as argument.</span>
 
 <span class="sd">        The function will receive a list containing the rms value for each audio channel.</span>
@@ -416,8 +432,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">setRms</span> <span class="o">=</span> <span class="n">func</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setAmpCallable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setMeter"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMeter">[docs]</a>    <span class="k">def</span> <span class="nf">setMeter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meter</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setMeter">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMeter">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setMeter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Registers a meter object to the server.</span>
 
 <span class="sd">        The object must have a method named `setRms`. This method will be called</span>
@@ -431,8 +450,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setAmpCallable</span><span class="p">(</span><span class="n">meter</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setInOutDevice"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInOutDevice">[docs]</a>    <span class="k">def</span> <span class="nf">setInOutDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setInOutDevice">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInOutDevice">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInOutDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set both input and output audio devices. See `pa_list_devices()`.</span>
 
 <span class="sd">        :Args:</span>
@@ -443,8 +465,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setInOutDevice</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setInputDevice"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInputDevice">[docs]</a>    <span class="k">def</span> <span class="nf">setInputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setInputDevice">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInputDevice">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the audio input device number. See `pa_list_devices()`.</span>
 
 <span class="sd">        :Args:</span>
@@ -455,8 +480,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setInputDevice</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setOutputDevice"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setOutputDevice">[docs]</a>    <span class="k">def</span> <span class="nf">setOutputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setOutputDevice">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setOutputDevice">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setOutputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the audio output device number. See `pa_list_devices()`.</span>
 
 <span class="sd">        :Args:</span>
@@ -467,8 +495,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setOutputDevice</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setInputOffset"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInputOffset">[docs]</a>    <span class="k">def</span> <span class="nf">setInputOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setInputOffset">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInputOffset">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInputOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the first physical input channel.</span>
 
 <span class="sd">        Channel number `x` from the soundcard will be assigned to</span>
@@ -483,8 +514,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setInputOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setOutputOffset"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setOutputOffset">[docs]</a>    <span class="k">def</span> <span class="nf">setOutputOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setOutputOffset">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setOutputOffset">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setOutputOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the first physical output channel.</span>
 
 <span class="sd">        Server&#39;s channel one will be assigned to soundcard&#39;s channel</span>
@@ -499,8 +533,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setOutputOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setInOutOffset"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInOutOffset">[docs]</a>    <span class="k">def</span> <span class="nf">setInOutOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setInOutOffset">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setInOutOffset">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInOutOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the first physical input and output channels.</span>
 
 <span class="sd">        Set both offsets to the same value. See `setInputOffset` and</span>
@@ -515,8 +552,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setInputOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setOutputOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setMidiInputDevice"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMidiInputDevice">[docs]</a>    <span class="k">def</span> <span class="nf">setMidiInputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setMidiInputDevice">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMidiInputDevice">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setMidiInputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the Midi input device number. See `pm_list_devices()`.</span>
 
 <span class="sd">        A number greater than the highest portmidi device index</span>
@@ -530,8 +570,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setMidiInputDevice</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setMidiOutputDevice"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMidiOutputDevice">[docs]</a>    <span class="k">def</span> <span class="nf">setMidiOutputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setMidiOutputDevice">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setMidiOutputDevice">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setMidiOutputDevice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the Midi output device number. See `pm_list_devices()`.</span>
 
 <span class="sd">        :Args:</span>
@@ -542,8 +585,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setMidiOutputDevice</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.allowMicrosoftMidiDevices"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.allowMicrosoftMidiDevices">[docs]</a>    <span class="k">def</span> <span class="nf">allowMicrosoftMidiDevices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.allowMicrosoftMidiDevices">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.allowMicrosoftMidiDevices">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">allowMicrosoftMidiDevices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Allows the Microsoft Midi Mapper or GS Wavetable Synth device.</span>
 
 <span class="sd">        These are off by default because they crash on some systems.</span>
@@ -551,8 +597,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">allowMicrosoftMidiDevices</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.setSamplingRate"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setSamplingRate">[docs]</a>    <span class="k">def</span> <span class="nf">setSamplingRate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setSamplingRate">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setSamplingRate">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setSamplingRate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the sampling rate used by the server.</span>
 
 <span class="sd">        :Args:</span>
@@ -563,8 +612,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setSamplingRate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setBufferSize"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setBufferSize">[docs]</a>    <span class="k">def</span> <span class="nf">setBufferSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setBufferSize">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setBufferSize">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setBufferSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the buffer size used by the server.</span>
 
 <span class="sd">        :Args:</span>
@@ -575,8 +627,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setBufferSize</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setNchnls"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setNchnls">[docs]</a>    <span class="k">def</span> <span class="nf">setNchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setNchnls">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setNchnls">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setNchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the number of output (and input if `ichnls` = None) channels used by the server.</span>
 
 <span class="sd">        :Args:</span>
@@ -588,8 +643,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_nchnls</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setNchnls</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setIchnls"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setIchnls">[docs]</a>    <span class="k">def</span> <span class="nf">setIchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setIchnls">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setIchnls">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setIchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the number of input channels (if different of output channels) used by the server.</span>
 
 <span class="sd">        :Args:</span>
@@ -601,8 +659,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ichnls</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setIchnls</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setDuplex"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setDuplex">[docs]</a>    <span class="k">def</span> <span class="nf">setDuplex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setDuplex">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setDuplex">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setDuplex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the duplex mode used by the server.</span>
 
 <span class="sd">        :Args:</span>
@@ -613,8 +674,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setDuplex</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setVerbosity"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setVerbosity">[docs]</a>    <span class="k">def</span> <span class="nf">setVerbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setVerbosity">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setVerbosity">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setVerbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the server&#39;s verbosity.</span>
 
 <span class="sd">        :Args:</span>
@@ -630,8 +694,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_verbosity</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setVerbosity</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setGlobalDur"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setGlobalDur">[docs]</a>    <span class="k">def</span> <span class="nf">setGlobalDur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setGlobalDur">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setGlobalDur">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setGlobalDur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the global object duration (time to wait before stopping the object).</span>
 
 <span class="sd">        This value, if not 0, will override the `dur` argument of object&#39;s</span>
@@ -645,8 +712,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setGlobalDur</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setGlobalDel"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setGlobalDel">[docs]</a>    <span class="k">def</span> <span class="nf">setGlobalDel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setGlobalDel">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setGlobalDel">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setGlobalDel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the global object delay time (time to wait before activating the object).</span>
 
 <span class="sd">        This value, if not 0, will override the `del` argument of object&#39;s</span>
@@ -660,8 +730,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setGlobalDel</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackAuto"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAuto">[docs]</a>    <span class="k">def</span> <span class="nf">setJackAuto</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xin</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xout</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackAuto">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAuto">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackAuto</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xin</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xout</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tells the server to auto-connect (or not) Jack ports to System ports.</span>
 
 <span class="sd">        :Args:</span>
@@ -674,8 +747,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackAuto</span><span class="p">(</span><span class="n">xin</span><span class="p">,</span> <span class="n">xout</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackAutoConnectInputPorts"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectInputPorts">[docs]</a>    <span class="k">def</span> <span class="nf">setJackAutoConnectInputPorts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackAutoConnectInputPorts">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectInputPorts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackAutoConnectInputPorts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tells the server to auto-connect Jack input ports to pre-defined Jack ports.</span>
 
 <span class="sd">        :Args:</span>
@@ -690,8 +766,11 @@
         <span class="n">ports</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackAutoConnectInputPorts</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackAutoConnectOutputPorts"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectOutputPorts">[docs]</a>    <span class="k">def</span> <span class="nf">setJackAutoConnectOutputPorts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackAutoConnectOutputPorts">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectOutputPorts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackAutoConnectOutputPorts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tells the server to auto-connect Jack output ports to pre-defined Jack ports.</span>
 
 <span class="sd">        :Args:</span>
@@ -706,8 +785,11 @@
         <span class="n">ports</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackAutoConnectOutputPorts</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackInputPortNames"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackInputPortNames">[docs]</a>    <span class="k">def</span> <span class="nf">setJackInputPortNames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackInputPortNames">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackInputPortNames">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackInputPortNames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Change the short name of pyo&#39;s input ports for the jack server.</span>
 
 <span class="sd">        This method must be called after the server is booted.</span>
@@ -723,8 +805,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackInputPortNames</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackOutputPortNames"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackOutputPortNames">[docs]</a>    <span class="k">def</span> <span class="nf">setJackOutputPortNames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackOutputPortNames">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackOutputPortNames">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackOutputPortNames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Change the short name of pyo&#39;s output ports for the jack server.</span>
 
 <span class="sd">        This method must be called after the server is booted.</span>
@@ -740,8 +825,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackOutputPortNames</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackAutoConnectMidiInputPort"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectMidiInputPort">[docs]</a>    <span class="k">def</span> <span class="nf">setJackAutoConnectMidiInputPort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackAutoConnectMidiInputPort">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectMidiInputPort">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackAutoConnectMidiInputPort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tells the server to auto-connect Jack midi input port to pre-defined Jack ports.</span>
 
 <span class="sd">        :Args:</span>
@@ -755,8 +843,11 @@
         <span class="n">ports</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackAutoConnectMidiInputPort</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackAutoConnectMidiOutputPort"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectMidiOutputPort">[docs]</a>    <span class="k">def</span> <span class="nf">setJackAutoConnectMidiOutputPort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackAutoConnectMidiOutputPort">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackAutoConnectMidiOutputPort">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackAutoConnectMidiOutputPort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ports</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tells the server to auto-connect Jack midi output port to pre-defined Jack ports.</span>
 
 <span class="sd">        :Args:</span>
@@ -770,8 +861,11 @@
         <span class="n">ports</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackAutoConnectMidiOutputPort</span><span class="p">(</span><span class="n">ports</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackMidiInputPortName"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackMidiInputPortName">[docs]</a>    <span class="k">def</span> <span class="nf">setJackMidiInputPortName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackMidiInputPortName">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackMidiInputPortName">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackMidiInputPortName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Change the short name of pyo&#39;s midi input port for the jack server.</span>
 
 <span class="sd">        This method must be called after the server is booted.</span>
@@ -784,8 +878,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackMidiInputPortName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setJackMidiOutputPortName"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackMidiOutputPortName">[docs]</a>    <span class="k">def</span> <span class="nf">setJackMidiOutputPortName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setJackMidiOutputPortName">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setJackMidiOutputPortName">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setJackMidiOutputPortName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Change the short name of pyo&#39;s midi output port for the jack server.</span>
 
 <span class="sd">        This method must be called after the server is booted.</span>
@@ -798,8 +895,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setJackMidiOutputPortName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setIsJackTransportSlave"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setIsJackTransportSlave">[docs]</a>    <span class="k">def</span> <span class="nf">setIsJackTransportSlave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setIsJackTransportSlave">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setIsJackTransportSlave">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setIsJackTransportSlave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set if pyo&#39;s server is slave to jack transport or not.</span>
 
 <span class="sd">        This method must be called before booting the server.</span>
@@ -814,8 +914,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_isJackTransportSlave</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setIsJackTransportSlave</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setGlobalSeed"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setGlobalSeed">[docs]</a>    <span class="k">def</span> <span class="nf">setGlobalSeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setGlobalSeed">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setGlobalSeed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setGlobalSeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the server&#39;s global seed used by random objects.</span>
 
 <span class="sd">        :Args:</span>
@@ -829,8 +932,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_globalseed</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setGlobalSeed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setStartOffset"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setStartOffset">[docs]</a>    <span class="k">def</span> <span class="nf">setStartOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setStartOffset">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setStartOffset">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setStartOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the server&#39;s starting time offset. First `x` seconds will be rendered</span>
 <span class="sd">        offline as fast as possible.</span>
 
@@ -843,8 +949,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_startoffset</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setStartOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.setAmp"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setAmp">[docs]</a>    <span class="k">def</span> <span class="nf">setAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setAmp">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setAmp">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the overall amplitude.</span>
 
 <span class="sd">        :Args:</span>
@@ -856,8 +965,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_amp</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setAmp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.beginResamplingBlock"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.beginResamplingBlock">[docs]</a>    <span class="k">def</span> <span class="nf">beginResamplingBlock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.beginResamplingBlock">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.beginResamplingBlock">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">beginResamplingBlock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Starts a resampling block.</span>
 
 <span class="sd">        This factor must be a power-of-two. A positive value means</span>
@@ -887,8 +999,11 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resampling factor must be a power-of-two (positive or negative).&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.endResamplingBlock"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.endResamplingBlock">[docs]</a>    <span class="k">def</span> <span class="nf">endResamplingBlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.endResamplingBlock">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.endResamplingBlock">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">endResamplingBlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Ends a resampling block.</span>
 
 <span class="sd">        This call ends a code block using a sample rate different from</span>
@@ -902,8 +1017,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_resampling</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">endResamplingBlock</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.shutdown"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.shutdown">[docs]</a>    <span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.shutdown">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.shutdown">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Shut down and clear the server. This method will erase all objects</span>
 <span class="sd">        from the callback loop. This method need to be called before changing</span>
 <span class="sd">        server&#39;s parameters like `samplingrate`, `buffersize`, `nchnls`, ...</span>
@@ -911,8 +1029,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.boot"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.boot">[docs]</a>    <span class="k">def</span> <span class="nf">boot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newBuffer</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.boot">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.boot">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">boot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newBuffer</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Boot the server. Must be called before defining any signal processing</span>
 <span class="sd">        chain. Server&#39;s parameters like `samplingrate`, `buffersize` or</span>
 <span class="sd">        `nchnls` will be effective after a call to this method.</span>
@@ -933,23 +1054,32 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">boot</span><span class="p">(</span><span class="n">newBuffer</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 
-<div class="viewcode-block" id="Server.start"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.start">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.start">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Start the audio callback loop and begin processing.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 
-<div class="viewcode-block" id="Server.stop"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.stop">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.stop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Stop the audio callback loop.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.recordOptions"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.recordOptions">[docs]</a>    <span class="k">def</span> <span class="nf">recordOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fileformat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sampletype</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.recordOptions">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.recordOptions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recordOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dur</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fileformat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sampletype</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Sets options for soundfile created by offline rendering or global recording.</span>
 
 <span class="sd">        :Args:</span>
@@ -1009,8 +1139,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sampletype</span> <span class="o">=</span> <span class="n">sampletype</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">recordOptions</span><span class="p">(</span><span class="n">dur</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">fileformat</span><span class="p">,</span> <span class="n">sampletype</span><span class="p">,</span> <span class="n">quality</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.recstart"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.recstart">[docs]</a>    <span class="k">def</span> <span class="nf">recstart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.recstart">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.recstart">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recstart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Begins a default recording of the sound that is sent to the</span>
 <span class="sd">        soundcard. This will create a file called `pyo_rec.wav` in</span>
 <span class="sd">        the user&#39;s home directory if no path is supplied or defined</span>
@@ -1039,15 +1172,21 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">recstart</span><span class="p">(</span><span class="n">stringencode</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Server.recstop"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.recstop">[docs]</a>    <span class="k">def</span> <span class="nf">recstop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.recstop">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.recstop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recstop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Stop the previously started recording.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">recstop</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.noteout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.noteout">[docs]</a>    <span class="k">def</span> <span class="nf">noteout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.noteout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.noteout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">noteout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a MIDI note message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values to generate multiple events</span>
@@ -1075,8 +1214,11 @@
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)</span>
         <span class="p">]</span></div>
 
-<div class="viewcode-block" id="Server.afterout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.afterout">[docs]</a>    <span class="k">def</span> <span class="nf">afterout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.afterout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.afterout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">afterout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send an aftertouch message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values to generate multiple events</span>
@@ -1103,8 +1245,11 @@
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)</span>
         <span class="p">]</span></div>
 
-<div class="viewcode-block" id="Server.ctlout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.ctlout">[docs]</a>    <span class="k">def</span> <span class="nf">ctlout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctlnum</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.ctlout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.ctlout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ctlout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctlnum</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a control change message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values to generate multiple events</span>
@@ -1131,8 +1276,11 @@
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)</span>
         <span class="p">]</span></div>
 
-<div class="viewcode-block" id="Server.programout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.programout">[docs]</a>    <span class="k">def</span> <span class="nf">programout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.programout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.programout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">programout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a program change message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values to generate multiple events</span>
@@ -1154,8 +1302,11 @@
         <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span>
         <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">programout</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="Server.pressout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.pressout">[docs]</a>    <span class="k">def</span> <span class="nf">pressout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.pressout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.pressout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pressout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a channel pressure message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values to generate multiple events</span>
@@ -1177,8 +1328,11 @@
         <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span>
         <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">pressout</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="Server.bendout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.bendout">[docs]</a>    <span class="k">def</span> <span class="nf">bendout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.bendout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.bendout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bendout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a pitch bend message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values to generate multiple events</span>
@@ -1201,8 +1355,11 @@
         <span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span>
         <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">bendout</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="Server.sysexout"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.sysexout">[docs]</a>    <span class="k">def</span> <span class="nf">sysexout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.sysexout">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.sysexout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sysexout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a system exclusive message to the selected midi output device.</span>
 
 <span class="sd">        Arguments can be list of values/messages to generate multiple events</span>
@@ -1222,8 +1379,11 @@
         <span class="n">msg</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span>
         <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">sysexout</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="Server.makenote"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.makenote">[docs]</a>    <span class="k">def</span> <span class="nf">makenote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.makenote">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.makenote">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">makenote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send MIDI noteon/noteoff messages to the selected midi output device.</span>
 
 <span class="sd">        This method will send a noteon message to the selected midi output</span>
@@ -1254,8 +1414,11 @@
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)</span>
         <span class="p">]</span></div>
 
-<div class="viewcode-block" id="Server.addMidiEvent"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.addMidiEvent">[docs]</a>    <span class="k">def</span> <span class="nf">addMidiEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data2</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.addMidiEvent">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.addMidiEvent">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">addMidiEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data2</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a MIDI event in the server processing loop.</span>
 
 <span class="sd">        This method can be used to  programmatically simulate incoming</span>
@@ -1293,161 +1456,227 @@
         <span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">)</span>
         <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">addMidiEvent</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">)]</span></div>
 
-    <span class="k">def</span> <span class="nf">getStreams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getStreams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the list of streams loaded in the server.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getStreams</span><span class="p">()</span>
 
-<div class="viewcode-block" id="Server.getSamplingRate"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getSamplingRate">[docs]</a>    <span class="k">def</span> <span class="nf">getSamplingRate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Server.getSamplingRate">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getSamplingRate">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getSamplingRate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current sampling rate.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getSamplingRate</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getNchnls"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getNchnls">[docs]</a>    <span class="k">def</span> <span class="nf">getNchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getNchnls">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getNchnls">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getNchnls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current number of channels.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getNchnls</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getBufferSize"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getBufferSize">[docs]</a>    <span class="k">def</span> <span class="nf">getBufferSize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getBufferSize">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getBufferSize">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getBufferSize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current buffer size.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getBufferSize</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getGlobalDur"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getGlobalDur">[docs]</a>    <span class="k">def</span> <span class="nf">getGlobalDur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getGlobalDur">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getGlobalDur">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getGlobalDur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current global duration.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getGlobalDur</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getGlobalDel"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getGlobalDel">[docs]</a>    <span class="k">def</span> <span class="nf">getGlobalDel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getGlobalDel">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getGlobalDel">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getGlobalDel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current global delay time.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getGlobalDel</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getGlobalSeed"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getGlobalSeed">[docs]</a>    <span class="k">def</span> <span class="nf">getGlobalSeed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getGlobalSeed">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getGlobalSeed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getGlobalSeed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current global seed.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getGlobalSeed</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getIsStarted"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getIsStarted">[docs]</a>    <span class="k">def</span> <span class="nf">getIsStarted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getIsStarted">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getIsStarted">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getIsStarted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns 1 if the server is started, otherwise returns 0.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getIsStarted</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getIsBooted"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getIsBooted">[docs]</a>    <span class="k">def</span> <span class="nf">getIsBooted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getIsBooted">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getIsBooted">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getIsBooted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns 1 if the server is booted, otherwise returns 0.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getIsBooted</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.deactivateMidi"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.deactivateMidi">[docs]</a>    <span class="k">def</span> <span class="nf">deactivateMidi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.deactivateMidi">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.deactivateMidi">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deactivateMidi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Deactivate Midi callback. Must be called before the boot() method.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">deactivateMidi</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getMidiActive"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getMidiActive">[docs]</a>    <span class="k">def</span> <span class="nf">getMidiActive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getMidiActive">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getMidiActive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getMidiActive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns 1 if Midi callback is active, otherwise returns 0.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getMidiActive</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getStreams"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getStreams">[docs]</a>    <span class="k">def</span> <span class="nf">getStreams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getStreams">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getStreams">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getStreams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the list of Stream objects currently in the Server memory.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getStreams</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getNumberOfStreams"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getNumberOfStreams">[docs]</a>    <span class="k">def</span> <span class="nf">getNumberOfStreams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getNumberOfStreams">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getNumberOfStreams">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfStreams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the number of streams currently in the Server memory.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getStreams</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="Server.setServer"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setServer">[docs]</a>    <span class="k">def</span> <span class="nf">setServer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setServer">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setServer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setServer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Sets this server as the one to use for new objects when using</span>
 <span class="sd">        the embedded device.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setServer</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getInputAddr"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getInputAddr">[docs]</a>    <span class="k">def</span> <span class="nf">getInputAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getInputAddr">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getInputAddr">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getInputAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the address of the input buffer.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getInputAddr</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getOutputAddr"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getOutputAddr">[docs]</a>    <span class="k">def</span> <span class="nf">getOutputAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getOutputAddr">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getOutputAddr">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getOutputAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the address of the output buffer.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getOutputAddr</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getServerID"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getServerID">[docs]</a>    <span class="k">def</span> <span class="nf">getServerID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getServerID">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getServerID">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getServerID</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the server ID.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getServerID</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getServerAddr"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getServerAddr">[docs]</a>    <span class="k">def</span> <span class="nf">getServerAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getServerAddr">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getServerAddr">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getServerAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the address of the server.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getServerAddr</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getEmbedICallbackAddr"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getEmbedICallbackAddr">[docs]</a>    <span class="k">def</span> <span class="nf">getEmbedICallbackAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getEmbedICallbackAddr">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getEmbedICallbackAddr">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getEmbedICallbackAddr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the address of the interleaved embedded</span>
 <span class="sd">        callback function.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getEmbedICallbackAddr</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getCurrentTime"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getCurrentTime">[docs]</a>    <span class="k">def</span> <span class="nf">getCurrentTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getCurrentTime">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getCurrentTime">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCurrentTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current time as a formatted string.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getCurrentTime</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getCurrentTimeInSamples"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getCurrentTimeInSamples">[docs]</a>    <span class="k">def</span> <span class="nf">getCurrentTimeInSamples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getCurrentTimeInSamples">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getCurrentTimeInSamples">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCurrentTimeInSamples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current time in number of elapsed samples since the server was started.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getCurrentTimeInSamples</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.getCurrentAmp"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getCurrentAmp">[docs]</a>    <span class="k">def</span> <span class="nf">getCurrentAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.getCurrentAmp">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.getCurrentAmp">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCurrentAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the current amplitudes as a tuple of `nchnls` length.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">getCurrentAmp</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Server.setAutoStartChildren"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setAutoStartChildren">[docs]</a>    <span class="k">def</span> <span class="nf">setAutoStartChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.setAutoStartChildren">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.setAutoStartChildren">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setAutoStartChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Giving True to this method tells pyo that a call to the `play`,</span>
 <span class="sd">        `out` or `stop` method of audio objects should propagate to the</span>
 <span class="sd">        other audio objects given as arguments. This can be used to</span>
@@ -1514,8 +1743,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">setAutoStartChildren</span><span class="p">(</span><span class="n">state</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Server.process"><a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.process">[docs]</a>    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Server.process">
+<a class="viewcode-back" href="../../../api/classes/server.html#pyo.Server.process">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tell the server to compute a single buffer size of audio samples.</span>
 
 <span class="sd">        The audio backend of the server must be set to `manual` to use this method.</span>
@@ -1524,47 +1756,49 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_server</span><span class="o">.</span><span class="n">process</span><span class="p">()</span></div>
 
+
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">amp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float. Overall amplitude.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">amp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float. Overall amplitude.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_amp</span>
 
     <span class="nd">@amp</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">amp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">amp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setAmp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">startoffset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float. Starting time of the real-time processing.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">startoffset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float. Starting time of the real-time processing.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_startoffset</span>
 
     <span class="nd">@startoffset</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">startoffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">startoffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setStartOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">verbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int. Server verbosity.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">verbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int. Server verbosity.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbosity</span>
 
     <span class="nd">@verbosity</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">verbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">verbosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setVerbosity</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;verbosity must be an integer&quot;</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">globalseed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int. Server global seed.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">globalseed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int. Server global seed.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_globalseed</span>
 
     <span class="nd">@globalseed</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">globalseed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">globalseed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setGlobalSeed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;global seed must be an integer&quot;</span><span class="p">)</span></div>
+
 </pre></div>
 
             <div class="clearer"></div>
@@ -1579,7 +1813,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <div role="navigation" aria-label="related navigaton">
+          <div role="navigation" aria-label="Related">
             <a href="../../../genindex.html" title="General Index"
               >index</a>
           </div>
@@ -1590,8 +1824,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
         </div>
         <div class="clearer"></div>

@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-content_root="../../" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Controller listeners — Pyo 1.0.5 documentation</title>
-<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/agogo.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
-<link href="../../_static/autoclasstoc.css" rel="stylesheet" type="text/css"/>
-<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-<script src="../../_static/jquery.js"></script>
-<script src="../../_static/underscore.js"></script>
-<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-<script src="../../_static/doctools.js"></script>
-<script src="../../_static/sphinx_highlight.js"></script>
-<link href="../../_static/E-PyoIcon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Controller listeners — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
@@ -25,8 +21,8 @@
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
-<div class="headertitle"><a href="../../index.html">Pyo 1.0.5 documentation</a></div>
-<div aria-label="related navigation" class="rel" role="navigation">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
 <a accesskey="P" href="server.html" title="Audio Server">previous</a> |
           <a accesskey="N" href="_core.html" title="Base Classes">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
@@ -57,24 +53,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
-<div role="search">
+<search role="search">
 <h3 style="margin-top: 1.5em;">Search</h3>
 <form action="../../search.html" class="search" method="get">
 <input name="q" type="text"/>
 <input type="submit" value="Go"/>
 </form>
-</div>
+</search>
 </div>
 <div class="document">
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
 <section id="controller-listeners">
-<h1>Controller listeners<a class="headerlink" href="#controller-listeners" title="Permalink to this heading">¶</a></h1>
+<h1>Controller listeners<a class="headerlink" href="#controller-listeners" title="Link to this heading">¶</a></h1>
 <p>These objects can be used to create MIDI and/or OSC listeners without the
 need to boot ands start an audio server before receiving messages.</p>
 <section id="objects-in-this-category">
-<h2>Objects in this category<a class="headerlink" href="#objects-in-this-category" title="Permalink to this heading">¶</a></h2>
+<h2>Objects in this category<a class="headerlink" href="#objects-in-this-category" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#pyo.MidiListener" title="pyo.MidiListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">MidiListener</span></code></a> :     Self-contained midi listener thread.</p></li>
 <li><p><a class="reference internal" href="#pyo.MidiDispatcher" title="pyo.MidiDispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">MidiDispatcher</span></code></a> :     Self-contained midi dispatcher thread.</p></li>
@@ -82,10 +78,10 @@ need to boot ands start an audio server before receiving messages.</p>
 </ul>
 </section>
 <section id="midilistener">
-<h2><em>MidiListener</em><a class="headerlink" href="#midilistener" title="Permalink to this heading">¶</a></h2>
+<h2><em>MidiListener</em><a class="headerlink" href="#midilistener" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.MidiListener">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MidiListener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mididev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reportdevice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MidiListener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mididev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reportdevice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener" title="Link to this definition">¶</a></dt>
 <dd><p>Self-contained midi listener thread.</p>
 <p>This object allows to setup a Midi server that is independent
 of the audio server (mainly to be able to receive Midi data even
@@ -94,10 +90,10 @@ thread, the same device can’t be used by this object and the audio
 server at the same time. It is adviced to call the deactivateMidi()
 method on the audio server to avoid conflicts.</p>
 <dl class="field-list">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p>threading.Thread</p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>function: Python function (can’t be a list)</dt><dd><p>Function that will be called when a new midi event is available.
 This function is called with the incoming midi data as
@@ -126,7 +122,7 @@ the callback. The signature will then be:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">s</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">deactivateMidi</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">midicall</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">midicall</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/listener.html#pyo.MidiListener" title="pyo.lib.listener.MidiListener"><span class="n">listen</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/listener.html#pyo.MidiListener" title="pyo.lib.listener.MidiListener"><span class="n">MidiListener</span></a><span class="p">(</span><span class="n">midicall</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">listen</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
@@ -135,10 +131,6 @@ the callback. The signature will then be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p>A string used for identification purposes only.</p></td>
@@ -158,10 +150,6 @@ the callback. The signature will then be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(function[, mididev, reportdevice])</p></td>
 <td><p>This constructor should always be called with keyword arguments.</p></td>
@@ -178,10 +166,6 @@ the callback. The signature will then be:</p>
 </tbody>
 </table>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([group, target, name, args, ...])</p></td>
 <td><p>This constructor should always be called with keyword arguments.</p></td>
@@ -202,16 +186,16 @@ the callback. The signature will then be:</p>
 <td><p>Return whether the thread is alive.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDaemon</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Return whether this thread is a daemon.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDaemon</span></code>(daemonic)</p></td>
-<td><p></p></td>
+<td><p>Set whether this thread is a daemon.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Return a string used for identification purposes only.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code>(name)</p></td>
-<td><p></p></td>
+<td><p>Set the name string for this thread.</p></td>
 </tr>
 </tbody>
 </table>
@@ -219,10 +203,6 @@ the callback. The signature will then be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_initialized</span></code></p></td>
 <td><p></p></td>
@@ -233,10 +213,6 @@ the callback. The signature will then be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_reset_internal_locks</span></code>(is_alive)</p></td>
 <td><p></p></td>
@@ -271,17 +247,17 @@ the callback. The signature will then be:</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiListener.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener.run" title="Link to this definition">¶</a></dt>
 <dd><p>Starts the process. The thread runs as daemon, so no need to stop it.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiListener.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener.stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener.stop" title="Link to this definition">¶</a></dt>
 <dd><p>Stops the listener and properly close the midi ports.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiListener.getDeviceInfos">
-<span class="sig-name descname"><span class="pre">getDeviceInfos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener.getDeviceInfos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener.getDeviceInfos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getDeviceInfos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiListener.getDeviceInfos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiListener.getDeviceInfos" title="Link to this definition">¶</a></dt>
 <dd><p>Returns infos about connected midi devices.</p>
 <p>This method returns a list of dictionaries, one per device.</p>
 <p>Dictionary format is:</p>
@@ -290,10 +266,10 @@ the callback. The signature will then be:</p>
 </dd></dl>
 </section>
 <section id="mididispatcher">
-<h2><em>MidiDispatcher</em><a class="headerlink" href="#mididispatcher" title="Permalink to this heading">¶</a></h2>
+<h2><em>MidiDispatcher</em><a class="headerlink" href="#mididispatcher" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.MidiDispatcher">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MidiDispatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mididev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MidiDispatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mididev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher" title="Link to this definition">¶</a></dt>
 <dd><p>Self-contained midi dispatcher thread.</p>
 <p>This object allows to setup a Midi server that is independent
 of the audio server (mainly to be able to send Midi data even
@@ -304,10 +280,10 @@ method on the audio server to avoid conflicts.</p>
 <p>Use the <cite>send</cite> method to send midi event to connected devices.</p>
 <p>Use the <cite>sendx</cite> method to send sysex event to connected devices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p>threading.Thread</p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>mididev: int or list of ints, optional</dt><dd><p>Sets the midi output device (see <cite>pm_list_devices()</cite> for the
 available devices). The default, -1, means the system default
@@ -334,10 +310,6 @@ set with a list of integers.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p>A string used for identification purposes only.</p></td>
@@ -357,10 +329,6 @@ set with a list of integers.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([mididev])</p></td>
 <td><p>This constructor should always be called with keyword arguments.</p></td>
@@ -380,10 +348,6 @@ set with a list of integers.</p>
 </tbody>
 </table>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([group, target, name, args, ...])</p></td>
 <td><p>This constructor should always be called with keyword arguments.</p></td>
@@ -404,16 +368,16 @@ set with a list of integers.</p>
 <td><p>Return whether the thread is alive.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDaemon</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Return whether this thread is a daemon.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDaemon</span></code>(daemonic)</p></td>
-<td><p></p></td>
+<td><p>Set whether this thread is a daemon.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Return a string used for identification purposes only.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code>(name)</p></td>
-<td><p></p></td>
+<td><p>Set the name string for this thread.</p></td>
 </tr>
 </tbody>
 </table>
@@ -421,10 +385,6 @@ set with a list of integers.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_initialized</span></code></p></td>
 <td><p></p></td>
@@ -435,10 +395,6 @@ set with a list of integers.</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_reset_internal_locks</span></code>(is_alive)</p></td>
 <td><p></p></td>
@@ -473,17 +429,17 @@ set with a list of integers.</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiDispatcher.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.run" title="Link to this definition">¶</a></dt>
 <dd><p>Starts the process. The thread runs as daemon, so no need to stop it.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiDispatcher.send">
-<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.send"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.send" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.send"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.send" title="Link to this definition">¶</a></dt>
 <dd><p>Send a MIDI message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>status: int</dt><dd><p>Status byte.</p>
 </dd>
@@ -505,12 +461,12 @@ be sent. The default (-1) means all devices. See
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiDispatcher.sendx">
-<span class="sig-name descname"><span class="pre">sendx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.sendx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.sendx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sendx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.sendx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.sendx" title="Link to this definition">¶</a></dt>
 <dd><p>Send a MIDI system exclusive message to the selected midi output device.</p>
 <p>Arguments can be list of values to generate multiple events
 in one call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Args</dt>
+<dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>msg: str</dt><dd><p>A valid system exclusive message as a string. The first byte
 must be 0xf0 and the last one must be 0xf7.</p>
@@ -529,7 +485,7 @@ be sent. The default (-1) means all devices. See
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.MidiDispatcher.getDeviceInfos">
-<span class="sig-name descname"><span class="pre">getDeviceInfos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.getDeviceInfos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.getDeviceInfos" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getDeviceInfos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#MidiDispatcher.getDeviceInfos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.MidiDispatcher.getDeviceInfos" title="Link to this definition">¶</a></dt>
 <dd><p>Returns infos about connected midi devices.</p>
 <p>This method returns a list of dictionaries, one per device.</p>
 <p>Dictionary format is:</p>
@@ -538,24 +494,24 @@ be sent. The default (-1) means all devices. See
 </dd></dl>
 </section>
 <section id="osclistener">
-<h2><em>OscListener</em><a class="headerlink" href="#osclistener" title="Permalink to this heading">¶</a></h2>
+<h2><em>OscListener</em><a class="headerlink" href="#osclistener" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.OscListener">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OscListener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#OscListener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.OscListener" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OscListener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#OscListener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.OscListener" title="Link to this definition">¶</a></dt>
 <dd><p>Self-contained OSC listener thread.</p>
 <p>This object allows to setup an OSC server that is independent
 of the audio server (mainly to be able to receive OSC data even
 when the audio server is stopped).</p>
 <dl class="field-list">
-<dt class="field-odd">Parent</dt>
+<dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p>threadind.Thread</p>
 </dd>
-<dt class="field-even">Args</dt>
+<dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>function: Python function (can’t be a list)</dt><dd><p>Function that will be called when a new OSC event is available.
 This function is called with the incoming address and values as
 arguments. The signature of the function must be:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">myfunc</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd>
@@ -565,7 +521,7 @@ arguments. The signature of the function must be:</p>
 </dd>
 </dl>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">call</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/listener.html#pyo.OscListener" title="pyo.lib.listener.OscListener"><span class="n">listen</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/listener.html#pyo.OscListener" title="pyo.lib.listener.OscListener"><span class="n">OscListener</span></a><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="mi">9901</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">listen</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
@@ -574,10 +530,6 @@ arguments. The signature of the function must be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p>A string used for identification purposes only.</p></td>
@@ -597,10 +549,6 @@ arguments. The signature of the function must be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(function[, port])</p></td>
 <td><p>This constructor should always be called with keyword arguments.</p></td>
@@ -611,10 +559,6 @@ arguments. The signature of the function must be:</p>
 </tbody>
 </table>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([group, target, name, args, ...])</p></td>
 <td><p>This constructor should always be called with keyword arguments.</p></td>
@@ -635,16 +579,16 @@ arguments. The signature of the function must be:</p>
 <td><p>Return whether the thread is alive.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isDaemon</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Return whether this thread is a daemon.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDaemon</span></code>(daemonic)</p></td>
-<td><p></p></td>
+<td><p>Set whether this thread is a daemon.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code>()</p></td>
-<td><p></p></td>
+<td><p>Return a string used for identification purposes only.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code>(name)</p></td>
-<td><p></p></td>
+<td><p>Set the name string for this thread.</p></td>
 </tr>
 </tbody>
 </table>
@@ -652,10 +596,6 @@ arguments. The signature of the function must be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_initialized</span></code></p></td>
 <td><p></p></td>
@@ -666,10 +606,6 @@ arguments. The signature of the function must be:</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_oscrecv</span></code>(address, *args)</p></td>
 <td><p></p></td>
@@ -677,10 +613,6 @@ arguments. The signature of the function must be:</p>
 </tbody>
 </table>
 <details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">Thread</span></code></summary><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_reset_internal_locks</span></code>(is_alive)</p></td>
 <td><p></p></td>
@@ -715,7 +647,7 @@ arguments. The signature of the function must be:</p>
 <hr class="docutils"/>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.OscListener.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#OscListener.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.OscListener.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/listener.html#OscListener.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.OscListener.run" title="Link to this definition">¶</a></dt>
 <dd><p>Starts the process. The thread runs as daemon, so no need to stop it.</p>
 </dd></dl>
 </dd></dl>
@@ -732,7 +664,7 @@ arguments. The signature of the function must be:</p>
 <div class="footer-wrapper">
 <div class="footer">
 <div class="left">
-<div aria-label="related navigaton" role="navigation">
+<div aria-label="Related" role="navigation">
 <a href="server.html" title="Audio Server">previous</a> |
             <a href="_core.html" title="Base Classes">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
@@ -742,8 +674,8 @@ arguments. The signature of the function must be:</p>
 </div>
 <div class="right">
 <div class="footer" role="contentinfo">
-        © Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
 </div>
 <div class="clearer"></div>

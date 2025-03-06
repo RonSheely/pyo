@@ -102,6 +102,7 @@ class Server(object):
             User can set an environment variable named PYO_SERVER_MIDI to set this value globally.
         verbosity: int, optional
             Set the server's verbosity.
+
     .. note::
 
         The following methods must be called **before** booting the server

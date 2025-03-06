@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>03-delayed-calls.py - Calling a function once, after a given delay. — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
+<link href="../../about.html" rel="author" title="About these documents"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="../x10-tables/index.html" rel="next" title="x10-tables"/>
+<link href="02-score-calls.html" rel="prev" title="02-score-calls.py - Sequencing the function calls."/>
+</head><body>
+<div class="header-wrapper" role="banner">
+<div class="header">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
+<a accesskey="P" href="02-score-calls.html" title="02-score-calls.py - Sequencing the function calls.">previous</a> |
+          <a accesskey="N" href="../x10-tables/index.html" title="x10-tables">next</a> |
+          <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="content">
+<div class="sidebar">
+<h3>Table of Contents</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About pyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download.html">Installing pyo with pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compiling.html">Compiling pyo from sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../structure.html">Structure of the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../winaudioinspect.html">Configuring the audio output (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../perftips.html">Improve performance of pyo programs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../x01-intro/index.html">First steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x02-controls/index.html">Parameter control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x03-generators/index.html">Synthesis generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x04-soundfiles/index.html">Playing with soundfiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x05-envelopes/index.html">Amplitude envelopes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x06-filters/index.html">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x07-effects/index.html">Creating sound effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x08-dynamics/index.html">Dynamic range of audio signals</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Calling python functions from audio objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x10-tables/index.html">Using tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x16-midi/index.html">How to use MIDI with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x17-osc/index.html">How to use OSC with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x19-multirate/index.html">Multirate audio processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x20-multicore/index.html">Multicore audio programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x21-utilities/index.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x22-events/index.html">Events framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x23-expression/index.html">Evaluating prefix expression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
+</ul>
+<search role="search">
+<h3 style="margin-top: 1.5em;">Search</h3>
+<form action="../../search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</search>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="delayed-calls-py-calling-a-function-once-after-a-given-delay">
+<h1>03-delayed-calls.py - Calling a function once, after a given delay.<a class="headerlink" href="#delayed-calls-py-calling-a-function-once-after-a-given-delay" title="Link to this heading">¶</a></h1>
+<p>If you want to setup a callback once in the future, the CallAfter
+object is very easy to use. You just give it the function name, the
+time to wait before making the call and an optional argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
+
+<span class="c1"># A four-streams oscillator to produce a chord.</span>
+<span class="n">amp</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/controls.html#pyo.Fader" title="pyo.lib.controls.Fader"><span class="n">Fader</span></a><span class="p">(</span><span class="n">fadein</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">fadeout</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.SineLoop" title="pyo.lib.generators.SineLoop"><span class="n">osc</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.SineLoop" title="pyo.lib.generators.SineLoop"><span class="n">SineLoop</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="n">amp</span><span class="p">)</span>
+<span class="n">rev</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/effects.html#pyo.WGVerb" title="pyo.lib.effects.WGVerb"><span class="n">WGVerb</span></a><span class="p">(</span><span class="n">osc</span><span class="o">.</span><span class="n">mix</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span> <span class="n">bal</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
+
+<span class="c1"># A function to change the oscillator's frequencies and start the envelope.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_osc_freqs</span><span class="p">(</span><span class="n">notes</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span>
+    <span class="n">osc</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">attr</span><span class="o">=</span><span class="s2">"freq"</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/functions/conv.html#pyo.midiToHz" title="pyo.midiToHz"><span class="n">midiToHz</span></a><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">notes</span><span class="p">)),</span> <span class="n">port</span><span class="o">=</span><span class="mf">0.005</span><span class="p">)</span>
+    <span class="n">amp</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+
+
+<span class="c1"># Initial chord.</span>
+<span class="n">set_osc_freqs</span><span class="p">([</span><span class="mi">60</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">72</span><span class="p">])</span>
+
+<span class="c1"># We must be sure that our CallAfter object stays alive as long as</span>
+<span class="c1"># it waits to call its function. If we don't keep a reference to it,</span>
+<span class="c1"># it will be garbage-collected before doing its job.</span>
+<span class="n">call</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">new_notes</span><span class="p">(</span><span class="n">notes</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">call</span>  <span class="c1"># Use a global variable.</span>
+    <span class="n">amp</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>  <span class="c1"># Start the fadeout of the current notes...</span>
+    <span class="c1"># ... then, 50 ms later, call the function that change the frequencies.</span>
+    <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">call</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">set_osc_freqs</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span>
+
+
+<span class="c1"># The sequence of events. We use a tuple for the list of frequencies</span>
+<span class="c1"># because PyoObjects spread lists as argument over all their internal</span>
+<span class="c1"># streams. This means that with a list of frequencies, only the first</span>
+<span class="c1"># frequency would be passed to the callback of the first (and single)</span>
+<span class="c1"># stream (a list of functions at first argument would create a</span>
+<span class="c1"># multi-stream object). A tuple is treated as a single argument.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">c1</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">new_notes</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">69</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">c2</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">new_notes</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">1.95</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">76</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">c3</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">new_notes</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">2.95</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="p">(</span><span class="mi">62</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">74</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">c4</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">new_notes</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">3.45</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="p">(</span><span class="mi">59</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">74</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">c5</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">new_notes</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">3.95</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">72</span><span class="p">))</span>
+<span class="c1"># The last event activates the fadeout of the amplitude envelope.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">c6</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pattern.html#pyo.CallAfter" title="pyo.lib.pattern.CallAfter"><span class="n">CallAfter</span></a><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">stop</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mf">5.95</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div aria-label="Related" role="navigation">
+<a href="02-score-calls.html" title="02-score-calls.py - Sequencing the function calls.">previous</a> |
+            <a href="../x10-tables/index.html" title="x10-tables">next</a> |
+            <a href="../../genindex.html" title="General Index">index</a>
+</div>
+<div aria-label="source link" role="note">
+</div>
+</div>
+<div class="right">
+<div class="footer" role="contentinfo">
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+</body>
+</html>

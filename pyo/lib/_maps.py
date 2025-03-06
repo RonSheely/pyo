@@ -240,6 +240,10 @@ class SLMapFreq(SLMap):
         - res = 'float'
         - ramp = 0.025
 
+    .. seealso::
+
+        :py:class:`SLMap`, :py:class:`Map`
+
     """
 
     def __init__(self, init=1000):
@@ -268,6 +272,10 @@ class SLMapMul(SLMap):
         - name = 'mul'
         - res = 'float'
         - ramp = 0.025
+
+    .. seealso::
+
+        :py:class:`SLMap`, :py:class:`Map`
 
     """
 
@@ -298,6 +306,10 @@ class SLMapPhase(SLMap):
         - res = 'float'
         - ramp = 0.025
 
+    .. seealso::
+
+        :py:class:`SLMap`, :py:class:`Map`
+
     """
 
     def __init__(self, init=0.0):
@@ -326,6 +338,10 @@ class SLMapPan(SLMap):
         - name = 'pan'
         - res = 'float'
         - ramp = 0.025
+
+    .. seealso::
+
+        :py:class:`SLMap`, :py:class:`Map`
 
     """
 
@@ -356,6 +372,10 @@ class SLMapQ(SLMap):
         - res = 'float'
         - ramp = 0.025
 
+    .. seealso::
+
+        :py:class:`SLMap`, :py:class:`Map`
+
     """
 
     def __init__(self, init=1.0):
@@ -384,6 +404,10 @@ class SLMapDur(SLMap):
         - name = 'dur'
         - res = 'float'
         - ramp = 0.025
+
+    .. seealso::
+
+        :py:class:`SLMap`, :py:class:`Map`
 
     """
 

@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyo.lib.players &#8212; Pyo 1.0.5 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../../_static/E-PyoIcon.ico"/>
+    <title>pyo.lib.players &#8212; Pyo 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/agogo.css?v=227e5aac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autoclasstoc.css?v=08871587" />
+    <script src="../../../_static/documentation_options.js?v=e2a723ec"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/E-PyoIcon.ico"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -24,8 +20,8 @@
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
-          href="../../../index.html">Pyo 1.0.5 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
+          href="../../../index.html">Pyo 1.0.6 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="Related">
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a>
         </div>
@@ -52,13 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Advanced tutorials</a></li>
 </ul>
 
-          <div role="search">
+          <search role="search">
             <h3 style="margin-top: 1.5em;">Search</h3>
             <form class="search" action="../../../search.html" method="get">
                 <input type="text" name="q" />
                 <input type="submit" value="Go" />
             </form>
-          </div>
+          </search>
 
         </div>
         <div class="document">
@@ -95,13 +91,14 @@
 <span class="sd">You should have received a copy of the GNU Lesser General Public</span>
 <span class="sd">License along with pyo.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">._core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">._maps</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">aifc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._maps</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 
-<div class="viewcode-block" id="SfPlayer"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer">[docs]</a><span class="k">class</span> <span class="nc">SfPlayer</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SfPlayer">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SfPlayer</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Soundfile player.</span>
 
 <span class="sd">    Reads audio data from a file using one of several available interpolation</span>
@@ -165,7 +162,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="n">pyoArgsAssert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;sObniOO&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">loop</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">interp</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">add</span><span class="p">)</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">add</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
@@ -192,8 +189,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_trig_objs</span> <span class="o">=</span> <span class="n">Dummy</span><span class="p">(</span><span class="n">_trig_objs_tmp</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_init_play</span><span class="p">()</span>
 
-<div class="viewcode-block" id="SfPlayer.setPath"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setPath">[docs]</a>    <span class="k">def</span> <span class="nf">setPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SfPlayer.setPath">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setPath">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Sets a new sound to read.</span>
 
 <span class="sd">        The number of channels of the new sound must match those</span>
@@ -226,8 +225,11 @@
         <span class="n">path</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setSound</span><span class="p">(</span><span class="n">stringencode</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfPlayer.setSound"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setSound">[docs]</a>    <span class="k">def</span> <span class="nf">setSound</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfPlayer.setSound">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setSound">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setSound</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Sets a new sound to read.</span>
 
 <span class="sd">        The number of channels of the new sound must match those</span>
@@ -241,8 +243,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setPath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SfPlayer.setSpeed"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setSpeed">[docs]</a>    <span class="k">def</span> <span class="nf">setSpeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfPlayer.setSpeed">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setSpeed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setSpeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `speed` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -256,8 +261,11 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfPlayer.setLoop"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setLoop">[docs]</a>    <span class="k">def</span> <span class="nf">setLoop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfPlayer.setLoop">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setLoop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setLoop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `loop` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -275,8 +283,11 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">obj</span><span class="o">.</span><span class="n">setLoop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SfPlayer.setOffset"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setOffset">[docs]</a>    <span class="k">def</span> <span class="nf">setOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfPlayer.setOffset">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setOffset">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setOffset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `offset` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -290,8 +301,11 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setOffset</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfPlayer.setInterp"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setInterp">[docs]</a>    <span class="k">def</span> <span class="nf">setInterp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfPlayer.setInterp">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.setInterp">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInterp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `interp` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -305,7 +319,10 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setInterp</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfPlayer.ctrl"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.ctrl">[docs]</a>    <span class="k">def</span> <span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SfPlayer.ctrl">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfPlayer.ctrl">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_map_list</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">SLMap</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;lin&quot;</span><span class="p">,</span> <span class="s2">&quot;speed&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span><span class="p">),</span>
             <span class="n">SLMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;lin&quot;</span><span class="p">,</span> <span class="s2">&quot;interp&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span><span class="p">,</span> <span class="n">res</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="n">dataOnly</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
@@ -313,73 +330,77 @@
         <span class="p">]</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="n">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="p">)</span></div>
 
+
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;string. Full path of the sound.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;string. Full path of the sound.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
 
     <span class="nd">@path</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setPath</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;string. Alias to the `path` attribute.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;string. Alias to the `path` attribute.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
 
     <span class="nd">@sound</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setPath</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float or PyoObject. Transposition factor.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float or PyoObject. Transposition factor.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span>
 
     <span class="nd">@speed</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;bool. Looping mode.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;bool. Looping mode.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span>
 
     <span class="nd">@loop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLoop</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float. Time, in seconds, of the first sample to read.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float. Time, in seconds, of the first sample to read.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span>
 
     <span class="nd">@offset</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setOffset</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int {1, 2, 3, 4}. Interpolation method.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int {1, 2, 3, 4}. Interpolation method.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span>
 
     <span class="nd">@interp</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setInterp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="SfMarkerShuffler"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler">[docs]</a><span class="k">class</span> <span class="nc">SfMarkerShuffler</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    AIFF with markers soundfile shuffler.</span>
 
-<span class="sd">    Reads audio data from a AIFF file using one of several available</span>
+<div class="viewcode-block" id="SfMarkerShuffler">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SfMarkerShuffler</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Soundfile player with markers shuffler.</span>
+
+<span class="sd">    Reads audio data from an audio file using one of several available</span>
 <span class="sd">    interpolation types. User can alter its pitch with the `speed`</span>
 <span class="sd">    attribute. The object takes care of sampling rate conversion to</span>
 <span class="sd">    match the Server sampling rate setting.</span>
 
-<span class="sd">    The reading pointer randomly choose a marker (from the MARK chunk</span>
-<span class="sd">    in the header of the AIFF file) as its starting point and reads</span>
-<span class="sd">    the samples until it reaches the following marker. Then, it choose</span>
+<span class="sd">    The reading pointer randomly chooses a marker (from the markers chunk</span>
+<span class="sd">    in the header of an AIFF or WAVE) as its starting point, and reads</span>
+<span class="sd">    the samples until it reaches the following marker. Then, it chooses</span>
 <span class="sd">    another marker and reads from the new position and so on...</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
@@ -415,7 +436,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="n">pyoArgsAssert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;sOiOO&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">interp</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">add</span><span class="p">)</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">add</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span> <span class="o">=</span> <span class="n">speed</span>
@@ -425,15 +446,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_base_objs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_snd_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dur</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_sr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_chnls</span><span class="p">,</span> <span class="n">_format</span><span class="p">,</span> <span class="n">_type</span> <span class="o">=</span> <span class="n">sndinfo</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">raise_on_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">):</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">sf</span> <span class="o">=</span> <span class="n">aifc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>  <span class="c1"># Do we need stringencode() here?</span>
-                <span class="n">markerstmp</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">getmarkers</span><span class="p">()</span>
-                <span class="n">sf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">markerstmp</span><span class="p">]</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="n">SfMarkerShuffler_base</span><span class="p">(</span><span class="n">stringencode</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">)),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="p">,</span> <span class="n">wrap</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">interp</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+                <span class="n">SfMarkerShuffler_base</span><span class="p">(</span><span class="n">stringencode</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">)),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">interp</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
             <span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_chnls</span><span class="p">):</span>
             <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_chnls</span>
@@ -442,8 +456,10 @@
             <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_init_play</span><span class="p">()</span>
 
-<div class="viewcode-block" id="SfMarkerShuffler.setSpeed"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.setSpeed">[docs]</a>    <span class="k">def</span> <span class="nf">setSpeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SfMarkerShuffler.setSpeed">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.setSpeed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setSpeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `speed` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -457,8 +473,11 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfMarkerShuffler.setInterp"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.setInterp">[docs]</a>    <span class="k">def</span> <span class="nf">setInterp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfMarkerShuffler.setInterp">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.setInterp">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInterp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `interp` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -472,8 +491,11 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setInterp</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfMarkerShuffler.setRandomType"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.setRandomType">[docs]</a>    <span class="k">def</span> <span class="nf">setRandomType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfMarkerShuffler.setRandomType">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.setRandomType">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setRandomType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the random distribution type used to choose the markers.</span>
 
 <span class="sd">        :Args:</span>
@@ -528,14 +550,20 @@
                 <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">XNOISE_DICT</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setRandomType</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfMarkerShuffler.getMarkers"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.getMarkers">[docs]</a>    <span class="k">def</span> <span class="nf">getMarkers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfMarkerShuffler.getMarkers">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.getMarkers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getMarkers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a list of marker time values in samples.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">getMarkers</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SfMarkerShuffler.ctrl"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.ctrl">[docs]</a>    <span class="k">def</span> <span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SfMarkerShuffler.ctrl">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerShuffler.ctrl">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_map_list</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">SLMap</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;lin&quot;</span><span class="p">,</span> <span class="s2">&quot;speed&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span><span class="p">),</span>
             <span class="n">SLMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;lin&quot;</span><span class="p">,</span> <span class="s2">&quot;interp&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span><span class="p">,</span> <span class="n">res</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">,</span> <span class="n">dataOnly</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
@@ -543,36 +571,40 @@
         <span class="p">]</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="n">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="p">)</span></div>
 
+
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float or PyoObject. Transposition factor.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float or PyoObject. Transposition factor.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span>
 
     <span class="nd">@speed</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int {1, 2, 3, 4}. Interpolation method.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int {1, 2, 3, 4}. Interpolation method.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span>
 
     <span class="nd">@interp</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setInterp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="SfMarkerLooper"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper">[docs]</a><span class="k">class</span> <span class="nc">SfMarkerLooper</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    AIFF with markers soundfile looper.</span>
 
-<span class="sd">    Reads audio data from a AIFF file using one of several available</span>
+<div class="viewcode-block" id="SfMarkerLooper">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SfMarkerLooper</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Soundfile player with markers looper.</span>
+
+<span class="sd">    Reads audio data from an audio file using one of several available</span>
 <span class="sd">    interpolation types. User can alter its pitch with the `speed`</span>
 <span class="sd">    attribute. The object takes care of sampling rate conversion to</span>
 <span class="sd">    match the Server sampling rate setting.</span>
 
-<span class="sd">    The reading pointer loops a specific marker (from the MARK chunk</span>
-<span class="sd">    in the header of the AIFF file) until it received a new integer</span>
+<span class="sd">    The reading pointer loops a specific marker (from the markers chunk</span>
+<span class="sd">    in the header of the AIFF or WAVE file) until it received a new integer</span>
 <span class="sd">    in the `mark` attribute.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
@@ -610,7 +642,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mark</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mark</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="n">pyoArgsAssert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;sOOiOO&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">mark</span><span class="p">,</span> <span class="n">interp</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">add</span><span class="p">)</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">add</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span> <span class="o">=</span> <span class="n">speed</span>
@@ -621,16 +653,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_base_objs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_snd_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dur</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_sr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_chnls</span><span class="p">,</span> <span class="n">_format</span><span class="p">,</span> <span class="n">_type</span> <span class="o">=</span> <span class="n">sndinfo</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">raise_on_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span><span class="p">):</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">sf</span> <span class="o">=</span> <span class="n">aifc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
-                <span class="n">markerstmp</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">getmarkers</span><span class="p">()</span>
-                <span class="n">sf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">markerstmp</span><span class="p">]</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                 <span class="n">SfMarkerLooper_base</span><span class="p">(</span>
-                    <span class="n">stringencode</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">)),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="p">,</span> <span class="n">wrap</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">interp</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                    <span class="n">stringencode</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">i</span><span class="p">)),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">wrap</span><span class="p">(</span><span class="n">interp</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
                 <span class="p">)</span>
             <span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lmax</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snd_chnls</span><span class="p">):</span>
@@ -640,8 +665,10 @@
             <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_init_play</span><span class="p">()</span>
 
-<div class="viewcode-block" id="SfMarkerLooper.setSpeed"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.setSpeed">[docs]</a>    <span class="k">def</span> <span class="nf">setSpeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SfMarkerLooper.setSpeed">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.setSpeed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setSpeed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `speed` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -655,8 +682,11 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfMarkerLooper.setMark"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.setMark">[docs]</a>    <span class="k">def</span> <span class="nf">setMark</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfMarkerLooper.setMark">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.setMark">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setMark</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `mark` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -670,8 +700,11 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setMark</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfMarkerLooper.setInterp"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.setInterp">[docs]</a>    <span class="k">def</span> <span class="nf">setInterp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfMarkerLooper.setInterp">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.setInterp">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setInterp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the `interp` attribute.</span>
 
 <span class="sd">        :Args:</span>
@@ -685,14 +718,20 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">=</span> <span class="n">convertArgsToLists</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">setInterp</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="SfMarkerLooper.getMarkers"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.getMarkers">[docs]</a>    <span class="k">def</span> <span class="nf">getMarkers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SfMarkerLooper.getMarkers">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.getMarkers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getMarkers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a list of marker time values in samples.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_players</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">getMarkers</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SfMarkerLooper.ctrl"><a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.ctrl">[docs]</a>    <span class="k">def</span> <span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SfMarkerLooper.ctrl">
+<a class="viewcode-back" href="../../../api/classes/players.html#pyo.SfMarkerLooper.ctrl">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_map_list</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">SLMap</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;lin&quot;</span><span class="p">,</span> <span class="s2">&quot;speed&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span><span class="p">),</span>
             <span class="n">SLMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;lin&quot;</span><span class="p">,</span> <span class="s2">&quot;mark&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mark</span><span class="p">,</span> <span class="s2">&quot;int&quot;</span><span class="p">),</span>
@@ -701,32 +740,34 @@
         <span class="p">]</span>
         <span class="n">PyoObject</span><span class="o">.</span><span class="n">ctrl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_list</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">wxnoserver</span><span class="p">)</span></div>
 
+
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float or PyoObject. Transposition factor.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float or PyoObject. Transposition factor.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_speed</span>
 
     <span class="nd">@speed</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">speed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;float or PyoObject. Marker to loop.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float or PyoObject. Marker to loop.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span>
 
     <span class="nd">@mark</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mark</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mark</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setMark</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;int {1, 2, 3, 4}. Interpolation method.&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;int {1, 2, 3, 4}. Interpolation method.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span>
 
     <span class="nd">@interp</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setInterp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+
 </pre></div>
 
             <div class="clearer"></div>
@@ -741,7 +782,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <div role="navigation" aria-label="related navigaton">
+          <div role="navigation" aria-label="Related">
             <a href="../../../genindex.html" title="General Index"
               >index</a>
           </div>
@@ -752,8 +793,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Olivier Bélanger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
         </div>
         <div class="clearer"></div>

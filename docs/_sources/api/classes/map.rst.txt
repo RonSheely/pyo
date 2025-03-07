@@ -17,7 +17,6 @@ Objects in this category
 - :py:class:`SLMapPhase` :     SLMap with normalized values for a 'phase' slider.
 - :py:class:`SLMapQ` :     SLMap with normalized values for a 'q' slider.
 
-
 *Map*
 -----------------------------------
 

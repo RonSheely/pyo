@@ -55,14 +55,14 @@ And build the library:
 
     python -m build
 
-You can customize your compilation by giving some flags to the build frontend with `--config-settings`.
-You can add as many `--config-settings` as you need in your build command.
+You can customize your compilation by giving some flags to the build frontend with `--config-setting`.
+You can add as many `--config-setting` as you need in your build command.
 
 .. code-block:: bash
 
     --config-setting="--build-option=<FLAG>"
     # Exemple for building with --use-double on Windows
-    py -3.13 -m build --config-settings="--build-option=--use-double"
+    py -3.13 -m build --config-setting="--build-option=--use-double"
 
 .. _compilation-flags-label:
 
@@ -138,7 +138,7 @@ For Python 3.9 and higher
     python3 -m pip install build
     git clone https://github.com/belangeo/pyo.git
     cd pyo
-    python3 -m build --config-settings="--build-option=--use-jack" --config-settings="--build-option=--use-double"
+    python3 -m build --config-setting="--build-option=--use-jack" --config-setting="--build-option=--use-double"
 
 If you want to be able to use all of pyo's gui widgets, you will need wxPython Phoenix 4.2.0 or higher. 
 
@@ -167,4 +167,4 @@ Finally, in a terminal window, install pyo's dependencies, clone and build pyo:
     brew install liblo libsndfile portaudio portmidi
     git clone https://github.com/belangeo/pyo.git
     cd pyo
-    python3 -m build --config-settings="--build-option=--use-coreaudio" --config-settings="--build-option=--use-double"
+    python3 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double"

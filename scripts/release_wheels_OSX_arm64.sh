@@ -3,13 +3,10 @@
 #  release_wheels_OSX_arm64.sh
 #
 # To upload wheels on test.pypi.org:
-#   twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+#   twine upload --repository testpypi dist/*
 #
 # To upload wheels on pypi.org:
 #   twine upload dist/*
-#
-# To update older pip:
-#   curl https://bootstrap.pypa.io/get-pip.py | python(3)
 #
 
 version=1.0.6
@@ -19,10 +16,10 @@ replace=XXX
 rm -rf build dist
 
 #### Source distribution.
-/usr/local/bin/python3.13 setup.py sdist
+/usr/local/bin/python3.13 -m build --sdist
 
 ### Build pyo for python 3.9
-/usr/local/bin/python3.9 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
+/usr/local/bin/python3.9 -m build --wheel --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp39-cp39-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -64,7 +61,7 @@ else
 fi
 
 ### Build pyo for python 3.10
-/usr/local/bin/python3.10 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
+/usr/local/bin/python3.10 -m build --wheel --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp310-cp310-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -106,7 +103,7 @@ else
 fi
 
 ### Build pyo for python 3.11
-/usr/local/bin/python3.11 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
+/usr/local/bin/python3.11 -m build --wheel --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp311-cp311-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -148,7 +145,7 @@ else
 fi
 
 ### Build pyo for python 3.12
-/usr/local/bin/python3.12 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
+/usr/local/bin/python3.12 -m build --wheel --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp312-cp312-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info
@@ -190,7 +187,7 @@ else
 fi
 
 ### Build pyo for python 3.13
-/usr/local/bin/python3.13 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
+/usr/local/bin/python3.13 -m build --wheel --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 
 wheel_file=pyo-XXX-cp313-cp313-macosx_13_0_arm64.whl
 dist_info=pyo-XXX.dist-info

@@ -57,7 +57,7 @@
         {
             "label": "Compile Windows (single)",
             "type": "shell",
-            "command": "py -3.${input:pyMinVersion} -m build & py -3.${input:pyMinVersion} -m pip install --user --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
+            "command": "py -3.${input:pyMinVersion} -m build --wheel & py -3.${input:pyMinVersion} -m pip install --user --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -74,7 +74,7 @@
         {
             "label": "Compile Windows (double)",
             "type": "shell",
-            "command": "py -3.${input:pyMinVersion} -m build --config-setting=\"--build-option=--use-double\" & py -3.${input:pyMinVersion} -m pip install --user --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
+            "command": "py -3.${input:pyMinVersion} -m build --wheel --config-setting=\"--build-option=--use-double\" & py -3.${input:pyMinVersion} -m pip install --user --force-reinstall dist\\pyo-${config:pyo_version}-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-win_amd64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -91,7 +91,7 @@
         {
             "label": "Compile MacOS arm64 (single)",
             "type": "shell",
-            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--plat-name=macosx_13_0_arm64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_arm64.whl",
+            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --wheel --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--plat-name=macosx_13_0_arm64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_arm64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -108,7 +108,7 @@
         {
             "label": "Compile MacOS arm64 (double)",
             "type": "shell",
-            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--use-double\" --config-setting=\"--build-option=--plat-name=macosx_13_0_arm64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_arm64.whl",
+            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --wheel --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--use-double\" --config-setting=\"--build-option=--plat-name=macosx_13_0_arm64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_arm64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -125,7 +125,7 @@
         {
             "label": "Compile MacOS x86_64 (single)",
             "type": "shell",
-            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--plat-name=macosx_12_0_x86_64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_x86_64.whl",
+            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --wheel --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--plat-name=macosx_12_0_x86_64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_x86_64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -142,7 +142,7 @@
         {
             "label": "Compile MacOS x86_64 (double)",
             "type": "shell",
-            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--use-double\" --config-setting=\"--build-option=--plat-name=macosx_12_0_x86_64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_x86_64.whl",
+            "command": "/usr/local/bin/python3.${input:pyMinVersion} -m build --wheel --config-setting=\"--build-option=--use-coreaudio\" --config-setting=\"--build-option=--use-double\" --config-setting=\"--build-option=--plat-name=macosx_12_0_x86_64\" && /usr/local/bin/python3.${input:pyMinVersion} -m pip install --user --force-reinstall dist/pyo-*-cp3${input:pyMinVersion}-cp3${input:pyMinVersion}-*_x86_64.whl",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"

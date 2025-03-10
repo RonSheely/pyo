@@ -123,6 +123,18 @@ in a host environment):
 
 This will compile pyo without portaudio, portmidi and liblo support.
 
+Installation
+---------------
+
+Once built, you can install the created wheel file in your python distribution with pip:
+
+.. code-block:: bash
+
+    python -m pip install --user dist/<YOUR_WHEEL_FILE.whl>
+
+With the `--user` flag, pyo will be installed in the user's site-packages,
+otherwise pyo will be installed system-wide.
+
 Debian & Ubuntu (apt-get)
 -------------------------
 
@@ -133,12 +145,14 @@ For Python 3.9 and higher
 
 .. code-block:: bash
 
+    # For python 3.11
     sudo apt-get install libjack-jackd2-dev libportmidi-dev portaudio19-dev liblo-dev libsndfile-dev
     sudo apt-get install python3-dev python3-tk python3-pil.imagetk python3-pip
     python3 -m pip install build
     git clone https://github.com/belangeo/pyo.git
     cd pyo
     python3 -m build --config-setting="--build-option=--use-jack" --config-setting="--build-option=--use-double"
+    python3 -m pip install dist/pyo-1.0.6-cp311-cp311-linux_x86_64.whl
 
 If you want to be able to use all of pyo's gui widgets, you will need wxPython Phoenix 4.2.0 or higher. 
 
@@ -168,3 +182,4 @@ Finally, in a terminal window, install pyo's dependencies, clone and build pyo:
     git clone https://github.com/belangeo/pyo.git
     cd pyo
     python3 -m build --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double"
+    python3 -m pip install --user dist/<YOUR_WHEEL_FILE.whl>

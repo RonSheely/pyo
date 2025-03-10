@@ -15,9 +15,6 @@ replace=XXX
 #### Clean up.
 rm -rf build dist
 
-#### Source distribution.
-/usr/local/bin/python3.13 -m build --sdist
-
 ### Build pyo for python 3.9
 /usr/local/bin/python3.9 -m build --wheel --config-setting="--build-option=--use-coreaudio" --config-setting="--build-option=--use-double" --config-setting="--build-option=--plat-name=macosx_13_0_arm64"
 

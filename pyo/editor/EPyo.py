@@ -190,7 +190,6 @@ EXAMPLE_PATH = os.path.join(filedir, "../examples")
 EXAMPLE_FOLDERS = [
     folder.capitalize() for folder in os.listdir(EXAMPLE_PATH) if folder[0] != "." and folder not in ["snds", "fft"]
 ]
-EXAMPLE_FOLDERS.append("FFT")
 EXAMPLE_FOLDERS.sort()
 
 SNIPPET_BUILTIN_CATEGORIES = ["Audio", "Control", "Interface", "Utilities"]

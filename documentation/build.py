@@ -102,6 +102,7 @@ Examples
    Dynamic range of audio signals <x08-dynamics/index>
    Calling python functions from audio objects <x09-callbacks/index>
    Using tables <x10-tables/index>
+   Processing in the spectral domain <x14-spectral/index>
    How to use MIDI with pyo <x16-midi/index>
    How to use OSC with pyo <x17-osc/index>
    Multirate audio processing <x19-multirate/index>
@@ -118,6 +119,17 @@ for dir in folders:
     index = open("source/examples/%s/index.rst" % dir, "w")
     index.write(dir + "\n")
     index.write("=" * 40)
+
+    # Section description from the __init__.py file
+    initfile = os.path.join(src_example_dir, dir, "__init__.py")
+    if os.path.isfile(initfile):
+        with open(initfile, "r") as f:
+            text = f.read()
+            pos1 = text.find('"""')
+            pos2 = text.find('"""', pos1 + 3)
+            desc = text[pos1 + 3 : pos2].strip()
+            index.write("\n\n" + desc + "\n\n")
+
     index.write("\n\n.. toctree::\n   :maxdepth: 1\n\n")
     for name in sorted(os.listdir(os.path.join(src_example_dir, dir))):
         if name == "__init__.py":

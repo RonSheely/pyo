@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>01-fft-filter.py - Filter a sound in the spectral domain. — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
+<link href="../../about.html" rel="author" title="About these documents"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="02-fft-cross-synth.html" rel="next" title="02-fft-cross-synth.py - Performs the cross-synthesis of two sounds."/>
+<link href="index.html" rel="prev" title="x14-spectral"/>
+</head><body>
+<div class="header-wrapper" role="banner">
+<div class="header">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
+<a accesskey="P" href="index.html" title="x14-spectral">previous</a> |
+          <a accesskey="N" href="02-fft-cross-synth.html" title="02-fft-cross-synth.py - Performs the cross-synthesis of two sounds.">next</a> |
+          <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="content">
+<div class="sidebar">
+<h3>Table of Contents</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About pyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download.html">Installing pyo with pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compiling.html">Compiling pyo from sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../structure.html">Structure of the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../winaudioinspect.html">Configuring the audio output (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../perftips.html">Improve performance of pyo programs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../x01-intro/index.html">First steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x02-controls/index.html">Parameter control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x03-generators/index.html">Synthesis generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x04-soundfiles/index.html">Playing with soundfiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x05-envelopes/index.html">Amplitude envelopes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x06-filters/index.html">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x07-effects/index.html">Creating sound effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x08-dynamics/index.html">Dynamic range of audio signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x09-callbacks/index.html">Calling python functions from audio objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x10-tables/index.html">Using tables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Processing in the spectral domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x16-midi/index.html">How to use MIDI with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x17-osc/index.html">How to use OSC with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x19-multirate/index.html">Multirate audio processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x20-multicore/index.html">Multicore audio programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x21-utilities/index.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x22-events/index.html">Events framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x23-expression/index.html">Evaluating prefix expression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
+</ul>
+<search role="search">
+<h3 style="margin-top: 1.5em;">Search</h3>
+<form action="../../search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</search>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="fft-filter-py-filter-a-sound-in-the-spectral-domain">
+<h1>01-fft-filter.py - Filter a sound in the spectral domain.<a class="headerlink" href="#fft-filter-py-filter-a-sound-in-the-spectral-domain" title="Link to this heading">¶</a></h1>
+<p>The FFT object analyses an input signal and converts it into the
+spectral domain. Three audio signals are sent out of the object,
+the real part, from bin 0 (DC) to bin size/2 (Nyquist frequency),
+the imaginary part, from bin 0 to bin size/2-1, and the bin number,
+an increasing count from 0 to size-1.</p>
+<p>This script uses the increasing count to extract amplitude values
+from a table, applies them to the real and imaginary parts of the
+signal in its spectral representation, and converts it back to a
+time domain signal with IFFT.</p>
+<p>For a simpler and more efficient process, see the Phase Vocoder
+implementation of the spectral filter: <cite>PVFilter</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">(</span><span class="n">duplex</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
+
+<span class="c1"># A spectrally rich source to filter.</span>
+<span class="n">a</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Noise" title="pyo.lib.generators.Noise"><span class="n">Noise</span></a><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">mix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># FFT size in samples</span>
+<span class="n">size</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="c1"># Number of overlaps</span>
+<span class="n">olaps</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># List of points to initialize the filter's table,</span>
+<span class="c1"># from 0 to half the FFT size.</span>
+<span class="n">filter_init</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.0000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.9337</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">0.0000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mf">0.4784</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mf">0.0000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mf">0.1927</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0000</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># Converts the source signal into its spectral representation.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/fourier.html#pyo.FFT" title="pyo.lib.fourier.FFT"><span class="n">fin</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/fourier.html#pyo.FFT" title="pyo.lib.fourier.FFT"><span class="n">FFT</span></a><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">overlaps</span><span class="o">=</span><span class="n">olaps</span><span class="p">,</span> <span class="n">wintype</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Creates the filter's table.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">t</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">ExpTable</span></a><span class="p">(</span><span class="n">filter_init</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">graph</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Filter shape"</span><span class="p">)</span>
+
+<span class="c1"># Reads the table cyclically, in sync with the FFT analysis.</span>
+<span class="c1"># Table values will be used as the new amplitude of analysis bins.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/tableprocess.html#pyo.TableIndex" title="pyo.lib.tableprocess.TableIndex"><span class="n">amp</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tableprocess.html#pyo.TableIndex" title="pyo.lib.tableprocess.TableIndex"><span class="n">TableIndex</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">t</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="../../api/classes/fourier.html#pyo.FFT" title="pyo.lib.fourier.FFT"><span class="n">fin</span></a><span class="p">[</span><span class="s2">"bin"</span><span class="p">])</span>
+
+<span class="c1"># Applies the amplitudes to the real/imaginary values of analysis bins.</span>
+<span class="n">re</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/fourier.html#pyo.FFT" title="pyo.lib.fourier.FFT"><span class="n">fin</span></a><span class="p">[</span><span class="s2">"real"</span><span class="p">]</span> <span class="o">*</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tableprocess.html#pyo.TableIndex" title="pyo.lib.tableprocess.TableIndex"><span class="n">amp</span></a>
+<span class="n">im</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/fourier.html#pyo.FFT" title="pyo.lib.fourier.FFT"><span class="n">fin</span></a><span class="p">[</span><span class="s2">"imag"</span><span class="p">]</span> <span class="o">*</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tableprocess.html#pyo.TableIndex" title="pyo.lib.tableprocess.TableIndex"><span class="n">amp</span></a>
+
+<span class="c1"># Converts back the spectral representation to a time domain signal.</span>
+<span class="n">fout</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/fourier.html#pyo.IFFT" title="pyo.lib.fourier.IFFT"><span class="n">IFFT</span></a><span class="p">(</span><span class="n">re</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">overlaps</span><span class="o">=</span><span class="n">olaps</span><span class="p">,</span> <span class="n">wintype</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div aria-label="Related" role="navigation">
+<a href="index.html" title="x14-spectral">previous</a> |
+            <a href="02-fft-cross-synth.html" title="02-fft-cross-synth.py - Performs the cross-synthesis of two sounds.">next</a> |
+            <a href="../../genindex.html" title="General Index">index</a>
+</div>
+<div aria-label="source link" role="note">
+</div>
+</div>
+<div class="right">
+<div class="footer" role="contentinfo">
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+</body>
+</html>

@@ -135,10 +135,9 @@ Exemples de scripts audio avec pyo
 
 1. fft-filter.py 
 2. fft-cross-synth.py
-3. pv-stretch.py
-4. pv-transpose.py
-5. pv-playback-speed.py
-6. pv-bin-modulation.py
+3. fft-morphing.py
+4. fft-spectral-delay.py
+5. fft-time-stretch.py
 
 15-matrices
 -----------

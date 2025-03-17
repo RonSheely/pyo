@@ -17,13 +17,13 @@ benefits of a mature, and widely used, general programming language.
 
 Available from Pypi:
 
-- python 3.7 (Windows amd64, MacOS x86_64, linux x86_64)
-- python 3.8 (Windows amd64, MacOS x86_64 et arm64, linux x86_64)
-- python 3.9 (Windows amd64, MacOS x86_64 et arm64, linux x86_64)
+- python 3.9 (Windows amd64, MacOS arm64, linux x86_64)
 - python 3.10 (Windows amd64, MacOS x86_64 et arm64, linux x86_64)
-- python 3.11 (Windows amd64, MacOS x86_64 et arm64)
+- python 3.11 (Windows amd64, MacOS x86_64 et arm64, linux x86_64)
+- python 3.12 (Windows amd64, MacOS x86_64 et arm64, linux x86_64)
+- python 3.13 (Windows amd64, MacOS x86_64 et arm64, linux x86_64)
 
-**For more informations and documentation**, visit the 
+**For more information and documentation**, visit the 
 [PYO DOCUMENTATION](https://belangeo.github.io/pyo/).
 
 How to install pre-built packages on any platform using **pip**: 
@@ -38,7 +38,7 @@ pyo was awarded **second prize** in the
 **You want to help the development of pyo ?** Go to the
 [pyo features market](https://github.com/belangeo/pyo/wiki/Pyo-features-market) 
 and make a donation for the feature you want to promote. You can also submit new
-features on the mailing-list ( pyo-discuss@googlegroups.com ).
+features on the mailing-list ( https://github.com/belangeo/pyo/discussions ).
 
 ## Radio Pyo ##
 

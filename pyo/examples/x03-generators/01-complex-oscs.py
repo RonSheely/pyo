@@ -8,7 +8,7 @@ Blit:
 Impulse train generator with control over the number of harmonics.
 
 RCOsc:
-Aproximation of a RC circuit (a capacitor and a resistor in series).
+Approximation of a RC circuit (a capacitor and a resistor in series).
 
 SineLoop:
 Sine wave oscillator with feedback.

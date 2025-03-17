@@ -1,7 +1,5 @@
 """
-Receiving Open Sound Control messages as audio streams
-
-**02-receive-streams.py**
+02-receive-streams.py - Receiving Open Sound Control messages as audio streams
 
 This script shows a granulation process controlled by OSC messages
 coming from another program (run the next example, *03-send-streams.py*,
@@ -19,7 +17,7 @@ table = SndTable("../snds/flute.aif")
 rec = OscReceive(port=9000, address=["/density", "/position", "/pitch_rand", "/duration"])
 
 # Sets initial values for the OSC streams. This allow the program to run with
-# minimal behaviour even if no message have been sent on these addresses.
+# minimal behavior even if no message have been sent on these addresses.
 rec.setValue("/density", 0.5)
 rec.setValue("/position", 0.5)
 rec.setValue("/pitch_rand", 0.0)

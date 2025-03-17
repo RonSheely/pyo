@@ -16,7 +16,7 @@ elif sys.platform.startswith("darwin"):
     audio = "portaudio"
     print("SharedTable does not behave correctly under MacOS... This example doesn't work.")
 else:
-    print("Multicore examples don't run under Windows... Sorry!")
+    print("Multi-core examples don't run under Windows... Sorry!")
     exit()
 
 

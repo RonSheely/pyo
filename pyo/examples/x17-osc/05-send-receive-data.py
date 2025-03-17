@@ -1,7 +1,5 @@
 """
-Sending and receiving data with OSC protocol
-
-**05-send-receive-data.py**
+05-send-receive-data.py - Sending and receiving data with OSC protocol
 
 OscDataSend and OscDataReceive are objects that should be used to
 send and receive Open Sound Control messages when message type is

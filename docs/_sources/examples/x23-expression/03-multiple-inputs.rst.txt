@@ -1,8 +1,6 @@
-Using more than one input signal in a single expression
+03-multiple-inputs.py - Using more than one input signal in a single expression
 ============================================================================================================================================
 
-
-**03-multiple-inputs.py**
 
 It is possible to give a list of audio signals to the `input`
 argument if you need more than one signal in your expression.
@@ -16,7 +14,7 @@ example below) or a single multi-streams object, as in::
 If multiple signals are used, the position in the list must be
 given between the `$x` and the sample position `[0]`. So, for the
 second audio signal, one would retrieve it with `$x1[0]`. The 0
-for the first signal can be ommited, `$x[0]` is the same as `$x0[0]`.
+for the first signal can be omitted, `$x[0]` is the same as `$x0[0]`.
 
 Complete example
 ----------------
@@ -47,7 +45,7 @@ Complete example
     # Shows the generated signal.
     sc = Scope(expr)
     
-    # Converts the mono signal to stereo and sends it to the soundcard.
+    # Converts the mono signal to stereo and sends it to the sound card.
     pan = Pan(expr).out()
     
     s.gui(locals())

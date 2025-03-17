@@ -10,7 +10,7 @@ from pyo import *
 
 s = Server().boot()
 
-# Play the drum lopp..
+# Play the drum loop.
 sf = SfPlayer("../snds/drumloop.wav", loop=True)
 
 # Use a gate to generate the gain curve that will be applied to the reverb.

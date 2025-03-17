@@ -116,7 +116,7 @@ version.</p>
 
 <span class="c1"># Create 8 modulated delay lines with a little feedback and send the signals</span>
 <span class="c1"># to the output. Streams 1, 3, 5, 7 to the left and streams 2, 4, 6, 8 to the</span>
-<span class="c1"># right (default behaviour of the out() method).</span>
+<span class="c1"># right (default behavior of the out() method).</span>
 <span class="n">delays</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/effects.html#pyo.Delay" title="pyo.lib.effects.Delay"><span class="n">Delay</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/players.html#pyo.SfPlayer" title="pyo.lib.players.SfPlayer"><span class="n">sf</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lfos</span></a><span class="p">,</span> <span class="n">feedback</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
 
 <span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>

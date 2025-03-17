@@ -1,7 +1,7 @@
 """
 03-exponential-ramp.py - Exponential portamento with rising and falling times.
 
-The Port object is designed to lowpass filter an audio signal with
+The Port object is designed to filter an audio signal with
 different coefficients for rising and falling signals. A lowpass
 filter is a good and efficient way of creating an exponential ramp
 from a signal containing abrupt changes. The rising and falling

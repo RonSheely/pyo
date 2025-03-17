@@ -9,7 +9,7 @@ Comparison of three objects used to adjust the dynamic range of the signal.
 
 These three objects, by default, process independently each audio stream
 relatively to its own RMS value. This can be a problem if they are passed
-a stereo signal (or any multiphonic signals) where both channels should be
+a stereo signal (or any multi-phonic signals) where both channels should be
 processed in the same way.
 
 An alternative usage to the one illustrated below is to mix a multi-channel

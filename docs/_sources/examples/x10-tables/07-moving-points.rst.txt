@@ -5,7 +5,7 @@
 This example shows how we can dynamically modify a function table to create a
 curve that varies over time.
 
-Note: Rewriting a large table can produce xruns in the audio output. Usually,
+Note: Rewriting a large table can produce glitches in the audio output. Usually,
 for this kind of processes, we want to keep the table size relatively small.
 
 .. code-block:: python

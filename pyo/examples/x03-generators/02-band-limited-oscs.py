@@ -4,7 +4,7 @@
 This tutorial presents an object (misnamed LFO but it's too late
 to change its name!) that implements various band-limited waveforms.
 A band-limited signal is a signal that none of its partials exceeds
-the nyquist frequency (sr/2).
+the Nyquist frequency (sr/2).
 
 The LFO object, despite its name, can be use as a standard oscillator,
 with very high fundamental frequencies. At lower frequencies (below 20 Hz)

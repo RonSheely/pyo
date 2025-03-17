@@ -1,7 +1,5 @@
 """
-Creating our own functions
-
-**05-define-function.py**
+05-define-function.py - Creating our own functions
 
 The define keyword starts the definition of a custom function. The syntax is:
 

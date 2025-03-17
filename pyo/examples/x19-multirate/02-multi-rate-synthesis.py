@@ -5,7 +5,7 @@ In numerical audio computing, it is sometimes useful to be able to process
 a signal with much more timing precision than what the usual sampling rates
 offer. A typical case is when the synthesis algorithm generates aliasing in 
 the output signal. The solution is to increase the sampling rate, so the 
-nyquist frequency, and to use anti-aliasing filters when converting from one 
+Nyquist frequency, and to use anti-aliasing filters when converting from one 
 rate to another.
 
 Pyo allows to compute chunks of code at different sampling rates than the
@@ -18,7 +18,7 @@ You start a new resampling block with the method:
     Server.beginResamplingBlock(x)
 
 where `x`, a power-of-two, is the resampling factor. A negative power-of-two
-will start a downsampling block of code.
+will start a down sampling block of code.
 
 To close the block, simply call:
 
@@ -38,7 +38,7 @@ from pyo import *
 
 s = Server().boot()
 
-# We create a new class for our upsampled Frequency modulation synthesis. We
+# We create a new class for our up sampled Frequency modulation synthesis. We
 # use only the modulation index as parameter in order to simplify the code.
 class UpSampFM:
     """
@@ -64,7 +64,7 @@ class UpSampFM:
         # Get a reference to the audio server.
         server = self.fmindex.getServer()
 
-        # Start an upsampled block of code.
+        # Start an up sampled block of code.
         server.beginResamplingBlock(upfactor)
 
         # Resample the audio signals. Because the drive signal is only a
@@ -74,11 +74,11 @@ class UpSampFM:
         # Generate the FM synthesis.
         self.fmUp = FM(carrier=492, ratio=2, index=self.fmindexUp)
 
-        # Close the upsampled block.
+        # Close the up sampled block.
         server.endResamplingBlock()
 
         # Convert back the synthesized signal to the current sampling rate.
-        # We use a good decimination filter to eliminate aliasing.
+        # We use a good decimation filter to eliminate aliasing.
         self.output = Resample(self.fmUp, mode=filtmode)
 
     # Define some useful methods.

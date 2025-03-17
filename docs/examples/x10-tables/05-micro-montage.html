@@ -91,7 +91,7 @@ parts of sounds into a single table:</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>insert(path, pos=0, crossfade=0, start=0, stop=None)</dt><dd><p>Insert samples at a given position in the table, with crossfades.</p>
+<dt>insert(path, pos=0, crossfade=0, start=0, stop=None)</dt><dd><p>Insert samples at a given position in the table, with crossfade.</p>
 </dd>
 </dl>
 </li>
@@ -108,7 +108,7 @@ in the Interpreter field of the Server GUI.</p>
 
 <span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
 
-<span class="c1"># Path and duration of the choosen soundfile.</span>
+<span class="c1"># Path and duration of the chosen soundfile.</span>
 <span class="n">path</span> <span class="o">=</span> <span class="s2">"../snds/baseballmajeur_m.aif"</span>
 <span class="n">snddur</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/functions/sndfile.html#pyo.sndinfo" title="pyo.sndinfo"><span class="n">sndinfo</span></a><span class="p">(</span><span class="n">path</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 
@@ -132,7 +132,7 @@ in the Interpreter field of the Server GUI.</p>
     <span class="n">start</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">snddur</span> <span class="o">*</span> <span class="mf">0.7</span><span class="p">)</span>
     <span class="n">duration</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
 
-    <span class="c1"># Randomly choose an insert point in the sound table and a croosfade time.</span>
+    <span class="c1"># Randomly choose an insert point in the sound table and a crossfade time.</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">getDur</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>
     <span class="n">cross</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.04</span><span class="p">,</span> <span class="n">duration</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 
@@ -170,7 +170,7 @@ in the Interpreter field of the Server GUI.</p>
     <span class="n">caller</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>  <span class="c1"># ... then call the delayed generation.</span>
 
 
-<span class="c1"># Generate the intial table.</span>
+<span class="c1"># Generate the initial table.</span>
 <span class="n">gen</span><span class="p">()</span>
 
 <span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>

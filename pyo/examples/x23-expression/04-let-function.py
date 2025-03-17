@@ -1,7 +1,5 @@
 """
-State variable inside an expression
-
-**04-let-function.py**
+04-let-function.py - State variable inside an expression
 
 User can create state variable with the keyword `let`. This is
 useful to set an intermediate state to be used in multiple places

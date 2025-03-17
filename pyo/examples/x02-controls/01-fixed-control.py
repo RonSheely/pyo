@@ -1,7 +1,7 @@
 """
 01-fixed-control.py - Number as argument.
 
-Audio objects behaviour can be controlled by passing
+Audio objects behavior can be controlled by passing
 value to their arguments at initialization time.
 
 """

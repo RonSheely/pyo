@@ -1,7 +1,5 @@
 """
-Sharing a table with a numpy array using the buffer protocol 
-
-**04-buffer-interface.py**
+04-buffer-interface.py - Sharing a table with a numpy array using the buffer protocol 
 
 This example shows two things:
     

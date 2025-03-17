@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Receiving OSC messages as list of audio streams — Pyo 1.0.6 documentation</title>
+<title>04-receive-list.py - Receiving OSC messages as list of audio streams — Pyo 1.0.6 documentation</title>
 <link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
 <link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
@@ -16,15 +16,15 @@
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
-<link href="05-send-receive-data.html" rel="next" title="Sending and receiving data with OSC protocol"/>
-<link href="03-send-streams.html" rel="prev" title="Sending audio streams as Open Sound Control messages"/>
+<link href="05-send-receive-data.html" rel="next" title="05-send-receive-data.py - Sending and receiving data with OSC protocol"/>
+<link href="03-send-streams.html" rel="prev" title="03-send-streams.py - Sending audio streams as Open Sound Control messages"/>
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
 <div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
 <div aria-label="Related" class="rel" role="navigation">
-<a accesskey="P" href="03-send-streams.html" title="Sending audio streams as Open Sound Control messages">previous</a> |
-          <a accesskey="N" href="05-send-receive-data.html" title="Sending and receiving data with OSC protocol">next</a> |
+<a accesskey="P" href="03-send-streams.html" title="03-send-streams.py - Sending audio streams as Open Sound Control messages">previous</a> |
+          <a accesskey="N" href="05-send-receive-data.html" title="05-send-receive-data.py - Sending and receiving data with OSC protocol">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
 </div>
 </div>
@@ -79,9 +79,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<section id="receiving-osc-messages-as-list-of-audio-streams">
-<h1>Receiving OSC messages as list of audio streams<a class="headerlink" href="#receiving-osc-messages-as-list-of-audio-streams" title="Link to this heading">¶</a></h1>
-<p><strong>04-receive-list.py</strong></p>
+<section id="receive-list-py-receiving-osc-messages-as-list-of-audio-streams">
+<h1>04-receive-list.py - Receiving OSC messages as list of audio streams<a class="headerlink" href="#receive-list-py-receiving-osc-messages-as-list-of-audio-streams" title="Link to this heading">¶</a></h1>
 <p>OscListReceive receives list of values over a network via the Open Sound
 Control protocol. It converts the values as audio streams that can be used
 to control audio process.</p>
@@ -98,7 +97,7 @@ to control audio process.</p>
 <a class="sphinx-codeautolink-a" href="../../api/classes/opensndctrl.html#pyo.OscListReceive" title="pyo.lib.opensndctrl.OscListReceive"><span class="n">rec</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/opensndctrl.html#pyo.OscListReceive" title="pyo.lib.opensndctrl.OscListReceive"><span class="n">OscListReceive</span></a><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">9002</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s2">"/4/xy"</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Sets initial values for the OSC streams. This allow the program to run with</span>
-<span class="c1"># minimal behaviour even if no message have been sent on this address.</span>
+<span class="c1"># minimal behavior even if no message have been sent on this address.</span>
 <span class="n">rec</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">"/4/xy"</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
 
 <span class="c1"># Assign the value on the X axis to the drive parameter, and</span>
@@ -121,8 +120,8 @@ to control audio process.</p>
 <div class="footer">
 <div class="left">
 <div aria-label="Related" role="navigation">
-<a href="03-send-streams.html" title="Sending audio streams as Open Sound Control messages">previous</a> |
-            <a href="05-send-receive-data.html" title="Sending and receiving data with OSC protocol">next</a> |
+<a href="03-send-streams.html" title="03-send-streams.py - Sending audio streams as Open Sound Control messages">previous</a> |
+            <a href="05-send-receive-data.html" title="05-send-receive-data.py - Sending and receiving data with OSC protocol">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
 </div>
 <div aria-label="source link" role="note">

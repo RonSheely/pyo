@@ -15,7 +15,7 @@ if sys.platform.startswith("linux"):
 elif sys.platform.startswith("darwin"):
     audio = "portaudio"
 else:
-    print("Multicore examples don't run under Windows... Sorry!")
+    print("Multi-core examples don't run under Windows... Sorry!")
     exit()
 
 

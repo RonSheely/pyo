@@ -1,7 +1,5 @@
 """
-Loading functions from an external file
-
-**08-load-function.py**
+08-load-function.py - Loading functions from an external file
 
 With the `load` function, the user can use functions defined in
 an external file within its script. This makes possible to create

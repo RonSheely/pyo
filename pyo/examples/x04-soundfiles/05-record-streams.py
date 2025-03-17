@@ -2,7 +2,7 @@
 05-record-streams.py - Recording individual audio streams on disk.
 
 The Record object can be used to record specific audio streams
-from a performance. It can be useful to record a sound in mutiple
+from a performance. It can be useful to record a sound in multiple
 tracks to make post-processing on individual part easier. This
 example record the bass, the mid and the higher part in three
 separated files on the user's desktop.

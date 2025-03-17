@@ -86,7 +86,7 @@ with a simpler array indexing operation. The savings in terms of processing time
 can be significant, since retrieving a value from memory is often faster than
 undergoing an “expensive” computation.</p>
 <p>This technic is also used a lot in audio synthesis, where the waveform can be
-pre-computed and stored in a table, then simply readed with a ramp at the desired
+pre-computed and stored in a table, then simply read with a ramp at the desired
 frequency.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
@@ -103,7 +103,7 @@ frequency.</p>
 
 <span class="c1"># We give it True to the dataonly argument when opening the sliders window,</span>
 <span class="c1"># otherwise the table would be rewrite way too often.</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">ctrl</span><span class="p">([</span><a class="sphinx-codeautolink-a" href="../../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"lin"</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dataOnly</span><span class="o">=</span><span class="kc">True</span><span class="p">)],</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Transfer fonction slope"</span><span class="p">)</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">ctrl</span><span class="p">([</span><a class="sphinx-codeautolink-a" href="../../api/classes/map.html#pyo.SLMap" title="pyo.lib._maps.SLMap"><span class="n">SLMap</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"lin"</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dataOnly</span><span class="o">=</span><span class="kc">True</span><span class="p">)],</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Transfer function slope"</span><span class="p">)</span>
 
 <span class="c1"># Lookup reads a table given an audio index lying between -1 and 1.</span>
 <span class="c1"># It is especially designed to scan a transfer function with an audio signal.</span>

@@ -9,10 +9,10 @@ Noise:
 White noise generator, flat spectrum.
 
 PinkNoise:
-Pink noise generator, 3dB rolloff per octave.
+Pink noise generator, 3dB roll off per octave.
 
 BrownNoise:
-Brown noise generator, 6dB rolloff per octave.
+Brown noise generator, 6dB roll off per octave.
 
 Use the "voice" slider of the window "Input interpolator" to
 interpolate between the three sources.

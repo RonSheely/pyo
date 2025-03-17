@@ -1,7 +1,5 @@
 """
-Mixing multiple inputs to multiple outputs with fading time
-
-**09-audio-mixer.py**
+09-audio-mixer.py - Mixing multiple inputs to multiple outputs with fading time
 
 The Mixer object allows to route multiple inputs to multiple outputs
 with individual amplitude. A portamento time, defined with the `time`
@@ -11,7 +9,7 @@ variations.
 The initialization argument `outs` lets defined the number of available
 outputs and the argument `chnls` specifies how many channels per output.
 If `chnls` is 2 and a single audio stream is given to an input, the signal
-will be dupplicated to fill the two channels of the voice.
+will be duplicated to fill the two channels of the voice.
 
 """
 from pyo import *
@@ -41,7 +39,7 @@ mm.addInput(voice=2, input=hig)
 mm.setAmp(vin=0, vout=0, amp=0.25)
 mm.setAmp(vin=1, vout=2, amp=0.25)
 
-# Dictionaries used to print assigment messages.
+# Dictionaries used to print assignment messages.
 inputs = {0: "low", 1: "mid", 2: "hig"}
 outputs = {0: "Octave below", 1: "Fifth below", 2: "Second above"}
 

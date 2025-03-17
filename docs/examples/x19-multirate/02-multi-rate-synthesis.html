@@ -85,7 +85,7 @@
 a signal with much more timing precision than what the usual sampling rates
 offer. A typical case is when the synthesis algorithm generates aliasing in
 the output signal. The solution is to increase the sampling rate, so the
-nyquist frequency, and to use anti-aliasing filters when converting from one
+Nyquist frequency, and to use anti-aliasing filters when converting from one
 rate to another.</p>
 <p>Pyo allows to compute chunks of code at different sampling rates than the
 one with which the server was started. You should do this only for the objects
@@ -96,7 +96,7 @@ sampling rate, otherwise the program will be very CPU consuming.</p>
 <div><p>Server.beginResamplingBlock(x)</p>
 </div></blockquote>
 <p>where <cite>x</cite>, a power-of-two, is the resampling factor. A negative power-of-two
-will start a downsampling block of code.</p>
+will start a down sampling block of code.</p>
 <p>To close the block, simply call:</p>
 <blockquote>
 <div><p>Server.endResamplingBlock()</p>
@@ -112,7 +112,7 @@ signal.</p>
 
 <span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
 
-<span class="c1"># We create a new class for our upsampled Frequency modulation synthesis. We</span>
+<span class="c1"># We create a new class for our up sampled Frequency modulation synthesis. We</span>
 <span class="c1"># use only the modulation index as parameter in order to simplify the code.</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">UpSampFM</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -138,7 +138,7 @@ signal.</p>
         <span class="c1"># Get a reference to the audio server.</span>
         <span class="n">server</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmindex</span><span class="o">.</span><span class="n">getServer</span><span class="p">()</span>
 
-        <span class="c1"># Start an upsampled block of code.</span>
+        <span class="c1"># Start an up sampled block of code.</span>
         <span class="n">server</span><span class="o">.</span><span class="n">beginResamplingBlock</span><span class="p">(</span><span class="n">upfactor</span><span class="p">)</span>
 
         <span class="c1"># Resample the audio signals. Because the drive signal is only a</span>
@@ -148,11 +148,11 @@ signal.</p>
         <span class="c1"># Generate the FM synthesis.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fmUp</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.FM" title="pyo.lib.generators.FM"><span class="n">FM</span></a><span class="p">(</span><span class="n">carrier</span><span class="o">=</span><span class="mi">492</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fmindexUp</span><span class="p">)</span>
 
-        <span class="c1"># Close the upsampled block.</span>
+        <span class="c1"># Close the up sampled block.</span>
         <span class="n">server</span><span class="o">.</span><span class="n">endResamplingBlock</span><span class="p">()</span>
 
         <span class="c1"># Convert back the synthesized signal to the current sampling rate.</span>
-        <span class="c1"># We use a good decimination filter to eliminate aliasing.</span>
+        <span class="c1"># We use a good decimation filter to eliminate aliasing.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.Resample" title="pyo.lib.utils.Resample"><span class="n">Resample</span></a><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fmUp</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">filtmode</span><span class="p">)</span>
 
     <span class="c1"># Define some useful methods.</span>

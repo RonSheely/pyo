@@ -6,7 +6,7 @@ a signal with much more timing precision than what the usual sampling rates
 offer. A typical case is when the effect applied to the sound adds a lot of 
 harmonics. Higher harmonics will quickly wrap around the Nyquist frequency,
 producing aliasing in the output signal. The solution is to increase the
-sampling rate, so the nyquist frequency, and to use anti-aliasing filters
+sampling rate, so the Nyquist frequency, and to use anti-aliasing filters
 when converting from one rate to another.
 
 Pyo allows to compute chunks of code at different sampling rates than the
@@ -19,7 +19,7 @@ You start a new resampling block with the method:
     Server.beginResamplingBlock(x)
 
 where `x`, a power-of-two, is the resampling factor. A negative power-of-two
-will start a downsampling block of code.
+will start a down sampling block of code.
 
 To close the block, simply call:
 
@@ -37,10 +37,10 @@ signal.
 """
 from pyo import *
 
-# We create a new class for our upsampled distortion effect.
+# We create a new class for our up sampled distortion effect.
 class UpSampDisto:
     """
-    Upsampled distortion effect.
+    Up sampled distortion effect.
 
     :Args:
 
@@ -66,7 +66,7 @@ class UpSampDisto:
         # Get a reference to the audio server.
         server = self.drive.getServer()
 
-        # Start an upsampled block of code.
+        # Start an up sampled block of code.
         server.beginResamplingBlock(upfactor)
 
         # Resample the audio signals. Because the drive signal is only a
@@ -78,11 +78,11 @@ class UpSampDisto:
         # Apply the distortion effect.
         self.disto = Disto(self.inputUp, drive=self.driveUp)
 
-        # Close the upsampled block.
+        # Close the up sampled block.
         server.endResamplingBlock()
 
         # Convert back the distorted signal to the current sampling rate.
-        # Again, we use a good decimination filter to eliminate aliasing.
+        # Again, we use a good decimation filter to eliminate aliasing.
         self.output = Resample(self.disto, mode=filtmode, mul=0.5)
 
     # Define some useful methods.

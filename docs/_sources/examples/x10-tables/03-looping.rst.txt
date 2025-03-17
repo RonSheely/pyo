@@ -14,7 +14,7 @@ reading pointer, normalized between 0.0 and 1.0 (1.0 means the beginning
 of the crossfade), inside the loop. User can retrieve the trigger stream
 with obj['time'].
 
-Some methods let change the behaviour of the loop:
+Some methods let change the behavior of the loop:
 
 - Looper.appendFadeTime(boolean):
     If True, the crossfade starts after the loop duration.

@@ -22,7 +22,7 @@ FADETIME = 0.01  # Fadein-fadeout time to avoid clicks.
 table = SndTable(SNDS_PATH + "/transparent.aif")
 tabdur = table.getDur()
 
-# Intialize the line used to read the table.
+# Initialize the line used to read the table.
 line = Linseg([(0, 0), (1, 1)])
 
 # Amplitude envelope, to avoid clicks.

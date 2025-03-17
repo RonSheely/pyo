@@ -1,7 +1,5 @@
 """
-Receiving OSC messages as list of audio streams
-
-**04-receive-list.py**
+04-receive-list.py - Receiving OSC messages as list of audio streams
 
 OscListReceive receives list of values over a network via the Open Sound
 Control protocol. It converts the values as audio streams that can be used
@@ -21,7 +19,7 @@ source = SfPlayer("../snds/flute.aif", loop=True, mul=0.7)
 rec = OscListReceive(port=9002, address="/4/xy", num=2)
 
 # Sets initial values for the OSC streams. This allow the program to run with
-# minimal behaviour even if no message have been sent on this address.
+# minimal behavior even if no message have been sent on this address.
 rec.setValue("/4/xy", [0.5, 0.5])
 
 # Assign the value on the X axis to the drive parameter, and

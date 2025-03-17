@@ -1,7 +1,5 @@
 """
-Controlling user variables in an expression from python
-
-**06-var-function.py**
+06-var-function.py - Controlling user variables in an expression from python
 
 User variables are created with the keyword `var`:
 

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>03-fuzz-disto.py - Hand-written asymmetrical tranfert function. — Pyo 1.0.6 documentation</title>
+<title>03-fuzz-disto.py - Hand-written asymmetrical transfer function. — Pyo 1.0.6 documentation</title>
 <link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
 <link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
@@ -79,10 +79,10 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<section id="fuzz-disto-py-hand-written-asymmetrical-tranfert-function">
-<h1>03-fuzz-disto.py - Hand-written asymmetrical tranfert function.<a class="headerlink" href="#fuzz-disto-py-hand-written-asymmetrical-tranfert-function" title="Link to this heading">¶</a></h1>
+<section id="fuzz-disto-py-hand-written-asymmetrical-transfer-function">
+<h1>03-fuzz-disto.py - Hand-written asymmetrical transfer function.<a class="headerlink" href="#fuzz-disto-py-hand-written-asymmetrical-transfer-function" title="Link to this heading">¶</a></h1>
 <p>This example implements a fuzz distortion. Bandpass filtered signal is
-eavily boosted, then feeded to an asymmetrical transfert function, and
+heavily boosted, then fed to an asymmetrical transfer function, and
 finally lowpass filtered to smooth out the sound. Balance between the
 dry and the distorted sound is applied before sending the signal to the
 outputs.</p>
@@ -113,7 +113,7 @@ its sampling rate and bit depth.</p>
 <span class="c1"># 1. Transfert function for signal lower than 0.</span>
 <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">table</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">ExpTable</span></a><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">),</span> <span class="p">(</span><span class="mi">4096</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">8192</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">exp</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 
-<span class="c1"># 2. Transfert function for signal higher than 0.</span>
+<span class="c1"># 2. Transfer function for signal higher than 0.</span>
 <span class="c1"># First, create an exponential function from 1 (at the beginning of the table)</span>
 <span class="c1"># to 0 (in the middle of the table).</span>
 <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">high_table</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">ExpTable</span></a><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4096</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">4598</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">8192</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">exp</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">inverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -124,7 +124,7 @@ its sampling rate and bit depth.</p>
 <span class="c1"># Finally, add the second table to the first, point by point.</span>
 <span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.ExpTable" title="pyo.lib.tables.ExpTable"><span class="n">high_table</span></a><span class="p">)</span>
 
-<span class="c1"># Show the transfert function.</span>
+<span class="c1"># Show the transfer function.</span>
 <span class="n">table</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Transfert function"</span><span class="p">)</span>
 
 <span class="c1"># Bandpass filter and boost gain applied on input signal.</span>

@@ -1,7 +1,5 @@
 """
-Saving list of floats to audio file on disk
-
-**01-list-to-audio-file.py**
+01-list-to-audio-file.py - Saving list of floats to audio file on disk
 
 This program generates 5 seconds of white noise with pure python function
 and saves the samples in a file called noise.aif on the Desktop.

@@ -4,7 +4,7 @@
 A stereo ping-pong delay is when you use two delays, one hard left and the
 other hard right, and the delays alternate. 
 
-This exemple illustrates how we can pass the signal of a first object to
+This example illustrates how we can pass the signal of a first object to
 the input of a second even if the first object does not exist yet when the
 second is created.
  
@@ -26,7 +26,7 @@ delay_feed.ctrl()
 # Because the right delay gets its input sound from the left delay, while
 # it is computed before (to send its output sound to the left delay), it
 # will be one buffer size late. To compensate this additional delay on the
-# right, we substract one buffer size from the real delay time.
+# right, we subtract one buffer size from the real delay time.
 delay_time_r = Sig(delay_time_l, add=-buftime)
 
 # Setup up a soundfile player.

@@ -43,13 +43,13 @@ Frequency
 The 'freq' argument can be used directly to specify the root note. But
 it is sometimes easier to create a melody with 'midinote' or 'degree',
 and let the engine do the conversion to frequency for you. The 'midinote'
-argument is a MIDI note number between 0 and 127, fractionnal numbers
+argument is a MIDI note number between 0 and 127, fractional numbers
 are allowed to do micro-tonal scaling. The 'degree' argument needs a
 value in octave.degree format where octave is the number of the desired
 octave and degree is a 2-digits degree number between 00 and 11. For
 an example, the MIDI note 48 is 4.00 in octave.degree notation.
 
-The midinote and degree arguments will automatically convert and store
+The midi note and degree arguments will automatically convert and store
 the frequency, in Hz, as the 'freq' argument::
 
     e3 = Events(midinote = EventSeq([60, 64, 67, 72]),
@@ -95,7 +95,7 @@ the envelope will be an ADSR built with 'attack', 'decay', 'sustain' and
 'release' argument. If both 'envelope' and 'decay' are None, the envelope
 will be an ASR, defined with 'attack', 'sustain' and 'release' arguments.
 
-The following defines an Adsr envelope::
+The following defines an ADSR envelope::
 
     e7 = Events(degree = EventSeq([5.00, 5.04, 5.07, 6.00]),
                 beat = EventSeq([1/2., 1/4., 1/4., 1], occurrences=4),

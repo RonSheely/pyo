@@ -1,7 +1,5 @@
 """
-Manipulating audio signal in input
-
-**02-audio-in.py**
+02-audio-in.py - Manipulating audio signal in input
 
 The expression illustrated in this example use a phasor signal
 in input as the running phase of a self-modulated sine wave.
@@ -64,7 +62,7 @@ expr.editor()
 # Shows the generated signal.
 sc = Scope(expr)
 
-# Converts the mono signal to stereo and sends it to the soundcard.
+# Converts the mono signal to stereo and sends it to the sound card.
 pan = Pan(expr).out()
 
 s.gui(locals())

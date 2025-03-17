@@ -119,12 +119,12 @@ the time gap between successive events:</p>
 <p>The ‘freq’ argument can be used directly to specify the root note. But
 it is sometimes easier to create a melody with ‘midinote’ or ‘degree’,
 and let the engine do the conversion to frequency for you. The ‘midinote’
-argument is a MIDI note number between 0 and 127, fractionnal numbers
+argument is a MIDI note number between 0 and 127, fractional numbers
 are allowed to do micro-tonal scaling. The ‘degree’ argument needs a
 value in octave.degree format where octave is the number of the desired
 octave and degree is a 2-digits degree number between 00 and 11. For
 an example, the MIDI note 48 is 4.00 in octave.degree notation.</p>
-<p>The midinote and degree arguments will automatically convert and store
+<p>The midi note and degree arguments will automatically convert and store
 the frequency, in Hz, as the ‘freq’ argument:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e3</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/events.html#pyo.Events" title="pyo.lib.events.Events"><span class="n">Events</span></a><span class="p">(</span><span class="n">midinote</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/events.html#pyo.EventSeq" title="pyo.lib.events.EventSeq"><span class="n">EventSeq</span></a><span class="p">([</span><span class="mi">60</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">72</span><span class="p">]),</span>
             <span class="n">beat</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/events.html#pyo.EventSeq" title="pyo.lib.events.EventSeq"><span class="n">EventSeq</span></a><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">occurrences</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
@@ -168,7 +168,7 @@ envelope of the events. If ‘envelope’ is None and ‘decay’ gets a value,
 the envelope will be an ADSR built with ‘attack’, ‘decay’, ‘sustain’ and
 ‘release’ argument. If both ‘envelope’ and ‘decay’ are None, the envelope
 will be an ASR, defined with ‘attack’, ‘sustain’ and ‘release’ arguments.</p>
-<p>The following defines an Adsr envelope:</p>
+<p>The following defines an ADSR envelope:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e7</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/events.html#pyo.Events" title="pyo.lib.events.Events"><span class="n">Events</span></a><span class="p">(</span><span class="n">degree</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/events.html#pyo.EventSeq" title="pyo.lib.events.EventSeq"><span class="n">EventSeq</span></a><span class="p">([</span><span class="mf">5.00</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">,</span> <span class="mf">5.07</span><span class="p">,</span> <span class="mf">6.00</span><span class="p">]),</span>
             <span class="n">beat</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/events.html#pyo.EventSeq" title="pyo.lib.events.EventSeq"><span class="n">EventSeq</span></a><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">occurrences</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
             <span class="n">attack</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">sustain</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">release</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">,</span>

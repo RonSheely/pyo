@@ -10,7 +10,7 @@ sound of a MIDI synthesizer with two MIDI-triggered envelope objects:
 
 We will use these envelopes to control the gain of two parts of the sound.
 The first part is an oscillator at the root frequency with a sharp attack.
-The second part is a pair of oscillators slightly detuned raising smoothly
+The second part is a pair of oscillators slightly out-of-tune raising smoothly
 after a half-second delay. This gradually introduces beating into the sound.
 
 .. code-block:: python

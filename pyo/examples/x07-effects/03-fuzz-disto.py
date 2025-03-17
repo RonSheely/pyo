@@ -1,8 +1,8 @@
 """
-03-fuzz-disto.py - Hand-written asymmetrical tranfert function.
+03-fuzz-disto.py - Hand-written asymmetrical transfer function.
 
 This example implements a fuzz distortion. Bandpass filtered signal is
-eavily boosted, then feeded to an asymmetrical transfert function, and
+heavily boosted, then fed to an asymmetrical transfer function, and
 finally lowpass filtered to smooth out the sound. Balance between the
 dry and the distorted sound is applied before sending the signal to the 
 outputs.
@@ -36,7 +36,7 @@ src = SfPlayer(SOURCE, loop=True).mix(2)
 # 1. Transfert function for signal lower than 0.
 table = ExpTable([(0, -0.25), (4096, 0), (8192, 0)], exp=30)
 
-# 2. Transfert function for signal higher than 0.
+# 2. Transfer function for signal higher than 0.
 # First, create an exponential function from 1 (at the beginning of the table)
 # to 0 (in the middle of the table).
 high_table = ExpTable([(0, 1), (2000, 1), (4096, 0), (4598, 0), (8192, 0)], exp=5, inverse=False)
@@ -47,7 +47,7 @@ high_table.reverse()
 # Finally, add the second table to the first, point by point.
 table.add(high_table)
 
-# Show the transfert function.
+# Show the transfer function.
 table.view(title="Transfert function")
 
 # Bandpass filter and boost gain applied on input signal.

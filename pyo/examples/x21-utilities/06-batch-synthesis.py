@@ -1,7 +1,5 @@
 """
-Offline batch generation of synthesis sounds  
-
-**06-batch-synthesis.py**
+06-batch-synthesis.py - Offline batch generation of synthesis sounds
 
 This program demonstrates how to use pyo to do offline synthesis batch
 generation.

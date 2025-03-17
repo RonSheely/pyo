@@ -41,7 +41,7 @@ lfos = Sine(freqs, mul=adelay, add=cdelay)
 
 # Create 8 modulated delay lines with a little feedback and send the signals
 # to the output. Streams 1, 3, 5, 7 to the left and streams 2, 4, 6, 8 to the
-# right (default behaviour of the out() method).
+# right (default behavior of the out() method).
 delays = Delay(sf, lfos, feedback=0.5, mul=0.5).out()
 
 s.gui(locals())

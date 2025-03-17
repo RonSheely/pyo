@@ -6,7 +6,7 @@ This example adds three continuous MIDI controllers to the previous one
 `transpo` argument, which multiply the pitches from the Notein object.
 The second is a continuous controller used to change the cutoff frequency
 (`hfdamp` argument) of the lowpass filter. The last one sets the speed
-(`lfofreq` argument) of moving notche oscillations in the spectrum. 
+(`lfofreq` argument) of the moving notch oscillations in the spectrum. 
 
 """
 from pyo import *

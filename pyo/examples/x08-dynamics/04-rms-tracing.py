@@ -15,7 +15,7 @@ s = Server().boot()
 MINFREQ = 250
 MAXFREQ = 5000
 
-# Play the drum lopp.
+# Play the drum loop.
 sf = SfPlayer("../snds/drumloop.wav", loop=True)
 
 # Follow the amplitude envelope of the input sound.

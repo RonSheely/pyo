@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Manipulating audio signal in input — Pyo 1.0.6 documentation</title>
+<title>02-audio-in.py - Manipulating audio signal in input — Pyo 1.0.6 documentation</title>
 <link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
 <link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
@@ -16,15 +16,15 @@
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
-<link href="03-multiple-inputs.html" rel="next" title="Using more than one input signal in a single expression"/>
-<link href="01-simple-expression.html" rel="prev" title="Introduction to prefix expression evaluator"/>
+<link href="03-multiple-inputs.html" rel="next" title="03-multiple-inputs.py - Using more than one input signal in a single expression"/>
+<link href="01-simple-expression.html" rel="prev" title="01-simple-expression.py - Introduction to prefix expression evaluator"/>
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
 <div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
 <div aria-label="Related" class="rel" role="navigation">
-<a accesskey="P" href="01-simple-expression.html" title="Introduction to prefix expression evaluator">previous</a> |
-          <a accesskey="N" href="03-multiple-inputs.html" title="Using more than one input signal in a single expression">next</a> |
+<a accesskey="P" href="01-simple-expression.html" title="01-simple-expression.py - Introduction to prefix expression evaluator">previous</a> |
+          <a accesskey="N" href="03-multiple-inputs.html" title="03-multiple-inputs.py - Using more than one input signal in a single expression">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
 </div>
 </div>
@@ -79,9 +79,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<section id="manipulating-audio-signal-in-input">
-<h1>Manipulating audio signal in input<a class="headerlink" href="#manipulating-audio-signal-in-input" title="Link to this heading">¶</a></h1>
-<p><strong>02-audio-in.py</strong></p>
+<section id="audio-in-py-manipulating-audio-signal-in-input">
+<h1>02-audio-in.py - Manipulating audio signal in input<a class="headerlink" href="#audio-in-py-manipulating-audio-signal-in-input" title="Link to this heading">¶</a></h1>
 <p>The expression illustrated in this example use a phasor signal
 in input as the running phase of a self-modulated sine wave.</p>
 <p>Here is the complete expression:</p>
@@ -131,7 +130,7 @@ input sample, rescaled to the range 0 -&gt; 2pi for the <cite>sin</cite> functio
 <span class="c1"># Shows the generated signal.</span>
 <a class="sphinx-codeautolink-a" href="../../api/classes/analysis.html#pyo.Scope" title="pyo.lib.analysis.Scope"><span class="n">sc</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/analysis.html#pyo.Scope" title="pyo.lib.analysis.Scope"><span class="n">Scope</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/expression.html#pyo.Expr" title="pyo.lib.expression.Expr"><span class="n">expr</span></a><span class="p">)</span>
 
-<span class="c1"># Converts the mono signal to stereo and sends it to the soundcard.</span>
+<span class="c1"># Converts the mono signal to stereo and sends it to the sound card.</span>
 <span class="n">pan</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pan.html#pyo.Pan" title="pyo.lib.pan.Pan"><span class="n">Pan</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/expression.html#pyo.Expr" title="pyo.lib.expression.Expr"><span class="n">expr</span></a><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
 
 <span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
@@ -151,8 +150,8 @@ input sample, rescaled to the range 0 -&gt; 2pi for the <cite>sin</cite> functio
 <div class="footer">
 <div class="left">
 <div aria-label="Related" role="navigation">
-<a href="01-simple-expression.html" title="Introduction to prefix expression evaluator">previous</a> |
-            <a href="03-multiple-inputs.html" title="Using more than one input signal in a single expression">next</a> |
+<a href="01-simple-expression.html" title="01-simple-expression.py - Introduction to prefix expression evaluator">previous</a> |
+            <a href="03-multiple-inputs.html" title="03-multiple-inputs.py - Using more than one input signal in a single expression">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
 </div>
 <div aria-label="source link" role="note">

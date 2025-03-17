@@ -1,7 +1,5 @@
 """
-Using the conditional function
-
-**07-condition.py**
+07-condition.py - Using the conditional function
 
 The `if` function let the user set different processing branches
 according to the result of a condition. The syntax is:

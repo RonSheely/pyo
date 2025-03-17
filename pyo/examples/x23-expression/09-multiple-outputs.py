@@ -1,7 +1,5 @@
 """
-How to send multiple outputs from a single expression
-
-**09-multiple-outputs.py**
+09-multiple-outputs.py - How to send multiple outputs from a single expression
 
 If the object generates only one channel output (the default), the last
 expression in the script is the output signal. Otherwise, output signals

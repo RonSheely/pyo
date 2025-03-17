@@ -1,12 +1,10 @@
 """
-Applying digital signal processing at a higher sampling rate
-
-**07-upsamp-processing.py**
+07-upsamp-processing.py - Applying digital signal processing at a higher sampling rate
 
 This script demonstrates how to use pyo to apply processing on a sound
 at a very high sampling rate.
 
-Pyo offers two functions to upsample and downsample an audio file::
+Pyo offers two functions to upsample and down sample an audio file::
 
     upsamp(path, outfile, up, order)
     downsamp(path, outfile, down, order)
@@ -23,7 +21,7 @@ Where:
 import os
 from pyo import *
 
-# Upsampling factor.
+# Up sampling factor.
 SR_FACTOR = 8
 
 # Size, in samples, of the anti-aliasing lowpass filters.
@@ -54,7 +52,7 @@ s = Server(sr=SR * SR_FACTOR, nchnls=1, duplex=0, audio="offline").boot()
 # Set the recording parameters.
 s.recordOptions(dur=DUR + 0.1, filename=PROC_SND, fileformat=0, sampletype=0)
 
-# Read the upsampled version of the source file.
+# Read the up sampled version of the source file.
 sf = SfPlayer(UP_SND, loop=False, interp=4, mul=0.7)
 # Apply distortion on it.
 dist = Disto(sf, drive=0.75, slope=0.7, mul=0.3)

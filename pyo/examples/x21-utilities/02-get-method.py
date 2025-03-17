@@ -1,7 +1,5 @@
 """
-Retrieving current value of a PyoObject as a python float
-
-**02-get-method.py**
+02-get-method.py - Retrieving current value of a PyoObject as a python float
 
 The get() method of the PyoObject allow the user to retrieve the current
 value of an audio signal as a python float. This can useful if one wants

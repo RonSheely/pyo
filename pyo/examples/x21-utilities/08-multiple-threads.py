@@ -1,7 +1,5 @@
 """
-Launching the audio processing in a separated thread
-
-**08-multiple-threads.py**
+08-multiple-threads.py - Launching the audio processing in a separated thread
 
 This program launches an audio process in a separated thread with the
 subprocess module and sends parameters to its standard input to control

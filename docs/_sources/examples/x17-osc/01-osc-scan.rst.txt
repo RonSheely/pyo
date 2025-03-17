@@ -1,8 +1,6 @@
-Scan Open Sound Control inputs on a specific port
+01-osc-scan.py - Scan Open Sound Control inputs on a specific port
 ============================================================================================================================================
 
-
-**01-osc-scan.py**
 
 Scan Open Sound Control inputs on a specific port. This program
 can be used to find the address used by a specific device or the

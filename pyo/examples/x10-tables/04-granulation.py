@@ -46,7 +46,7 @@ pososc = Sine(0.05).range(0, end)
 posrnd = Noise(mul=0.01, add=1)
 pos = pososc * posrnd
 
-# The grain panoramisation is completely random.
+# The grain panning is completely random.
 pan = Noise(mul=0.5, add=0.5)
 
 # The grain filter center frequency choices are the first 40

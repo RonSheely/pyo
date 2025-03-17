@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Introduction to prefix expression evaluator — Pyo 1.0.6 documentation</title>
+<title>01-simple-expression.py - Introduction to prefix expression evaluator — Pyo 1.0.6 documentation</title>
 <link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
 <link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
@@ -16,7 +16,7 @@
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
-<link href="02-audio-in.html" rel="next" title="Manipulating audio signal in input"/>
+<link href="02-audio-in.html" rel="next" title="02-audio-in.py - Manipulating audio signal in input"/>
 <link href="index.html" rel="prev" title="x23-expression"/>
 </head><body>
 <div class="header-wrapper" role="banner">
@@ -24,7 +24,7 @@
 <div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
 <div aria-label="Related" class="rel" role="navigation">
 <a accesskey="P" href="index.html" title="x23-expression">previous</a> |
-          <a accesskey="N" href="02-audio-in.html" title="Manipulating audio signal in input">next</a> |
+          <a accesskey="N" href="02-audio-in.html" title="02-audio-in.py - Manipulating audio signal in input">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
 </div>
 </div>
@@ -79,9 +79,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<section id="introduction-to-prefix-expression-evaluator">
-<h1>Introduction to prefix expression evaluator<a class="headerlink" href="#introduction-to-prefix-expression-evaluator" title="Link to this heading">¶</a></h1>
-<p><strong>01-simple-expression.py</strong></p>
+<section id="simple-expression-py-introduction-to-prefix-expression-evaluator">
+<h1>01-simple-expression.py - Introduction to prefix expression evaluator<a class="headerlink" href="#simple-expression-py-introduction-to-prefix-expression-evaluator" title="Link to this heading">¶</a></h1>
 <p>The Expr object implements a tiny functional programming language
 that can be used to write synthesis or signal processing algorithms.</p>
 <p>The language uses prefix notation (also known as “Polish notation”)
@@ -136,7 +135,7 @@ sine waves with frequency and gain control.</p>
 <span class="c1"># Shows the generated signal.</span>
 <a class="sphinx-codeautolink-a" href="../../api/classes/analysis.html#pyo.Scope" title="pyo.lib.analysis.Scope"><span class="n">sc</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/analysis.html#pyo.Scope" title="pyo.lib.analysis.Scope"><span class="n">Scope</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/expression.html#pyo.Expr" title="pyo.lib.expression.Expr"><span class="n">expr</span></a><span class="p">)</span>
 
-<span class="c1"># Converts the mono signal to stereo and sends it to the soundcard.</span>
+<span class="c1"># Converts the mono signal to stereo and sends it to the sound card.</span>
 <span class="n">pan</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pan.html#pyo.Pan" title="pyo.lib.pan.Pan"><span class="n">Pan</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/expression.html#pyo.Expr" title="pyo.lib.expression.Expr"><span class="n">expr</span></a><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
 
 <span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
@@ -156,7 +155,7 @@ sine waves with frequency and gain control.</p>
 <div class="left">
 <div aria-label="Related" role="navigation">
 <a href="index.html" title="x23-expression">previous</a> |
-            <a href="02-audio-in.html" title="Manipulating audio signal in input">next</a> |
+            <a href="02-audio-in.html" title="02-audio-in.py - Manipulating audio signal in input">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
 </div>
 <div aria-label="source link" role="note">

@@ -4,7 +4,7 @@
 The SigTo object allows to create audio glissando between the
 current value and the target value, within a user-defined time.
 The target value can be a float or another PyoObject. A new ramp
-is created everytime the target value changes.
+is created every time the target value changes.
 
 Also:
 

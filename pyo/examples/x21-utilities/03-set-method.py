@@ -1,7 +1,5 @@
 """
-Setting audio object parameter's value with portamento
-
-**03-set-method.py**
+03-set-method.py - Setting audio object parameter's value with portamento
 
 The set() method of the PyoObject lets the user define a new
 value for a given parameter with a portamento time to reach
@@ -41,7 +39,7 @@ def go():
     # Choose new targets and start the ramps.
     a.set("carrier", [uniform(395, 405) for i in range(10)], 9.5)
     a.set("ratio", [uniform(0.49, 0.51) for i in range(10)], 9.5)
-    # Call the reset() function when portamentos are done.
+    # Call the reset() function when portamento are done.
     a.set("index", [uniform(10, 15) for i in range(10)], 9.5, callback=reset)
 
 

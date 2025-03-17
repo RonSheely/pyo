@@ -1,7 +1,5 @@
 """
-Sending audio streams as Open Sound Control messages
-
-**03-send-streams.py**
+03-send-streams.py - Sending audio streams as Open Sound Control messages
 
 This program does not generate any sound. All it does is to produce
 audio streams that are then send on an open port as OSC messages in

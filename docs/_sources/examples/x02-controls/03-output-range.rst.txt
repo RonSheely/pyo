@@ -5,7 +5,7 @@
 Almost all audio objects have a `mul` and `add` attributes.
 These are defined inside the PyoObject, which is the base
 class for all objects generating audio signal. The manual
-page of the PyoObject explains all behaviours common to
+page of the PyoObject explains all behaviors common to
 audio objects.
 
 An audio signal outputs samples as floating-point numbers in

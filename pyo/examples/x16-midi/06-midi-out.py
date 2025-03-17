@@ -58,7 +58,7 @@ def midi_event():
     print("pitch: %d, velocity: %d, duration: %d" % (pit, vel, dur))
 
     # The Server's `makenote` method generates a noteon event immediately
-    # and the correponding noteoff event after `duration` milliseconds.
+    # and the corresponding noteoff event after `duration` milliseconds.
     s.makenote(pitch=pit, velocity=vel, duration=dur)
 
 

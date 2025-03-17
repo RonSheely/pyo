@@ -1,7 +1,5 @@
 """
-Introduction to prefix expression evaluator
-
-**01-simple-expression.py**
+01-simple-expression.py - Introduction to prefix expression evaluator
 
 The Expr object implements a tiny functional programming language
 that can be used to write synthesis or signal processing algorithms.
@@ -71,7 +69,7 @@ expr.editor()
 # Shows the generated signal.
 sc = Scope(expr)
 
-# Converts the mono signal to stereo and sends it to the soundcard.
+# Converts the mono signal to stereo and sends it to the sound card.
 pan = Pan(expr).out()
 
 s.gui(locals())

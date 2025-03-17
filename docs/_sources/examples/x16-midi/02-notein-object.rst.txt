@@ -38,7 +38,7 @@ processes with events received from a MIDI keyboard (virtual or not).
     # Applies a portamento on the velocity changes.
     amps = Port(notes["velocity"], risetime=0.005, falltime=0.5, mul=0.1)
     
-    # Creates two groups of oscillators (10 per channel), slightly detuned.
+    # Creates two groups of oscillators (10 per channel), slightly out-of-tune.
     sigL = RCOsc(freq=freqs, sharp=0.5, mul=amps)
     sigR = RCOsc(freq=freqs * 1.003, sharp=0.5, mul=amps)
     

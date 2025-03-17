@@ -2,13 +2,13 @@
 10-arithmetic-ops.py - Using arithmetic with event generators.
 
 Arithmetic operators can be used with EventGenerator objects to control
-their behaviour (and change the pattern of the sequence of values).
+their behavior (and change the pattern of the sequence of values).
 
 Available operators are:
 
 `+` : addition
 
-`-` : substraction
+`-` : subtraction
 
 `*` : multiplication
 
@@ -18,7 +18,7 @@ Available operators are:
 
 `%` : modulo (remaining of the division)
 
-`//`: quantizer (returns te nearest multiple of its argument)
+`//`: quantize (returns te nearest multiple of its argument)
 
 Arithmetic can be done with event generators as both operand and operator.
 

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Receiving Open Sound Control messages as audio streams — Pyo 1.0.6 documentation</title>
+<title>02-receive-streams.py - Receiving Open Sound Control messages as audio streams — Pyo 1.0.6 documentation</title>
 <link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
 <link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
@@ -16,15 +16,15 @@
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
-<link href="03-send-streams.html" rel="next" title="Sending audio streams as Open Sound Control messages"/>
-<link href="01-osc-scan.html" rel="prev" title="Scan Open Sound Control inputs on a specific port"/>
+<link href="03-send-streams.html" rel="next" title="03-send-streams.py - Sending audio streams as Open Sound Control messages"/>
+<link href="01-osc-scan.html" rel="prev" title="01-osc-scan.py - Scan Open Sound Control inputs on a specific port"/>
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
 <div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
 <div aria-label="Related" class="rel" role="navigation">
-<a accesskey="P" href="01-osc-scan.html" title="Scan Open Sound Control inputs on a specific port">previous</a> |
-          <a accesskey="N" href="03-send-streams.html" title="Sending audio streams as Open Sound Control messages">next</a> |
+<a accesskey="P" href="01-osc-scan.html" title="01-osc-scan.py - Scan Open Sound Control inputs on a specific port">previous</a> |
+          <a accesskey="N" href="03-send-streams.html" title="03-send-streams.py - Sending audio streams as Open Sound Control messages">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
 </div>
 </div>
@@ -79,9 +79,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<section id="receiving-open-sound-control-messages-as-audio-streams">
-<h1>Receiving Open Sound Control messages as audio streams<a class="headerlink" href="#receiving-open-sound-control-messages-as-audio-streams" title="Link to this heading">¶</a></h1>
-<p><strong>02-receive-streams.py</strong></p>
+<section id="receive-streams-py-receiving-open-sound-control-messages-as-audio-streams">
+<h1>02-receive-streams.py - Receiving Open Sound Control messages as audio streams<a class="headerlink" href="#receive-streams-py-receiving-open-sound-control-messages-as-audio-streams" title="Link to this heading">¶</a></h1>
 <p>This script shows a granulation process controlled by OSC messages
 coming from another program (run the next example, <em>03-send-streams.py</em>,
 to get values coming in).</p>
@@ -96,7 +95,7 @@ to get values coming in).</p>
 <a class="sphinx-codeautolink-a" href="../../api/classes/opensndctrl.html#pyo.OscReceive" title="pyo.lib.opensndctrl.OscReceive"><span class="n">rec</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/opensndctrl.html#pyo.OscReceive" title="pyo.lib.opensndctrl.OscReceive"><span class="n">OscReceive</span></a><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">9000</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="p">[</span><span class="s2">"/density"</span><span class="p">,</span> <span class="s2">"/position"</span><span class="p">,</span> <span class="s2">"/pitch_rand"</span><span class="p">,</span> <span class="s2">"/duration"</span><span class="p">])</span>
 
 <span class="c1"># Sets initial values for the OSC streams. This allow the program to run with</span>
-<span class="c1"># minimal behaviour even if no message have been sent on these addresses.</span>
+<span class="c1"># minimal behavior even if no message have been sent on these addresses.</span>
 <span class="n">rec</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">"/density"</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">rec</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">"/position"</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">rec</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">"/pitch_rand"</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
@@ -144,8 +143,8 @@ to get values coming in).</p>
 <div class="footer">
 <div class="left">
 <div aria-label="Related" role="navigation">
-<a href="01-osc-scan.html" title="Scan Open Sound Control inputs on a specific port">previous</a> |
-            <a href="03-send-streams.html" title="Sending audio streams as Open Sound Control messages">next</a> |
+<a href="01-osc-scan.html" title="01-osc-scan.py - Scan Open Sound Control inputs on a specific port">previous</a> |
+            <a href="03-send-streams.html" title="03-send-streams.py - Sending audio streams as Open Sound Control messages">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
 </div>
 <div aria-label="source link" role="note">

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Using more than one input signal in a single expression — Pyo 1.0.6 documentation</title>
+<title>03-multiple-inputs.py - Using more than one input signal in a single expression — Pyo 1.0.6 documentation</title>
 <link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
 <link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
@@ -16,15 +16,15 @@
 <link href="../../about.html" rel="author" title="About these documents"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../search.html" rel="search" title="Search"/>
-<link href="04-let-function.html" rel="next" title="State variable inside an expression"/>
-<link href="02-audio-in.html" rel="prev" title="Manipulating audio signal in input"/>
+<link href="04-let-function.html" rel="next" title="04-let-function.py - State variable inside an expression"/>
+<link href="02-audio-in.html" rel="prev" title="02-audio-in.py - Manipulating audio signal in input"/>
 </head><body>
 <div class="header-wrapper" role="banner">
 <div class="header">
 <div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
 <div aria-label="Related" class="rel" role="navigation">
-<a accesskey="P" href="02-audio-in.html" title="Manipulating audio signal in input">previous</a> |
-          <a accesskey="N" href="04-let-function.html" title="State variable inside an expression">next</a> |
+<a accesskey="P" href="02-audio-in.html" title="02-audio-in.py - Manipulating audio signal in input">previous</a> |
+          <a accesskey="N" href="04-let-function.html" title="04-let-function.py - State variable inside an expression">next</a> |
           <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
 </div>
 </div>
@@ -79,9 +79,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<section id="using-more-than-one-input-signal-in-a-single-expression">
-<h1>Using more than one input signal in a single expression<a class="headerlink" href="#using-more-than-one-input-signal-in-a-single-expression" title="Link to this heading">¶</a></h1>
-<p><strong>03-multiple-inputs.py</strong></p>
+<section id="multiple-inputs-py-using-more-than-one-input-signal-in-a-single-expression">
+<h1>03-multiple-inputs.py - Using more than one input signal in a single expression<a class="headerlink" href="#multiple-inputs-py-using-more-than-one-input-signal-in-a-single-expression" title="Link to this heading">¶</a></h1>
 <p>It is possible to give a list of audio signals to the <cite>input</cite>
 argument if you need more than one signal in your expression.</p>
 <p>You can either pass a list of audio objects (as in the complete
@@ -93,7 +92,7 @@ example below) or a single multi-streams object, as in:</p>
 <p>If multiple signals are used, the position in the list must be
 given between the <cite>$x</cite> and the sample position <cite>[0]</cite>. So, for the
 second audio signal, one would retrieve it with <cite>$x1[0]</cite>. The 0
-for the first signal can be ommited, <cite>$x[0]</cite> is the same as <cite>$x0[0]</cite>.</p>
+for the first signal can be omitted, <cite>$x[0]</cite> is the same as <cite>$x0[0]</cite>.</p>
 <section id="complete-example">
 <h2>Complete example<a class="headerlink" href="#complete-example" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -120,7 +119,7 @@ for the first signal can be ommited, <cite>$x[0]</cite> is the same as <cite>$x0
 <span class="c1"># Shows the generated signal.</span>
 <a class="sphinx-codeautolink-a" href="../../api/classes/analysis.html#pyo.Scope" title="pyo.lib.analysis.Scope"><span class="n">sc</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/analysis.html#pyo.Scope" title="pyo.lib.analysis.Scope"><span class="n">Scope</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/expression.html#pyo.Expr" title="pyo.lib.expression.Expr"><span class="n">expr</span></a><span class="p">)</span>
 
-<span class="c1"># Converts the mono signal to stereo and sends it to the soundcard.</span>
+<span class="c1"># Converts the mono signal to stereo and sends it to the sound card.</span>
 <span class="n">pan</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/pan.html#pyo.Pan" title="pyo.lib.pan.Pan"><span class="n">Pan</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/expression.html#pyo.Expr" title="pyo.lib.expression.Expr"><span class="n">expr</span></a><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
 
 <span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
@@ -140,8 +139,8 @@ for the first signal can be ommited, <cite>$x[0]</cite> is the same as <cite>$x0
 <div class="footer">
 <div class="left">
 <div aria-label="Related" role="navigation">
-<a href="02-audio-in.html" title="Manipulating audio signal in input">previous</a> |
-            <a href="04-let-function.html" title="State variable inside an expression">next</a> |
+<a href="02-audio-in.html" title="02-audio-in.py - Manipulating audio signal in input">previous</a> |
+            <a href="04-let-function.html" title="04-let-function.py - State variable inside an expression">next</a> |
             <a href="../../genindex.html" title="General Index">index</a>
 </div>
 <div aria-label="source link" role="note">

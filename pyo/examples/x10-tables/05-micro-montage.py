@@ -9,7 +9,7 @@ parts of sounds into a single table:
 - setSound(path, start=0, stop=None)
     Replace the table content with the new sound.
 - insert(path, pos=0, crossfade=0, start=0, stop=None)
-    Insert samples at a given position in the table, with crossfades.
+    Insert samples at a given position in the table, with crossfade.
 - append(path, crossfade=0, start=0, stop=None)
     Append samples at the end of the table, with crossfade.
 
@@ -22,7 +22,7 @@ import random
 
 s = Server().boot()
 
-# Path and duration of the choosen soundfile.
+# Path and duration of the chosen soundfile.
 path = "../snds/baseballmajeur_m.aif"
 snddur = sndinfo(path)[1]
 
@@ -46,7 +46,7 @@ def addsnd():
     start = random.uniform(0, snddur * 0.7)
     duration = random.uniform(0.1, 0.3)
 
-    # Randomly choose an insert point in the sound table and a croosfade time.
+    # Randomly choose an insert point in the sound table and a crossfade time.
     pos = random.uniform(0.05, table.getDur() - 0.5)
     cross = random.uniform(0.04, duration / 2)
 
@@ -84,7 +84,7 @@ def gen():
     caller.play()  # ... then call the delayed generation.
 
 
-# Generate the intial table.
+# Generate the initial table.
 gen()
 
 s.gui(locals())

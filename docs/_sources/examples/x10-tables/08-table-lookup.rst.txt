@@ -8,7 +8,7 @@ can be significant, since retrieving a value from memory is often faster than
 undergoing an "expensive" computation.
 
 This technic is also used a lot in audio synthesis, where the waveform can be
-pre-computed and stored in a table, then simply readed with a ramp at the desired
+pre-computed and stored in a table, then simply read with a ramp at the desired
 frequency.
 
 .. code-block:: python
@@ -28,7 +28,7 @@ frequency.
     
     # We give it True to the dataonly argument when opening the sliders window,
     # otherwise the table would be rewrite way too often.
-    drive.ctrl([SLMap(0, 1, "lin", "value", 0.5, dataOnly=True)], title="Transfer fonction slope")
+    drive.ctrl([SLMap(0, 1, "lin", "value", 0.5, dataOnly=True)], title="Transfer function slope")
     
     # Lookup reads a table given an audio index lying between -1 and 1.
     # It is especially designed to scan a transfer function with an audio signal.

@@ -1,7 +1,5 @@
 """
-Offline processing of multiple audio files in batch  
-
-**05-batch-processing.py**
+05-batch-processing.py - Offline processing of multiple audio files in batch
 
 This program demonstrates how to use pyo to do offline batch processing
 given a folder of sounds.

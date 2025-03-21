@@ -695,7 +695,7 @@
 <span class="sd">            If True, a small jitter is added to the frequency of each partial.</span>
 <span class="sd">            For a large number of oscillators and a very small `spread`, the</span>
 <span class="sd">            periodicity between partial frequencies can cause very strange</span>
-<span class="sd">            artefact. Adding a jitter breaks the periodicity. Defaults to False.</span>
+<span class="sd">            artifact. Adding a jitter breaks the periodicity. Defaults to False.</span>
 
 <span class="sd">    .. seealso::</span>
 
@@ -703,8 +703,8 @@
 
 <span class="sd">    .. note::</span>
 
-<span class="sd">        Altough parameters can be audio signals, values are sampled only once</span>
-<span class="sd">        per buffer size. To avoid artefacts, it is recommended to keep variations</span>
+<span class="sd">        Although parameters can be audio signals, values are sampled only once</span>
+<span class="sd">        per buffer size. To avoid artifacts, it is recommended to keep variations</span>
 <span class="sd">        at low rate (&lt; 20 Hz).</span>
 
 <span class="sd">    &gt;&gt;&gt; s = Server().boot()</span>
@@ -1048,7 +1048,7 @@
 
 <span class="sd">        TableRead will send a trigger signal at the end of the playback if</span>
 <span class="sd">        loop is off or any time it wraps around if loop is on. User can</span>
-<span class="sd">        retreive the trigger streams by calling obj[&#39;trig&#39;]:</span>
+<span class="sd">        retrieve the trigger streams by calling obj[&#39;trig&#39;]:</span>
 
 <span class="sd">        &gt;&gt;&gt; tabr = TableRead(SNDS_PATH + &quot;/transparent.aif&quot;).out()</span>
 <span class="sd">        &gt;&gt;&gt; trig = TrigRand(tabr[&#39;trig&#39;])</span>
@@ -1882,7 +1882,7 @@
 <span class="sd">    :Args:</span>
 
 <span class="sd">        table: PyoTableObject</span>
-<span class="sd">            Table containing the transfert function.</span>
+<span class="sd">            Table containing the transfer function.</span>
 <span class="sd">        index: PyoObject</span>
 <span class="sd">            Audio signal, between -1 and 1, internally converted to be</span>
 <span class="sd">            used as the index position in the table.</span>
@@ -1950,7 +1950,7 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;PyoTableObject. Table containing the transfert function.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;PyoTableObject. Table containing the transfer function.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_table</span>
 
     <span class="nd">@table</span><span class="o">.</span><span class="n">setter</span>
@@ -1980,7 +1980,7 @@
 <span class="sd">    the recording into the table until the table is full. Calling the</span>
 <span class="sd">    play method again restarts the recording and overwrites previously</span>
 <span class="sd">    recorded samples. The stop method stops the recording. Otherwise, the</span>
-<span class="sd">    default behaviour is to record through the end of the table.</span>
+<span class="sd">    default behavior is to record through the end of the table.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
 
@@ -2330,7 +2330,7 @@
 
 <span class="sd">        The smaller size among the output table and the two current tables to</span>
 <span class="sd">        interpolate is used to determine the number of samples to process. Using</span>
-<span class="sd">        tables with different size can produce strange behaviours.</span>
+<span class="sd">        tables with different size can produce strange behaviors.</span>
 
 <span class="sd">        The out() method is bypassed. TableMorph returns no signal.</span>
 
@@ -3466,7 +3466,7 @@
 <span class="sd">    the recording into the table until the table is full. Calling the</span>
 <span class="sd">    play method again restarts the recording and overwrites previously</span>
 <span class="sd">    recorded values. The stop method stops the recording. Otherwise, the</span>
-<span class="sd">    default behaviour is to record through the end of the table.</span>
+<span class="sd">    default behavior is to record through the end of the table.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
 

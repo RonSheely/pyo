@@ -107,7 +107,7 @@
 <span class="sd">    PVAnal takes an input sound and performs the phase vocoder</span>
 <span class="sd">    analysis on it. This results in two streams, one for the bin&#39;s</span>
 <span class="sd">    magnitudes and the other for the bin&#39;s true frequencies. These</span>
-<span class="sd">    two streams are used by the PVxxx object family to transform</span>
+<span class="sd">    two streams are used by the PV object family to transform</span>
 <span class="sd">    the input signal using spectral domain algorithms. The last</span>
 <span class="sd">    object in the phase vocoder chain must be a PVSynth to perform</span>
 <span class="sd">    the spectral to time domain conversion.</span>
@@ -125,7 +125,7 @@
 <span class="sd">            The FFT size is the number of samples used in each</span>
 <span class="sd">            analysis frame.</span>
 <span class="sd">        overlaps: int, optional</span>
-<span class="sd">            The number of overlaped analysis block. Must be a</span>
+<span class="sd">            The number of overlapped analysis block. Must be a</span>
 <span class="sd">            power of two. Defaults to 4.</span>
 
 <span class="sd">            More overlaps can greatly improved sound quality</span>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>02-matrix-record.py - Wave Terrain Synthesis of a live FM synthesis. — Pyo 1.0.6 documentation</title>
+<link href="../../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../../_static/agogo.css?v=227e5aac" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../../_static/autoclasstoc.css?v=08871587" rel="stylesheet" type="text/css"/>
+<script src="../../_static/documentation_options.js?v=e2a723ec"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<link href="../../_static/E-PyoIcon.ico" rel="icon"/>
+<link href="../../about.html" rel="author" title="About these documents"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="03-record-loop-chunks.html" rel="next" title="03-record-loop-chunks.py - Using a matrix to record multiple chunks of sound."/>
+<link href="01-wave-terrain-synthesis.html" rel="prev" title="01-wave-terrain-synthesis.py - Simple Wave Terrain Synthesis."/>
+</head><body>
+<div class="header-wrapper" role="banner">
+<div class="header">
+<div class="headertitle"><a href="../../index.html">Pyo 1.0.6 documentation</a></div>
+<div aria-label="Related" class="rel" role="navigation">
+<a accesskey="P" href="01-wave-terrain-synthesis.html" title="01-wave-terrain-synthesis.py - Simple Wave Terrain Synthesis.">previous</a> |
+          <a accesskey="N" href="03-record-loop-chunks.html" title="03-record-loop-chunks.py - Using a matrix to record multiple chunks of sound.">next</a> |
+          <a accesskey="I" href="../../genindex.html" title="General Index">index</a>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="content">
+<div class="sidebar">
+<h3>Table of Contents</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About pyo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download.html">Installing pyo with pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compiling.html">Compiling pyo from sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../structure.html">Structure of the library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../winaudioinspect.html">Configuring the audio output (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../perftips.html">Improve performance of pyo programs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../x01-intro/index.html">First steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x02-controls/index.html">Parameter control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x03-generators/index.html">Synthesis generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x04-soundfiles/index.html">Playing with soundfiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x05-envelopes/index.html">Amplitude envelopes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x06-filters/index.html">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x07-effects/index.html">Creating sound effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x08-dynamics/index.html">Dynamic range of audio signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x09-callbacks/index.html">Calling python functions from audio objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x10-tables/index.html">Using tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x14-spectral/index.html">Processing in the spectral domain</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Using 2D tables (matrix)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x16-midi/index.html">How to use MIDI with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x17-osc/index.html">How to use OSC with pyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x19-multirate/index.html">Multirate audio processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x20-multicore/index.html">Multicore audio programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x21-utilities/index.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x22-events/index.html">Events framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../x23-expression/index.html">Evaluating prefix expression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Advanced tutorials</a></li>
+</ul>
+<search role="search">
+<h3 style="margin-top: 1.5em;">Search</h3>
+<form action="../../search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+</form>
+</search>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="matrix-record-py-wave-terrain-synthesis-of-a-live-fm-synthesis">
+<h1>02-matrix-record.py - Wave Terrain Synthesis of a live FM synthesis.<a class="headerlink" href="#matrix-record-py-wave-terrain-synthesis-of-a-live-fm-synthesis" title="Link to this heading">¶</a></h1>
+<p>In this example, an FM synthesis is generated and recorded, row after
+row, in the matrix used as the terrain for the synthesis. It is then
+scanned with sine waves assigned to x and y positions in the 2D table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../../api/alphabetical.html#module-pyo" title="pyo"><span class="nn">pyo</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">(</span><span class="n">duplex</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
+
+<span class="c1"># Size of a square matrix.</span>
+<span class="n">SIZE</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="c1"># Creates the terrain.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/matrices.html#pyo.NewMatrix" title="pyo.lib.matrix.NewMatrix"><span class="n">field</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/matrices.html#pyo.NewMatrix" title="pyo.lib.matrix.NewMatrix"><span class="n">NewMatrix</span></a><span class="p">(</span><span class="n">SIZE</span><span class="p">,</span> <span class="n">SIZE</span><span class="p">)</span>
+
+<span class="c1"># Produces a source sound to record in the terrain.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">fmind</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">fmrat</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">1.33</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.FM" title="pyo.lib.generators.FM"><span class="n">fm</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.FM" title="pyo.lib.generators.FM"><span class="n">FM</span></a><span class="p">(</span><span class="n">carrier</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">fmrat</span></a><span class="p">,</span> <span class="n">index</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">fmind</span></a><span class="p">)</span>
+
+<span class="c1"># Record the source into the matrix, row after row, until the matrix is full.</span>
+<span class="n">rec</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/matrixprocess.html#pyo.MatrixRec" title="pyo.lib.matrixprocess.MatrixRec"><span class="n">MatrixRec</span></a><span class="p">(</span><span class="nb">input</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.FM" title="pyo.lib.generators.FM"><span class="n">fm</span></a><span class="p">,</span> <span class="n">matrix</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/matrices.html#pyo.NewMatrix" title="pyo.lib.matrix.NewMatrix"><span class="n">field</span></a><span class="p">)</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+
+<span class="c1"># LFOs applied to the amplitude of the x and y pointers reading the matrix.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lfx</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.24</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lfy</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="c1"># The x and y reading pointers.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">x</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="p">[</span><span class="mi">505</span><span class="p">,</span> <span class="mf">499.9</span><span class="p">],</span> <span class="n">mul</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lfx</span></a><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">y</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">Sine</span></a><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="p">[</span><span class="mf">40.5</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">],</span> <span class="n">mul</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">lfy</span></a><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># 2D table lookup with linear interpolation in the matrix.</span>
+<a class="sphinx-codeautolink-a" href="../../api/classes/matrixprocess.html#pyo.MatrixPointer" title="pyo.lib.matrixprocess.MatrixPointer"><span class="n">c</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/matrixprocess.html#pyo.MatrixPointer" title="pyo.lib.matrixprocess.MatrixPointer"><span class="n">MatrixPointer</span></a><span class="p">(</span><span class="n">matrix</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/matrices.html#pyo.NewMatrix" title="pyo.lib.matrix.NewMatrix"><span class="n">field</span></a><span class="p">,</span> <span class="n">x</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">x</span></a><span class="p">,</span> <span class="n">y</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/generators.html#pyo.Sine" title="pyo.lib.generators.Sine"><span class="n">y</span></a><span class="p">,</span> <span class="n">mul</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+
+<span class="c1"># Lowpass filtering of the output signal.</span>
+<span class="n">filt</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/filters.html#pyo.Tone" title="pyo.lib.filters.Tone"><span class="n">Tone</span></a><span class="p">(</span><span class="nb">input</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="../../api/classes/matrixprocess.html#pyo.MatrixPointer" title="pyo.lib.matrixprocess.MatrixPointer"><span class="n">c</span></a><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">3000</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
+
+<span class="c1"># Signals when the recording is done.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"End of recording"</span><span class="p">)</span>
+
+<a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigFunc" title="pyo.lib.triggers.TrigFunc"><span class="n">tr</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigFunc" title="pyo.lib.triggers.TrigFunc"><span class="n">TrigFunc</span></a><span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="s2">"trig"</span><span class="p">],</span> <span class="n">func</span><span class="p">)</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">gui</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div aria-label="Related" role="navigation">
+<a href="01-wave-terrain-synthesis.html" title="01-wave-terrain-synthesis.py - Simple Wave Terrain Synthesis.">previous</a> |
+            <a href="03-record-loop-chunks.html" title="03-record-loop-chunks.py - Using a matrix to record multiple chunks of sound.">next</a> |
+            <a href="../../genindex.html" title="General Index">index</a>
+</div>
+<div aria-label="source link" role="note">
+</div>
+</div>
+<div class="right">
+<div class="footer" role="contentinfo">
+    © Copyright 2025, Olivier Bélanger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+</div>
+<div class="clearer"></div>
+</div>
+</div>
+</body>
+</html>

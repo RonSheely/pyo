@@ -1,12 +1,7 @@
 This is a list of features/fixes to implement for future releases
 =================================================================
 
-Roadmap 1.0.5
--------------
-
-- python 3.10 and 3.11 wheels
-
-Roadmap 1.0.6
+Roadmap 1.0.7
 -------------
 
 - Doc page about multichannel expansion.
@@ -15,6 +10,9 @@ Roadmap 1.0.6
     1) multi-channel expansion
     2) the necessity of keeping the python process alive (no sound because the main python process quits)
     3) scoping problems (defining a PyoObject in a function that gets garbage-collected before it produces sound)
+
+Roadmap 1.0.9
+-------------
 
 - HiDPI on Windows:
 

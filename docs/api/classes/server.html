@@ -108,7 +108,7 @@ the computation is done.</p>
 <p>‘embedded’ should be used when pyo is embedded inside an host environment via its C api.</p>
 <p>If ‘jack’ is selected but jackd is not already started when the program is executed, pyo
 will ask jack to start in the background. Note that pyo never ask jack to close. It is
-the user’s responsability to manage the audio configuration of its system.</p>
+the user’s responsibility to manage the audio configuration of its system.</p>
 <p>If ‘manual’ is selected, the server waits for a call to its <cite>process</cite> method to compute
 a single buffer size of audio samples. Successive calls to <cite>process</cite> can simulate a
 real computation (probably only useful in the context of internal testing).</p>
@@ -119,13 +119,13 @@ real computation (probably only useful in the context of internal testing).</p>
 <dt>ichnls: int, optional</dt><dd><p>Number of input channels if different of output channels. If None (default), ichnls = nchnls.</p>
 </dd>
 <dt>winhost: string, optional</dt><dd><p>Under Windows, pyo’s Server will try to use the default devices of the given host.
-This behaviour can be changed with the SetXXXDevice methods. Defaults to “directsound”.</p>
+This behavior can be changed with the SetXXXDevice methods. Defaults to “directsound”.</p>
 <p>User can set an environment variable named PYO_SERVER_WINHOST to set this value globally.</p>
 </dd>
 <dt>midi: string {‘portmidi’, ‘pm’, ‘jack’}, optional</dt><dd><p>Midi backend to use. ‘pm’ is equivalent to ‘portmidi’. Default is ‘portmidi’.</p>
 <p>If ‘jack’ is selected but jackd is not already started when the program is executed, pyo
 will ask jack to start in the background. Note that pyo never ask jack to close. It is
-the user’s responsability to manage the audio/midi configuration of its system.</p>
+the user’s responsibility to manage the audio/midi configuration of its system.</p>
 <p>User can set an environment variable named PYO_SERVER_MIDI to set this value globally.</p>
 </dd>
 <dt>verbosity: int, optional</dt><dd><p>Set the server’s verbosity.</p>
@@ -193,7 +193,7 @@ the user’s responsability to manage the audio/midi configuration of its system
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reinit</span></code>([sr, nchnls, buffersize, duplex, ...])</p></td>
-<td><p>Reinit the server'settings.</p></td>
+<td><p>Reinitialize the server'settings.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCallback</span></code>(callback)</p></td>
 <td><p>Register a custom process callback.</p></td>
@@ -325,7 +325,7 @@ the user’s responsability to manage the audio/midi configuration of its system
 <td><p>Sets options for soundfile created by offline rendering or global recording.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">recstart</span></code>([filename])</p></td>
-<td><p>Begins a default recording of the sound that is sent to the soundcard.</p></td>
+<td><p>Begins a default recording of the sound that is sent to the sound card.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">recstop</span></code>()</p></td>
 <td><p>Stop the previously started recording.</p></td>
@@ -433,7 +433,7 @@ the user’s responsability to manage the audio/midi configuration of its system
 <dl class="py method">
 <dt class="sig sig-object py" id="pyo.Server.reinit">
 <span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">44100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nchnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portaudio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jackname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ichnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winhost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'directsound'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'portmidi'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.reinit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.reinit" title="Link to this definition">¶</a></dt>
-<dd><p>Reinit the server’settings. Useful to alternate between real-time and offline server.</p>
+<dd><p>Reinitialize the server’settings. Useful to alternate between real-time and offline server.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Same as in the __init__ method.</p>
@@ -459,7 +459,7 @@ numpy calls for example.</p>
 <dt>locals: locals namespace {locals(), None}, optional</dt><dd><p>If locals() is given, the interface will show an interpreter extension,
 giving a way to interact with the running script. Defaults to None.</p>
 </dd>
-<dt>meter: boolean, optinal</dt><dd><p>If True, the interface will show a vumeter of the global output signal.
+<dt>meter: boolean, optional</dt><dd><p>If True, the interface will show a vu-meter of the global output signal.
 Defaults to True.</p>
 </dd>
 <dt>timer: boolean, optional</dt><dd><p>If True, the interface will show a clock of the current time.
@@ -570,7 +570,7 @@ with the rms values of each audio channel as argument.</p>
 <dt class="sig sig-object py" id="pyo.Server.setInputOffset">
 <span class="sig-name descname"><span class="pre">setInputOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setInputOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setInputOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Set the first physical input channel.</p>
-<p>Channel number <cite>x</cite> from the soundcard will be assigned to
+<p>Channel number <cite>x</cite> from the sound card will be assigned to
 server’s channel one, channel number <cite>x</cite> + 1 to server’s
 channel two and so on.</p>
 <dl class="field-list simple">
@@ -586,8 +586,8 @@ channel two and so on.</p>
 <dt class="sig sig-object py" id="pyo.Server.setOutputOffset">
 <span class="sig-name descname"><span class="pre">setOutputOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.setOutputOffset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.setOutputOffset" title="Link to this definition">¶</a></dt>
 <dd><p>Set the first physical output channel.</p>
-<p>Server’s channel one will be assigned to soundcard’s channel
-number <cite>x</cite>, server’s channel two will be assigned to soundcard’s
+<p>Server’s channel one will be assigned to sound card’s channel
+number <cite>x</cite>, server’s channel two will be assigned to sound card’s
 channel number <cite>x</cite> + 1 and so on.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
@@ -654,7 +654,7 @@ will opened all available input devices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt>x: int</dt><dd><p>New sampling rate, must be supported by the soundcard.</p>
+<dt>x: int</dt><dd><p>New sampling rate, must be supported by the sound card.</p>
 </dd>
 </dl>
 </dd>
@@ -1081,7 +1081,7 @@ FLAC and OGG compressed formats. Defaults to 0.4.</p>
 <dt class="sig sig-object py" id="pyo.Server.recstart">
 <span class="sig-name descname"><span class="pre">recstart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/server.html#Server.recstart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Server.recstart" title="Link to this definition">¶</a></dt>
 <dd><p>Begins a default recording of the sound that is sent to the
-soundcard. This will create a file called <cite>pyo_rec.wav</cite> in
+sound card. This will create a file called <cite>pyo_rec.wav</cite> in
 the user’s home directory if no path is supplied or defined
 with recordOptions method. Uses file format and sample type
 defined with recordOptions method.</p>

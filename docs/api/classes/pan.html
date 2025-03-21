@@ -89,7 +89,7 @@ signal into a stereo or multi-channel sound field.</p>
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mixer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chnls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.025</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/pan.html#Mixer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Mixer" title="Link to this definition">¶</a></dt>
 <dd><p>Audio mixer.</p>
 <p>Mixer mixes multiple inputs to an arbitrary number of outputs
-with independant amplitude values per mixing channel and a
+with independent amplitude values per mixing channel and a
 user defined portamento applied on amplitude changes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
@@ -530,7 +530,7 @@ the server GUI before showing the controller window.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.Pan">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/pan.html#Pan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.Pan" title="Link to this definition">¶</a></dt>
-<dd><p>Cosinus panner with control on the spread factor.</p>
+<dd><p>Cosine panner with control on the spread factor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
@@ -1646,7 +1646,7 @@ Defaults to 0.</p>
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>x: int {0, 1}</dt><dd><p>If 0 (the default) the equal power law is used to
-interpolate bewtween sources. If 1, linear fade is
+interpolate between sources. If 1, linear fade is
 used instead.</p>
 </dd>
 </dl>
@@ -2420,7 +2420,7 @@ PyoObject but not a mix of both.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.HRTF">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HRTF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">azimuth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elevation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hrtfdata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/hrtf.html#HRTF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.HRTF" title="Link to this definition">¶</a></dt>
-<dd><p>Head-Related Transfert Function 3D spatialization.</p>
+<dd><p>Head-Related Transfer Function 3D spatialization.</p>
 <p>HRTF describes how a given sound wave input is filtered by the
 diffraction and reflection properties of the head, pinna, and
 torso, before the sound reaches the transduction machinery of
@@ -2843,7 +2843,7 @@ the server GUI before showing the controller window.</p>
 by the mean of combining VBAP and HRTF algorithms.</p>
 <p>VBAP is used to move the sound over a sixteen channels speaker setup
 without artifact and its result signals are then processed with
-Head-related Transfert Functions to mix them on a 3D sphere around a
+Head-related Transfer Functions to mix them on a 3D sphere around a
 virtual head.</p>
 <p>This treatment is better perceived when listened with headphones!</p>
 <p>Binaural generates two outpout streams per input stream.</p>

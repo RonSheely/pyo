@@ -554,7 +554,7 @@
 <span class="sd">            Delay length, in ms, for the &quot;look-ahead&quot; buffer. Range is</span>
 <span class="sd">            0 -&gt; 25 ms. Defaults to 5.0.</span>
 <span class="sd">        knee: float optional</span>
-<span class="sd">            Shape of the transfert function around the threshold, specified</span>
+<span class="sd">            Shape of the transfer function around the threshold, specified</span>
 <span class="sd">            in the range 0 -&gt; 1.</span>
 
 <span class="sd">            A value of 0 means a hard knee and a value of 1.0 means a softer</span>
@@ -822,7 +822,7 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">knee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;float. Shape of the transfert function around the threshold.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;float. Shape of the transfer function around the threshold.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_knee</span>
 
     <span class="nd">@knee</span><span class="o">.</span><span class="n">setter</span>

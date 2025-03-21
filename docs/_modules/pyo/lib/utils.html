@@ -154,7 +154,7 @@
 <span class="sd">        method: int {0, 1}, optional</span>
 <span class="sd">            There is two methods to set when a value is printed (Defaults to 0):</span>
 <span class="sd">            0. at a periodic interval.</span>
-<span class="sd">            1. everytime the value changed.</span>
+<span class="sd">            1. every time the value changed.</span>
 <span class="sd">        interval: float, optional</span>
 <span class="sd">            Interval, in seconds, between each print. Used by method 0.</span>
 <span class="sd">            Defaults to 0.25.</span>
@@ -335,7 +335,7 @@
 <span class="sd">                1. Hertz</span>
 <span class="sd">                2. transposition factor</span>
 
-<span class="sd">            In the transpo mode, the central key (the key where there</span>
+<span class="sd">            In the transposition mode, the central key (the key where there</span>
 <span class="sd">            is no transposition) is 60.</span>
 
 <span class="sd">    &gt;&gt;&gt; s = Server().boot()</span>
@@ -1074,7 +1074,7 @@
 
 <span class="sd">        ControlRead will send a trigger signal at the end of the playback if</span>
 <span class="sd">        loop is off or any time it wraps around if loop is on. User can</span>
-<span class="sd">        retreive the trigger streams by calling obj[&#39;trig&#39;]:</span>
+<span class="sd">        retrieve the trigger streams by calling obj[&#39;trig&#39;]:</span>
 
 <span class="sd">        &gt;&gt;&gt; rnds = ControlRead(home+&quot;/freq_auto&quot;, loop=True)</span>
 <span class="sd">        &gt;&gt;&gt; t = SndTable(SNDS_PATH+&quot;/transparent.aif&quot;)</span>
@@ -1321,7 +1321,7 @@
 
 <span class="sd">        NoteinRead will send a trigger signal at the end of the playback if</span>
 <span class="sd">        loop is off or any time it wraps around if loop is on. User can</span>
-<span class="sd">        retreive the trigger streams by calling obj[&#39;trig&#39;]:</span>
+<span class="sd">        retrieve the trigger streams by calling obj[&#39;trig&#39;]:</span>
 
 <span class="sd">        &gt;&gt;&gt; notes = NoteinRead(home+&quot;/notes_rec&quot;, loop=True)</span>
 <span class="sd">        &gt;&gt;&gt; t = SndTable(SNDS_PATH+&quot;/transparent.aif&quot;)</span>

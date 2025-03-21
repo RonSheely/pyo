@@ -87,7 +87,7 @@ need to boot ands start an audio server before receiving messages.</p>
 of the audio server (mainly to be able to receive Midi data even
 when the audio server is stopped). Although it runs in a separated
 thread, the same device can’t be used by this object and the audio
-server at the same time. It is adviced to call the deactivateMidi()
+server at the same time. It is advised to call the deactivateMidi()
 method on the audio server to avoid conflicts.</p>
 <dl class="field-list">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
@@ -117,7 +117,7 @@ the callback. The signature will then be:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This object is available only if pyo is built with portmidi support
-(see withPortmidi function).</p>
+(see <cite>withPortmidi()</cite> function).</p>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">s</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">deactivateMidi</span><span class="p">()</span>
@@ -275,7 +275,7 @@ the callback. The signature will then be:</p>
 of the audio server (mainly to be able to send Midi data even
 when the audio server is stopped). Although it runs in a separated
 thread, the same device can’t be used by this object and the audio
-server at the same time. It is adviced to call the deactivateMidi()
+server at the same time. It is advised to call the deactivateMidi()
 method on the audio server to avoid conflicts.</p>
 <p>Use the <cite>send</cite> method to send midi event to connected devices.</p>
 <p>Use the <cite>sendx</cite> method to send sysex event to connected devices.</p>
@@ -297,7 +297,7 @@ set with a list of integers.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This object is available only if pyo is built with portmidi support
-(see withPortmidi function).</p>
+(see <cite>withPortmidi()</cite> function).</p>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">s</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">deactivateMidi</span><span class="p">()</span>

@@ -139,14 +139,13 @@ Exemples de scripts audio avec pyo
 4. fft-spectral-delay.py
 5. fft-time-stretch.py
 
-15-matrices
+15-matrix
 -----------
 
-1. matrix-record.py
-2. matrix-from-image.py
-3. wave-terrain-synthesis.py
-4. record-loop-chunks.py
-5. algo-with-matrix.py
+1. wave-terrain-synthesis.py
+2. matrix-record.py
+3. record-loop-chunks.py
+4. algo-with-matrix.py
 
 16-midi
 -------

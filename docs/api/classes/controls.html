@@ -103,7 +103,7 @@ object creation time.</p>
 </dd>
 <dt>fadeout: float, optional</dt><dd><p>Falling time of the envelope in seconds. Defaults to 0.1.</p>
 </dd>
-<dt>dur: float, optional</dt><dd><p>Total duration of the envelope in seocnds. Defaults to 0,
+<dt>dur: float, optional</dt><dd><p>Total duration of the envelope in seconds. Defaults to 0,
 which means wait for the stop() method to start the fadeout.</p>
 </dd>
 </dl>
@@ -117,7 +117,7 @@ which means wait for the stop() method to start the fadeout.</p>
 <p>As of version 0.8.0, exponential or logarithmic envelopes can be created
 with the exponent factor (see setExp() method).</p>
 <p>As of version 0.9.2, Fader will send a trigger signal at the end of the playback.
-User can retreive the trigger streams by calling obj[‘trig’].
+User can retrieve the trigger streams by calling obj[‘trig’].
 Useful to synchronize other processes.</p>
 </div>
 <div class="admonition seealso">
@@ -624,7 +624,7 @@ which means wait for the stop() method to start the release phase.</p>
 <p>As of version 0.8.0, exponential or logarithmic envelopes can be created
 with the exponent factor (see setExp() method).</p>
 <p>As of version 0.9.2, Adsr will send a trigger signal at the end of the playback.
-User can retreive the trigger streams by calling obj[‘trig’].
+User can retrieve the trigger streams by calling obj[‘trig’].
 Useful to synchronize other processes.</p>
 </div>
 <div class="admonition seealso">
@@ -1612,7 +1612,7 @@ new point in the form (time, value).</p>
 <dt>exp: float, optional</dt><dd><p>Exponent factor. Used to control the slope of the curves.
 Defaults to 10.</p>
 </dd>
-<dt>inverse: boolean, optional</dt><dd><p>If True, downward slope will be inversed. Useful to create
+<dt>inverse: boolean, optional</dt><dd><p>If True, downward slope will be inverted. Useful to create
 biexponential curves. Defaults to True.</p>
 </dd>
 <dt>initToFirstVal: boolean, optional</dt><dd><p>If True, audio buffer will be filled at initialization with the

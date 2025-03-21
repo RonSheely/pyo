@@ -1702,7 +1702,7 @@ Defaults to False.</p>
 <p class="admonition-title">Note</p>
 <p>ControlRead will send a trigger signal at the end of the playback if
 loop is off or any time it wraps around if loop is on. User can
-retreive the trigger streams by calling obj[‘trig’]:</p>
+retrieve the trigger streams by calling obj[‘trig’]:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.ControlRead" title="pyo.lib.utils.ControlRead"><span class="n">rnds</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.ControlRead" title="pyo.lib.utils.ControlRead"><span class="n">ControlRead</span></a><span class="p">(</span><span class="n">home</span><span class="o">+</span><span class="s2">"/freq_auto"</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.SndTable" title="pyo.lib.tables.SndTable"><span class="n">t</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.SndTable" title="pyo.lib.tables.SndTable"><span class="n">SndTable</span></a><span class="p">(</span><span class="n">SNDS_PATH</span><span class="o">+</span><span class="s2">"/transparent.aif"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">loop</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigEnv" title="pyo.lib.triggers.TrigEnv"><span class="n">TrigEnv</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.ControlRead" title="pyo.lib.utils.ControlRead"><span class="n">rnds</span></a><span class="p">[</span><span class="s2">"trig"</span><span class="p">],</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.SndTable" title="pyo.lib.tables.SndTable"><span class="n">t</span></a><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="p">[</span><span class="mf">.2</span><span class="p">,</span><span class="mf">.3</span><span class="p">,</span><span class="mf">.4</span><span class="p">,</span><span class="mf">.5</span><span class="p">],</span> <span class="n">mul</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
@@ -4455,7 +4455,7 @@ Defaults to False.</p>
 <p class="admonition-title">Note</p>
 <p>NoteinRead will send a trigger signal at the end of the playback if
 loop is off or any time it wraps around if loop is on. User can
-retreive the trigger streams by calling obj[‘trig’]:</p>
+retrieve the trigger streams by calling obj[‘trig’]:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.NoteinRead" title="pyo.lib.utils.NoteinRead"><span class="n">notes</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.NoteinRead" title="pyo.lib.utils.NoteinRead"><span class="n">NoteinRead</span></a><span class="p">(</span><span class="n">home</span><span class="o">+</span><span class="s2">"/notes_rec"</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.SndTable" title="pyo.lib.tables.SndTable"><span class="n">t</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.SndTable" title="pyo.lib.tables.SndTable"><span class="n">SndTable</span></a><span class="p">(</span><span class="n">SNDS_PATH</span><span class="o">+</span><span class="s2">"/transparent.aif"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">loop</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigEnv" title="pyo.lib.triggers.TrigEnv"><span class="n">TrigEnv</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="../../api/classes/utils.html#pyo.NoteinRead" title="pyo.lib.utils.NoteinRead"><span class="n">notes</span></a><span class="p">[</span><span class="s2">"trig"</span><span class="p">],</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tables.html#pyo.SndTable" title="pyo.lib.tables.SndTable"><span class="n">t</span></a><span class="p">,</span> <span class="n">dur</span><span class="o">=</span><span class="p">[</span><span class="mf">.2</span><span class="p">,</span><span class="mf">.3</span><span class="p">,</span><span class="mf">.4</span><span class="p">,</span><span class="mf">.5</span><span class="p">],</span> <span class="n">mul</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
@@ -5186,7 +5186,7 @@ assigned to successive streams.</p>
 </dd>
 <dt>method: int {0, 1}, optional</dt><dd><p>There is two methods to set when a value is printed (Defaults to 0):
 0. at a periodic interval.
-1. everytime the value changed.</p>
+1. every time the value changed.</p>
 </dd>
 <dt>interval: float, optional</dt><dd><p>Interval, in seconds, between each print. Used by method 0.
 Defaults to 0.25.</p>
@@ -6872,7 +6872,7 @@ factor (centralkey = 60).</p>
 </ol>
 </dd>
 </dl>
-<p>In the transpo mode, the central key (the key where there
+<p>In the transposition mode, the central key (the key where there
 is no transposition) is 60.</p>
 </dd>
 </dl>

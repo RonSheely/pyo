@@ -67,14 +67,14 @@
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Objects to manage values on an Open Sound Control port.</span>
 
-<span class="sd">OscSend takes the first value of each buffersize and send it on an</span>
+<span class="sd">OscSend takes the first value of each buffer size and send it on an</span>
 <span class="sd">OSC port.</span>
 
 <span class="sd">OscReceive creates and returns audio streams from the value in its</span>
 <span class="sd">input port.</span>
 
 <span class="sd">The audio streams of these objects are essentially intended to be</span>
-<span class="sd">controls and can&#39;t be sent to the output soundcard.</span>
+<span class="sd">controls and can&#39;t be sent to the output sound card.</span>
 
 <span class="sd">These objects are available only if pyo is built with OSC (Open Sound</span>
 <span class="sd">Control) support.</span>
@@ -124,7 +124,7 @@
 <span class="sd">    Sends values over a network via the Open Sound Control protocol.</span>
 
 <span class="sd">    Uses the OSC protocol to share values to other softwares or other</span>
-<span class="sd">    computers. Only the first value of each input buffersize will be</span>
+<span class="sd">    computers. Only the first value of each input buffer size will be</span>
 <span class="sd">    sent on the OSC port.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
@@ -241,7 +241,7 @@
 <span class="sd">    Receives values over a network via the Open Sound Control protocol.</span>
 
 <span class="sd">    Uses the OSC protocol to receive values from other softwares or</span>
-<span class="sd">    other computers. Get a value at the beginning of each buffersize</span>
+<span class="sd">    other computers. Get a value at the beginning of each buffer size</span>
 <span class="sd">    and fill its buffer with it.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
@@ -265,7 +265,7 @@
 <span class="sd">        Audio streams are accessed with the `address` string parameter.</span>
 <span class="sd">        The user should call :</span>
 
-<span class="sd">        OscReceive[&#39;/pitch&#39;] to retreive stream named &#39;/pitch&#39;.</span>
+<span class="sd">        OscReceive[&#39;/pitch&#39;] to retrieve stream named &#39;/pitch&#39;.</span>
 
 <span class="sd">        The out() method is bypassed. OscReceive&#39;s signal can not be sent</span>
 <span class="sd">        to audio outs.</span>
@@ -411,7 +411,7 @@
 <span class="sd">            identifier: string</span>
 <span class="sd">                Address string parameter identifying audio stream.</span>
 <span class="sd">                Defaults to None, useful when `all` is True to</span>
-<span class="sd">                retreive all streams values.</span>
+<span class="sd">                retrieve all streams values.</span>
 <span class="sd">            all: boolean, optional</span>
 <span class="sd">                If True, the first value of each object&#39;s stream</span>
 <span class="sd">                will be returned as a list. Otherwise, only the value</span>
@@ -808,7 +808,7 @@
 
 <span class="sd">    Uses the OSC protocol to receive list of floating-point values from other</span>
 <span class="sd">    softwares or other computers. The list are converted into audio streams.</span>
-<span class="sd">    Get values at the beginning of each buffersize and fill buffers with them.</span>
+<span class="sd">    Get values at the beginning of each buffer size and fill buffers with them.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
 
@@ -833,7 +833,7 @@
 <span class="sd">        Audio streams are accessed with the `address` string parameter.</span>
 <span class="sd">        The user should call :</span>
 
-<span class="sd">        OscReceive[&#39;/pitch&#39;] to retreive list of streams named &#39;/pitch&#39;.</span>
+<span class="sd">        OscReceive[&#39;/pitch&#39;] to retrieve list of streams named &#39;/pitch&#39;.</span>
 
 <span class="sd">        The out() method is bypassed. OscReceive&#39;s signal can not be sent</span>
 <span class="sd">        to audio outs.</span>
@@ -1000,7 +1000,7 @@
 <span class="sd">            identifier: string</span>
 <span class="sd">                Address string parameter identifying audio stream.</span>
 <span class="sd">                Defaults to None, useful when `all` is True to</span>
-<span class="sd">                retreive all streams values.</span>
+<span class="sd">                retrieve all streams values.</span>
 <span class="sd">            all: boolean, optional</span>
 <span class="sd">                If True, the first list of values of each object&#39;s stream</span>
 <span class="sd">                will be returned as a list of lists. Otherwise, only the</span>

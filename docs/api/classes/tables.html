@@ -441,7 +441,7 @@ the server GUI before showing the controller window.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The number of bars in the graph is initialized to the length
-of the list of relative strentghs at the time the graph is
+of the list of relative strengths at the time the graph is
 created.</p>
 </div>
 </dd></dl>
@@ -752,7 +752,7 @@ in the table. Location must be integer.</p>
 <p>loadRecFile takes a recording file, usually from a ControlRec object,
 as <cite>filename</cite> parameter, applies a filtering pre-processing to eliminate
 redundancies and loads the result in the table as a list of points.
-Filtering process can be controled with the <cite>tolerance</cite> parameter.</p>
+Filtering process can be controlled with the <cite>tolerance</cite> parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -1103,7 +1103,7 @@ in the table. Location must be integer.</p>
 <p>loadRecFile takes a recording file, usually from a ControlRec object,
 as <cite>filename</cite> parameter, applies a filtering pre-processing to eliminate
 redundancies and loads the result in the table as a list of points.
-Filtering process can be controled with the <cite>tolerance</cite> parameter.</p>
+Filtering process can be controlled with the <cite>tolerance</cite> parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -1179,7 +1179,7 @@ table (size - 1). Location must be an integer.</p>
 <dt>tension: float, optional</dt><dd><p>Curvature at the known points. 1 is high, 0 normal, -1 is low.
 Defaults to 0.</p>
 </dd>
-<dt>bias: float, optional</dt><dd><p>Curve attraction (for each segments) toward bundary points.
+<dt>bias: float, optional</dt><dd><p>Curve attraction (for each segments) toward boundary points.
 0 is even, positive is towards first point, negative is towards
 the second point. Defaults to 0.</p>
 </dd>
@@ -1509,7 +1509,7 @@ in the table. Location must be integer.</p>
 <p>loadRecFile takes a recording file, usually from a ControlRec object,
 as <cite>filename</cite> parameter, applies a filtering pre-processing to eliminate
 redundancies and loads the result in the table as a list of points.
-Filtering process can be controled with the <cite>tolerance</cite> parameter.</p>
+Filtering process can be controlled with the <cite>tolerance</cite> parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -1938,7 +1938,7 @@ the table. Location must be an integer.</p>
 <dt>exp: float, optional</dt><dd><p>Exponent factor. Used to control the slope of the curve.
 Defaults to 10.</p>
 </dd>
-<dt>inverse: boolean, optional</dt><dd><p>If True, downward slope will be inversed. Useful to create
+<dt>inverse: boolean, optional</dt><dd><p>If True, downward slope will be inverted. Useful to create
 biexponential curves. Defaults to True.</p>
 </dd>
 <dt>size: int, optional</dt><dd><p>Table size in samples. Defaults to 8192.</p>
@@ -2261,7 +2261,7 @@ in the table. Location must be integer.</p>
 <p>loadRecFile takes a recording file, usually from a ControlRec object,
 as <cite>filename</cite> parameter, applies a filtering pre-processing to eliminate
 redundancies and loads the result in the table as a list of points.
-Filtering process can be controled with the <cite>tolerance</cite> parameter.</p>
+Filtering process can be controlled with the <cite>tolerance</cite> parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -2906,7 +2906,7 @@ the server GUI before showing the controller window.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The number of bars in the graph is initialized to the length
-of the list of relative strentghs at the time the graph is
+of the list of relative strengths at the time the graph is
 created.</p>
 </div>
 </dd></dl>
@@ -3217,7 +3217,7 @@ in the table. Location must be integer.</p>
 <p>loadRecFile takes a recording file, usually from a ControlRec object,
 as <cite>filename</cite> parameter, applies a filtering pre-processing to eliminate
 redundancies and loads the result in the table as a list of points.
-Filtering process can be controled with the <cite>tolerance</cite> parameter.</p>
+Filtering process can be controlled with the <cite>tolerance</cite> parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -3568,7 +3568,7 @@ in the table. Location must be integer.</p>
 <p>loadRecFile takes a recording file, usually from a ControlRec object,
 as <cite>filename</cite> parameter, applies a filtering pre-processing to eliminate
 redundancies and loads the result in the table as a list of points.
-Filtering process can be controled with the <cite>tolerance</cite> parameter.</p>
+Filtering process can be controlled with the <cite>tolerance</cite> parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -6566,8 +6566,8 @@ contains <cite>order</cite> odd harmonics. Defaults to 10.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyo.AtanTable">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AtanTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/tables.html#AtanTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.AtanTable" title="Link to this definition">¶</a></dt>
-<dd><p>Generates an arctangent transfert function.</p>
-<p>This table allow the creation of the classic arctangent transfert function,
+<dd><p>Generates an arctangent transfer function.</p>
+<p>This table allow the creation of the classic arctangent transfer function,
 useful in distortion design. See Lookup object for a simple table lookup
 process.</p>
 <dl class="field-list simple">

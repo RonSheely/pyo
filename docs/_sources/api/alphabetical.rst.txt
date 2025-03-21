@@ -11,7 +11,7 @@ Alphabetical class reference
 - :py:class:`AllpassWG` :     Out of tune waveguide model with a recursive allpass network.
 - :py:class:`Allpass` :     Delay line based allpass filter.
 - :py:class:`Atan2` :     Computes the principal value of the arc tangent of b/a.
-- :py:class:`AtanTable` :     Generates an arctangent transfert function.
+- :py:class:`AtanTable` :     Generates an arctangent transfer function.
 - :py:class:`Atone` :     A first-order recursive high-pass filter with variable frequency response.
 - :py:class:`AttackDetector` :     Audio signal onset detection.
 - :py:class:`Average` :     Moving average filter.
@@ -109,7 +109,7 @@ Alphabetical class reference
 - :py:class:`Gate` :     Allows a signal to pass only when its amplitude is above a set threshold.
 - :py:class:`Granulator` :     Granular synthesis generator.
 - :py:class:`Granule` :     Another granular synthesis generator.
-- :py:class:`HRTF` :     Head-Related Transfert Function 3D spatialization.
+- :py:class:`HRTF` :     Head-Related Transfer Function 3D spatialization.
 - :py:class:`HannTable` :     Generates Hanning window function.
 - :py:class:`HarmTable` :     Harmonic waveform generator.
 - :py:class:`Harmonizer` :     Generates harmonizing voices in synchrony with its audio input.
@@ -192,7 +192,7 @@ Alphabetical class reference
 - :py:class:`PVTranspose` :     Transpose the frequency components of a pv stream.
 - :py:class:`PVVerb` :     Spectral domain reverberation.
 - :py:class:`PadSynthTable` :     Generates wavetable with the PadSynth algorithm from Nasca Octavian Paul.
-- :py:class:`Pan` :     Cosinus panner with control on the spread factor.
+- :py:class:`Pan` :     Cosine panner with control on the spread factor.
 - :py:class:`ParaTable` :     Generates parabola window function.
 - :py:class:`PartialTable` :     Inharmonic waveform generator.
 - :py:class:`Particle2` :     An even more full control granular synthesis generator.
@@ -247,7 +247,7 @@ Alphabetical class reference
 - :py:class:`SawTable` :     Sawtooth waveform generator.
 - :py:class:`Scale` :     Maps an input range of audio values to an output range.
 - :py:class:`Scope` :     Oscilloscope - audio waveform display.
-- :py:class:`Score` :     Calls functions by incrementation of a preformatted name.
+- :py:class:`Score` :     Calls functions by incrementing a preformatted name.
 - :py:class:`Select` :     Sends trigger on matching integer values.
 - :py:class:`Selector` :     Audio selector.
 - :py:class:`Seq` :     Generates a rhythmic sequence of trigger signals.
@@ -267,7 +267,7 @@ Alphabetical class reference
 - :py:class:`Spectrum` :     Spectrum analyzer and display.
 - :py:class:`Sqrt` :     Performs a square-root function on audio signal.
 - :py:class:`SquareTable` :     Square waveform generator.
-- :py:class:`Sub` :     Substracts b from a.
+- :py:class:`Sub` :     Subtracts b from a.
 - :py:class:`SumOsc` :     Discrete summation formulae to produce complex spectra.
 - :py:class:`SuperSaw` :     Roland JP-8000 Supersaw emulator.
 - :py:class:`Switch` :     Audio switcher.
@@ -283,7 +283,7 @@ Alphabetical class reference
 - :py:class:`Tan` :     Performs a tangent function on audio signal.
 - :py:class:`Tanh` :     Performs a hyperbolic tangent function on audio signal.
 - :py:class:`Thresh` :     Informs when a signal crosses a threshold.
-- :py:class:`Timer` :     Reports elapsed time between two trigs.
+- :py:class:`Timer` :     Reports elapsed time between two triggers.
 - :py:class:`Tone` :     A first-order recursive low-pass filter with variable frequency response.
 - :py:class:`Touchin` :     Get the current value of an after-touch Midi controller.
 - :py:class:`TrackHold` :     Performs a track-and-hold operation on its input.

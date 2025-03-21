@@ -993,7 +993,7 @@ will be sent to all addresses managed by the object.</p>
 <dd><p>Receives list of values over a network via the Open Sound Control protocol.</p>
 <p>Uses the OSC protocol to receive list of floating-point values from other
 softwares or other computers. The list are converted into audio streams.
-Get values at the beginning of each buffersize and fill buffers with them.</p>
+Get values at the beginning of each buffer size and fill buffers with them.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
@@ -1020,7 +1020,7 @@ OscListReceive object are of the same length. Defaults to 8.</p>
 <p class="admonition-title">Note</p>
 <p>Audio streams are accessed with the <cite>address</cite> string parameter.
 The user should call :</p>
-<p>OscReceive[‘/pitch’] to retreive list of streams named ‘/pitch’.</p>
+<p>OscReceive[‘/pitch’] to retrieve list of streams named ‘/pitch’.</p>
 <p>The out() method is bypassed. OscReceive’s signal can not be sent
 to audio outs.</p>
 </div>
@@ -1388,7 +1388,7 @@ which stream to get value from.</p>
 <dd class="field-odd"><dl class="simple">
 <dt>identifier: string</dt><dd><p>Address string parameter identifying audio stream.
 Defaults to None, useful when <cite>all</cite> is True to
-retreive all streams values.</p>
+retrieve all streams values.</p>
 </dd>
 <dt>all: boolean, optional</dt><dd><p>If True, the first list of values of each object’s stream
 will be returned as a list of lists. Otherwise, only the
@@ -1487,7 +1487,7 @@ triggered by the stop call.</p>
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OscReceive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/opensndctrl.html#OscReceive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.OscReceive" title="Link to this definition">¶</a></dt>
 <dd><p>Receives values over a network via the Open Sound Control protocol.</p>
 <p>Uses the OSC protocol to receive values from other softwares or
-other computers. Get a value at the beginning of each buffersize
+other computers. Get a value at the beginning of each buffer size
 and fill its buffer with it.</p>
 <dl class="field-list">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
@@ -1511,7 +1511,7 @@ the form of a Unix path (ex.: ‘/pitch’).</p>
 <p class="admonition-title">Note</p>
 <p>Audio streams are accessed with the <cite>address</cite> string parameter.
 The user should call :</p>
-<p>OscReceive[‘/pitch’] to retreive stream named ‘/pitch’.</p>
+<p>OscReceive[‘/pitch’] to retrieve stream named ‘/pitch’.</p>
 <p>The out() method is bypassed. OscReceive’s signal can not be sent
 to audio outs.</p>
 </div>
@@ -1878,7 +1878,7 @@ which stream to get value from.</p>
 <dd class="field-odd"><dl class="simple">
 <dt>identifier: string</dt><dd><p>Address string parameter identifying audio stream.
 Defaults to None, useful when <cite>all</cite> is True to
-retreive all streams values.</p>
+retrieve all streams values.</p>
 </dd>
 <dt>all: boolean, optional</dt><dd><p>If True, the first value of each object’s stream
 will be returned as a list. Otherwise, only the value
@@ -1977,7 +1977,7 @@ triggered by the stop call.</p>
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OscSend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'127.0.0.1'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/opensndctrl.html#OscSend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.OscSend" title="Link to this definition">¶</a></dt>
 <dd><p>Sends values over a network via the Open Sound Control protocol.</p>
 <p>Uses the OSC protocol to share values to other softwares or other
-computers. Only the first value of each input buffersize will be
+computers. Only the first value of each input buffer size will be
 sent on the OSC port.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>

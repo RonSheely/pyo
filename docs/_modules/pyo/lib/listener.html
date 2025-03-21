@@ -79,7 +79,7 @@
 <span class="sd">    of the audio server (mainly to be able to receive Midi data even</span>
 <span class="sd">    when the audio server is stopped). Although it runs in a separated</span>
 <span class="sd">    thread, the same device can&#39;t be used by this object and the audio</span>
-<span class="sd">    server at the same time. It is adviced to call the deactivateMidi()</span>
+<span class="sd">    server at the same time. It is advised to call the deactivateMidi()</span>
 <span class="sd">    method on the audio server to avoid conflicts.</span>
 
 <span class="sd">    :Parent: threading.Thread</span>
@@ -111,7 +111,7 @@
 <span class="sd">    .. note::</span>
 
 <span class="sd">        This object is available only if pyo is built with portmidi support</span>
-<span class="sd">        (see withPortmidi function).</span>
+<span class="sd">        (see `withPortmidi()` function).</span>
 
 <span class="sd">    &gt;&gt;&gt; s = Server()</span>
 <span class="sd">    &gt;&gt;&gt; s.deactivateMidi()</span>
@@ -198,7 +198,7 @@
 <span class="sd">    of the audio server (mainly to be able to send Midi data even</span>
 <span class="sd">    when the audio server is stopped). Although it runs in a separated</span>
 <span class="sd">    thread, the same device can&#39;t be used by this object and the audio</span>
-<span class="sd">    server at the same time. It is adviced to call the deactivateMidi()</span>
+<span class="sd">    server at the same time. It is advised to call the deactivateMidi()</span>
 <span class="sd">    method on the audio server to avoid conflicts.</span>
 
 <span class="sd">    Use the `send` method to send midi event to connected devices.</span>
@@ -219,7 +219,7 @@
 <span class="sd">    .. note::</span>
 
 <span class="sd">        This object is available only if pyo is built with portmidi support</span>
-<span class="sd">        (see withPortmidi function).</span>
+<span class="sd">        (see `withPortmidi()` function).</span>
 
 <span class="sd">    &gt;&gt;&gt; s = Server()</span>
 <span class="sd">    &gt;&gt;&gt; s.deactivateMidi()</span>

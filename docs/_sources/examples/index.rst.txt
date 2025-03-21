@@ -16,6 +16,7 @@ Examples
    Calling python functions from audio objects <x09-callbacks/index>
    Using tables <x10-tables/index>
    Processing in the spectral domain <x14-spectral/index>
+   Using 2D tables (matrix) <x15-matrix/index>
    How to use MIDI with pyo <x16-midi/index>
    How to use OSC with pyo <x17-osc/index>
    Multirate audio processing <x19-multirate/index>

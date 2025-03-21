@@ -1109,7 +1109,7 @@ pointer in the table.</p>
 </dd>
 <dt class="field-even">Args<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt>table: PyoTableObject</dt><dd><p>Table containing the transfert function.</p>
+<dt>table: PyoTableObject</dt><dd><p>Table containing the transfer function.</p>
 </dd>
 <dt>index: PyoObject</dt><dd><p>Audio signal, between -1 and 1, internally converted to be
 used as the index position in the table.</p>
@@ -1451,7 +1451,7 @@ the server GUI before showing the controller window.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.Lookup.table">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#pyo.Lookup.table" title="Link to this definition">¶</a></dt>
-<dd><p>PyoTableObject. Table containing the transfert function.</p>
+<dd><p>PyoTableObject. Table containing the transfer function.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyo.Lookup.index">
@@ -2657,7 +2657,7 @@ Defaults to 24.</p>
 <dt>fjit: boolean, optional</dt><dd><p>If True, a small jitter is added to the frequency of each partial.
 For a large number of oscillators and a very small <cite>spread</cite>, the
 periodicity between partial frequencies can cause very strange
-artefact. Adding a jitter breaks the periodicity. Defaults to False.</p>
+artifact. Adding a jitter breaks the periodicity. Defaults to False.</p>
 </dd>
 </dl>
 </dd>
@@ -2668,8 +2668,8 @@ artefact. Adding a jitter breaks the periodicity. Defaults to False.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Altough parameters can be audio signals, values are sampled only once
-per buffer size. To avoid artefacts, it is recommended to keep variations
+<p>Although parameters can be audio signals, values are sampled only once
+per buffer size. To avoid artifacts, it is recommended to keep variations
 at low rate (&lt; 20 Hz).</p>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/server.html#pyo.Server" title="pyo.lib.server.Server"><span class="n">Server</span></a><span class="p">()</span><span class="o">.</span><span class="n">boot</span><span class="p">()</span>
@@ -6916,7 +6916,7 @@ and 1 is the last.</p>
 <p class="admonition-title">Note</p>
 <p>The smaller size among the output table and the two current tables to
 interpolate is used to determine the number of samples to process. Using
-tables with different size can produce strange behaviours.</p>
+tables with different size can produce strange behaviors.</p>
 <p>The out() method is bypassed. TableMorph returns no signal.</p>
 <p>TableMorph has no <cite>mul</cite> and <cite>add</cite> attributes.</p>
 </div>
@@ -7344,7 +7344,7 @@ values, without repetitions.</p>
 the recording into the table until the table is full. Calling the
 play method again restarts the recording and overwrites previously
 recorded values. The stop method stops the recording. Otherwise, the
-default behaviour is to record through the end of the table.</p>
+default behavior is to record through the end of the table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>
@@ -7793,7 +7793,7 @@ Defaults to 0.</p>
 <p class="admonition-title">Note</p>
 <p>TableRead will send a trigger signal at the end of the playback if
 loop is off or any time it wraps around if loop is on. User can
-retreive the trigger streams by calling obj[‘trig’]:</p>
+retrieve the trigger streams by calling obj[‘trig’]:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tabr</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/tableprocess.html#pyo.TableRead" title="pyo.lib.tableprocess.TableRead"><span class="n">TableRead</span></a><span class="p">(</span><span class="n">SNDS_PATH</span> <span class="o">+</span> <span class="s2">"/transparent.aif"</span><span class="p">)</span><span class="o">.</span><span class="n">out</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigRand" title="pyo.lib.triggers.TrigRand"><span class="n">trig</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../../api/classes/triggers.html#pyo.TrigRand" title="pyo.lib.triggers.TrigRand"><span class="n">TrigRand</span></a><span class="p">(</span><span class="n">tabr</span><span class="p">[</span><span class="s1">'trig'</span><span class="p">])</span>
 </pre></div>
@@ -8229,7 +8229,7 @@ the server GUI before showing the controller window.</p>
 the recording into the table until the table is full. Calling the
 play method again restarts the recording and overwrites previously
 recorded samples. The stop method stops the recording. Otherwise, the
-default behaviour is to record through the end of the table.</p>
+default behavior is to record through the end of the table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parent<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="_core.html#pyo.PyoObject" title="pyo.PyoObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyoObject</span></code></a></p>

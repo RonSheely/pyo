@@ -1731,7 +1731,7 @@
 <span class="sd">    .. note::</span>
 
 <span class="sd">        TrigEnv will send a trigger signal at the end of the playback.</span>
-<span class="sd">        User can retreive the trigger streams by calling obj[&#39;trig&#39;].</span>
+<span class="sd">        User can retrieve the trigger streams by calling obj[&#39;trig&#39;].</span>
 <span class="sd">        Useful to synchronize other processes.</span>
 
 <span class="sd">    &gt;&gt;&gt; s = Server().boot()</span>
@@ -1902,7 +1902,7 @@
 <span class="sd">    .. note::</span>
 
 <span class="sd">        TrigLinseg will send a trigger signal at the end of the playback.</span>
-<span class="sd">        User can retreive the trigger streams by calling obj[&#39;trig&#39;].</span>
+<span class="sd">        User can retrieve the trigger streams by calling obj[&#39;trig&#39;].</span>
 <span class="sd">        Useful to synchronize other processes.</span>
 
 <span class="sd">        The out() method is bypassed. TrigLinseg&#39;s signal can not be sent</span>
@@ -2085,13 +2085,13 @@
 <span class="sd">            Exponent factor. Used to control the slope of the curves.</span>
 <span class="sd">            Defaults to 10.</span>
 <span class="sd">        inverse: boolean, optional</span>
-<span class="sd">            If True, downward slope will be inversed. Useful to create</span>
+<span class="sd">            If True, downward slope will be inverted. Useful to create</span>
 <span class="sd">            biexponential curves. Defaults to True.</span>
 
 <span class="sd">    .. note::</span>
 
 <span class="sd">        TrigExpseg will send a trigger signal at the end of the playback.</span>
-<span class="sd">        User can retreive the trigger streams by calling obj[&#39;trig&#39;].</span>
+<span class="sd">        User can retrieve the trigger streams by calling obj[&#39;trig&#39;].</span>
 <span class="sd">        Useful to synchronize other processes.</span>
 
 <span class="sd">        The out() method is bypassed. TrigExpseg&#39;s signal can not be sent</span>
@@ -3537,7 +3537,7 @@
 <a class="viewcode-back" href="../../../api/classes/triggers.html#pyo.Timer">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Timer</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Reports elapsed time between two trigs.</span>
+<span class="sd">    Reports elapsed time between two triggers.</span>
 
 <span class="sd">    A trigger in `input2` signal starts an internal timer. The next trigger</span>
 <span class="sd">    in `input` signal stops it and reports the elapsed time between the two</span>
@@ -3668,7 +3668,7 @@
 <span class="sd">    .. note::</span>
 
 <span class="sd">        Iter will send a trigger signal when the iterator hits the</span>
-<span class="sd">        last value of the list `choice`. User can retreive the trigger</span>
+<span class="sd">        last value of the list `choice`. User can retrieve the trigger</span>
 <span class="sd">        streams by calling obj[&#39;trig&#39;]. Useful to synchronize other</span>
 <span class="sd">        processes.</span>
 
@@ -4513,7 +4513,7 @@
 <span class="sd">        time: float, optional</span>
 <span class="sd">            Base time, in seconds, between each trig of the serie. Defaults to 0.25.</span>
 <span class="sd">        count: int, optional</span>
-<span class="sd">            Number of trigs generated (length of the serie). Defaults to 10.</span>
+<span class="sd">            Number of triggers generated (length of the serie). Defaults to 10.</span>
 <span class="sd">        expand: float, optional</span>
 <span class="sd">            Timing power serie factor. Each delay before the next trig is the</span>
 <span class="sd">            current delay (starting with `time`) times `expand` factor. Defaults to 1.0.</span>

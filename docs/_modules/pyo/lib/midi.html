@@ -65,12 +65,12 @@
             
   <h1>Source code for pyo.lib.midi</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Objects to retrieve Midi informations for a specific Midi port and channel.</span>
+<span class="sd">Objects to retrieve Midi information for a specific Midi port and channel.</span>
 
 <span class="sd">Objects creates and returns audio streams from the value in their Midi input.</span>
 
 <span class="sd">The audio streams of these objects are essentially intended to be</span>
-<span class="sd">used as controls and can&#39;t be sent to the output soundcard.</span>
+<span class="sd">used as controls and can&#39;t be sent to the output sound card.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
@@ -823,7 +823,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Sets the key mode. Defaults to 0.</span>
 
-<span class="sd">        Controls the behaviour of an incoming Midi note.</span>
+<span class="sd">        Controls the behavior of an incoming Midi note.</span>
 
 <span class="sd">        :Args:</span>
 
@@ -1381,8 +1381,6 @@
 <a class="viewcode-back" href="../../../api/classes/midi.html#pyo.Programin">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Programin</span><span class="p">(</span><span class="n">PyoObject</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get the current value of a program change Midi controller.</span>
-
 <span class="sd">    Get the current value of a program change Midi controller.</span>
 
 <span class="sd">    :Parent: :py:class:`PyoObject`</span>
@@ -2130,7 +2128,7 @@
 <span class="sd">    .. note::</span>
 
 <span class="sd">        MidiLinseg will send a trigger signal at the end of the playback.</span>
-<span class="sd">        User can retreive the trigger streams by calling obj[&#39;trig&#39;].</span>
+<span class="sd">        User can retrieve the trigger streams by calling obj[&#39;trig&#39;].</span>
 <span class="sd">        Useful to synchronize other processes.</span>
 
 <span class="sd">        The out() method is bypassed. MidiLinseg&#39;s signal can not be sent</span>

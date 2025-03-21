@@ -65,7 +65,7 @@
             
   <h1>Source code for pyo.lib.players</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Play soundfiles from the disk.</span>
+<span class="sd">Play sound files from the disk.</span>
 
 <span class="sd">SfMarkerXXX objects use markers features (store in the header) from</span>
 <span class="sd">an AIFF file to create more specific reading patterns.</span>
@@ -146,7 +146,7 @@
 <span class="sd">        &gt;&gt;&gt; sf = SfPlayer(SNDS_PATH + &quot;/transparent.aif&quot;).out()</span>
 <span class="sd">        &gt;&gt;&gt; trig = TrigRand(sf[&#39;trig&#39;])</span>
 
-<span class="sd">        Note that the object will send as many trigs as there is channels</span>
+<span class="sd">        Note that the object will send as many triggers as there is channels</span>
 <span class="sd">        in the sound file. If you want to retrieve only one trig, only give</span>
 <span class="sd">        the first stream to the next object:</span>
 
@@ -537,7 +537,7 @@
 <span class="sd">            6. biexpon</span>
 <span class="sd">                - x: bandwidth {0 = huge bandwidth -&gt; 1 = narrow bandwidth}</span>
 <span class="sd">            7. cauchy</span>
-<span class="sd">                - x: bandwidth {0 = huge bandwidth -&gt; 1 = narroe bandwidth}</span>
+<span class="sd">                - x: bandwidth {0 = huge bandwidth -&gt; 1 = narrow bandwidth}</span>
 <span class="sd">            8. weibull</span>
 <span class="sd">                - x: shape {0 = expon min =&gt; linear min =&gt; 1 = gaussian}</span>
 <span class="sd">            9. gaussian</span>

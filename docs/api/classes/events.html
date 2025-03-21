@@ -355,9 +355,9 @@ EventScale can handle.</p>
 <dt class="sig sig-object py" id="pyo.EventGenerator">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventGenerator</span></span><a class="reference internal" href="../../_modules/pyo/lib/events.html#EventGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.EventGenerator" title="Link to this definition">¶</a></dt>
 <dd><p>Base class for all event generators.</p>
-<p>This class contains the common behaviours of all event generators.</p>
+<p>This class contains the common behaviors of all event generators.</p>
 <p>Each EventGenerator contains a particular algorithm that can produce a
-sequence of values triggered by an Events mecanism for one of its arguments.</p>
+sequence of values triggered by an Events mechanism for one of its arguments.</p>
 <p>The EventGenerator allows very flexible control of the algorithm parameters.
 It can be a single value, another EventGenerator or an audio signal (PyoObject).</p>
 <p>Arithmetic operations are allowed on EventGenerator. An EventDummy is
@@ -367,7 +367,7 @@ then created to apply the operation to each value produced by the generator.</p>
 <div><dl class="simple">
 <dt>+: float, PyoObject or EventGenerator</dt><dd><p>Addition.</p>
 </dd>
-<dt>-: float, PyoObject or EventGenerator</dt><dd><p>Substraction</p>
+<dt>-: float, PyoObject or EventGenerator</dt><dd><p>Subtraction</p>
 </dd>
 <dt><a href="#id1"><span class="problematic" id="id2">*</span></a>: float, PyoObject or EventGenerator</dt><dd><p>Multiplication</p>
 </dd>
@@ -480,10 +480,10 @@ value and outputs it if the comparison is True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -585,7 +585,7 @@ according to the argument <cite>depth</cite>, in percent.</p>
 <dt class="sig sig-object py" id="pyo.EventGenerator.scale">
 <span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mini</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/events.html#EventGenerator.scale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.EventGenerator.scale" title="Link to this definition">¶</a></dt>
 <dd><p>Return an EventFilter which maps its input value, in the range 0 to 1,
-to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p>
+to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -606,7 +606,7 @@ higher than 1 give an exponential curve.</p>
 <span class="sig-name descname"><span class="pre">rescale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/events.html#EventGenerator.rescale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.EventGenerator.rescale" title="Link to this definition">¶</a></dt>
 <dd><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite>
 to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling
-curve deternimed bu the <cite>expon</cite> value.</p>
+curve determined by the <cite>expon</cite> value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Args<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -731,10 +731,10 @@ the last valid value is sent again.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -851,10 +851,10 @@ the last valid value is sent again.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1000,10 +1000,10 @@ None (the default), the current Events object is used.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1061,7 +1061,7 @@ Defaults to inf (infinite).</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -1160,10 +1160,10 @@ automatically converted to an EventSeq.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1202,7 +1202,7 @@ automatically converted to an EventSeq.</p>
 <dt class="sig sig-object py" id="pyo.EventSlide">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventSlide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wraparound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">occurrences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stopEventsWhenDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyo/lib/events.html#EventSlide"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyo.EventSlide" title="Link to this definition">¶</a></dt>
 <dd><p>Plays overlapping segments from a list of values.</p>
-<p>EventSlide will play a segment of length <cite>segment</cite> from startpos,
+<p>EventSlide will play a segment of length <cite>segment</cite> from <cite>startpos</cite>,
 then another segment with a start position incremented by <cite>step</cite>,
 and so on.</p>
 <dl class="field-list simple">
@@ -1229,7 +1229,7 @@ if it goes outside the list bounds. Defaults to True.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -1330,10 +1330,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1385,7 +1385,7 @@ PyoObject or other EventGenerator.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -1484,10 +1484,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1543,7 +1543,7 @@ Defaults to 2.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -1643,10 +1643,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1696,7 +1696,7 @@ PyoObject or other EventGenerator.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -1791,10 +1791,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -1850,7 +1850,7 @@ allowed. Defaults to 2.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -1948,10 +1948,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -2006,7 +2006,7 @@ types are:</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -2105,10 +2105,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -2164,7 +2164,7 @@ event and the result passed, as number, to the function.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -2259,10 +2259,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>
@@ -2319,7 +2319,7 @@ th <cite>iffalse</cite> argument is used.</p>
 <dt>stopEventsWhenDone: bool, optional</dt><dd><p>If True, the Events playback will stop if this generator reaches
 its end. If False, the Events will ignore this signal and probably
 get None as value for the given parameter. It’s the user
-responsability to handle this case correctly. Defaults to True.</p>
+responsibility to handle this case correctly. Defaults to True.</p>
 </dd>
 </dl>
 </dd>
@@ -2429,10 +2429,10 @@ responsability to handle this case correctly. Defaults to True.</p>
 <td><p>Return an EventFilter which clips its input value between the limits <cite>mini</cite> and <cite>maxi</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code>(mini, maxi, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range 0 to 1, to an output range, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale</span></code>(inmin, inmax, outmin, outmax, expon)</p></td>
-<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve deternimed bu the <cite>expon</cite> value.</p></td>
+<td><p>Return an EventFilter which maps its input value, in the range <cite>inmin</cite> to <cite>inmax</cite>, to an output range, <cite>outmin</cite> to <cite>outmax</cite>, with a scaling curve determined by the <cite>expon</cite> value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">iftrue</span></code>(op, comp)</p></td>
 <td><p>Return an EventFilter which compares its input value to the value given to <cite>comp</cite> argument, using the comparison operator <cite>op</cite>.</p></td>

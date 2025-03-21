@@ -40,7 +40,7 @@ class MatrixRec(PyoObject):
     the recording into the matrix, row after row, until the matrix is full.
     Calling the play method again restarts the recording and overwrites
     previously recorded samples. The stop method stops the recording.
-    Otherwise, the default behaviour is to record through the end of the matrix.
+    Otherwise, the default behavior is to record through the end of the matrix.
 
     :Parent: :py:class:`PyoObject`
 
@@ -64,7 +64,7 @@ class MatrixRec(PyoObject):
         MatrixRec has no `mul` and `add` attributes.
 
         MatrixRec will send a trigger signal at the end of the recording.
-        User can retreive the trigger streams by calling obj['trig']. See
+        User can retrieve the trigger streams by calling obj['trig']. See
         `TableRec` documentation for an example.
 
     .. seealso::
@@ -184,7 +184,7 @@ class MatrixRecLoop(PyoObject):
         MatrixRecLoop has no `mul` and `add` attributes.
 
         MatrixRecLoop will send a trigger signal when reaching the end
-        of the matrix. User can retreive the trigger streams by calling
+        of the matrix. User can retrieve the trigger streams by calling
         obj['trig']. See `TableRec` documentation for an example.
 
     .. seealso::

@@ -121,7 +121,7 @@ class HarmTable(PyoTableObject):
         .. note::
 
             The number of bars in the graph is initialized to the length
-            of the list of relative strentghs at the time the graph is
+            of the list of relative strengths at the time the graph is
             created.
 
         """
@@ -440,7 +440,7 @@ class ChebyTable(PyoTableObject):
         .. note::
 
             The number of bars in the graph is initialized to the length
-            of the list of relative strentghs at the time the graph is
+            of the list of relative strengths at the time the graph is
             created.
 
         """
@@ -715,7 +715,7 @@ class LinTable(PyoTableObject):
         loadRecFile takes a recording file, usually from a ControlRec object,
         as `filename` parameter, applies a filtering pre-processing to eliminate
         redundancies and loads the result in the table as a list of points.
-        Filtering process can be controled with the `tolerance` parameter.
+        Filtering process can be controlled with the `tolerance` parameter.
 
         :Args:
 
@@ -852,7 +852,7 @@ class LogTable(PyoTableObject):
         loadRecFile takes a recording file, usually from a ControlRec object,
         as `filename` parameter, applies a filtering pre-processing to eliminate
         redundancies and loads the result in the table as a list of points.
-        Filtering process can be controled with the `tolerance` parameter.
+        Filtering process can be controlled with the `tolerance` parameter.
 
         :Args:
 
@@ -989,7 +989,7 @@ class CosLogTable(PyoTableObject):
         loadRecFile takes a recording file, usually from a ControlRec object,
         as `filename` parameter, applies a filtering pre-processing to eliminate
         redundancies and loads the result in the table as a list of points.
-        Filtering process can be controled with the `tolerance` parameter.
+        Filtering process can be controlled with the `tolerance` parameter.
 
         :Args:
 
@@ -1125,7 +1125,7 @@ class CosTable(PyoTableObject):
         loadRecFile takes a recording file, usually from a ControlRec object,
         as `filename` parameter, applies a filtering pre-processing to eliminate
         redundancies and loads the result in the table as a list of points.
-        Filtering process can be controled with the `tolerance` parameter.
+        Filtering process can be controlled with the `tolerance` parameter.
 
         :Args:
 
@@ -1221,7 +1221,7 @@ class CurveTable(PyoTableObject):
             Curvature at the known points. 1 is high, 0 normal, -1 is low.
             Defaults to 0.
         bias: float, optional
-            Curve attraction (for each segments) toward bundary points.
+            Curve attraction (for each segments) toward boundary points.
             0 is even, positive is towards first point, negative is towards
             the second point. Defaults to 0.
         size: int, optional
@@ -1314,7 +1314,7 @@ class CurveTable(PyoTableObject):
         loadRecFile takes a recording file, usually from a ControlRec object,
         as `filename` parameter, applies a filtering pre-processing to eliminate
         redundancies and loads the result in the table as a list of points.
-        Filtering process can be controled with the `tolerance` parameter.
+        Filtering process can be controlled with the `tolerance` parameter.
 
         :Args:
 
@@ -1422,7 +1422,7 @@ class ExpTable(PyoTableObject):
             Exponent factor. Used to control the slope of the curve.
             Defaults to 10.
         inverse: boolean, optional
-            If True, downward slope will be inversed. Useful to create
+            If True, downward slope will be inverted. Useful to create
             biexponential curves. Defaults to True.
         size: int, optional
             Table size in samples. Defaults to 8192.
@@ -1505,7 +1505,7 @@ class ExpTable(PyoTableObject):
         loadRecFile takes a recording file, usually from a ControlRec object,
         as `filename` parameter, applies a filtering pre-processing to eliminate
         redundancies and loads the result in the table as a list of points.
-        Filtering process can be controled with the `tolerance` parameter.
+        Filtering process can be controlled with the `tolerance` parameter.
 
         :Args:
 
@@ -2310,9 +2310,9 @@ class DataTable(PyoTableObject):
 
 class AtanTable(PyoTableObject):
     """
-    Generates an arctangent transfert function.
+    Generates an arctangent transfer function.
 
-    This table allow the creation of the classic arctangent transfert function,
+    This table allow the creation of the classic arctangent transfer function,
     useful in distortion design. See Lookup object for a simple table lookup
     process.
 

@@ -151,7 +151,7 @@ def stringencode(st):
 
 def sndinfo(path, print=False, raise_on_failure=False):
     """
-    Retrieve informations about a soundfile.
+    Retrieve information about a soundfile.
 
     Prints the infos of the given soundfile to the console and returns a
     tuple containing:
@@ -1724,7 +1724,7 @@ class PyoObject(PyoObjectBase):
         :Args:
 
             x: float or PyoObject
-                New inversed `add` attribute.
+                New inverted `add` attribute.
 
         """
         pyoArgsAssert(self, "O", x)
@@ -1739,7 +1739,7 @@ class PyoObject(PyoObjectBase):
         :Args:
 
             x: float or PyoObject
-                New inversed `mul` attribute.
+                New inverted `mul` attribute.
 
         """
         pyoArgsAssert(self, "O", x)
@@ -2335,7 +2335,7 @@ class PyoTableObject(PyoObjectBase):
         """
         Performs substraction on the table values.
 
-        Substracts the argument to each table values, position by position
+        Subtracts the argument to each table values, position by position
         if the argument is a list or another PyoTableObject.
 
         :Args:

@@ -1,10 +1,10 @@
 """
-Objects to retrieve Midi informations for a specific Midi port and channel.
+Objects to retrieve Midi information for a specific Midi port and channel.
 
 Objects creates and returns audio streams from the value in their Midi input.
 
 The audio streams of these objects are essentially intended to be
-used as controls and can't be sent to the output soundcard.
+used as controls and can't be sent to the output sound card.
 
 """
 
@@ -654,7 +654,7 @@ class Notein(PyoObject):
         """
         Sets the key mode. Defaults to 0.
 
-        Controls the behaviour of an incoming Midi note.
+        Controls the behavior of an incoming Midi note.
 
         :Args:
 
@@ -1142,8 +1142,6 @@ class Touchin(PyoObject):
 
 class Programin(PyoObject):
     """
-    Get the current value of a program change Midi controller.
-
     Get the current value of a program change Midi controller.
 
     :Parent: :py:class:`PyoObject`
@@ -1801,7 +1799,7 @@ class MidiLinseg(PyoObject):
     .. note::
 
         MidiLinseg will send a trigger signal at the end of the playback.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
         The out() method is bypassed. MidiLinseg's signal can not be sent

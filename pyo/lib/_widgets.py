@@ -42,7 +42,7 @@ if use_wx:
             """
 WxPython is not found for the current python version.
 Pyo will use a minimal GUI toolkit written with Tkinter (if available).
-This toolkit has limited functionnalities and is no more
+This toolkit has limited functionalities and is no more
 maintained or updated. If you want to use all of pyo's
 GUI features, you should install WxPython, available here:
 http://www.wxpython.org/
@@ -476,7 +476,7 @@ def createMMLEditorWindow(object, title, wxnoserver=False):
 
 
 def createNoteinKeyboardWindow(object, title, wxnoserver=False):
-    "Creates avirtual midi keyboard window."
+    "Creates a virtual midi keyboard window."
     if not PYO_USE_WX:
         print("WxPython must be installed to use the Notein keyboard display.")
     else:

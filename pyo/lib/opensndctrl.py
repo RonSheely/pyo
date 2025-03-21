@@ -1,14 +1,14 @@
 """
 Objects to manage values on an Open Sound Control port.
 
-OscSend takes the first value of each buffersize and send it on an
+OscSend takes the first value of each buffer size and send it on an
 OSC port.
 
 OscReceive creates and returns audio streams from the value in its
 input port.
 
 The audio streams of these objects are essentially intended to be
-controls and can't be sent to the output soundcard.
+controls and can't be sent to the output sound card.
 
 These objects are available only if pyo is built with OSC (Open Sound
 Control) support.
@@ -56,7 +56,7 @@ class OscSend(PyoObject):
     Sends values over a network via the Open Sound Control protocol.
 
     Uses the OSC protocol to share values to other softwares or other
-    computers. Only the first value of each input buffersize will be
+    computers. Only the first value of each input buffer size will be
     sent on the OSC port.
 
     :Parent: :py:class:`PyoObject`
@@ -155,7 +155,7 @@ class OscReceive(PyoObject):
     Receives values over a network via the Open Sound Control protocol.
 
     Uses the OSC protocol to receive values from other softwares or
-    other computers. Get a value at the beginning of each buffersize
+    other computers. Get a value at the beginning of each buffer size
     and fill its buffer with it.
 
     :Parent: :py:class:`PyoObject`
@@ -179,7 +179,7 @@ class OscReceive(PyoObject):
         Audio streams are accessed with the `address` string parameter.
         The user should call :
 
-        OscReceive['/pitch'] to retreive stream named '/pitch'.
+        OscReceive['/pitch'] to retrieve stream named '/pitch'.
 
         The out() method is bypassed. OscReceive's signal can not be sent
         to audio outs.
@@ -308,7 +308,7 @@ class OscReceive(PyoObject):
             identifier: string
                 Address string parameter identifying audio stream.
                 Defaults to None, useful when `all` is True to
-                retreive all streams values.
+                retrieve all streams values.
             all: boolean, optional
                 If True, the first value of each object's stream
                 will be returned as a list. Otherwise, only the value
@@ -647,7 +647,7 @@ class OscListReceive(PyoObject):
 
     Uses the OSC protocol to receive list of floating-point values from other
     softwares or other computers. The list are converted into audio streams.
-    Get values at the beginning of each buffersize and fill buffers with them.
+    Get values at the beginning of each buffer size and fill buffers with them.
 
     :Parent: :py:class:`PyoObject`
 
@@ -672,7 +672,7 @@ class OscListReceive(PyoObject):
         Audio streams are accessed with the `address` string parameter.
         The user should call :
 
-        OscReceive['/pitch'] to retreive list of streams named '/pitch'.
+        OscReceive['/pitch'] to retrieve list of streams named '/pitch'.
 
         The out() method is bypassed. OscReceive's signal can not be sent
         to audio outs.
@@ -822,7 +822,7 @@ class OscListReceive(PyoObject):
             identifier: string
                 Address string parameter identifying audio stream.
                 Defaults to None, useful when `all` is True to
-                retreive all streams values.
+                retrieve all streams values.
             all: boolean, optional
                 If True, the first list of values of each object's stream
                 will be returned as a list of lists. Otherwise, only the

@@ -567,7 +567,7 @@ class OscBank(PyoObject):
             If True, a small jitter is added to the frequency of each partial.
             For a large number of oscillators and a very small `spread`, the
             periodicity between partial frequencies can cause very strange
-            artefact. Adding a jitter breaks the periodicity. Defaults to False.
+            artifact. Adding a jitter breaks the periodicity. Defaults to False.
 
     .. seealso::
 
@@ -575,8 +575,8 @@ class OscBank(PyoObject):
 
     .. note::
 
-        Altough parameters can be audio signals, values are sampled only once
-        per buffer size. To avoid artefacts, it is recommended to keep variations
+        Although parameters can be audio signals, values are sampled only once
+        per buffer size. To avoid artifacts, it is recommended to keep variations
         at low rate (< 20 Hz).
 
     >>> s = Server().boot()
@@ -887,7 +887,7 @@ class TableRead(PyoObject):
 
         TableRead will send a trigger signal at the end of the playback if
         loop is off or any time it wraps around if loop is on. User can
-        retreive the trigger streams by calling obj['trig']:
+        retrieve the trigger streams by calling obj['trig']:
 
         >>> tabr = TableRead(SNDS_PATH + "/transparent.aif").out()
         >>> trig = TrigRand(tabr['trig'])
@@ -1631,7 +1631,7 @@ class Lookup(PyoObject):
     :Args:
 
         table: PyoTableObject
-            Table containing the transfert function.
+            Table containing the transfer function.
         index: PyoObject
             Audio signal, between -1 and 1, internally converted to be
             used as the index position in the table.
@@ -1690,7 +1690,7 @@ class Lookup(PyoObject):
 
     @property
     def table(self):
-        """PyoTableObject. Table containing the transfert function."""
+        """PyoTableObject. Table containing the transfer function."""
         return self._table
 
     @table.setter
@@ -1717,7 +1717,7 @@ class TableRec(PyoObject):
     the recording into the table until the table is full. Calling the
     play method again restarts the recording and overwrites previously
     recorded samples. The stop method stops the recording. Otherwise, the
-    default behaviour is to record through the end of the table.
+    default behavior is to record through the end of the table.
 
     :Parent: :py:class:`PyoObject`
 
@@ -2028,7 +2028,7 @@ class TableMorph(PyoObject):
 
         The smaller size among the output table and the two current tables to
         interpolate is used to determine the number of samples to process. Using
-        tables with different size can produce strange behaviours.
+        tables with different size can produce strange behaviors.
 
         The out() method is bypassed. TableMorph returns no signal.
 
@@ -3044,7 +3044,7 @@ class TablePut(PyoObject):
     the recording into the table until the table is full. Calling the
     play method again restarts the recording and overwrites previously
     recorded values. The stop method stops the recording. Otherwise, the
-    default behaviour is to record through the end of the table.
+    default behavior is to record through the end of the table.
 
     :Parent: :py:class:`PyoObject`
 

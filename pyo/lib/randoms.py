@@ -274,7 +274,7 @@ class Choice(PyoObject):
 
     Choice chooses a new value from a predefined list of floats `choice`
     at a frequency specified by `freq` parameter. Choice will
-    hold choosen value until next generation.
+    hold chosen value until next generation.
 
     :Parent: :py:class:`PyoObject`
 
@@ -1326,7 +1326,7 @@ class Urn(PyoObject):
     .. note::
 
         Urn will send a trigger signal when the pool is empty.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
     >>> s = Server().boot()

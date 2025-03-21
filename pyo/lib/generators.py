@@ -961,7 +961,7 @@ class Rossler(PyoObject):
             If True, 2 streams will be generated, one with the X variable signal of
             the algorithm and a second composed of the Y variable signal of the algorithm.
             These two signal are strongly related in their frequency spectrum but
-            the Y signal is out-of-phase by approximatly 180 degrees. Useful to create
+            the Y signal is out-of-phase by approximately 180 degrees. Useful to create
             alternating LFOs. Available at initialization only. Defaults to False.
 
     .. seealso::
@@ -1078,7 +1078,7 @@ class Lorenz(PyoObject):
             If True, 2 streams will be generated, one with the X variable signal of
             the algorithm and a second composed of the Y variable signal of the algorithm.
             These two signal are strongly related in their frequency spectrum but
-            the Y signal is out-of-phase by approximatly 180 degrees. Useful to create
+            the Y signal is out-of-phase by approximately 180 degrees. Useful to create
             alternating LFOs. Available at initialization only. Defaults to False.
 
     .. seealso::

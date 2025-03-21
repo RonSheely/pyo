@@ -951,7 +951,7 @@ class Div(PyoObject):
 
 class Sub(PyoObject):
     """
-    Substracts b from a.
+    Subtracts b from a.
 
     :Parent: :py:class:`PyoObject`
 

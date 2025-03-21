@@ -57,7 +57,7 @@ class FFT(PyoObject):
             The FFT size is the number of samples used in each
             analysis frame. Defaults to 1024.
         overlaps: int, optional
-            The number of overlaped analysis block. Must be a
+            The number of overlapped analysis block. Must be a
             positive integer. More overlaps can greatly improved
             sound quality synthesis but it is also more CPU
             expensive. Defaults to 4.
@@ -293,7 +293,7 @@ class IFFT(PyoObject):
             analysis frame. This value must match the `size`
             attribute of the former FFT object. Defaults to 1024.
         overlaps: int, optional
-            The number of overlaped analysis block. Must be a
+            The number of overlapped analysis block. Must be a
             positive integer. More overlaps can greatly improved
             sound quality synthesis but it is also more CPU
             expensive. This value must match the `overlaps`
@@ -1428,7 +1428,7 @@ class IFFTMatrix(PyoObject):
             analysis frame. This value must match the `size`
             attribute of the former FFT object. Defaults to 1024.
         overlaps: int, optional
-            The number of overlaped analysis block. Must be a
+            The number of overlapped analysis block. Must be a
             positive integer. More overlaps can greatly improved
             sound quality synthesis but it is also more CPU
             expensive. This value must match the `overlaps`

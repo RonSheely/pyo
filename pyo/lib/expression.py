@@ -12,7 +12,7 @@ Builtin functions
 Arithmetic operators:
 
 (+ x y) : returns the sum of two values.
-(- x y) : substracts the second value to the first and returns the result.
+(- x y) : subtracts the second value to the first and returns the result.
 (* x y) : returns the multiplication of two values.
 (/ x y) : returns the quotient of x/y.
 (^ x y) : returns x to the power y.
@@ -65,7 +65,7 @@ Clipping functions:
 (max x y) : returns the larger of its arguments: either x or y.
 (wrap x) : wraps x between 0 and 1.
 
-Random fuctions:
+Random functions:
 
 (randf x y) : returns a pseudo-random floating-point number in the range between x and y.
 (randi x y) : returns a pseudo-random integral number in the range between x and y.
@@ -100,7 +100,7 @@ sr : returns the current sampling rate.
 Comments
 --------
 
-A comment starts with two slashs ( // ) and ends at the end of the line:
+A comment starts with two slashes ( // ) and ends at the end of the line:
 
     // This is a comment!
 
@@ -229,7 +229,7 @@ script with method calls (varname is a string and value is a float):
 
 obj.setVar(varname, value)
 
-The following example shows how to control the cutoff fequency of a lowpass
+The following example shows how to control the cutoff frequency of a lowpass
 filter with a user variable:
 
     expression = '''

@@ -39,7 +39,7 @@ class PVAnal(PyoPVObject):
     PVAnal takes an input sound and performs the phase vocoder
     analysis on it. This results in two streams, one for the bin's
     magnitudes and the other for the bin's true frequencies. These
-    two streams are used by the PVxxx object family to transform
+    two streams are used by the PV object family to transform
     the input signal using spectral domain algorithms. The last
     object in the phase vocoder chain must be a PVSynth to perform
     the spectral to time domain conversion.
@@ -57,7 +57,7 @@ class PVAnal(PyoPVObject):
             The FFT size is the number of samples used in each
             analysis frame.
         overlaps: int, optional
-            The number of overlaped analysis block. Must be a
+            The number of overlapped analysis block. Must be a
             power of two. Defaults to 4.
 
             More overlaps can greatly improved sound quality

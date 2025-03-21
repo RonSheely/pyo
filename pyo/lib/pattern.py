@@ -178,9 +178,9 @@ class Pattern(PyoObject):
 
 class Score(PyoObject):
     """
-    Calls functions by incrementation of a preformatted name.
+    Calls functions by incrementing a preformatted name.
 
-    Score takes audio stream containning integers in input and calls
+    Score takes audio stream containing integers in input and calls
     a function whose name is the concatenation of `fname` and the changing
     integer.
 

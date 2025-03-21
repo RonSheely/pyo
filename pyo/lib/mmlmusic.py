@@ -1,7 +1,7 @@
 """
 Music Macro Language evaluator.
 
-The MML object implements acustom MML evaluator to allow simple and efficient
+The MML object implements a custom MML evaluator to allow simple and efficient
 music composition within pyo. The language's rules are explained below.
 
 The MML object generates triggers on new notes with additional streams to
@@ -56,7 +56,7 @@ Realtime Processing of the music
 - The letter `r` corresponds to a rest. The length of the rest is specified in
   the same manner as the length of a note.
 
-- Notes surrounded by brakets ( `(` and `)` ) act as tuplet. Tuplet length is specified
+- Notes surrounded by round brackets ( `(` and `)` ) act as tuplet. Tuplet length is specified
   just after the closing bracket using the same values as for a note duration. Length of
   each note in tuplet will evenly be <note length of tuplet> / <count of notes in tuplet>.
   If not specified, tuplet duration defaults to 5 (quarter note).

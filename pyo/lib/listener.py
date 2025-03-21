@@ -11,7 +11,7 @@ class MidiListener(threading.Thread):
     of the audio server (mainly to be able to receive Midi data even
     when the audio server is stopped). Although it runs in a separated
     thread, the same device can't be used by this object and the audio
-    server at the same time. It is adviced to call the deactivateMidi()
+    server at the same time. It is advised to call the deactivateMidi()
     method on the audio server to avoid conflicts.
 
     :Parent: threading.Thread
@@ -43,7 +43,7 @@ class MidiListener(threading.Thread):
     .. note::
 
         This object is available only if pyo is built with portmidi support
-        (see withPortmidi function).
+        (see `withPortmidi()` function).
 
     >>> s = Server()
     >>> s.deactivateMidi()
@@ -118,7 +118,7 @@ class MidiDispatcher(threading.Thread):
     of the audio server (mainly to be able to send Midi data even
     when the audio server is stopped). Although it runs in a separated
     thread, the same device can't be used by this object and the audio
-    server at the same time. It is adviced to call the deactivateMidi()
+    server at the same time. It is advised to call the deactivateMidi()
     method on the audio server to avoid conflicts.
 
     Use the `send` method to send midi event to connected devices.
@@ -139,7 +139,7 @@ class MidiDispatcher(threading.Thread):
     .. note::
 
         This object is available only if pyo is built with portmidi support
-        (see withPortmidi function).
+        (see `withPortmidi()` function).
 
     >>> s = Server()
     >>> s.deactivateMidi()

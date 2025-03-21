@@ -97241,7 +97241,7 @@ class HRTFData:
 
 class HRTF(PyoObject):
     """
-    Head-Related Transfert Function 3D spatialization.
+    Head-Related Transfer Function 3D spatialization.
 
     HRTF describes how a given sound wave input is filtered by the
     diffraction and reflection properties of the head, pinna, and
@@ -97410,7 +97410,7 @@ class Binaural(PyoObject):
 
     VBAP is used to move the sound over a sixteen channels speaker setup
     without artifact and its result signals are then processed with
-    Head-related Transfert Functions to mix them on a 3D sphere around a
+    Head-related Transfer Functions to mix them on a 3D sphere around a
     virtual head.
 
     This treatment is better perceived when listened with headphones!

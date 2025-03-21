@@ -30,7 +30,7 @@ from ._maps import *
 
 class Pan(PyoObject):
     """
-    Cosinus panner with control on the spread factor.
+    Cosine panner with control on the spread factor.
 
     :Parent: :py:class:`PyoObject`
 
@@ -468,7 +468,7 @@ class Selector(PyoObject):
 
             x: int {0, 1}
                 If 0 (the default) the equal power law is used to
-                interpolate bewtween sources. If 1, linear fade is
+                interpolate between sources. If 1, linear fade is
                 used instead.
 
         """
@@ -628,7 +628,7 @@ class Mixer(PyoObject):
     Audio mixer.
 
     Mixer mixes multiple inputs to an arbitrary number of outputs
-    with independant amplitude values per mixing channel and a
+    with independent amplitude values per mixing channel and a
     user defined portamento applied on amplitude changes.
 
     :Parent: :py:class:`PyoObject`

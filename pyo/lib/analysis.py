@@ -1,7 +1,7 @@
 """
 Tools to analyze audio signals.
 
-These objects are designed to retrieve specific informations
+These objects are designed to retrieve specific information
 from an audio stream. Analysis are sent at audio rate, user
 can use them for controlling parameters of others objects.
 
@@ -267,7 +267,7 @@ class ZCross(PyoObject):
     """
     Zero-crossing counter.
 
-    Output signal is the number of zero-crossing occured during each
+    Output signal is the number of zero-crossing that occurred during each
     buffer size, normalized between 0 and 1.
 
     :Parent: :py:class:`PyoObject`
@@ -367,7 +367,7 @@ class Yin(PyoObject):
     Pitch tracker using the Yin algorithm.
 
     Pitch tracker using the Yin algorithm based on the implementation in C of aubio.
-    This algorithm was developped by A. de Cheveigne and H. Kawahara and published in
+    This algorithm was developed by A. de Cheveigne and H. Kawahara and published in
 
     de Cheveigne, A., Kawahara, H. (2002) 'YIN, a fundamental frequency estimator for
     speech and music', J. Acoust. Soc. Am. 111, 1917-1930.

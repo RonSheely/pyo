@@ -73,7 +73,7 @@ else:
                 value of the slider can be retrieve with the `value`
                 attribute of the generated event. The object itself can be
                 retrieve with the `object` attribute of the event and the
-                object's id with the `id` attrbute.
+                object's id with the `id` attribute.
 
         :Args:
 
@@ -312,7 +312,7 @@ else:
                 list of points of the grapher can be retrieve with the `value`
                 attribute of the generated event. The object itself can be
                 retrieve with the `object` attribute of the event and the
-                object's id with the `id` attrbute.
+                object's id with the `id` attribute.
 
         :Args:
 
@@ -328,7 +328,7 @@ else:
                 A point is defined with its X and Y positions as a tuple.
                 Defaults to [(0.0, 0.0), (1.0, 1.0)].
             mode: int, optional
-                The grapher mode definning how line segments will be draw.
+                The grapher mode defining how line segments will be draw.
                 Possible modes are:
 
                 0. linear (default)
@@ -340,13 +340,13 @@ else:
             exp: int or float, optional
                 The exponent factor for an exponential graph. Defaults to 10.0.
             inverse: boolean, optional
-                If True, downward slope will be inversed. Useful to create
+                If True, downward slope will be inverted. Useful to create
                 biexponential curves. Defaults to True.
             tension: int or float, optional
                 Curvature at the known points. 1 is high, 0 normal, -1 is low.
                 Defaults to 0.
             bias: int or float, optional
-                Curve attraction (for each segments) toward bundary points.
+                Curve attraction (for each segments) toward boundary points.
                 0 is even, positive is towards first point, negative is towards
                 the second point. Defaults to 0.
             pos: wx.Point, optional
@@ -542,7 +542,7 @@ else:
                 list of values of the multi-sliders can be retrieve with the
                 `value` attribute of the generated event. The object itself can
                 be retrieve with the `object` attribute of the event and the
-                object's id with the `id` attrbute.
+                object's id with the `id` attribute.
 
         :Args:
 
@@ -905,7 +905,7 @@ else:
                 is the end of the sound. For the Y-axis, 0.0 is the bottom
                 of the panel and 1.0 is the top. The object itself can be
                 retrieve with the `object` attribute of the event and the
-                object's id with the `id` attrbute.
+                object's id with the `id` attribute.
             EVT_PYO_GUI_SNDVIEW_SELECTION
                 Sent when a new region is selected on the panel. A new
                 selection is created with a Right-click and drag on the panel.
@@ -915,7 +915,7 @@ else:
                 selection as a tuple (min, max). 0.0 means the beginning of
                 the sound and 1.0 means the end of the sound. The object itself
                 can be retrieve with the `object` attribute of the event and the
-                object's id with the `id` attrbute.
+                object's id with the `id` attribute.
 
         :Args:
 
@@ -1042,7 +1042,7 @@ else:
                 Sent whenever a note change on the keyboard. The `value`
                 attribute of the event will hold a (pitch, velocity) tuple.
                 The object itself can be retrieve with the `object`
-                attribute of the event and the object's id with the `id` attrbute.
+                attribute of the event and the object's id with the `id` attribute.
 
         :Args:
 

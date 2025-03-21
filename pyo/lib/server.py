@@ -76,7 +76,7 @@ class Server(object):
 
             If 'jack' is selected but jackd is not already started when the program is executed, pyo
             will ask jack to start in the background. Note that pyo never ask jack to close. It is
-            the user's responsability to manage the audio configuration of its system.
+            the user's responsibility to manage the audio configuration of its system.
 
             If 'manual' is selected, the server waits for a call to its `process` method to compute
             a single buffer size of audio samples. Successive calls to `process` can simulate a
@@ -89,7 +89,7 @@ class Server(object):
             Number of input channels if different of output channels. If None (default), ichnls = nchnls.
         winhost: string, optional
             Under Windows, pyo's Server will try to use the default devices of the given host.
-            This behaviour can be changed with the SetXXXDevice methods. Defaults to "directsound".
+            This behavior can be changed with the SetXXXDevice methods. Defaults to "directsound".
 
             User can set an environment variable named PYO_SERVER_WINHOST to set this value globally.
         midi: string {'portmidi', 'pm', 'jack'}, optional
@@ -97,7 +97,7 @@ class Server(object):
 
             If 'jack' is selected but jackd is not already started when the program is executed, pyo
             will ask jack to start in the background. Note that pyo never ask jack to close. It is
-            the user's responsability to manage the audio/midi configuration of its system.
+            the user's responsibility to manage the audio/midi configuration of its system.
 
             User can set an environment variable named PYO_SERVER_MIDI to set this value globally.
         verbosity: int, optional
@@ -204,7 +204,7 @@ class Server(object):
         midi="portmidi",
     ):
         """
-        Reinit the server'settings. Useful to alternate between real-time and offline server.
+        Reinitialize the server'settings. Useful to alternate between real-time and offline server.
 
         :Args:
 
@@ -265,8 +265,8 @@ class Server(object):
             locals: locals namespace {locals(), None}, optional
                 If locals() is given, the interface will show an interpreter extension,
                 giving a way to interact with the running script. Defaults to None.
-            meter: boolean, optinal
-                If True, the interface will show a vumeter of the global output signal.
+            meter: boolean, optional
+                If True, the interface will show a vu-meter of the global output signal.
                 Defaults to True.
             timer: boolean, optional
                 If True, the interface will show a clock of the current time.
@@ -402,7 +402,7 @@ class Server(object):
         """
         Set the first physical input channel.
 
-        Channel number `x` from the soundcard will be assigned to
+        Channel number `x` from the sound card will be assigned to
         server's channel one, channel number `x` + 1 to server's
         channel two and so on.
 
@@ -418,8 +418,8 @@ class Server(object):
         """
         Set the first physical output channel.
 
-        Server's channel one will be assigned to soundcard's channel
-        number `x`, server's channel two will be assigned to soundcard's
+        Server's channel one will be assigned to sound card's channel
+        number `x`, server's channel two will be assigned to sound card's
         channel number `x` + 1 and so on.
 
         :Args:
@@ -489,7 +489,7 @@ class Server(object):
         :Args:
 
             x: int
-                New sampling rate, must be supported by the soundcard.
+                New sampling rate, must be supported by the sound card.
 
         """
         self._server.setSamplingRate(x)
@@ -943,7 +943,7 @@ class Server(object):
     def recstart(self, filename=None):
         """
         Begins a default recording of the sound that is sent to the
-        soundcard. This will create a file called `pyo_rec.wav` in
+        sound card. This will create a file called `pyo_rec.wav` in
         the user's home directory if no path is supplied or defined
         with recordOptions method. Uses file format and sample type
         defined with recordOptions method.

@@ -911,7 +911,7 @@ class Convolve(PyoObject):
         input: PyoObject
             Input signal to process.
         table: PyoTableObject
-            Table containning the impulse response.
+            Table containing the impulse response.
         size: int
             Length, in samples, of the convolution. Available at initialization
             time only.
@@ -1838,7 +1838,7 @@ class SmoothDelay(PyoObject):
             Amount of output signal sent back into the delay line.
             Defaults to 0.
         crossfade: float, optional
-            Crossfade time, in seconds, between overlaped readers.
+            Crossfade time, in seconds, between overlapped readers.
             Defaults to 0.05.
         maxdelay: float, optional
             Maximum delay length in seconds. Available only at initialization.

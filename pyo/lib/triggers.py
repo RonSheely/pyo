@@ -1426,7 +1426,7 @@ class TrigEnv(PyoObject):
     .. note::
 
         TrigEnv will send a trigger signal at the end of the playback.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
     >>> s = Server().boot()
@@ -1579,7 +1579,7 @@ class TrigLinseg(PyoObject):
     .. note::
 
         TrigLinseg will send a trigger signal at the end of the playback.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
         The out() method is bypassed. TrigLinseg's signal can not be sent
@@ -1741,13 +1741,13 @@ class TrigExpseg(PyoObject):
             Exponent factor. Used to control the slope of the curves.
             Defaults to 10.
         inverse: boolean, optional
-            If True, downward slope will be inversed. Useful to create
+            If True, downward slope will be inverted. Useful to create
             biexponential curves. Defaults to True.
 
     .. note::
 
         TrigExpseg will send a trigger signal at the end of the playback.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
         The out() method is bypassed. TrigExpseg's signal can not be sent
@@ -3046,7 +3046,7 @@ class Percent(PyoObject):
 
 class Timer(PyoObject):
     """
-    Reports elapsed time between two trigs.
+    Reports elapsed time between two triggers.
 
     A trigger in `input2` signal starts an internal timer. The next trigger
     in `input` signal stops it and reports the elapsed time between the two
@@ -3168,7 +3168,7 @@ class Iter(PyoObject):
     .. note::
 
         Iter will send a trigger signal when the iterator hits the
-        last value of the list `choice`. User can retreive the trigger
+        last value of the list `choice`. User can retrieve the trigger
         streams by calling obj['trig']. Useful to synchronize other
         processes.
 
@@ -3920,7 +3920,7 @@ class TrigBurst(PyoObject):
         time: float, optional
             Base time, in seconds, between each trig of the serie. Defaults to 0.25.
         count: int, optional
-            Number of trigs generated (length of the serie). Defaults to 10.
+            Number of triggers generated (length of the serie). Defaults to 10.
         expand: float, optional
             Timing power serie factor. Each delay before the next trig is the
             current delay (starting with `time`) times `expand` factor. Defaults to 1.0.

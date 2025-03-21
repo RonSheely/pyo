@@ -1,5 +1,5 @@
 """
-Play soundfiles from the disk.
+Play sound files from the disk.
 
 SfMarkerXXX objects use markers features (store in the header) from
 an AIFF file to create more specific reading patterns.
@@ -78,7 +78,7 @@ class SfPlayer(PyoObject):
         >>> sf = SfPlayer(SNDS_PATH + "/transparent.aif").out()
         >>> trig = TrigRand(sf['trig'])
 
-        Note that the object will send as many trigs as there is channels
+        Note that the object will send as many triggers as there is channels
         in the sound file. If you want to retrieve only one trig, only give
         the first stream to the next object:
 
@@ -437,7 +437,7 @@ class SfMarkerShuffler(PyoObject):
             6. biexpon
                 - x: bandwidth {0 = huge bandwidth -> 1 = narrow bandwidth}
             7. cauchy
-                - x: bandwidth {0 = huge bandwidth -> 1 = narroe bandwidth}
+                - x: bandwidth {0 = huge bandwidth -> 1 = narrow bandwidth}
             8. weibull
                 - x: shape {0 = expon min => linear min => 1 = gaussian}
             9. gaussian

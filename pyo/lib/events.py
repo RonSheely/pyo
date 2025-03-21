@@ -510,10 +510,10 @@ class EventGenerator:
     """
     Base class for all event generators.
 
-    This class contains the common behaviours of all event generators.
+    This class contains the common behaviors of all event generators.
 
     Each EventGenerator contains a particular algorithm that can produce a
-    sequence of values triggered by an Events mecanism for one of its arguments.
+    sequence of values triggered by an Events mechanism for one of its arguments.
 
     The EventGenerator allows very flexible control of the algorithm parameters.
     It can be a single value, another EventGenerator or an audio signal (PyoObject).
@@ -526,7 +526,7 @@ class EventGenerator:
         +: float, PyoObject or EventGenerator
             Addition.
         -: float, PyoObject or EventGenerator
-            Substraction
+            Subtraction
         *: float, PyoObject or EventGenerator
             Multiplication
         /: float, PyoObject or EventGenerator
@@ -756,7 +756,7 @@ class EventGenerator:
     def scale(self, mini, maxi, expon):
         """
         Return an EventFilter which maps its input value, in the range 0 to 1,
-        to an output range, with a scaling curve deternimed bu the `expon` value.
+        to an output range, with a scaling curve determined by the `expon` value.
 
         :Args:
 
@@ -776,7 +776,7 @@ class EventGenerator:
         """
         Return an EventFilter which maps its input value, in the range `inmin`
         to `inmax`, to an output range, `outmin` to `outmax`, with a scaling
-        curve deternimed bu the `expon` value.
+        curve determined by the `expon` value.
 
         :Args:
 
@@ -1006,7 +1006,7 @@ class EventSeq(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     .. note::
 
@@ -1056,7 +1056,7 @@ class EventSlide(EventGenerator):
     """
     Plays overlapping segments from a list of values.
 
-    EventSlide will play a segment of length `segment` from startpos,
+    EventSlide will play a segment of length `segment` from `startpos`,
     then another segment with a start position incremented by `step`,
     and so on.
 
@@ -1084,7 +1084,7 @@ class EventSlide(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1223,7 +1223,7 @@ class EventIndex(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1312,7 +1312,7 @@ class EventMarkov(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1396,7 +1396,7 @@ class EventChoice(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1455,7 +1455,7 @@ class EventDrunk(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1554,7 +1554,7 @@ class EventNoise(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1650,7 +1650,7 @@ class EventCall(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()
@@ -1719,7 +1719,7 @@ class EventConditional(EventGenerator):
             If True, the Events playback will stop if this generator reaches
             its end. If False, the Events will ignore this signal and probably
             get None as value for the given parameter. It's the user
-            responsability to handle this case correctly. Defaults to True.
+            responsibility to handle this case correctly. Defaults to True.
 
     >>> s = Server().boot()
     >>> s.start()

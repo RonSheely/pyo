@@ -5,7 +5,7 @@ These objects can be used to create envelopes, line segments
 and conversion from python number to audio signal.
 
 The audio streams of these objects can't be sent to the output
-soundcard.
+sound card.
 
 """
 
@@ -56,7 +56,7 @@ class Fader(PyoObject):
         fadeout: float, optional
             Falling time of the envelope in seconds. Defaults to 0.1.
         dur: float, optional
-            Total duration of the envelope in seocnds. Defaults to 0,
+            Total duration of the envelope in seconds. Defaults to 0,
             which means wait for the stop() method to start the fadeout.
 
     .. note::
@@ -71,7 +71,7 @@ class Fader(PyoObject):
         with the exponent factor (see setExp() method).
 
         As of version 0.9.2, Fader will send a trigger signal at the end of the playback.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
     .. seealso::
@@ -269,7 +269,7 @@ class Adsr(PyoObject):
         with the exponent factor (see setExp() method).
 
         As of version 0.9.2, Adsr will send a trigger signal at the end of the playback.
-        User can retreive the trigger streams by calling obj['trig'].
+        User can retrieve the trigger streams by calling obj['trig'].
         Useful to synchronize other processes.
 
     .. seealso::
@@ -695,7 +695,7 @@ class Expseg(PyoObject):
             Exponent factor. Used to control the slope of the curves.
             Defaults to 10.
         inverse: boolean, optional
-            If True, downward slope will be inversed. Useful to create
+            If True, downward slope will be inverted. Useful to create
             biexponential curves. Defaults to True.
         initToFirstVal: boolean, optional
             If True, audio buffer will be filled at initialization with the

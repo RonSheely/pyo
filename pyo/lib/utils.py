@@ -80,7 +80,7 @@ class Print(PyoObject):
         method: int {0, 1}, optional
             There is two methods to set when a value is printed (Defaults to 0):
             0. at a periodic interval.
-            1. everytime the value changed.
+            1. every time the value changed.
         interval: float, optional
             Interval, in seconds, between each print. Used by method 0.
             Defaults to 0.25.
@@ -243,7 +243,7 @@ class Snap(PyoObject):
                 1. Hertz
                 2. transposition factor
 
-            In the transpo mode, the central key (the key where there
+            In the transposition mode, the central key (the key where there
             is no transposition) is 60.
 
     >>> s = Server().boot()
@@ -919,7 +919,7 @@ class ControlRead(PyoObject):
 
         ControlRead will send a trigger signal at the end of the playback if
         loop is off or any time it wraps around if loop is on. User can
-        retreive the trigger streams by calling obj['trig']:
+        retrieve the trigger streams by calling obj['trig']:
 
         >>> rnds = ControlRead(home+"/freq_auto", loop=True)
         >>> t = SndTable(SNDS_PATH+"/transparent.aif")
@@ -1142,7 +1142,7 @@ class NoteinRead(PyoObject):
 
         NoteinRead will send a trigger signal at the end of the playback if
         loop is off or any time it wraps around if loop is on. User can
-        retreive the trigger streams by calling obj['trig']:
+        retrieve the trigger streams by calling obj['trig']:
 
         >>> notes = NoteinRead(home+"/notes_rec", loop=True)
         >>> t = SndTable(SNDS_PATH+"/transparent.aif")

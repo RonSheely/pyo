@@ -2208,8 +2208,8 @@ class Vocoder(PyoObject):
 
     .. note::
 
-        Altough parameters can be audio signals, values are sampled only four times
-        per buffer size. To avoid artefacts, it is recommended to keep variations
+        Although parameters can be audio signals, values are sampled only four times
+        per buffer size. To avoid artifacts, it is recommended to keep variations
         at low rate (< 20 Hz).
 
     >>> s = Server().boot()

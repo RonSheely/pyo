@@ -441,7 +441,7 @@ class Compress(PyoObject):
             Delay length, in ms, for the "look-ahead" buffer. Range is
             0 -> 25 ms. Defaults to 5.0.
         knee: float optional
-            Shape of the transfert function around the threshold, specified
+            Shape of the transfer function around the threshold, specified
             in the range 0 -> 1.
 
             A value of 0 means a hard knee and a value of 1.0 means a softer
@@ -685,7 +685,7 @@ class Compress(PyoObject):
 
     @property
     def knee(self):
-        """float. Shape of the transfert function around the threshold."""
+        """float. Shape of the transfer function around the threshold."""
         return self._knee
 
     @knee.setter

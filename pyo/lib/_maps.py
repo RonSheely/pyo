@@ -161,7 +161,7 @@ class SLMap(Map):
             Name of the attributes the slider is affected to.
         init: int or float
             Initial value. Specified in the real range, not between 0 and 1.
-            Use `set` method to retreive the normalized corresponding value.
+            Use `set` method to retrieve the normalized corresponding value.
         res: string {'int', 'float'}, optional
             Sets the resolution of the slider. Defaults to 'float'.
         ramp: float, optional

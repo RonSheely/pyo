@@ -8,8 +8,9 @@ Roadmap 1.0.7
 
 - FAQ in github's wiki
     1) multi-channel expansion
-    2) the necessity of keeping the python process alive (no sound because the main python process quits)
-    3) scoping problems (defining a PyoObject in a function that gets garbage-collected before it produces sound)
+    2) sample accurate timing
+    3) the necessity of keeping the python process alive (no sound because the main python process quits)
+    4) scoping problems (defining a PyoObject in a function that gets garbage-collected before it produces sound)
 
 Roadmap 1.0.9
 -------------
